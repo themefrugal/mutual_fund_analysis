@@ -13,3 +13,11 @@ json_data <- fromJSON(paste(readLines(mf_url), collapse=""))
 dt_mf_info <- data.table(t(data.frame(unlist(json_data[[1]]))))
 
 # MF NAVs
+dt_navs <- data.frame()
+columns <- c('date', 'nav')
+dt_navs <- data.frame(matrix(nrow = 0, ncol = length(columns)))
+colnames(dt_navs) = columns
+for (i in c(1:length(json_data[[2]]))){
+    dt_navs <- rbind(dt_navs, data.frame(t(unlist(json_data[[2]][[i]]))))
+}
+dt_navs <- data.table(dt_navs)
