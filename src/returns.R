@@ -8,16 +8,12 @@ mf_url <- 'https://api.mfapi.in/mf/122639'
 
 # Directly using readLines on the URL
 json_data <- fromJSON(paste(readLines(mf_url), collapse=""))
-
 # MF Info
 dt_mf_info <- data.table(t(data.frame(unlist(json_data[[1]]))))
-
 # MF NAVs
-dt_navs <- data.frame()
-columns <- c('date', 'nav')
-dt_navs <- data.frame(matrix(nrow = 0, ncol = length(columns)))
-colnames(dt_navs) = columns
-for (i in c(1:length(json_data[[2]]))){
-    dt_navs <- rbind(dt_navs, data.frame(t(unlist(json_data[[2]][[i]]))))
-}
-dt_navs <- data.table(dt_navs)
+dt_navs <- data.table(do.call(rbind.data.frame, json_data[[2]]))
+
+mf_list_url <- 'https://api.mfapi.in/mf'
+mf_list <- fromJSON(paste(readLines(mf_list_url), collapse=""))
+# MF List
+dt_mfs <- data.table(do.call(rbind.data.frame, mf_list))
