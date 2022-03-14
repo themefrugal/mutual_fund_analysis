@@ -1,6 +1,9 @@
 # download nav info from mfapi.in
 library(rjson)
 library(data.table)
+library(ggplot2)
+library(plotly)
+
 mf_url <- 'https://api.mfapi.in/mf/122639'
 # json_file <- './temp.json'
 # download.file(mf_url, temp_file)
@@ -21,5 +24,35 @@ dt_mfs <- data.table(do.call(rbind.data.frame, mf_list))
 dt_navs[, date := as.Date(date, format="%d-%m-%Y")]
 dt_navs[, nav := as.numeric(nav)]
 dt_navs <- dt_navs[order(date)]
-dt_navs[, nav_diff := nav - shift(nav)]
-dt_navs[, date_diff := date - shift(date)]
+
+# Fill in for all dates
+all_dates <- seq.Date(min(dt_navs$date), max(dt_navs$date), by=1)
+dt_all_dates <- data.table(all_dates)
+names(dt_all_dates) <- 'date'
+dt_navs <- merge(dt_all_dates, dt_navs, by='date', all.x=TRUE)
+# Get the next observed value carried backward for missing days ("nocb")
+dt_navs$nav <- nafill(dt_navs$nav, type='nocb')
+
+day_fn <- function(period){
+    fn_list <- list("weekly" = wday, "monthly" = mday, "yearly" = yday)
+    return (fn_list[[period]])
+}
+
+get_periodic_navs <- function(dt_navs, period='weekly', ord_num=1){
+    dt_navs[, day := day_fn(period)(date)]
+    dt_period_navs <- dt_navs[day == ord_num]
+    dt_navs[, day := NULL]
+    dt_period_navs[, day := NULL]
+    return(dt_period_navs)
+}
+
+# dt_navs[, nav_diff := nav - shift(nav)]
+# dt_navs[, date_diff := as.numeric(date - shift(date))]
+dt_daily_navs <- dt_navs
+dt_daily_navs[, returns := nav / shift(nav) - 1]
+
+dt_weekly_navs <- get_periodic_navs(dt_navs, 'weekly', 2)
+dt_weekly_navs[, returns := nav / shift(nav) - 1]
+
+p <- ggplot(dt_daily_navs, aes(x=returns)) + geom_histogram()
+ggplotly(p)
