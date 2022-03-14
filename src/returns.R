@@ -17,3 +17,9 @@ mf_list_url <- 'https://api.mfapi.in/mf'
 mf_list <- fromJSON(paste(readLines(mf_list_url), collapse=""))
 # MF List
 dt_mfs <- data.table(do.call(rbind.data.frame, mf_list))
+
+dt_navs[, date := as.Date(date, format="%d-%m-%Y")]
+dt_navs[, nav := as.numeric(nav)]
+dt_navs <- dt_navs[order(date)]
+dt_navs[, nav_diff := nav - shift(nav)]
+dt_navs[, date_diff := date - shift(date)]
