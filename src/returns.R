@@ -56,3 +56,9 @@ dt_weekly_navs[, returns := nav / shift(nav) - 1]
 
 p <- ggplot(dt_daily_navs, aes(x=returns)) + geom_histogram()
 ggplotly(p)
+
+p <- ggplot(dt_daily_navs, aes(x=date, y=nav)) + geom_line() + scale_y_log10()
+ggplotly(p)
+
+dt_weekly_navs$nav_mult[1] <- 1
+dt_weekly_navs[, cum_returns := cumprod(nav_mult)]
