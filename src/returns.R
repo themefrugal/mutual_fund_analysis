@@ -60,5 +60,12 @@ ggplotly(p)
 p <- ggplot(dt_daily_navs, aes(x=date, y=nav)) + geom_line() + scale_y_log10()
 ggplotly(p)
 
-dt_weekly_navs$nav_mult[1] <- 1
-dt_weekly_navs[, cum_returns := cumprod(nav_mult)]
+# Rebasing based on a specific date
+from_date <- '2018-08-28'
+dt_cumulative <- dt_daily_navs[date >= from_date]
+dt_cumulative[, returns := nav / shift(nav)]
+dt_cumulative$returns[1] <- 1
+dt_cumulative[, cum_returns := cumprod(returns)]
+
+p <- ggplot(dt_cumulative, aes(x=date, y=cum_returns)) + geom_line() + scale_y_log10()
+ggplotly(p)
