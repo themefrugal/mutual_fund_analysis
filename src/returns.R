@@ -4,6 +4,29 @@ library(data.table)
 library(ggplot2)
 library(plotly)
 
+day_fn <- function(period){
+    fn_list <- list("weekly" = wday, "monthly" = mday, "yearly" = yday)
+    return (fn_list[[period]])
+}
+
+get_periodic_navs <- function(dt_navs, period='weekly', ord_num=1){
+    dt_navs[, day := day_fn(period)(date)]
+    dt_period_navs <- dt_navs[day == ord_num]
+    dt_navs[, day := NULL]
+    dt_period_navs[, day := NULL]
+    dt_period_navs[, returns := nav / shift(nav) - 1]
+    return(dt_period_navs)
+}
+
+# Rebasing based on a specific date
+get_cumulative_returns <- function(dt_navs, from_date='2018-08-28'){
+    dt_cumulative <- dt_navs[date >= from_date]
+    dt_cumulative[, multiple := nav / shift(nav)]
+    dt_cumulative$multiple[1] <- 1
+    dt_cumulative[, cum_returns := cumprod(multiple)]
+    return (dt_cumulative)
+}
+
 mf_url <- 'https://api.mfapi.in/mf/122639'
 # json_file <- './temp.json'
 # download.file(mf_url, temp_file)
@@ -33,39 +56,21 @@ dt_navs <- merge(dt_all_dates, dt_navs, by='date', all.x=TRUE)
 # Get the next observed value carried backward for missing days ("nocb")
 dt_navs$nav <- nafill(dt_navs$nav, type='nocb')
 
-day_fn <- function(period){
-    fn_list <- list("weekly" = wday, "monthly" = mday, "yearly" = yday)
-    return (fn_list[[period]])
-}
-
-get_periodic_navs <- function(dt_navs, period='weekly', ord_num=1){
-    dt_navs[, day := day_fn(period)(date)]
-    dt_period_navs <- dt_navs[day == ord_num]
-    dt_navs[, day := NULL]
-    dt_period_navs[, day := NULL]
-    return(dt_period_navs)
-}
-
 # dt_navs[, nav_diff := nav - shift(nav)]
 # dt_navs[, date_diff := as.numeric(date - shift(date))]
 dt_daily_navs <- dt_navs
-dt_daily_navs[, returns := nav / shift(nav) - 1]
-
 dt_weekly_navs <- get_periodic_navs(dt_navs, 'weekly', 2)
-dt_weekly_navs[, returns := nav / shift(nav) - 1]
+dt_monthly_navs <- get_periodic_navs(dt_navs, 'monthly', 1)
 
-p <- ggplot(dt_daily_navs, aes(x=returns)) + geom_histogram()
+# Histogram
+p <- ggplot(dt_monthly_navs, aes(x=returns)) + geom_histogram()
 ggplotly(p)
 
+# NAV Plot
 p <- ggplot(dt_daily_navs, aes(x=date, y=nav)) + geom_line() + scale_y_log10()
 ggplotly(p)
 
-# Rebasing based on a specific date
-from_date <- '2018-08-28'
-dt_cumulative <- dt_daily_navs[date >= from_date]
-dt_cumulative[, returns := nav / shift(nav)]
-dt_cumulative$returns[1] <- 1
-dt_cumulative[, cum_returns := cumprod(returns)]
-
-p <- ggplot(dt_cumulative, aes(x=date, y=cum_returns)) + geom_line() + scale_y_log10()
+# Cumulative Return Plot
+dt_cumr <- get_cumulative_returns(dt_daily_navs, '2016-02-05')
+p <- ggplot(dt_cumr, aes(x=date, y=cum_returns)) + geom_line() + scale_y_log10()
 ggplotly(p)
