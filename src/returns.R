@@ -27,34 +27,41 @@ get_cumulative_returns <- function(dt_navs, from_date='2018-08-28'){
     return (dt_cumulative)
 }
 
-mf_url <- 'https://api.mfapi.in/mf/122639'
-# json_file <- './temp.json'
-# download.file(mf_url, temp_file)
-# json_data <- fromJSON(paste(readLines(json_file), collapse=""))
 
-# Directly using readLines on the URL
-json_data <- fromJSON(paste(readLines(mf_url), collapse=""))
-# MF Info
-dt_mf_info <- data.table(t(data.frame(unlist(json_data[[1]]))))
-# MF NAVs
-dt_navs <- data.table(do.call(rbind.data.frame, json_data[[2]]))
+get_navs <- function(mf_url){
+    # Directly using readLines on the URL
+    json_data <- fromJSON(paste(readLines(mf_url), collapse=""))
+
+    # MF Info
+    dt_mf_info <- data.table(t(data.frame(unlist(json_data[[1]]))))
+
+    # MF NAVs
+    dt_navs <- data.table(do.call(rbind.data.frame, json_data[[2]]))
+    dt_navs[, date := as.Date(date, format="%d-%m-%Y")]
+    dt_navs[, nav := as.numeric(nav)]
+    dt_navs <- dt_navs[order(date)]
+
+    # Fill in for all dates
+    all_dates <- seq.Date(min(dt_navs$date), max(dt_navs$date), by=1)
+    dt_all_dates <- data.table(all_dates)
+    names(dt_all_dates) <- 'date'
+    dt_navs <- merge(dt_all_dates, dt_navs, by='date', all.x=TRUE)
+    # Get the next observed value carried backward for missing days ("nocb")
+    dt_navs$nav <- nafill(dt_navs$nav, type='nocb')
+    return(dt_navs)
+}
+
+mf_url_1 <- 'https://api.mfapi.in/mf/122639'
+dt_navs_1 <- get_navs(mf_url_1)
+
+mf_url_2 <- 'https://api.mfapi.in/mf/122640'
+dt_navs_2 <- get_navs(mf_url_2)
+dt_navs <- merge(dt_navs_1, dt_navs_2, by='date')
+names(dt_navs) <- c('date', 'mf1', 'mf2')
 
 mf_list_url <- 'https://api.mfapi.in/mf'
 mf_list <- fromJSON(paste(readLines(mf_list_url), collapse=""))
-# MF List
 dt_mfs <- data.table(do.call(rbind.data.frame, mf_list))
-
-dt_navs[, date := as.Date(date, format="%d-%m-%Y")]
-dt_navs[, nav := as.numeric(nav)]
-dt_navs <- dt_navs[order(date)]
-
-# Fill in for all dates
-all_dates <- seq.Date(min(dt_navs$date), max(dt_navs$date), by=1)
-dt_all_dates <- data.table(all_dates)
-names(dt_all_dates) <- 'date'
-dt_navs <- merge(dt_all_dates, dt_navs, by='date', all.x=TRUE)
-# Get the next observed value carried backward for missing days ("nocb")
-dt_navs$nav <- nafill(dt_navs$nav, type='nocb')
 
 # dt_navs[, nav_diff := nav - shift(nav)]
 # dt_navs[, date_diff := as.numeric(date - shift(date))]
