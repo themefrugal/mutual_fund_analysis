@@ -27,7 +27,6 @@ get_cumulative_returns <- function(dt_navs, from_date='2018-08-28'){
     return (dt_cumulative)
 }
 
-
 get_navs <- function(mf_url){
     # Directly using readLines on the URL
     json_data <- fromJSON(paste(readLines(mf_url), collapse=""))
@@ -80,4 +79,28 @@ ggplotly(p)
 # Cumulative Return Plot
 dt_cumr <- get_cumulative_returns(dt_daily_navs, '2016-02-05')
 p <- ggplot(dt_cumr, aes(x=date, y=cum_returns)) + geom_line() + scale_y_log10()
+ggplotly(p)
+
+# MF Analysis
+mf_url <- 'https://api.mfapi.in/mf/122639'
+dt_navs  <- get_navs(mf_url)
+
+get_cagr <- function(dt_navs, num_years=1){
+    dt_navs[, prev_nav := shift(nav, 365*num_years)]
+    dt_cagr <- na.omit(dt_navs)
+    dt_cagr[, returns := nav/prev_nav - 1]
+    dt_cagr[, cagr := (1 + returns) ^ (1/num_years) - 1]
+    dt_cagr[, years := as.factor(num_years)]
+    dt_cagr <- dt_cagr[, c('date', 'years', 'cagr')]
+    return (dt_cagr)
+}
+
+dt_cagrs <- rbindlist(lapply(c(3,5,7), function(x)get_cagr(dt_navs,x)))
+
+# MF Analysis
+p <- ggplot(dt_cagrs, aes(x=cagr)) + geom_histogram()
+ggplotly(p)
+
+p <- ggplot(dt_cagrs, aes(x=cagr, color=years)) + geom_density() +
+    scale_color_brewer(palette="Dark2") + theme_minimal()
 ggplotly(p)
