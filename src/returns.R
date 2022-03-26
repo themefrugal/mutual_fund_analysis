@@ -4,6 +4,16 @@ library(data.table)
 library(ggplot2)
 library(plotly)
 
+get_cagr <- function(dt_navs, num_years=1){
+    dt_navs[, prev_nav := shift(nav, 365*num_years)]
+    dt_cagr <- na.omit(dt_navs)
+    dt_cagr[, returns := nav/prev_nav - 1]
+    dt_cagr[, cagr := (1 + returns) ^ (1/num_years) - 1]
+    dt_cagr[, years := as.factor(num_years)]
+    dt_cagr <- dt_cagr[, c('date', 'years', 'cagr')]
+    return (dt_cagr)
+}
+
 day_fn <- function(period){
     fn_list <- list("weekly" = wday, "monthly" = mday, "yearly" = yday)
     return (fn_list[[period]])
@@ -64,9 +74,9 @@ dt_mfs <- data.table(do.call(rbind.data.frame, mf_list))
 
 # dt_navs[, nav_diff := nav - shift(nav)]
 # dt_navs[, date_diff := as.numeric(date - shift(date))]
-dt_daily_navs <- dt_navs
-dt_weekly_navs <- get_periodic_navs(dt_navs, 'weekly', 2)
-dt_monthly_navs <- get_periodic_navs(dt_navs, 'monthly', 1)
+dt_daily_navs <- dt_navs_1
+dt_weekly_navs <- get_periodic_navs(dt_navs_1, 'weekly', 2)
+dt_monthly_navs <- get_periodic_navs(dt_navs_1, 'monthly', 1)
 
 # Histogram
 p <- ggplot(dt_monthly_navs, aes(x=returns)) + geom_histogram()
@@ -84,16 +94,6 @@ ggplotly(p)
 # MF Analysis
 mf_url <- 'https://api.mfapi.in/mf/122639'
 dt_navs  <- get_navs(mf_url)
-
-get_cagr <- function(dt_navs, num_years=1){
-    dt_navs[, prev_nav := shift(nav, 365*num_years)]
-    dt_cagr <- na.omit(dt_navs)
-    dt_cagr[, returns := nav/prev_nav - 1]
-    dt_cagr[, cagr := (1 + returns) ^ (1/num_years) - 1]
-    dt_cagr[, years := as.factor(num_years)]
-    dt_cagr <- dt_cagr[, c('date', 'years', 'cagr')]
-    return (dt_cagr)
-}
 
 dt_cagrs <- rbindlist(lapply(c(3,5,7), function(x)get_cagr(dt_navs,x)))
 
