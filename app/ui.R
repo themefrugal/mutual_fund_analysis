@@ -4,10 +4,11 @@ navbarPage(
     tabPanel('Tab 1',
         fluidPage(
             sidebarPanel(
-                DT::dataTableOutput('table1')
+                selectizeInput("mf_name", "Select Mutual Fund:", choices=c())
             ),
             mainPanel(
-                plotlyOutput('plot1')
+                DT::dataTableOutput('table1')
+                # plotlyOutput('plot1')
             )
         )
     ),
