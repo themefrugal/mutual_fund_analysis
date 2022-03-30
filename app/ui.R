@@ -1,20 +1,20 @@
 library(shiny)
 navbarPage(
     title = 'Mutual Fund Analysis',
-    tabPanel('Tab 1',
+    tabPanel('NAV',
         fluidPage(
             sidebarPanel(
                 selectizeInput("mf_name", "Select Mutual Fund:", choices=c())
             ),
             mainPanel(
-                DT::dataTableOutput('table1')
-                # plotlyOutput('plot1')
+                DT::dataTableOutput('table_nav')
             )
         )
     ),
-    tabPanel('Tab 2',
+    tabPanel('CAGR',
         fluidPage(
-            DT::dataTableOutput('table2')
+            DT::dataTableOutput('table_cagr'),
+            plotlyOutput('plot1')
         )
     )
 
