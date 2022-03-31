@@ -34,9 +34,21 @@ function(input, output, session) {
         datatable(cagrs(), filter='top', options = list(pageLength = 25))
     )
 
-    output$plot1 <- renderPlotly({
+    output$plot_density <- renderPlotly({
         p <- ggplot(cagrs(), aes(x=cagr, color=years)) + geom_density() +
             scale_color_brewer(palette="Dark2") + theme_minimal()
+        ggplotly(p)
+    })
+
+    output$plot_hist <- renderPlotly({
+        p <- ggplot(cagrs()[years == input$year_hist], aes(x=cagr)) +
+            geom_histogram() +
+            geom_vline(aes(xintercept = mean), colour="black") +
+            geom_vline(aes(xintercept = median), colour="red") +
+            geom_vline(aes(xintercept = min), colour="black") +
+            geom_vline(aes(xintercept = max), colour="black") +
+            geom_vline(aes(xintercept = P25), colour="blue") +
+            geom_vline(aes(xintercept = P75), colour="blue")
         ggplotly(p)
     })
 }

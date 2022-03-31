@@ -1,4 +1,5 @@
 library(shiny)
+library(plotly)
 navbarPage(
     title = 'Mutual Fund Analysis',
     tabPanel('NAV',
@@ -14,7 +15,9 @@ navbarPage(
     tabPanel('CAGR',
         fluidPage(
             DT::dataTableOutput('table_cagr'),
-            plotlyOutput('plot1')
+            plotlyOutput('plot_density'),
+            selectInput("year_hist", "Year:", choices=c(1:10)),
+            plotlyOutput('plot_hist')
         )
     )
 

@@ -4,7 +4,13 @@ get_cagr <- function(dt_navs, num_years=1){
     dt_cagr[, returns := nav/prev_nav - 1]
     dt_cagr[, cagr := (1 + returns) ^ (1/num_years) - 1]
     dt_cagr[, years := as.factor(num_years)]
-    dt_cagr <- dt_cagr[, c('date', 'years', 'cagr')]
+    dt_cagr[, mean := mean(cagr, na.rm=TRUE)]
+    dt_cagr[, median := median(cagr, na.rm=TRUE)]
+    dt_cagr[, min := min(cagr, na.rm=TRUE)]
+    dt_cagr[, max := max(cagr, na.rm=TRUE)]
+    dt_cagr[, P25 := unlist(quantile(cagr, na.rm=TRUE)[2])]
+    dt_cagr[, P75 := unlist(quantile(cagr, na.rm=TRUE)[4])]
+    dt_cagr <- dt_cagr[, c('date', 'years', 'cagr', 'mean', 'median', 'min', 'max', 'P25', 'P75')]
     return (dt_cagr)
 }
 
