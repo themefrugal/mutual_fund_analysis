@@ -37,7 +37,8 @@ p <- ggplot(dt_cumr, aes(x=date, y=cum_returns)) + geom_line() + scale_y_log10()
 ggplotly(p)
 
 # MF Analysis
-mf_url <- 'https://api.mfapi.in/mf/122639'
+mf_url <- 'https://api.mfapi.in/mf/122639' #PPFAS Flexi
+mf_url <- 'https://api.mfapi.in/mf/100669' #UTI Flexi
 dt_navs  <- get_navs(mf_url)
 
 dt_cagrs <- rbindlist(lapply(c(3,5,7), function(x)get_cagr(dt_navs,x)))

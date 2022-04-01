@@ -2,14 +2,14 @@ get_cagr <- function(dt_navs, num_years=1){
     dt_navs[, prev_nav := shift(nav, 365*num_years)]
     dt_cagr <- na.omit(dt_navs)
     dt_cagr[, returns := nav/prev_nav - 1]
-    dt_cagr[, cagr := (1 + returns) ^ (1/num_years) - 1]
+    dt_cagr[, cagr := 100 * ((1 + returns) ^ (1/num_years) - 1)]
     dt_cagr[, years := as.factor(num_years)]
+    dt_cagr[, min := min(cagr, na.rm=TRUE)]
+    dt_cagr[, P25 := unlist(quantile(cagr, na.rm=TRUE)[2])]
     dt_cagr[, mean := mean(cagr, na.rm=TRUE)]
     dt_cagr[, median := median(cagr, na.rm=TRUE)]
-    dt_cagr[, min := min(cagr, na.rm=TRUE)]
-    dt_cagr[, max := max(cagr, na.rm=TRUE)]
-    dt_cagr[, P25 := unlist(quantile(cagr, na.rm=TRUE)[2])]
     dt_cagr[, P75 := unlist(quantile(cagr, na.rm=TRUE)[4])]
+    dt_cagr[, max := max(cagr, na.rm=TRUE)]
     dt_cagr <- dt_cagr[, c('date', 'years', 'cagr', 'mean', 'median', 'min', 'max', 'P25', 'P75')]
     return (dt_cagr)
 }
@@ -57,5 +57,6 @@ get_navs <- function(mf_url){
     dt_navs <- merge(dt_all_dates, dt_navs, by='date', all.x=TRUE)
     # Get the next observed value carried backward for missing days ("nocb")
     dt_navs$nav <- nafill(dt_navs$nav, type='nocb')
+    dt_navs <- dt_navs[nav != 0]
     return(dt_navs)
 }
