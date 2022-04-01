@@ -16,6 +16,8 @@ navbarPage(
         fluidPage(
             h3('CAGR Table:'),
             DT::dataTableOutput('table_cagr'),
+            h3('CAGR Summary Statistics:'),
+            DT::dataTableOutput('table_cagr_desc'),
             h3('CAGR Frequency Analysis:'),
             plotlyOutput('plot_density'),
             h3('Histogram Analysis:'),
