@@ -53,7 +53,8 @@ function(input, output, session) {
 
     output$plot_density <- renderPlotly({
         p <- ggplot(cagrs(), aes(x=cagr, color=years)) + geom_density() +
-            scale_color_brewer(palette="Dark2") + theme_minimal()
+            # scale_color_brewer(palette="RdYlBu") +
+            theme_minimal()
         ggplotly(p)
     })
 
@@ -94,7 +95,10 @@ function(input, output, session) {
     # Cumulative Return Plot
     output$plot_cumr <- renderPlotly({
         dt_cumr <- get_cumulative_returns(navs(), input$start_date)
-        p <- ggplot(dt_cumr, aes(x=date, y=cum_returns)) + geom_line() + scale_y_log10()
+        p <- ggplot(dt_cumr, aes(x=date, y=cum_returns)) + geom_line()
+        if(input$cumr_log_y){
+            p <- p + scale_y_log10()
+        }
         ggplotly(p)
     })
 }
