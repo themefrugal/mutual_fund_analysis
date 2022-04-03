@@ -1,4 +1,4 @@
-source('../src/utils.R')
+source('./utils.R')
 library(DT)
 library(shiny)
 library(rjson)
