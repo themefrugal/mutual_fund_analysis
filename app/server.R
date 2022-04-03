@@ -14,17 +14,37 @@ if (read_from_internet){
     mf_list_url <- 'https://api.mfapi.in/mf'
     mf_list <- fromJSON(paste(readLines(mf_list_url), collapse=""))
     dt_mfs <- data.table(do.call(rbind.data.frame, mf_list))
-    save(dt_mfs, file = 'mf_codes.RData')
+
+    dt_mfs$schemeName <- sapply(dt_mfs$schemeName, first_upper)
+    dt_mfs$schemeName <- sapply(dt_mfs$schemeName, prune_left)
+    dt_mfs$schemeName <- sapply(dt_mfs$schemeName, remove_extra_space)
+    dt_mfs <- dt_mfs[order(schemeName)]
+    dt_mfs <- unique(dt_mfs)
+    save(dt_mfs, file = './mf_codes.RData')
 } else {
     load('./mf_codes.RData')
 }
 
 function(input, output, session) {
     updateSelectizeInput(session, "mf_name", choices = unique(dt_mfs$schemeName), server=TRUE)
+    updateSelectizeInput(session, "mf_name_1", choices = unique(dt_mfs$schemeName), server=TRUE)
 
     navs <- reactive({
-        mf_url <- paste0('https://api.mfapi.in/mf/', dt_mfs[schemeName == input$mf_name]$schemeCode)
-        dt_navs <- get_navs(mf_url)
+        # Check this: There are multiple scheme codes for the same scheme name (in approx 20 instances)
+        # As of now, we are taking the occurrence of first such instance
+        scheme_code <- dt_mfs[schemeName == input$mf_name]$schemeCode[1]
+        get_navs(scheme_code)
+    })
+
+    navs_1 <- reactive({
+        # Check this: There are multiple scheme codes for the same scheme name (in approx 20 instances)
+        # As of now, we are taking the occurrence of first such instance
+        if (input$mf_name_1 == ''){
+            dt_navs <- data.table()
+        } else {
+            scheme_code <- dt_mfs[schemeName == input$mf_name_1]$schemeCode[1]
+            dt_navs <- get_navs(scheme_code)
+        }
         dt_navs
     })
 
@@ -95,11 +115,17 @@ function(input, output, session) {
     # Cumulative Return Plot
     output$plot_cumr <- renderPlotly({
         dt_cumr <- get_cumulative_returns(navs(), input$start_date)
-        p <- ggplot(dt_cumr, aes(x=date, y=cum_returns)) + geom_line()
+        dt_cumr[, 'scheme' := input$mf_name]
+
+        dt_cumr1 <- get_cumulative_returns(navs_1(), input$start_date)
+        dt_cumr1[, 'scheme' := input$mf_name_1]
+
+        dt_cumr <- rbindlist(list(dt_cumr, dt_cumr1))
+        p <- ggplot(dt_cumr, aes(x=date, y=cum_returns, color=scheme)) + geom_line() + theme(legend.position = "bottom")
         if(input$cumr_log_y){
             p <- p + scale_y_log10()
         }
-        ggplotly(p)
+        ggplotly(p) %>% layout(legend = list(orientation = "h", x = 0.4, y = -0.2))
     })
 }
 # [years == input$year_rolling]

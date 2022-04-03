@@ -5,6 +5,7 @@ get_cagr <- function(dt_navs, num_years=1){
     dt_cagr[, cagr := 100 * ((1 + returns) ^ (1/num_years) - 1)]
     dt_cagr[, years := as.factor(num_years)]
     dt_cagr <- dt_cagr[, c('date', 'years', 'cagr')]
+    dt_navs[, prev_nav := NULL]     # Remove the extra column added in dt_navs
     return (dt_cagr)
 }
 
@@ -45,7 +46,8 @@ get_cumulative_returns <- function(dt_navs, from_date='2018-08-28'){
     return (dt_cumulative)
 }
 
-get_navs <- function(mf_url){
+get_navs <- function(scheme_code){
+    mf_url <- paste0('https://api.mfapi.in/mf/', scheme_code)
     # Directly using readLines on the URL
     json_data <- fromJSON(paste(readLines(mf_url), collapse=""))
 
@@ -67,4 +69,16 @@ get_navs <- function(mf_url){
     dt_navs$nav <- nafill(dt_navs$nav, type='nocb')
     dt_navs <- dt_navs[nav != 0]
     return(dt_navs)
+}
+
+first_upper <- function(sx){
+    return(paste0(toupper(substring(sx, 1,1)), substring(sx, 2)))
+}
+
+prune_left <- function(sx){
+    return(gsub('^[^A-Za-z]+([A-Za-z])', '\\1', sx))
+}
+
+remove_extra_space <- function(sx){
+    return(gsub('\\s+', ' ', sx))
 }

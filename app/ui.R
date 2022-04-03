@@ -30,7 +30,8 @@ navbarPage(
                         column(6, dateInput('start_date', 'Plot From:', value='2015-01-01')),
                         column(6, checkboxInput('cumr_log_y', 'Log Y-Axis', TRUE))
                     ),
-                    plotlyOutput('plot_cumr')
+                   selectizeInput("mf_name_1", "Add Fund:", choices=c()),
+                   plotlyOutput('plot_cumr')
                 )
 
             )
