@@ -52,6 +52,10 @@ function(input, output, session) {
         dt_cagrs <- rbindlist(lapply(c(1:10), function(x)get_cagr(navs(), x)))
     })
 
+    cagrs_1 <- reactive({
+        dt_cagrs <- rbindlist(lapply(c(1:10), function(x)get_cagr(navs_1(), x)))
+    })
+
     cagr_desc <- reactive({
         dt_cagr_desc <- get_cagr_desc(cagrs())
     })
@@ -103,6 +107,18 @@ function(input, output, session) {
         ggplotly(p)
     })
 
+    output$plot_comparative_roll <- renderPlotly({
+        dt_cagr <- cagrs()
+        dt_cagr[, scheme:= input$mf_name]
+        dt_cagr_1 <- cagrs_1()
+        dt_cagr_1[, scheme:= input$mf_name_1]
+        dt_cagr <- rbindlist(list(dt_cagr, dt_cagr_1))
+
+        p <- ggplot(dt_cagr[years == input$year_cagr], aes(x=date, y=cagr, color=scheme)) +
+            geom_line()
+        ggplotly(p) %>% layout(legend = list(orientation = "h", y = -0.2))
+    })
+
     # NAV Plot
     output$plot_nav <- renderPlotly({
         p <- ggplot(navs(), aes(x=date, y=nav)) + geom_line()
@@ -125,7 +141,7 @@ function(input, output, session) {
         if(input$cumr_log_y){
             p <- p + scale_y_log10()
         }
-        ggplotly(p) %>% layout(legend = list(orientation = "h", x = 0.4, y = -0.2))
+        ggplotly(p) %>% layout(legend = list(orientation = "h", y = -0.2))
     })
 }
 # [years == input$year_rolling]

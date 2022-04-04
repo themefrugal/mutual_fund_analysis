@@ -31,7 +31,10 @@ navbarPage(
                         column(6, checkboxInput('cumr_log_y', 'Log Y-Axis', TRUE))
                     ),
                    selectizeInput("mf_name_1", "Add Fund:", choices=c()),
-                   plotlyOutput('plot_cumr')
+                   plotlyOutput('plot_cumr'),
+                   h3('Comparative Rolling Return:'),
+                   selectInput("year_cagr", "Year:", choices=c(1:10)),
+                   plotlyOutput('plot_comparative_roll')
                 )
 
             )
