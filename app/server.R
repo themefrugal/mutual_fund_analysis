@@ -6,6 +6,7 @@ library(data.table)
 library(ggplot2)
 library(plotly)
 library(dplyr)
+library(memoise)
 
 # Read from the internet, once in a while - may be once in a quarter or when necessary
 # reading 'https://api.mfapi.in/mf' takes about 1 to 2 minutes
@@ -25,9 +26,11 @@ if (read_from_internet){
     load('./mf_codes.RData')
 }
 
+m_get_navs <- memoise(get_navs)
 function(input, output, session) {
     updateSelectizeInput(session, "mf_name", choices = unique(dt_mfs$schemeName), server=TRUE)
-    updateSelectizeInput(session, "mf_name_1", choices = unique(dt_mfs$schemeName), server=TRUE)
+    updateSelectizeInput(session, "mf_name_cumr", choices = unique(dt_mfs$schemeName), server=TRUE)
+    updateSelectizeInput(session, "mf_name_comprr", choices = unique(dt_mfs$schemeName), server=TRUE)
 
     navs <- reactive({
         # Check this: There are multiple scheme codes for the same scheme name (in approx 20 instances)
@@ -39,10 +42,10 @@ function(input, output, session) {
     navs_1 <- reactive({
         # Check this: There are multiple scheme codes for the same scheme name (in approx 20 instances)
         # As of now, we are taking the occurrence of first such instance
-        if (input$mf_name_1 == ''){
+        if (input$mf_name_comprr == ''){
             dt_navs <- data.table()
         } else {
-            scheme_code <- dt_mfs[schemeName == input$mf_name_1]$schemeCode[1]
+            scheme_code <- dt_mfs[schemeName == input$mf_name_comprr]$schemeCode[1]
             dt_navs <- get_navs(scheme_code)
         }
         dt_navs
@@ -107,18 +110,6 @@ function(input, output, session) {
         ggplotly(p)
     })
 
-    output$plot_comparative_roll <- renderPlotly({
-        dt_cagr <- cagrs()
-        dt_cagr[, scheme:= input$mf_name]
-        dt_cagr_1 <- cagrs_1()
-        dt_cagr_1[, scheme:= input$mf_name_1]
-        dt_cagr <- rbindlist(list(dt_cagr, dt_cagr_1))
-
-        p <- ggplot(dt_cagr[years == input$year_cagr], aes(x=date, y=cagr, color=scheme)) +
-            geom_line()
-        ggplotly(p) %>% layout(legend = list(orientation = "h", y = -0.2))
-    })
-
     # NAV Plot
     output$plot_nav <- renderPlotly({
         p <- ggplot(navs(), aes(x=date, y=nav)) + geom_line()
@@ -133,15 +124,36 @@ function(input, output, session) {
         dt_cumr <- get_cumulative_returns(navs(), input$start_date)
         dt_cumr[, 'scheme' := input$mf_name]
 
-        dt_cumr1 <- get_cumulative_returns(navs_1(), input$start_date)
-        dt_cumr1[, 'scheme' := input$mf_name_1]
+        list_cumr <- list()
+        list_cumr <- c(list_cumr, list(dt_cumr))
+        for (x in input$mf_name_cumr){
+            scheme_code <- dt_mfs[schemeName == x]$schemeCode[1]
+            dt_cumr <- get_cumulative_returns(m_get_navs(scheme_code), input$start_date)
+            dt_cumr[, 'scheme' := x]
+            list_cumr <- append(list_cumr, list(dt_cumr))
+        }
 
-        dt_cumr <- rbindlist(list(dt_cumr, dt_cumr1))
-        p <- ggplot(dt_cumr, aes(x=date, y=cum_returns, color=scheme)) + geom_line() + theme(legend.position = "bottom")
+        dt_cumr_all <- rbindlist(list_cumr)
+        p <- ggplot(dt_cumr_all, aes(x=date, y=cum_returns, color=scheme)) + geom_line() + theme(legend.position = "bottom")
         if(input$cumr_log_y){
             p <- p + scale_y_log10()
         }
         ggplotly(p) %>% layout(legend = list(orientation = "h", y = -0.2))
     })
+
+    # Comparative Rolling Return
+    output$plot_comparative_roll <- renderPlotly({
+        dt_cagr <- cagrs()
+        dt_cagr[, scheme:= input$mf_name]
+
+        dt_cagr_1 <- cagrs_1()
+        dt_cagr_1[, scheme:= input$mf_name_comprr]
+        dt_cagr <- rbindlist(list(dt_cagr, dt_cagr_1))
+
+        p <- ggplot(dt_cagr[years == input$year_cagr], aes(x=date, y=cagr, color=scheme)) +
+            geom_line()
+        ggplotly(p) %>% layout(legend = list(orientation = "h", y = -0.2))
+    })
+
 }
 # [years == input$year_rolling]
