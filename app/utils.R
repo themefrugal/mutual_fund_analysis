@@ -1,3 +1,5 @@
+
+
 get_cagr <- function(dt_navs, num_years=1){
     dt_navs[, prev_nav := shift(nav, 365*num_years)]
     dt_cagr <- na.omit(dt_navs)

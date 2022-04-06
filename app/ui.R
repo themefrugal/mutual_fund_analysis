@@ -33,7 +33,7 @@ navbarPage(
                    selectizeInput("mf_name_cumr", "Add Fund:", choices=c(), multiple=TRUE),
                    plotlyOutput('plot_cumr'),
                    h3('Comparative Rolling Return:'),
-                   selectizeInput("mf_name_comprr", "Add Fund:", choices=c()),
+                   selectizeInput("mf_name_comprr", "Add Fund:", choices=c(), multiple=TRUE),
                    selectInput("year_cagr", "Year:", choices=c(1:10)),
                    plotlyOutput('plot_comparative_roll')
                 )

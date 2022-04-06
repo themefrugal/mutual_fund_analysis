@@ -26,37 +26,37 @@ if (read_from_internet){
     load('./mf_codes.RData')
 }
 
+get_scheme_code <- function(mf_name){
+    # Check this: There are multiple scheme codes for the same scheme name (in approx 20 instances)
+    # As of now, we are taking the occurrence of first such instance
+    scheme_code <- dt_mfs[schemeName == mf_name]$schemeCode[1]
+    return (scheme_code)
+}
+
 m_get_navs <- memoise(get_navs)
+m_get_cagr <- memoise(get_cagr)
+
 function(input, output, session) {
     updateSelectizeInput(session, "mf_name", choices = unique(dt_mfs$schemeName), server=TRUE)
     updateSelectizeInput(session, "mf_name_cumr", choices = unique(dt_mfs$schemeName), server=TRUE)
     updateSelectizeInput(session, "mf_name_comprr", choices = unique(dt_mfs$schemeName), server=TRUE)
 
     navs <- reactive({
-        # Check this: There are multiple scheme codes for the same scheme name (in approx 20 instances)
-        # As of now, we are taking the occurrence of first such instance
-        scheme_code <- dt_mfs[schemeName == input$mf_name]$schemeCode[1]
-        get_navs(scheme_code)
+        m_get_navs(get_scheme_code(input$mf_name))
     })
 
     navs_1 <- reactive({
-        # Check this: There are multiple scheme codes for the same scheme name (in approx 20 instances)
-        # As of now, we are taking the occurrence of first such instance
-        if (input$mf_name_comprr == ''){
-            dt_navs <- data.table()
-        } else {
-            scheme_code <- dt_mfs[schemeName == input$mf_name_comprr]$schemeCode[1]
-            dt_navs <- get_navs(scheme_code)
-        }
-        dt_navs
+        m_get_navs(get_scheme_code(input$mf_name_comprr))
     })
 
     cagrs <- reactive({
-        dt_cagrs <- rbindlist(lapply(c(1:10), function(x)get_cagr(navs(), x)))
+        dt_cagrs <- rbindlist(lapply(c(1:10),
+            function(x)get_cagr(m_get_navs(get_scheme_code(input$mf_name)), x)))
     })
 
     cagrs_1 <- reactive({
-        dt_cagrs <- rbindlist(lapply(c(1:10), function(x)get_cagr(navs_1(), x)))
+        dt_cagrs <- rbindlist(lapply(c(1:10),
+            function(x)get_cagr(m_get_navs(get_scheme_code(input$mf_name_comprr)), x)))
     })
 
     cagr_desc <- reactive({
@@ -64,7 +64,8 @@ function(input, output, session) {
     })
 
     output$table_nav <- DT::renderDataTable(
-        datatable(navs(), filter='top', options = list(pageLength = 10)) %>%
+        datatable(navs(),
+            filter='top', options = list(pageLength = 10)) %>%
             formatRound(columns=c('nav'), digits=3)
     )
 
@@ -146,11 +147,17 @@ function(input, output, session) {
         dt_cagr <- cagrs()
         dt_cagr[, scheme:= input$mf_name]
 
-        dt_cagr_1 <- cagrs_1()
-        dt_cagr_1[, scheme:= input$mf_name_comprr]
-        dt_cagr <- rbindlist(list(dt_cagr, dt_cagr_1))
+        list_cagr <- list()
+        list_cagr <- c(list_cagr, list(dt_cagr))
+        for (x in input$mf_name_comprr){
+            scheme_code <- dt_mfs[schemeName == x]$schemeCode[1]
+            dt_cagr <- rbindlist(lapply(c(1:10), function(x)m_get_cagr(m_get_navs(scheme_code), x)))
+            dt_cagr[, 'scheme' := x]
+            list_cagr <- append(list_cagr, list(dt_cagr))
+        }
+        dt_cagr_all <- rbindlist(list_cagr)
 
-        p <- ggplot(dt_cagr[years == input$year_cagr], aes(x=date, y=cagr, color=scheme)) +
+        p <- ggplot(dt_cagr_all[years == input$year_cagr], aes(x=date, y=cagr, color=scheme)) +
             geom_line()
         ggplotly(p) %>% layout(legend = list(orientation = "h", y = -0.2))
     })
