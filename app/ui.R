@@ -20,7 +20,7 @@ navbarPage(
                     DT::dataTableOutput('table_cagr_desc'),
                     h3('CAGR Frequency Analysis:'),
                     plotlyOutput('plot_density'),
-                    h3('Histogram Analysis:'),
+                    h3('CAGR Histogram Analysis:'),
                     selectInput("year_hist", "Year:", choices=c(1:10)),
                     plotlyOutput('plot_hist'),
                     h3('Rolling Returns Analysis:'),

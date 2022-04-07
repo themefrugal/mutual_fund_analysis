@@ -7,6 +7,7 @@ library(ggplot2)
 library(plotly)
 library(dplyr)
 library(memoise)
+library(purrr)
 
 # Read from the internet, once in a while - may be once in a quarter or when necessary
 # reading 'https://api.mfapi.in/mf' takes about 1 to 2 minutes
@@ -33,8 +34,9 @@ get_scheme_code <- function(mf_name){
     return (scheme_code)
 }
 
-m_get_navs <- memoise(get_navs)
-m_get_cagr <- memoise(get_cagr)
+mnav <- memoise(compose(get_navs, get_scheme_code))
+composed_cagr <- function(x, y) {compose(function(k)get_cagr(k, y), mnav)(x)}
+mcagr <- memoise(composed_cagr)
 
 function(input, output, session) {
     updateSelectizeInput(session, "mf_name", choices = unique(dt_mfs$schemeName), server=TRUE)
@@ -42,21 +44,11 @@ function(input, output, session) {
     updateSelectizeInput(session, "mf_name_comprr", choices = unique(dt_mfs$schemeName), server=TRUE)
 
     navs <- reactive({
-        m_get_navs(get_scheme_code(input$mf_name))
-    })
-
-    navs_1 <- reactive({
-        m_get_navs(get_scheme_code(input$mf_name_comprr))
+        mnav(input$mf_name)
     })
 
     cagrs <- reactive({
-        dt_cagrs <- rbindlist(lapply(c(1:10),
-            function(x)get_cagr(m_get_navs(get_scheme_code(input$mf_name)), x)))
-    })
-
-    cagrs_1 <- reactive({
-        dt_cagrs <- rbindlist(lapply(c(1:10),
-            function(x)get_cagr(m_get_navs(get_scheme_code(input$mf_name_comprr)), x)))
+        rbindlist(lapply(c(1:10),function(x) mcagr(input$mf_name, x)))
     })
 
     cagr_desc <- reactive({
@@ -127,10 +119,9 @@ function(input, output, session) {
 
         list_cumr <- list()
         list_cumr <- c(list_cumr, list(dt_cumr))
-        for (x in input$mf_name_cumr){
-            scheme_code <- dt_mfs[schemeName == x]$schemeCode[1]
-            dt_cumr <- get_cumulative_returns(m_get_navs(scheme_code), input$start_date)
-            dt_cumr[, 'scheme' := x]
+        for (mf_name in input$mf_name_cumr){
+            dt_cumr <- get_cumulative_returns(mnav(mf_name), input$start_date)
+            dt_cumr[, 'scheme' := mf_name]
             list_cumr <- append(list_cumr, list(dt_cumr))
         }
 
@@ -149,10 +140,9 @@ function(input, output, session) {
 
         list_cagr <- list()
         list_cagr <- c(list_cagr, list(dt_cagr))
-        for (x in input$mf_name_comprr){
-            scheme_code <- dt_mfs[schemeName == x]$schemeCode[1]
-            dt_cagr <- rbindlist(lapply(c(1:10), function(x)m_get_cagr(m_get_navs(scheme_code), x)))
-            dt_cagr[, 'scheme' := x]
+        for (mf_name in input$mf_name_comprr){
+            dt_cagr <- rbindlist(lapply(c(1:10), function(x)mcagr(mf_name, x)))
+            dt_cagr[, 'scheme' := mf_name]
             list_cagr <- append(list_cagr, list(dt_cagr))
         }
         dt_cagr_all <- rbindlist(list_cagr)
@@ -163,4 +153,3 @@ function(input, output, session) {
     })
 
 }
-# [years == input$year_rolling]
