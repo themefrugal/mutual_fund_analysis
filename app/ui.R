@@ -5,6 +5,10 @@ navbarPage(
     tabPanel('Dashboard',
         fluidPage(
             sidebarPanel(
+                tags$style(type="text/css",
+                    ".shiny-output-error { visibility: hidden; }",
+                    ".shiny-output-error:before { visibility: hidden; }"
+                ),
                 selectizeInput("mf_name", "Mutual Fund:", choices=c())
             ),
             mainPanel(

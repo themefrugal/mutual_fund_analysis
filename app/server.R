@@ -39,7 +39,7 @@ composed_cagr <- function(x, y) {compose(function(k)get_cagr(k, y), mnav)(x)}
 mcagr <- memoise(composed_cagr)
 
 function(input, output, session) {
-    updateSelectizeInput(session, "mf_name", choices = unique(dt_mfs$schemeName), server=TRUE)
+    updateSelectizeInput(session, "mf_name", choices = unique(dt_mfs$schemeName), server=TRUE, selected="")
     updateSelectizeInput(session, "mf_name_cumr", choices = unique(dt_mfs$schemeName), server=TRUE)
     updateSelectizeInput(session, "mf_name_comprr", choices = unique(dt_mfs$schemeName), server=TRUE)
 
