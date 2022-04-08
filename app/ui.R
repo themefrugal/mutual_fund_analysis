@@ -14,12 +14,12 @@ navbarPage(
             mainPanel(
                 tabsetPanel(
                     tabPanel('NAV',
-                        h3('NAV:'),
+                        h4('NAV:'),
                         fluidRow(column(6, DT::dataTableOutput('table_nav'))),
-                        h3('NAV Charting:'),
+                        h4('NAV Charting:'),
                         checkboxInput('nav_log_y', 'Log Y-Axis', TRUE),
                         plotlyOutput('plot_nav'),
-                        h3('Cumulative Return:'),
+                        h4('Cumulative Return:'),
                         fluidRow(
                             column(6, dateInput('start_date', 'Plot From:', value='2015-01-01')),
                             column(6, checkboxInput('cumr_log_y', 'Log Y-Axis', TRUE))
@@ -28,23 +28,23 @@ navbarPage(
                        plotlyOutput('plot_cumr')
                     ),
                     tabPanel('CAGR',
-                        h3('CAGR:'),
+                        h4('CAGR:'),
                         fluidRow(column(6, DT::dataTableOutput('table_cagr'))),
-                        h3('CAGR Summary:'),
-                        DT::dataTableOutput('table_cagr_desc'),
-                        h3('CAGR Frequency Analysis:'),
+                        h4('CAGR Summary:'),
+                        fluidRow(column(12, DT::dataTableOutput('table_cagr_desc'))),
+                        h4('CAGR Frequency Analysis:'),
                         plotlyOutput('plot_density'),
-                        h3('CAGR Histogram Analysis:'),
+                        h4('CAGR Histogram Analysis:'),
                         selectInput("year_hist", "Year:", choices=c(1:10)),
                         plotlyOutput('plot_hist')
                     ),
                     tabPanel('Rolling Returns',
-                        h3('Rolling Returns Analysis:'),
+                        h4('Rolling Returns Analysis:'),
                         plotlyOutput('plot_rolling'),
-                       h3('Comparative Rolling Return:'),
-                       selectizeInput("mf_name_comprr", "Add Fund:", choices=c(), multiple=TRUE),
-                       selectInput("year_cagr", "Year:", choices=c(1:10)),
-                       plotlyOutput('plot_comparative_roll')
+                        h4('Comparative Rolling Return:'),
+                        selectizeInput("mf_name_comprr", "Add Fund:", choices=c(), multiple=TRUE),
+                        selectInput("year_cagr", "Year:", choices=c(1:10)),
+                        plotlyOutput('plot_comparative_roll')
                     )
                 )
             )
