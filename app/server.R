@@ -55,6 +55,12 @@ function(input, output, session) {
         dt_cagr_desc <- get_cagr_desc(cagrs())
     })
 
+    cagr_desc_long <- reactive({
+        dt_cagr_long <- melt(cagr_desc(), id.vars=c('years'), measure.vars=c('min', 'max'))
+        dt_cagr_long['years'] <- as.numeric(dt_cagr_long['years'])
+        dt_cagr_long
+    })
+
     output$table_nav <- DT::renderDataTable(
         datatable(navs(),
             filter='top', options = list(pageLength = 10)) %>%
@@ -70,6 +76,14 @@ function(input, output, session) {
         datatable(cagr_desc(), filter='top', options = list(pageLength = 10)) %>%
             formatRound(columns=c('min', 'p25', 'mean', 'median', 'p75', 'max'), digits=3)
     )
+
+    output$plot_eq_yld_curve <- renderPlotly({
+        p <- ggplot(cagr_desc_long(),
+                    aes(x=years, y=value, color=variable)) +
+                    geom_line() +
+                    theme_minimal()
+        ggplotly(p)
+    })
 
     output$plot_density <- renderPlotly({
         p <- ggplot(cagrs(), aes(x=cagr, color=years)) + geom_density() +
