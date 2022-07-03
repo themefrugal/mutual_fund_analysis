@@ -34,6 +34,7 @@ navbarPage(
                         fluidRow(column(12, DT::dataTableOutput('table_cagr_desc'))),
                         h4('Min and Max across Years:'),
                         plotlyOutput('plot_eq_yld_curve'),
+                        fluidRow(column(12, tableOutput('table_cagr_desc_long'))),
                         h4('CAGR Frequency Analysis:'),
                         plotlyOutput('plot_density'),
                         h4('CAGR Histogram Analysis:'),

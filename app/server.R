@@ -77,6 +77,10 @@ function(input, output, session) {
             formatRound(columns=c('min', 'p25', 'mean', 'median', 'p75', 'max'), digits=3)
     )
 
+    output$table_cagr_desc_long <- renderTable(
+        cagr_desc_long()
+    )
+
     output$plot_eq_yld_curve <- renderPlotly({
         p <- ggplot(cagr_desc_long(),
                     aes(x=years, y=value, color=variable)) +
