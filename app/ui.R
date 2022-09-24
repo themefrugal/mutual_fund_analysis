@@ -1,4 +1,5 @@
 # To do: SIP and SWP analysis in this app.
+# Also build a python streamlit version of this app
 library(shiny)
 library(plotly)
 navbarPage(
