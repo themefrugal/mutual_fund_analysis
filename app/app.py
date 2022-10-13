@@ -14,5 +14,6 @@ import plotly_express as px
 # 4. SIP Analysis
 # 5. STP Analysis
 # 6. SWP Analysis
+# 7. Comparision of SIPs and SWPs across two or more mutual funds
 
 st.plotly_chart(fig_1)
