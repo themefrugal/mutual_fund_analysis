@@ -49,8 +49,12 @@ navbarPage(
                         h4('Comparative Rolling Return:'),
                         selectizeInput("mf_name_comprr", "Add Fund:", choices=c(), multiple=TRUE),
                         selectInput("year_cagr", "Year:", choices=c(1:10)),
-                        plotlyOutput('plot_comparative_roll')
-                    )
+                        plotlyOutput('plot_comparative_roll'),
+                        hr(),
+                        textOutput('text_growth'),
+                        checkboxInput('growth_log_y', 'Log Y-Axis', TRUE),
+                        plotlyOutput('plot_comparative_growth')
+                   )
                 )
             )
         )

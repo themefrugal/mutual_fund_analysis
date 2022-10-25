@@ -11,6 +11,17 @@ get_cagr <- function(dt_navs, num_years=1){
     return (dt_cagr)
 }
 
+get_growth <- function(dt_navs, num_years=1){
+    dt_navs[, prev_nav := shift(nav, 365*num_years)]
+    dt_growth <- na.omit(dt_navs)
+    dt_growth[, returns := nav/prev_nav - 1]
+    dt_growth[, end_value := 1000 * (1 + returns)]
+    dt_growth[, years := as.factor(num_years)]
+    dt_growth <- dt_growth[, c('date', 'years', 'end_value')]
+    dt_navs[, prev_nav := NULL]     # Remove the extra column added in dt_navs
+    return (dt_growth)
+}
+
 get_cagr_desc <- function(dt_cagr){
     dt_desc <- dt_cagr[, list(
             min=min(cagr, na.rm=TRUE),

@@ -36,7 +36,9 @@ get_scheme_code <- function(mf_name){
 
 mnav <- memoise(compose(get_navs, get_scheme_code))
 composed_cagr <- function(x, y) {compose(function(k)get_cagr(k, y), mnav)(x)}
+composed_growth <- function(x, y) {compose(function(k)get_growth(k, y), mnav)(x)}
 mcagr <- memoise(composed_cagr)
+mgrowth <- memoise(composed_growth)
 
 function(input, output, session) {
     updateSelectizeInput(session, "mf_name", choices = unique(dt_mfs$schemeName), server=TRUE, selected="")
@@ -49,6 +51,10 @@ function(input, output, session) {
 
     cagrs <- reactive({
         rbindlist(lapply(c(1:10),function(x) mcagr(input$mf_name, x)))
+    })
+
+    growths <- reactive({
+        rbindlist(lapply(c(1:10),function(x) mgrowth(input$mf_name, x)))
     })
 
     cagr_desc <- reactive({
@@ -167,6 +173,34 @@ function(input, output, session) {
 
         p <- ggplot(dt_cagr_all[years == input$year_cagr], aes(x=date, y=cagr, color=scheme)) +
             geom_line()
+        ggplotly(p) %>% layout(legend = list(orientation = "h", y = -0.2))
+    })
+
+    output$text_growth <- renderText({
+        paste0('Value of Rs 1000, having invested for a period of ',
+            input$year_cagr,
+            ' years, as taken out on various dates.')
+    })
+
+    # Comparative Growth
+    output$plot_comparative_growth <- renderPlotly({
+        dt_growth <- growths()
+        dt_growth[, scheme:= input$mf_name]
+
+        list_growth <- list()
+        list_growth <- c(list_growth, list(dt_growth))
+        for (mf_name in input$mf_name_comprr){
+            dt_growth <- rbindlist(lapply(c(1:10), function(x)mgrowth(mf_name, x)))
+            dt_growth[, 'scheme' := mf_name]
+            list_growth <- append(list_growth, list(dt_growth))
+        }
+        dt_growth_all <- rbindlist(list_growth)
+
+        p <- ggplot(dt_growth_all[years == input$year_cagr], aes(x=date, y=end_value, color=scheme)) +
+            geom_line()
+        if(input$growth_log_y){
+            p <- p + scale_y_log10()
+        }
         ggplotly(p) %>% layout(legend = list(orientation = "h", y = -0.2))
     })
 
