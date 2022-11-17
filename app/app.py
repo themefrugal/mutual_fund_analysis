@@ -88,3 +88,4 @@ fig2 = px.line(df_cagrs, x='date', y='cagr', color='years')
 st.write('CAGR Chart - ' + sel_name)
 st.plotly_chart(fig2)
 
+# Next to do: Comparisons with other mutual funds
