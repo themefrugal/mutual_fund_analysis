@@ -6,7 +6,7 @@ import urllib.request, json
 import plotly_express as px
 import plotly.figure_factory as ff
 import streamlit as st
-
+import numpy as np
 
 @st.cache
 def get_scheme_codes():
@@ -15,22 +15,7 @@ def get_scheme_codes():
     df_mfs = pd.DataFrame(data)
     return df_mfs
 
-@st.cache
-def get_nav(scheme_code = '122639'):
-    # scheme_code = '122639'
-    mf_url = 'https://api.mfapi.in/mf/' + scheme_code
-    with urllib.request.urlopen(mf_url) as url:
-        data = json.load(url)
-
-    df_navs = pd.DataFrame(data['data'])
-    df_navs['date'] = pd.to_datetime(df_navs.date, format='%d-%m-%Y')
-    df_navs['nav'] = df_navs['nav'].astype(float)
-    df_navs = df_navs.sort_values(['date']).set_index(['date'])
-    df_dates = pd.DataFrame(pd.date_range(start=df_navs.index.min(), end=df_navs.index.max()), columns=['date']).set_index(['date'])
-    df_navs = df_navs.join(df_dates, how='outer').ffill().reset_index()
-    return df_navs
-
-@st.cache
+@st.cache(allow_output_mutation=True)
 def get_nav(scheme_code = '122639'):
     # scheme_code = '122639'
     mf_url = 'https://api.mfapi.in/mf/' + scheme_code
@@ -69,12 +54,13 @@ df_mfs = get_scheme_codes()
 
 sel_name = st.sidebar.selectbox("Mutual Fund:", df_mfs.schemeName.unique())
 st.write(sel_name)
-st.write(df_mfs[df_mfs['schemeName'] == sel_name].schemeCode.to_list()[0])
+# st.write(df_mfs[df_mfs['schemeName'] == sel_name].schemeCode.to_list()[0])
 sel_code = df_mfs[df_mfs['schemeName'] == sel_name].schemeCode.to_list()[0]
 
 df_navs = get_nav(str(sel_code))
 fig1 = px.line(df_navs, x = 'date', y='nav', log_y=True)
-st.write('NAV Chart - ' + sel_name)
+sub_name = ": " + sel_name if False else ""
+st.write('NAV Chart' + sub_name)
 st.plotly_chart(fig1)
 
 years = [x + 1 for x in range(9)]
@@ -85,7 +71,38 @@ for y in years:
 df_cagrs = pd.concat(list_cagr)
 
 fig2 = px.line(df_cagrs, x='date', y='cagr', color='years')
-st.write('CAGR Chart - ' + sel_name)
+st.write('CAGR Chart' + sub_name)
 st.plotly_chart(fig2)
 
-# Next to do: Comparisons with other mutual funds
+dfx = df_cagrs[['date', 'years', 'cagr']].groupby('years').describe().reset_index()
+dfx.columns = [[a for (a, b) in dfx.columns][0]] + [a for a in dfx.columns.droplevel()][1:]
+st.write('CAGR - Min, Median and Max')
+st.write(dfx)
+
+# Comparisons with other mutual funds
+st.write('Comparative Chart')
+names_comp = st.multiselect("Mutual Fund:", df_mfs.schemeName.unique())
+all_names = [sel_name] + names_comp
+codes_comp = [df_mfs[df_mfs['schemeName'] == x].schemeCode.to_list()[0] for x in all_names]
+
+list_navs = []
+for name in all_names:
+    code = df_mfs[df_mfs['schemeName'] == name].schemeCode.to_list()[0]
+    df_nav_comp = get_nav(str(code))
+    df_nav_comp = df_nav_comp.set_index('date')
+    df_nav_comp = df_nav_comp.rename(columns={'nav': name})
+    list_navs.append(df_nav_comp)
+
+df_nav_all = pd.concat(list_navs, axis=1).dropna()
+df_navs_date = df_nav_all.reset_index()
+min_date = df_navs_date['date'].min()
+max_date = df_navs_date['date'].max()
+from_date = st.date_input('From Date:', value=min_date, min_value=min_date, max_value=max_date)
+df_nav_all = df_navs_date[df_navs_date['date'] >= np.datetime64(from_date)].set_index('date')
+
+df_rebased = df_nav_all.div(df_nav_all.iloc[0]).reset_index()
+df_rebased_long = pd.melt(df_rebased, id_vars='date', value_vars=all_names, var_name='mf', value_name='nav')
+
+fig3 = px.line(df_rebased_long, x='date', y='nav', log_y=True, color='mf')
+fig3.update_layout(legend=dict(yanchor="bottom", y=0, xanchor="left", x=0.5))
+st.plotly_chart(fig3)
