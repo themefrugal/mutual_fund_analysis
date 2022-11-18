@@ -1,13 +1,18 @@
 source('./utils.R')
-library(DT)
-library(shiny)
-library(rjson)
-library(data.table)
-library(ggplot2)
-library(plotly)
-library(dplyr)
-library(memoise)
-library(purrr)
+
+# https://statsandr.com/blog/an-efficient-way-to-install-and-load-r-packages/
+
+# Package names
+packages <- c("DT", "shiny", "rjson", "data.table", "ggplot2", "plotly", "dplyr", "memoise", "purrr")
+
+# Install packages not yet installed
+installed_packages <- packages %in% rownames(installed.packages())
+if (any(installed_packages == FALSE)) {
+  install.packages(packages[!installed_packages])
+}
+
+# Packages loading
+invisible(lapply(packages, library, character.only = TRUE))
 
 # Read from the internet, once in a while - may be once in a quarter or when necessary
 # reading 'https://api.mfapi.in/mf' takes about 1 to 2 minutes
