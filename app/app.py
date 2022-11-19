@@ -86,14 +86,28 @@ all_names = [sel_name] + names_comp
 codes_comp = [df_mfs[df_mfs['schemeName'] == x].schemeCode.to_list()[0] for x in all_names]
 
 list_navs = []
+list_cagrs = []
 for name in all_names:
     code = df_mfs[df_mfs['schemeName'] == name].schemeCode.to_list()[0]
     df_nav_comp = get_nav(str(code))
+    years = [x for x in range(1, 11)]
+    list_cagr = []
+    for y in years:
+        df_cagr = get_cagr(df_nav_comp, y)
+        list_cagr.append(df_cagr)
+    df_cagrs_comp = pd.concat(list_cagr)
+
     df_nav_comp = df_nav_comp.set_index('date')
     df_nav_comp = df_nav_comp.rename(columns={'nav': name})
     list_navs.append(df_nav_comp)
 
+    df_cagrs_comp = df_cagrs_comp.set_index(['date', 'years'])
+    df_cagrs_comp = df_cagrs_comp.rename(columns={'cagr': name})
+    list_cagrs.append(df_cagrs_comp)
+
 df_nav_all = pd.concat(list_navs, axis=1).dropna()
+df_cagr_all = pd.concat(list_cagrs, axis=1).dropna()
+
 df_navs_date = df_nav_all.reset_index()
 min_date = df_navs_date['date'].min()
 max_date = df_navs_date['date'].max()
@@ -106,3 +120,13 @@ df_rebased_long = pd.melt(df_rebased, id_vars='date', value_vars=all_names, var_
 fig3 = px.line(df_rebased_long, x='date', y='nav', log_y=True, color='mf')
 fig3.update_layout(legend=dict(yanchor="bottom", y=0, xanchor="left", x=0.5))
 st.plotly_chart(fig3)
+
+df_cagr_wide = df_cagr_all.reset_index()
+df_cagr_long = pd.melt(df_cagr_wide, id_vars=['date', 'years'], value_vars=all_names, var_name='mf', value_name='cagr')
+
+st.write("Rolling CAGR Comparison")
+sel_year = st.number_input('Investment Duration (Number of Years):', value=1, min_value=1, max_value=10, step=1)
+df_cagr_plot = df_cagr_long[df_cagr_long['years'] == sel_year]
+fig4 = px.line(df_cagr_plot, x='date', y='cagr', color='mf')
+fig4.update_layout(legend=dict(yanchor="bottom", y=-0.5, xanchor="left", x=0))
+st.plotly_chart(fig4)
