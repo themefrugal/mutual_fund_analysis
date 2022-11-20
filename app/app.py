@@ -130,3 +130,5 @@ df_cagr_plot = df_cagr_long[df_cagr_long['years'] == sel_year]
 fig4 = px.line(df_cagr_plot, x='date', y='cagr', color='mf')
 fig4.update_layout(legend=dict(yanchor="bottom", y=-0.5, xanchor="left", x=0))
 st.plotly_chart(fig4)
+
+# Drawdown Chart
