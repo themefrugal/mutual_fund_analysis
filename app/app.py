@@ -54,81 +54,85 @@ df_mfs = get_scheme_codes()
 
 sel_name = st.sidebar.selectbox("Mutual Fund:", df_mfs.schemeName.unique())
 st.write(sel_name)
+tab_nav, tab_cagr, tab_comp, tab_dd  = st.tabs(["NAV", "CAGR", "Comparative Analysis", "Draw Down"])
 # st.write(df_mfs[df_mfs['schemeName'] == sel_name].schemeCode.to_list()[0])
 sel_code = df_mfs[df_mfs['schemeName'] == sel_name].schemeCode.to_list()[0]
 
 df_navs = get_nav(str(sel_code))
-fig1 = px.line(df_navs, x = 'date', y='nav', log_y=True)
-sub_name = ": " + sel_name if False else ""
-st.write('NAV Chart' + sub_name)
-st.plotly_chart(fig1)
+with tab_nav:
+    fig1 = px.line(df_navs, x='date', y='nav', log_y=True)
+    sub_name = ": " + sel_name if False else ""
+    st.write('NAV Chart' + sub_name)
+    st.plotly_chart(fig1)
 
-years = [x + 1 for x in range(9)]
-list_cagr = []
-for y in years:
-    df_cagr = get_cagr(df_navs, y)
-    list_cagr.append(df_cagr)
-df_cagrs = pd.concat(list_cagr)
-
-fig2 = px.line(df_cagrs, x='date', y='cagr', color='years')
-st.write('CAGR Chart' + sub_name)
-st.plotly_chart(fig2)
-
-dfx = df_cagrs[['date', 'years', 'cagr']].groupby('years').describe().reset_index()
-dfx.columns = [[a for (a, b) in dfx.columns][0]] + [a for a in dfx.columns.droplevel()][1:]
-st.write('CAGR - Min, Median and Max')
-st.write(dfx)
-
-# Comparisons with other mutual funds
-st.write('Comparative Chart')
-names_comp = st.multiselect("Mutual Fund:", df_mfs.schemeName.unique())
-all_names = [sel_name] + names_comp
-codes_comp = [df_mfs[df_mfs['schemeName'] == x].schemeCode.to_list()[0] for x in all_names]
-
-list_navs = []
-list_cagrs = []
-for name in all_names:
-    code = df_mfs[df_mfs['schemeName'] == name].schemeCode.to_list()[0]
-    df_nav_comp = get_nav(str(code))
-    years = [x for x in range(1, 11)]
+with tab_cagr:
+    years = [x + 1 for x in range(9)]
     list_cagr = []
     for y in years:
-        df_cagr = get_cagr(df_nav_comp, y)
+        df_cagr = get_cagr(df_navs, y)
         list_cagr.append(df_cagr)
-    df_cagrs_comp = pd.concat(list_cagr)
+    df_cagrs = pd.concat(list_cagr)
+    st.write('CAGR Chart' + sub_name)
+    fig2 = px.line(df_cagrs, x='date', y='cagr', color='years')
+    st.plotly_chart(fig2)
+    dfx = df_cagrs[['date', 'years', 'cagr']].groupby('years').describe().reset_index()
+    dfx.columns = [[a for (a, b) in dfx.columns][0]] + [a for a in dfx.columns.droplevel()][1:]
+    st.write('CAGR - Min, Median and Max')
+    st.write(dfx)
 
-    df_nav_comp = df_nav_comp.set_index('date')
-    df_nav_comp = df_nav_comp.rename(columns={'nav': name})
-    list_navs.append(df_nav_comp)
+with tab_comp:
+    # Comparisons with other mutual funds
+    names_comp = st.multiselect("Mutual Fund:", df_mfs.schemeName.unique())
+    all_names = [sel_name] + names_comp
+    codes_comp = [df_mfs[df_mfs['schemeName'] == x].schemeCode.to_list()[0] for x in all_names]
 
-    df_cagrs_comp = df_cagrs_comp.set_index(['date', 'years'])
-    df_cagrs_comp = df_cagrs_comp.rename(columns={'cagr': name})
-    list_cagrs.append(df_cagrs_comp)
+    list_navs = []
+    list_cagrs = []
+    for name in all_names:
+        code = df_mfs[df_mfs['schemeName'] == name].schemeCode.to_list()[0]
+        df_nav_comp = get_nav(str(code))
+        years = [x for x in range(1, 11)]
+        list_cagr = []
+        for y in years:
+            df_cagr = get_cagr(df_nav_comp, y)
+            list_cagr.append(df_cagr)
+        df_cagrs_comp = pd.concat(list_cagr)
 
-df_nav_all = pd.concat(list_navs, axis=1).dropna()
-df_cagr_all = pd.concat(list_cagrs, axis=1).dropna()
+        df_nav_comp = df_nav_comp.set_index('date')
+        df_nav_comp = df_nav_comp.rename(columns={'nav': name})
+        list_navs.append(df_nav_comp)
 
-df_navs_date = df_nav_all.reset_index()
-min_date = df_navs_date['date'].min()
-max_date = df_navs_date['date'].max()
-from_date = st.date_input('From Date:', value=min_date, min_value=min_date, max_value=max_date)
-df_nav_all = df_navs_date[df_navs_date['date'] >= np.datetime64(from_date)].set_index('date')
+        df_cagrs_comp = df_cagrs_comp.set_index(['date', 'years'])
+        df_cagrs_comp = df_cagrs_comp.rename(columns={'cagr': name})
+        list_cagrs.append(df_cagrs_comp)
 
-df_rebased = df_nav_all.div(df_nav_all.iloc[0]).reset_index()
-df_rebased_long = pd.melt(df_rebased, id_vars='date', value_vars=all_names, var_name='mf', value_name='nav')
+    df_nav_all = pd.concat(list_navs, axis=1).dropna()
+    df_cagr_all = pd.concat(list_cagrs, axis=1).dropna()
 
-fig3 = px.line(df_rebased_long, x='date', y='nav', log_y=True, color='mf')
-fig3.update_layout(legend=dict(yanchor="bottom", y=0, xanchor="left", x=0.5))
-st.plotly_chart(fig3)
+    df_navs_date = df_nav_all.reset_index()
+    min_date = df_navs_date['date'].min()
+    max_date = df_navs_date['date'].max()
+    st.write('Comparative Chart')
+    from_date = st.date_input('From Date:', value=min_date, min_value=min_date, max_value=max_date)
+    df_nav_all = df_navs_date[df_navs_date['date'] >= np.datetime64(from_date)].set_index('date')
 
-df_cagr_wide = df_cagr_all.reset_index()
-df_cagr_long = pd.melt(df_cagr_wide, id_vars=['date', 'years'], value_vars=all_names, var_name='mf', value_name='cagr')
+    df_rebased = df_nav_all.div(df_nav_all.iloc[0]).reset_index()
+    df_rebased_long = pd.melt(df_rebased, id_vars='date', value_vars=all_names, var_name='mf', value_name='nav')
 
-st.write("Rolling CAGR Comparison")
-sel_year = st.number_input('Investment Duration (Number of Years):', value=1, min_value=1, max_value=10, step=1)
-df_cagr_plot = df_cagr_long[df_cagr_long['years'] == sel_year]
-fig4 = px.line(df_cagr_plot, x='date', y='cagr', color='mf')
-fig4.update_layout(legend=dict(yanchor="bottom", y=-0.5, xanchor="left", x=0))
-st.plotly_chart(fig4)
+    fig3 = px.line(df_rebased_long, x='date', y='nav', log_y=True, color='mf')
+    fig3.update_layout(legend=dict(yanchor="bottom", y=0, xanchor="left", x=0.5))
+    st.plotly_chart(fig3)
+
+    df_cagr_wide = df_cagr_all.reset_index()
+    df_cagr_long = pd.melt(df_cagr_wide, id_vars=['date', 'years'], value_vars=all_names, var_name='mf', value_name='cagr')
+
+    st.write("Rolling CAGR Comparison")
+    sel_year = st.number_input('Investment Duration (Number of Years):', value=1, min_value=1, max_value=10, step=1)
+    df_cagr_plot = df_cagr_long[df_cagr_long['years'] == sel_year]
+    fig4 = px.line(df_cagr_plot, x='date', y='cagr', color='mf')
+    fig4.update_layout(legend=dict(yanchor="bottom", y=-0.5, xanchor="left", x=0))
+    st.plotly_chart(fig4)
 
 # Drawdown Chart
+with tab_dd:
+    st.write('Draw Down Chart')
