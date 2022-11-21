@@ -54,7 +54,7 @@ df_mfs = get_scheme_codes()
 
 sel_name = st.sidebar.selectbox("Mutual Fund:", df_mfs.schemeName.unique())
 st.write(sel_name)
-tab_nav, tab_cagr, tab_comp, tab_dd  = st.tabs(["NAV", "CAGR", "Comparative Analysis", "Draw Down"])
+tab_nav, tab_cagr, tab_comp = st.tabs(["NAV", "CAGR", "Comparative Analysis"])
 # st.write(df_mfs[df_mfs['schemeName'] == sel_name].schemeCode.to_list()[0])
 sel_code = df_mfs[df_mfs['schemeName'] == sel_name].schemeCode.to_list()[0]
 
@@ -66,7 +66,7 @@ with tab_nav:
     st.plotly_chart(fig1)
 
 with tab_cagr:
-    years = [x + 1 for x in range(9)]
+    years = [x for x in range(1, 11)]
     list_cagr = []
     for y in years:
         df_cagr = get_cagr(df_navs, y)
@@ -82,7 +82,7 @@ with tab_cagr:
 
 with tab_comp:
     # Comparisons with other mutual funds
-    names_comp = st.multiselect("Mutual Fund:", df_mfs.schemeName.unique())
+    names_comp = st.multiselect("Select Mutual Funds for Comparison:", df_mfs.schemeName.unique())
     all_names = [sel_name] + names_comp
     codes_comp = [df_mfs[df_mfs['schemeName'] == x].schemeCode.to_list()[0] for x in all_names]
 
@@ -112,7 +112,7 @@ with tab_comp:
     df_navs_date = df_nav_all.reset_index()
     min_date = df_navs_date['date'].min()
     max_date = df_navs_date['date'].max()
-    st.write('Comparative Chart')
+    st.write('Cumulative Returns Comparisons')
     from_date = st.date_input('From Date:', value=min_date, min_value=min_date, max_value=max_date)
     df_nav_all = df_navs_date[df_navs_date['date'] >= np.datetime64(from_date)].set_index('date')
 
@@ -133,6 +133,9 @@ with tab_comp:
     fig4.update_layout(legend=dict(yanchor="bottom", y=-0.5, xanchor="left", x=0))
     st.plotly_chart(fig4)
 
-# Drawdown Chart
-with tab_dd:
-    st.write('Draw Down Chart')
+    st.write('Draw Down Comparison')
+    df_rebased_long['cum_max'] = df_rebased_long.groupby('mf').nav.cummax()
+    df_rebased_long['draw_down'] = (df_rebased_long['nav'] - df_rebased_long['cum_max']) / df_rebased_long['cum_max']
+    fig5 = px.line(df_rebased_long, x="date", y="draw_down", color="mf")
+    fig5.update_layout(legend=dict(yanchor="bottom", y=-0.5, xanchor="left", x=0))
+    st.plotly_chart(fig5)
