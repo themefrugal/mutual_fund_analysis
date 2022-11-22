@@ -7,6 +7,7 @@ import plotly_express as px
 import plotly.figure_factory as ff
 import streamlit as st
 import numpy as np
+from pyxirr import xirr
 
 @st.cache
 def get_scheme_codes():
@@ -54,7 +55,7 @@ df_mfs = get_scheme_codes()
 
 sel_name = st.sidebar.selectbox("Mutual Fund:", df_mfs.schemeName.unique())
 st.write(sel_name)
-tab_nav, tab_cagr, tab_comp = st.tabs(["NAV", "CAGR", "Comparative Analysis"])
+tab_nav, tab_cagr, tab_comp, tab_sip = st.tabs(["NAV", "CAGR", "Comparative Analysis", "SIP"])
 # st.write(df_mfs[df_mfs['schemeName'] == sel_name].schemeCode.to_list()[0])
 sel_code = df_mfs[df_mfs['schemeName'] == sel_name].schemeCode.to_list()[0]
 
@@ -139,3 +140,23 @@ with tab_comp:
     fig5 = px.line(df_rebased_long, x="date", y="draw_down", color="mf")
     fig5.update_layout(legend=dict(yanchor="bottom", y=-0.5, xanchor="left", x=0))
     st.plotly_chart(fig5)
+
+with tab_sip:
+    start_date = pd.to_datetime('2006-05-01')
+    end_date = pd.to_datetime('2020-04-01')
+    df_dates = pd.DataFrame(pd.date_range(start=start_date, end=end_date, freq='M'))
+    df_dates.columns = ['date']
+
+    df_cf = df_navs.merge(df_dates, on='date')
+    df_cf['amount'] = 1000
+    df_cf['units'] = df_cf['amount'] / df_cf['nav']
+
+    df_investment = df_cf[['date', 'amount']]
+    df_redemption = pd.DataFrame(
+        [{'date': df_cf.iloc[-1:].date.values[0],
+          'amount': -df_cf['units'].sum() * df_cf.iloc[-1:].nav.values[0]}])
+    df_irr = pd.concat([df_investment, df_redemption]).reset_index(drop=True)
+
+    xirr_value = xirr(df_irr[['date', 'amount']]) * 100
+    st.write(xirr_value)
+    st.write(df_irr)
