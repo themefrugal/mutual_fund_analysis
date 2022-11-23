@@ -8,6 +8,7 @@ import plotly.figure_factory as ff
 import streamlit as st
 import numpy as np
 from pyxirr import xirr
+import datetime
 
 @st.cache
 def get_scheme_codes():
@@ -142,14 +143,23 @@ with tab_comp:
     st.plotly_chart(fig5)
 
 with tab_sip:
-    start_date = pd.to_datetime('2006-05-01')
-    end_date = pd.to_datetime('2020-04-01')
+    #start_date = pd.to_datetime('2006-05-01')
+    #end_date = pd.to_datetime('2020-04-01')
+    col1, col2 = st.columns(2)
+    with col1:
+        start_date = st.date_input('Start Date:', datetime.date(2006, 5, 1))
+    with col2:
+        end_date = st.date_input('End Date:', datetime.date(2022, 4, 1))
+
     df_dates = pd.DataFrame(pd.date_range(start=start_date, end=end_date, freq='M'))
     df_dates.columns = ['date']
 
     df_cf = df_navs.merge(df_dates, on='date')
     df_cf['amount'] = 1000
     df_cf['units'] = df_cf['amount'] / df_cf['nav']
+    df_cf['cum_units'] = df_cf['units'].cumsum()
+    df_cf['inv_value'] = df_cf['cum_units'] * df_cf['nav']
+    df_cf['cum_amount'] = df_cf['amount'].cumsum()
 
     df_investment = df_cf[['date', 'amount']]
     df_redemption = pd.DataFrame(
@@ -158,5 +168,16 @@ with tab_sip:
     df_irr = pd.concat([df_investment, df_redemption]).reset_index(drop=True)
 
     xirr_value = xirr(df_irr[['date', 'amount']]) * 100
+    st.write("XIRR")
     st.write(xirr_value)
+
+    df_daily_dates = pd.DataFrame(
+        pd.date_range(start=df_cf['date'].min(), end=df_cf['date'].max(), freq='D'))
+    df_daily_dates.columns = ['date']
+    df_cfs = df_cf.merge(df_daily_dates, on='date', how='right').sort_values(['date'])
+    df_cfs = df_cfs.ffill()
+    df_cf_long = pd.melt(df_cfs[['date', 'cum_amount', 'inv_value']], id_vars=['date'],
+                         value_vars=['cum_amount', 'inv_value'])
+    fig6 = px.line(df_cf_long, x='date', y='value', color='variable', log_y=True)
+    st.plotly_chart(fig6)
     st.write(df_irr)
