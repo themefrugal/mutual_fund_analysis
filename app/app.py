@@ -158,8 +158,8 @@ with tab_sip:
     df_cf['amount'] = 1000
     df_cf['units'] = df_cf['amount'] / df_cf['nav']
     df_cf['cum_units'] = df_cf['units'].cumsum()
-    df_cf['inv_value'] = df_cf['cum_units'] * df_cf['nav']
-    df_cf['cum_amount'] = df_cf['amount'].cumsum()
+    df_cf['cur_value'] = df_cf['cum_units'] * df_cf['nav']
+    df_cf['inv_amount'] = df_cf['amount'].cumsum()
 
     df_investment = df_cf[['date', 'amount']]
     df_redemption = pd.DataFrame(
@@ -168,16 +168,28 @@ with tab_sip:
     df_irr = pd.concat([df_investment, df_redemption]).reset_index(drop=True)
 
     xirr_value = xirr(df_irr[['date', 'amount']]) * 100
-    st.write("XIRR")
-    st.write(xirr_value)
+    st.write("XIRR: (%)")
+    st.write(round(xirr_value,2))
 
+    st.write('Invested Amount vs Current Value')
     df_daily_dates = pd.DataFrame(
         pd.date_range(start=df_cf['date'].min(), end=df_cf['date'].max(), freq='D'))
     df_daily_dates.columns = ['date']
-    df_cfs = df_cf.merge(df_daily_dates, on='date', how='right').sort_values(['date'])
+    df_daily_navs = df_navs.merge(df_daily_dates, on='date')
+    del df_cf['nav']
+    df_cfs = df_cf.merge(df_daily_navs, on='date', how='right').sort_values(['date'])
     df_cfs = df_cfs.ffill()
-    df_cf_long = pd.melt(df_cfs[['date', 'cum_amount', 'inv_value']], id_vars=['date'],
-                         value_vars=['cum_amount', 'inv_value'])
-    fig6 = px.line(df_cf_long, x='date', y='value', color='variable', log_y=True)
+    df_cfs['cur_value'] = df_cfs['cum_units'] * df_cfs['nav']
+    df_cf_long = pd.melt(df_cfs[['date', 'inv_amount', 'cur_value']], id_vars=['date'],
+                         value_vars=['inv_amount', 'cur_value'], var_name='component', value_name='amount')
+    fig6 = px.line(df_cf_long, x='date', y='amount', color='component')
     st.plotly_chart(fig6)
-    st.write(df_irr)
+
+    st.write('Unit Accumulation - Normalized')
+    df_cfs['cum_units'] = (df_cfs['cum_units'] / df_cfs.iloc[-1:].cum_units.values[0])
+    df_cfs['inv_amount'] = (df_cfs['inv_amount'] / df_cfs.iloc[-1:].inv_amount.values[0])
+    df_cf_long1 = pd.melt(df_cfs[['date', 'inv_amount', 'cum_units']], id_vars=['date'],
+                         value_vars=['inv_amount', 'cum_units'], var_name='component', value_name='proportion')
+    fig7 = px.line(df_cf_long1, x='date', y='proportion', color='component')
+    # fig7 = px.line(df_cfs, x='date', y='cum_units')
+    st.plotly_chart(fig7)
