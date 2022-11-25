@@ -93,7 +93,7 @@ with tab_cagr:
 
 with tab_comp:
     # Comparisons with other mutual funds
-    names_comp = st.multiselect("Select Mutual Funds to Compare:", df_mfs.schemeName.unique())
+    names_comp = st.multiselect("Select Mutual Funds to Compare:", df_mfs.schemeName.unique(), max_selections=5)
     all_names = [sel_name] + names_comp
     codes_comp = [df_mfs[df_mfs['schemeName'] == x].schemeCode.to_list()[0] for x in all_names]
 
@@ -131,7 +131,7 @@ with tab_comp:
     df_rebased_long = pd.melt(df_rebased, id_vars='date', value_vars=all_names, var_name='mf', value_name='nav')
 
     fig3 = px.line(df_rebased_long, x='date', y='nav', log_y=True, color='mf')
-    fig3.update_layout(legend=dict(yanchor="bottom", y=0, xanchor="left", x=0.5))
+    fig3.update_layout(legend=dict(yanchor="bottom", y=-0.7, xanchor="left", x=0))
     st.plotly_chart(fig3)
 
     df_cagr_wide = df_cagr_all.reset_index()
@@ -141,14 +141,14 @@ with tab_comp:
     sel_year = st.number_input('Investment Duration (Number of Years):', value=1, min_value=1, max_value=10, step=1)
     df_cagr_plot = df_cagr_long[df_cagr_long['years'] == sel_year]
     fig4 = px.line(df_cagr_plot, x='date', y='cagr', color='mf')
-    fig4.update_layout(legend=dict(yanchor="bottom", y=-0.5, xanchor="left", x=0))
+    fig4.update_layout(legend=dict(yanchor="bottom", y=-0.7, xanchor="left", x=0))
     st.plotly_chart(fig4)
 
     st.write('Draw Down Comparison')
     df_rebased_long['cum_max'] = df_rebased_long.groupby('mf').nav.cummax()
     df_rebased_long['draw_down'] = (df_rebased_long['nav'] - df_rebased_long['cum_max']) / df_rebased_long['cum_max']
     fig5 = px.line(df_rebased_long, x="date", y="draw_down", color="mf")
-    fig5.update_layout(legend=dict(yanchor="bottom", y=-0.5, xanchor="left", x=0))
+    fig5.update_layout(legend=dict(yanchor="bottom", y=-0.7, xanchor="left", x=0))
     st.plotly_chart(fig5)
 
 with tab_sip:
