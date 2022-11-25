@@ -53,8 +53,13 @@ def get_cagr(df_navs_orig, num_years = 1):
 # 7. Comparision of SIPs and SWPs across two or more mutual funds
 
 df_mfs = get_scheme_codes()
+scheme_names = df_mfs.schemeName.unique().tolist()
+# scheme_names = sorted(scheme_names)
+sel_names = st.sidebar.multiselect("Mutual Fund:", scheme_names, max_selections=1)
+if sel_names == []:
+    st.stop()
 
-sel_name = st.sidebar.selectbox("Mutual Fund:", df_mfs.schemeName.unique())
+sel_name = sel_names[0]
 st.write(sel_name)
 tab_nav, tab_cagr, tab_comp, tab_sip = st.tabs(["NAV", "CAGR", "Comparative Analysis", "SIP"])
 # st.write(df_mfs[df_mfs['schemeName'] == sel_name].schemeCode.to_list()[0])
@@ -84,7 +89,7 @@ with tab_cagr:
 
 with tab_comp:
     # Comparisons with other mutual funds
-    names_comp = st.multiselect("Select Mutual Funds for Comparison:", df_mfs.schemeName.unique())
+    names_comp = st.multiselect("Select Mutual Funds to Compare:", df_mfs.schemeName.unique())
     all_names = [sel_name] + names_comp
     codes_comp = [df_mfs[df_mfs['schemeName'] == x].schemeCode.to_list()[0] for x in all_names]
 
