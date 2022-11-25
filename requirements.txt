@@ -1,0 +1,5 @@
+plotly_express
+pandas
+streamlit
+pyxirr
+datetime
