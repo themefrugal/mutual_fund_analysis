@@ -191,6 +191,8 @@ with tab_sip:
     df_cfs['cur_value'] = df_cfs['cum_units'] * df_cfs['nav']
     df_cf_long = pd.melt(df_cfs[['date', 'inv_amount', 'cur_value']], id_vars=['date'],
                          value_vars=['inv_amount', 'cur_value'], var_name='component', value_name='amount')
+    df_cf_long.loc[df_cf_long['component'] == 'inv_amount', 'component'] = 'Invested Amount'
+    df_cf_long.loc[df_cf_long['component'] == 'cur_value', 'component'] = 'Current Value'
     fig6 = px.line(df_cf_long, x='date', y='amount', color='component')
     st.plotly_chart(fig6)
 
@@ -199,6 +201,8 @@ with tab_sip:
     df_cfs['inv_amount'] = (df_cfs['inv_amount'] / df_cfs.iloc[-1:].inv_amount.values[0])
     df_cf_long1 = pd.melt(df_cfs[['date', 'inv_amount', 'cum_units']], id_vars=['date'],
                          value_vars=['inv_amount', 'cum_units'], var_name='component', value_name='proportion')
+    df_cf_long1.loc[df_cf_long1['component'] == 'inv_amount', 'component'] = 'Invested Amount'
+    df_cf_long1.loc[df_cf_long1['component'] == 'cum_units', 'component'] = 'Accumulated Units'
     fig7 = px.line(df_cf_long1, x='date', y='proportion', color='component')
     # fig7 = px.line(df_cfs, x='date', y='cum_units')
     st.plotly_chart(fig7)
