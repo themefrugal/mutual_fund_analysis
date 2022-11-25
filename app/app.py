@@ -55,7 +55,11 @@ def get_cagr(df_navs_orig, num_years = 1):
 df_mfs = get_scheme_codes()
 scheme_names = df_mfs.schemeName.unique().tolist()
 # scheme_names = sorted(scheme_names)
-sel_names = st.sidebar.multiselect("Mutual Fund:", scheme_names, max_selections=1)
+sel_names = st.sidebar.multiselect("Select a Mutual Fund:", scheme_names, max_selections=1)
+
+st.sidebar.write("To visualize the historical net asset value (NAV) and compounded annual growth rate (CAGR) for various investment horizons and compare with other mutual funds.")
+st.sidebar.write("This application also helps visualize the historical monthly SIP performance.")
+
 if sel_names == []:
     st.stop()
 
