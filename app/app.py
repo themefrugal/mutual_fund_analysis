@@ -65,7 +65,7 @@ if sel_names == []:
 
 sel_name = sel_names[0]
 st.write(sel_name)
-tab_nav, tab_cagr, tab_comp, tab_sip = st.tabs(["NAV", "CAGR", "Comparative Analysis", "SIP"])
+tab_nav, tab_cagr, tab_comp, tab_sip = st.tabs(["Home / NAV History", "CAGR Charts", "Comparative Analysis", "SIP"])
 # st.write(df_mfs[df_mfs['schemeName'] == sel_name].schemeCode.to_list()[0])
 sel_code = df_mfs[df_mfs['schemeName'] == sel_name].schemeCode.to_list()[0]
 
