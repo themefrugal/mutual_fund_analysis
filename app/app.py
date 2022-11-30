@@ -44,13 +44,16 @@ def get_cagr(df_navs_orig, num_years = 1):
     return df_cagr
 # Here is the top level outline
 # Multi page
-# 1. Nav Charting
-# 2. CAGR Analysis
-# 3. Rolling Return Analysis
-# 4. SIP Analysis
+# 1. Nav Charting (done)
+# 2. CAGR Analysis (done)
+# 3. Rolling Return Analysis (done)
+# 4. SIP Analysis (need to integrate frequency adjustment, and analysis of different dates)
 # 5. STP Analysis
 # 6. SWP Analysis
-# 7. Comparision of SIPs and SWPs across two or more mutual funds
+# 7. Comparison of SIPs and SWPs across two or more mutual funds
+# 8. AUM, Manager, Expense Ratios etc.
+# 9. Holding Analysis
+#10. Giving option to select only specific funds
 
 df_mfs = get_scheme_codes()
 scheme_names = df_mfs.schemeName.unique().tolist()
@@ -206,3 +209,4 @@ with tab_sip:
     fig7 = px.line(df_cf_long1, x='date', y='proportion', color='component')
     # fig7 = px.line(df_cfs, x='date', y='cum_units')
     st.plotly_chart(fig7)
+
