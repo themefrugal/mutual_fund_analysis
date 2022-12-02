@@ -54,6 +54,8 @@ def get_cagr(df_navs_orig, num_years = 1):
 # 8. AUM, Manager, Expense Ratios etc.
 # 9. Holding Analysis
 #10. Giving option to select only specific funds
+#11. Separate the large-mid-small into a separate repository
+#12. Check the same with US history
 
 df_mfs = get_scheme_codes()
 scheme_names = df_mfs.schemeName.unique().tolist()
