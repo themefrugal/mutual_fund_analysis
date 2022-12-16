@@ -56,6 +56,7 @@ def get_cagr(df_navs_orig, num_years = 1):
 #10. Giving option to select only specific funds
 #11. Create the large-mid-small analysis into a separate repository
 #12. Check the same with US history
+#13. Subset with select set of MF - with appropriate categories
 
 df_mfs = get_scheme_codes()
 scheme_names = df_mfs.schemeName.unique().tolist()
