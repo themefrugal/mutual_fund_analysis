@@ -1,0 +1,191 @@
+Open Ended Schemes(Equity Scheme - ELSS)
+
+Aditya Birla Sun Life Mutual Fund
+
+119661;INF209K01VV9;-;Aditya Birla Sun Life Tax Plan - Direct Plan - Growth Option;54.9;16-Dec-2022
+104331;INF209K01348;-;Aditya Birla Sun Life Tax Plan - Regular Plan - Growth Option;50.4;16-Dec-2022
+119544;INF209K01UN8;-;Aditya Birla Sun Life Tax Relief '96 - Growth - Direct Plan;45.53;16-Dec-2022
+107745;INF209K01108;-;Aditya Birla Sun Life Tax Relief '96 - Growth Option;41.6;16-Dec-2022
+
+Axis Mutual Fund
+
+120503;INF846K01EW2;-;Axis Long Term Equity Fund - Direct Plan - Growth Option;73.0535;16-Dec-2022
+112323;INF846K01131;-;Axis Long Term Equity Fund - Regular Plan - Growth;65.9515;16-Dec-2022
+
+Bank of India Mutual Fund
+
+119351;INF761K01884;-;BANK OF INDIA Tax Advantage Fund-Direct Plan- Growth;116.12;16-Dec-2022
+111709;INF761K01157;-;BANK OF INDIA Tax Advantage Fund-ECO Plan-Growth;110.23;16-Dec-2022
+111710;INF761K01181;-;BANK OF INDIA Tax Advantage Fund-Regular Plan- Growth;102.60;16-Dec-2022
+
+Baroda BNP Paribas Mutual Fund
+
+150159;INF251K01HF3;-;BARODA BNP PARIBAS ELSS Fund - Direct Plan - Growth Option;64.8265;16-Dec-2022
+150156;INF251K01985;-;BARODA BNP PARIBAS ELSS Fund - Regular - Growth Option;59.3303;16-Dec-2022
+
+Canara Robeco Mutual Fund
+
+118285;INF760K01EL8;-;CANARA ROBECO EQUITY TAX SAVER FUND - DIRECT PLAN - GROWTH OPTION;128.5100;16-Dec-2022
+111722;INF760K01100;-;CANARA ROBECO EQUITY TAX SAVER FUND - REGULAR PLAN - GROWTH OPTION;118.5400;16-Dec-2022
+
+DSP Mutual Fund
+
+119242;INF740K01OK1;-;DSP Tax Saver Fund - Direct Plan - Growth;91.803;16-Dec-2022
+104772;INF740K01185;-;DSP Tax Saver Fund - Regular Plan - Growth;84.666;16-Dec-2022
+
+Edelweiss Mutual Fund
+
+118620;INF754K01CA8;-;Edelweiss Long Term Equity Fund (Tax Savings) - Direct Plan-Growth Option;81.93;16-Dec-2022
+111638;INF754K01517;-;Edelweiss Long Term Equity Fund (Tax Savings) - Regular Plan - Growth Option;72.29;16-Dec-2022
+
+Franklin Templeton Mutual Fund
+
+118540;INF090I01JS8;-;Franklin India TAXSHIELD - Direct - Growth;1010.1652;16-Dec-2022
+100526;INF090I01775;-;Franklin India Taxshield-Growth;925.4117;16-Dec-2022
+
+HDFC Mutual Fund
+
+118929;INF179K01WX8;-;HDFC Long Term Advantage Plan - Growth Option - Direct Plan;625.385;14-Jan-2022
+100998;INF179K01996;-;HDFC Long Term Advantage Plan - Growth Plan;595.168;14-Jan-2022
+119060;INF179K01YS4;-;HDFC Taxsaver - Growth Option - Direct Plan;878.516;16-Dec-2022
+101979;INF179K01BB8;-;HDFC Taxsaver - Growth Plan;826.539;16-Dec-2022
+
+HSBC Mutual Fund
+
+151078;INF917K01GP0;-;HSBC ELSS Fund - Direct Growth;85.5943;16-Dec-2022
+151076;INF677K01064;-;HSBC ELSS Fund - Regular Growth;80.1529;16-Dec-2022
+104707;INF336L01BA4;-;HSBC Tax Saver Equity Fund - Growth;57.7099;16-Dec-2022
+120079;INF336L01EE0;-;HSBC Tax Saver Equity Fund - Growth Direct;63.2376;16-Dec-2022
+
+ICICI Prudential Mutual Fund
+
+120592;INF109K01Y31;-;ICICI Prudential Long Term Equity Fund (Tax Saving) - Direct Plan -  Growth;670.82;16-Dec-2022
+100354;INF109K01464;-;ICICI Prudential Long Term Equity Fund (Tax Saving) - Growth;614.14;16-Dec-2022
+
+IDBI Mutual Fund
+
+123637;INF397L01EC6;-;IDBI Equity Advantage Fund - Growth Direct;44.33;16-Dec-2022
+123638;INF397L01DY2;-;IDBI Equity Advantage Fund - Growth Regular;39.73;16-Dec-2022
+
+IDFC Mutual Fund
+
+118473;INF194K01Y29;-;IDFC Tax Advantage  (ELSS) Fund-Direct Plan-Growth ;114.272;16-Dec-2022
+111569;INF194K01292;-;IDFC Tax Advantage (ELSS) Fund - Regular Plan - Growth;102.434;16-Dec-2022
+
+Indiabulls Mutual Fund
+
+141808;INF666M01DK7;-;Indiabulls Tax Savings Fund- Direct Plan- Growth Option;15.02;16-Dec-2022
+141862;INF666M01DN1;-;Indiabulls Tax Savings Fund-Regular Plan-Growth Option;13.8;16-Dec-2022
+
+Invesco Mutual Fund
+
+120416;INF205K01NT8;-;Invesco India Tax Plan - Direct Plan - Growth;90.73;16-Dec-2022
+104636;INF205K01270;-;Invesco India Tax Plan - Growth;79.05;16-Dec-2022
+
+ITI Mutual Fund
+
+147541;INF00XX01390;-;ITI Long Term Equity Fund - Direct Plan - Growth Option;15.4241;16-Dec-2022
+147544;INF00XX01374;-;ITI Long Term Equity Fund - Regular Plan - Growth Option;14.4041;16-Dec-2022
+
+JM Financial Mutual Fund
+
+120494;INF192K01CE3;-;JM Tax Gain Fund (Direct) - Growth Option;32.5140;16-Dec-2022
+107288;INF192K01650;-;JM Tax Gain Fund (Regular) - Growth option;29.3207;16-Dec-2022
+
+Kotak Mahindra Mutual Fund
+
+103339;INF174K01369;-;Kotak Tax Saver-Scheme-Growth;77.177;16-Dec-2022
+119773;INF174K01LI3;-;Kotak Tax Saver-Scheme-Growth - Direct;87.605;16-Dec-2022
+
+LIC Mutual Fund
+
+120270;INF767K01EM1;-;LIC MF Tax Plan-Direct Plan-Growth;110.423;16-Dec-2022
+100865;INF767K01956;-;LIC MF Tax Plan-Regular Plan-Growth;99.6481;16-Dec-2022
+
+Mahindra Manulife Mutual Fund
+
+139781;INF174V01093;-;Mahindra Manulife ELSS Kar Bachat Yojana - Direct Plan -Growth;21.8900;16-Dec-2022
+139783;INF174V01077;-;Mahindra Manulife ELSS Kar Bachat Yojana - Regular Plan - Growth;19.4498;16-Dec-2022
+
+Mirae Asset Mutual Fund
+
+135781;INF769K01DM9;-;Mirae Asset Tax Saver Fund-Direct Plan -Growth;35.068;16-Dec-2022
+135784;INF769K01DK3;-;Mirae Asset Tax Saver Fund-Regular Plan-Growth;31.809;16-Dec-2022
+
+Motilal Oswal Mutual Fund
+
+133386;INF247L01569;-;Motilal Oswal Long Term Equity Fund (MOFLTE) - Direct Plan - Growth Option;30.8253;16-Dec-2022
+133385;INF247L01544;-;Motilal Oswal Long Term Equity Fund (MOFLTE) - Regular Plan - Growth Option;27.7521;16-Dec-2022
+
+Navi Mutual Fund
+
+135654;INF959L01CD5;-;Navi ELSS Tax Saver Fund- Direct Plan- Growth Option;23.506;16-Dec-2022
+135655;INF959L01CF0;-;Navi ELSS Tax Saver Fund- Regular Plan- Growth Option;20.8256;16-Dec-2022
+
+Nippon India Mutual Fund
+
+103196;INF204K01GK4;-;Nippon India Tax Saver (ELSS) Fund-Growth Plan-Growth Option;82.4472;16-Dec-2022
+118803;INF204K01L55;-;Nippon India Tax Saver Fund - Direct Plan Growth Plan - Growth Option;88.9434;16-Dec-2022
+
+PGIM India Mutual Fund
+
+135601;INF663L01FN5;-;PGIM India ELSS Tax Saver Fund - Direct Plan - Growth Option;27.62;16-Dec-2022
+135598;INF663L01FQ8;-;PGIM India ELSS Tax Saver Fund - Regular Plan - Growth Option;25.09;16-Dec-2022
+
+PPFAS Mutual Fund
+
+147481;INF879O01100;-;Parag Parikh Tax Saver Fund- Direct Growth;20.9344;16-Dec-2022
+147482;INF879O01092;-;Parag Parikh Tax Saver Fund- Regular Growth;20.0495;16-Dec-2022
+
+quant Mutual Fund
+
+120847;INF966L01986;-;quant Tax Plan - Growth Option - Direct Plan;274.3081;16-Dec-2022
+100175;INF966L01135;-;quant Tax Plan - Growth Option - Regular Plan;252.4503;16-Dec-2022
+
+Quantum Mutual Fund
+
+111549;INF082J01069;-;Quantum Tax Saving Fund - Direct Plan Growth Option;81.86;16-Dec-2022
+141070;INF082J01366;-;Quantum Tax Saving Fund - Regular Plan Growth Option;80.06;16-Dec-2022
+
+SBI Mutual Fund
+
+119723;INF200K01UM9;-;SBI LONG TERM EQUITY FUND - DIRECT PLAN -GROWTH;256.8939;16-Dec-2022
+105628;INF200K01495;-;SBI LONG TERM EQUITY FUND - REGULAR PLAN- GROWTH;241.9260;16-Dec-2022
+
+Shriram Mutual Fund
+
+145819;INF680P01158;-;Shriram Long Term Equity Fund - Direct Growth;17.0402;16-Dec-2022
+145820;INF680P01133;-;Shriram Long Term Equity Fund - Regular Growth;15.8415;16-Dec-2022
+
+Sundaram Mutual Fund
+
+119549;INF903J01NN3;-;Sundaram Diversified Equity (ELSS) Direct Plan - Growth;163.2619;16-Dec-2022
+101853;INF903J01538;-;Sundaram Diversified Equity (ELSS) Regular Plan - Growth;156.3184;16-Dec-2022
+149570;INF173K01HZ7;-;Sundaram Tax Savings Fund (Formerly Known as Principal Tax Savings Fund) - Direct Plan Growth;363.7590;16-Dec-2022
+149569;INF173K01361;-;Sundaram Tax Savings Fund (Formerly Known as Principal Tax Savings Fund) Regular Growth;345.1272;16-Dec-2022
+
+Tata Mutual Fund
+
+132756;INF277K01I86;-;Tata India Tax Savings Fund-Growth-Direct Plan;33.4690;16-Dec-2022
+132757;INF277K01I52;-;Tata India Tax Savings Fund-Growth-Regular Plan;30.1055;16-Dec-2022
+
+Taurus Mutual Fund
+
+118866;INF044D01CG6;INF044D01AA3;Taurus Taxshield - Direct Plan - Growth;127.94;16-Dec-2022
+100480;INF044D01AC9;-;Taurus Taxshield - Regular Plan - Growth;119.33;16-Dec-2022
+
+Union Mutual Fund
+
+119307;INF582M01765;-;Union Long Term Equity Fund - Direct Plan - Growth Option;46.22;16-Dec-2022
+116051;INF582M01302;-;Union Long Term Equity Fund - Growth Option;43.55;16-Dec-2022
+
+UTI Mutual Fund
+
+120715;INF789F01TF7;-;UTI - Long Term Equity Fund (Tax Saving) - Direct Plan - Growth Option;157.2693;16-Dec-2022
+100821;INF789F01547;-;UTI - Long Term Equity Fund (Tax Saving) - Regular Plan - Growth Option;144.2399;16-Dec-2022
+
+WhiteOak Capital Mutual Fund
+
+150587;INF03VN01621;-;WhiteOak Capital Tax Saver Fund Direct Plan Growth;10.276;16-Dec-2022
+150589;INF03VN01647;-;WhiteOak Capital Tax Saver Fund Regular Plan Growth;10.243;16-Dec-2022
+
