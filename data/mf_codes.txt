@@ -189,3 +189,164 @@ WhiteOak Capital Mutual Fund
 150587;INF03VN01621;-;WhiteOak Capital Tax Saver Fund Direct Plan Growth;10.276;16-Dec-2022
 150589;INF03VN01647;-;WhiteOak Capital Tax Saver Fund Regular Plan Growth;10.243;16-Dec-2022
 
+Open Ended Schemes(Equity Scheme - Flexi Cap Fund)
+
+Aditya Birla Sun Life Mutual Fund
+
+120564;INF209K01XX1;-;Aditya Birla Sun Life Flexi Cap Fund - Growth - Direct Plan;1260.3;16-Dec-2022
+103166;INF209K01AJ8;-;Aditya Birla Sun Life Flexi Cap Fund - Growth - Regular Plan;1151.63;16-Dec-2022
+
+Axis Mutual Fund
+
+141925;INF846K01B28;-;Axis Flexi Cap Fund - Direct Plan - Growth;19.26;16-Dec-2022
+141927;INF846K01B51;-;Axis Flexi Cap Fund - Regular Plan - Growth;17.92;16-Dec-2022
+
+Baroda BNP Paribas Mutual Fund
+
+150387;INF251K01QZ2;-;Baroda BNP Paribas Flexi Cap Fund - Direct Plan - Growth Option;10.2724;16-Dec-2022
+150385;INF251K01QW9;-;Baroda BNP Paribas Flexi Cap Fund - Regular Plan - Growth Option;10.2103;16-Dec-2022
+
+Canara Robeco Mutual Fund
+
+118275;INF760K01EF0;-;CANARA ROBECO FLEXICAP FUND - DIRECT PLAN - GROWTH OPTION;247.9600;16-Dec-2022
+101922;INF760K01019;-;CANARA ROBECO FLEXICAP FUND - REGULAR PLAN - GROWTH OPTION;227.8600;16-Dec-2022
+
+DSP Mutual Fund
+
+119076;INF740K01PI2;-;DSP Flexi Cap Fund - Direct Plan - Growth;70.201;16-Dec-2022
+105875;INF740K01037;-;DSP Flexi Cap Fund - Regular Plan - Growth;64.853;16-Dec-2022
+
+Edelweiss Mutual Fund
+
+140353;INF843K01KK1;-;Edelweiss Flexi Cap Fund - Direct Plan - Growth Option;26.243;16-Dec-2022
+140355;INF843K01KN5;-;Edelweiss Flexi Cap Fund - Regular Plan - Growth Option;23.627;16-Dec-2022
+
+Franklin Templeton Mutual Fund
+
+118535;INF090I01FK3;-;Franklin India Flexi Cap Fund - Direct - Growth;1120.5401;16-Dec-2022
+100520;INF090I01239;-;Franklin India Flexi Cap Fund - Growth;1027.1731;16-Dec-2022
+
+HDFC Mutual Fund
+
+118955;INF179K01UT0;-;HDFC Flexi Cap Fund - Growth Option - Direct Plan;1249.642;16-Dec-2022
+101762;INF179K01608;-;HDFC Flexi Cap Fund - Growth Plan;1162.676;16-Dec-2022
+
+HSBC Mutual Fund
+
+120046;INF336L01DH5;-;HSBC Flexi Cap Fund - Direct Growth;143.0788;16-Dec-2022
+102252;INF336L01AF5;-;HSBC Flexi Cap Fund - Regular Growth;130.8709;16-Dec-2022
+
+ICICI Prudential Mutual Fund
+
+148990;INF109KC1R14;-;ICICI Prudential Flexicap Fund - Direct Plan - Growth;11.96;16-Dec-2022
+148989;INF109KC1Q80;-;ICICI Prudential Flexicap Fund - Growth;11.71;16-Dec-2022
+
+IDBI Mutual Fund
+
+128236;INF397L01HF2;-;IDBI FLEXI CAP FUND Growth Direct;39.54;16-Dec-2022
+128235;INF397L01HJ4;-;IDBI FLEXI CAP FUND Growth Regular;35.30;16-Dec-2022
+
+IDFC Mutual Fund
+
+108594;INF194K01391;-;IDFC Flexi Cap Fund - Regular Plan - Growth;139.133;16-Dec-2022
+118424;INF194K01W62;-;IDFC Flexi Cap Fund-Direct Plan-Growth;149.321;16-Dec-2022
+
+Invesco Mutual Fund
+
+149763;INF205KA1494;-;Invesco India Flexi Cap Fund - Direct Plan - Growth;10.81;16-Dec-2022
+149766;INF205KA1460;-;Invesco India Flexi Cap Fund - Growth;10.65;16-Dec-2022
+
+JM Financial Mutual Fund
+
+120492;INF192K01CC7;-;JM Flexicap Fund (Direct) - Growth Option;61.9372;16-Dec-2022
+109522;INF192K01635;-;JM Flexicap Fund (Regular) - Growth option;56.2783;16-Dec-2022
+
+Kotak Mahindra Mutual Fund
+
+112090;INF174K01336;-;Kotak Flexicap Fund - Growth;55.264;16-Dec-2022
+120166;INF174K01LS2;-;Kotak Flexicap Fund - Growth - Direct;60.872;16-Dec-2022
+
+LIC Mutual Fund
+
+120264;INF767K01EG3;-;LIC MF Flexi Cap Fund-Direct Plan-Growth;71.6847;16-Dec-2022
+100313;INF767K01071;-;LIC MF Flexi Cap Fund-Regular Plan-Growth;66.5664;16-Dec-2022
+
+Mahindra Manulife Mutual Fund
+
+149104;INF174V01AS2;-;Mahindra Manulife Flexi Cap Yojana - Direct Plan -Growth;10.7967;16-Dec-2022
+149101;INF174V01AP8;-;Mahindra Manulife Flexi Cap Yojana - Regular Plan -Growth;10.5025;16-Dec-2022
+
+Motilal Oswal Mutual Fund
+
+129046;INF247L01502;-;Motilal Oswal Flexi cap Fund Direct Plan-Growth Option;36.9975;16-Dec-2022
+129048;INF247L01478;-;Motilal Oswal Flexi Cap Fund Regular Plan-Growth Option;34.1276;16-Dec-2022
+
+Navi Mutual Fund
+
+143793;INF959L01DT9;-;Navi Flexi Cap Fund - Direct Plan - Growth;18.0603;16-Dec-2022
+143787;INF959L01EE9;-;Navi Flexi Cap Fund - Regular Plan - Growth;16.4889;16-Dec-2022
+
+Nippon India Mutual Fund
+
+149094;INF204KC1121;-;Nippon India Flexi Cap Fund - Direct Plan - Growth Plan - Growth Option;11.1521;16-Dec-2022
+149089;INF204KC1097;-;Nippon India Flexi Cap Fund - Regular Plan - Growth Plan - Growth Option;10.9099;16-Dec-2022
+
+PGIM India Mutual Fund
+
+133839;INF663L01FF1;-;PGIM India Flexi Cap Fund - Direct Plan - Growth Option;29.11;16-Dec-2022
+133836;INF663L01FJ3;-;PGIM India Flexi Cap Fund - Regular Plan - Growth Option;25.82;16-Dec-2022
+
+PPFAS Mutual Fund
+
+122639;INF879O01027;-;Parag Parikh Flexi Cap Fund - Direct Plan - Growth;51.7298;16-Dec-2022
+122640;INF879O01019;-;Parag Parikh Flexi Cap Fund - Regular Plan - Growth;48.3786;16-Dec-2022
+
+quant Mutual Fund
+
+109830;INF966L01457;-;quant Flexi Cap Fund - Growth Option - Regular Plan;64.8473;16-Dec-2022
+120843;INF966L01911;-;quant Flexi Cap Fund - Growth Option-Direct Plan;69.7708;16-Dec-2022
+
+Samco Mutual Fund
+
+149450;INF0K1H01024;-;Samco Flexi Cap Fund - Direct Plan - Growth Option;9.62;16-Dec-2022
+149449;INF0K1H01016;-;Samco Flexi Cap Fund - Regular Plan - Growth Option;9.49;16-Dec-2022
+
+SBI Mutual Fund
+
+119718;INF200K01UG1;-;SBI Flexicap Fund - DIRECT PLAN - Growth Option;84.3748;16-Dec-2022
+103215;INF200K01222;-;SBI Flexicap Fund - REGULAR PLAN -Growth Option;77.2128;16-Dec-2022
+
+Shriram Mutual Fund
+
+144905;INF680P01109;-;Shriram Flexi Cap Fund - Direct Growth;16.3931;16-Dec-2022
+144902;INF680P01075;-;Shriram Flexi Cap Fund - Regular Growth;15.1827;16-Dec-2022
+
+Sundaram Mutual Fund
+
+150571;INF903JA1LE2;-;Sundaram Flexicap Fund Direct Growth;10.1867;16-Dec-2022
+150568;INF903JA1LB8;-;Sundaram Flexicap Fund Regular Growth;10.1342;16-Dec-2022
+
+Tata Mutual Fund
+
+144548;INF277K019K2;-;Tata Flexi Cap Fund -Regular Plan-Growth;15.8758;16-Dec-2022
+144546;INF277K015K0;-;Tata Flexi Cap Fund-Direct Plan-Growth;17.0510;16-Dec-2022
+
+Taurus Mutual Fund
+
+118883;INF044D01BU9;-;Taurus Flexi Cap Fund - Direct Plan - Growth;162.03;16-Dec-2022
+100476;INF044D01989;-;Taurus Flexi Cap Fund - Regular Plan - Growth ;155.97;16-Dec-2022
+
+Union Mutual Fund
+
+119292;INF582M01633;-;Union Flexi Cap Fund - Direct Plan - Growth Option;37.09;16-Dec-2022
+115270;INF582M01104;-;Union Flexi Cap Fund - Growth Option;34.31;16-Dec-2022
+
+UTI Mutual Fund
+
+100669;INF789F01513;-;UTI - Flexi Cap Fund-Growth Option;234.8052;16-Dec-2022
+120662;INF789F01TC4;-;UTI - Flexi Cap Fund-Growth Option - Direct;247.2277;16-Dec-2022
+
+WhiteOak Capital Mutual Fund
+
+150347;INF03VN01506;-;WhiteOak Capital Flexi Cap Fund Regular Plan Growth;10.546;16-Dec-2022
+150346;INF03VN01530;-;WhiteOak Capital Flexi Cap Fund Direct Plan Growth;10.607;16-Dec-2022
