@@ -350,3 +350,135 @@ WhiteOak Capital Mutual Fund
 
 150347;INF03VN01506;-;WhiteOak Capital Flexi Cap Fund Regular Plan Growth;10.546;16-Dec-2022
 150346;INF03VN01530;-;WhiteOak Capital Flexi Cap Fund Direct Plan Growth;10.607;16-Dec-2022
+
+Open Ended Schemes(Equity Scheme - Focused Fund)
+
+Aditya Birla Sun Life Mutual Fund
+
+119564;INF209K01WE3;-;Aditya Birla Sun Life Focused Equity Fund - Growth - Direct Plan;104.0331;19-Dec-2022
+103309;INF209K01462;-;Aditya Birla Sun Life Focused Equity Fund -Growth Option;94.6118;19-Dec-2022
+
+Axis Mutual Fund
+
+120468;INF846K01CQ8;-;Axis Focused 25 Fund - Direct Plan - Growth Option;45.26;19-Dec-2022
+117560;INF846K01CH7;-;Axis Focused 25 Fund - Regular Plan - Growth Option;40.18;19-Dec-2022
+
+Baroda BNP Paribas Mutual Fund
+
+150264;INF251K01PN0;-;BARODA BNP PARIBAS Focused Fund - Direct Plan - Growth Option;16.3458;19-Dec-2022
+150263;INF251K01PK6;-;BARODA BNP PARIBAS Focused Fund - Regular Plan-Growth Option;15.1249;19-Dec-2022
+
+Canara Robeco Mutual Fund
+
+148883;INF760K01JQ6;-;Canara Robeco Focused Equity Fund - Direct Plan - Growth Option;13.2000;19-Dec-2022
+148884;INF760K01JT0;-;Canara Robeco Focused Equity Fund - Regular Plan - Growth Option;12.8400;19-Dec-2022
+
+DSP Mutual Fund
+
+119096;INF740K01OB0;-;DSP Focus Fund - Direct Plan - Growth;36.525;19-Dec-2022
+112901;INF740K01532;-;DSP Focus Fund - Regular Plan - Growth;33.608;19-Dec-2022
+
+Edelweiss Mutual Fund
+
+150376;INF754K01OP1;-;Edelweiss Focused Equity Fund - Direct Plan - Growth;10.587;19-Dec-2022
+150382;INF754K01OL0;-;Edelweiss Focused Equity Fund - Regular Plan - Growth;10.517;19-Dec-2022
+
+Franklin Templeton Mutual Fund
+
+118564;INF090I01IW2;-;Franklin India Focused Equity Fund - Direct - Growth;79.8332;19-Dec-2022
+105817;INF090I01981;-;Franklin India Focused Equity Fund - Growth Plan;72.3878;19-Dec-2022
+
+HDFC Mutual Fund
+
+118950;INF179K01VK7;-;HDFC Focused 30 Fund - Growth Option - Direct Plan;149.385;19-Dec-2022
+102760;INF179K01574;-;HDFC Focused 30 Fund - GROWTH PLAN;135.895;19-Dec-2022
+
+HSBC Mutual Fund
+
+148411;INF336L01PB2;-;HSBC Focused Fund - Direct Growth;17.0241;19-Dec-2022
+148409;INF336L01PE6;-;HSBC Focused Fund - Regular Growth;16.3624;19-Dec-2022
+
+ICICI Prudential Mutual Fund
+
+120722;INF109K018N2;-;ICICI Prudential Focused Equity Fund - Direct Plan - Growth;58.95;19-Dec-2022
+111957;INF109K01BZ4;-;ICICI Prudential Focused Equity Fund - Growth;53.04;19-Dec-2022
+
+IDBI Mutual Fund
+
+141920;INF397L01KA7;-;IDBI FOCUSED 30 EQUITY FUND - Growth Direct;17.00;19-Dec-2022
+141919;INF397L01KE9;-;IDBI FOCUSED 30 EQUITY FUND - Growth Regular;15.84;19-Dec-2022
+
+IDFC Mutual Fund
+
+108592;INF194K01466;-;IDFC Focused Equity Fund - Regular Plan - Growth;53.088;19-Dec-2022
+118421;INF194K01W21;-;IDFC Focused Equity Fund-Direct Plan-Growth ;60.468;19-Dec-2022
+
+IIFL Mutual Fund
+
+131578;INF579M01878;-;IIFL Focused Equity Fund -Regular Plan - Growth;31.0930;19-Dec-2022
+131580;INF579M01902;-;IIFL Focused Equity Fund-Direct Plan-Growth;34.3661;19-Dec-2022
+
+Invesco Mutual Fund
+
+148481;INF205KA1213;-;Invesco India Focused 20 Equity Fund - Direct Plan - Growth;15.82;19-Dec-2022
+148483;INF205KA1189;-;Invesco India Focused 20 Equity Fund - Growth;15.23;19-Dec-2022
+
+JM Financial Mutual Fund
+
+120488;INF192K01BW7;-;JM Focused Fund (Direct)  - Growth Option;14.2695;19-Dec-2022
+107410;INF192K01577;-;JM Focused Fund (Regular) - Growth Option;12.6322;19-Dec-2022
+
+Kotak Mahindra Mutual Fund
+
+147473;INF174KA1EN7;-;Kotak Focused equity Fund- Direct Plan- Growth option;18.052;19-Dec-2022
+147477;INF174KA1EK3;-;Kotak Focused Equity Fund- Regular plan _ Growth Option;17.032;19-Dec-2022
+
+Mahindra Manulife Mutual Fund
+
+148567;INF174V01AG7;-;Mahindra Manulife Focused Equity Yojana - Direct Plan -Growth;17.2899;19-Dec-2022
+148571;INF174V01AD4;-;Mahindra Manulife Focused Equity Yojana - Regular Plan - Growth;16.5285;19-Dec-2022
+
+Mirae Asset Mutual Fund
+
+147206;INF769K01EU0;-;Mirae Asset Focused Fund Direct Plan Growth;20.076;19-Dec-2022
+147203;INF769K01ES4;-;Mirae Asset Focused Fund Regular Plan Growth;19.022;19-Dec-2022
+
+Motilal Oswal Mutual Fund
+
+122389;INF247L01189;-;Motilal Oswal Focused 25 Fund (MOF25)- Direct Plan Growth Option;38.5081;19-Dec-2022
+122387;INF247L01155;-;Motilal Oswal Focused 25 Fund (MOF25)- Regular Plan Growth Option;33.9307;19-Dec-2022
+
+Nippon India Mutual Fund
+
+118692;INF204K01F95;-;Nippon India Focused Equity Fund - Direct Plan Growth Plan - Growth Option;90.2818;19-Dec-2022
+104637;INF204K01GE7;-;Nippon India Focused Equity Fund -Growth Plan -Growth Option;83.5253;19-Dec-2022
+
+quant Mutual Fund
+
+109275;INF966L01374;-;quant Focused Fund - Growth Option - Regular Plan;59.4246;19-Dec-2022
+120834;INF966L01853;-;quant Focused Fund - Growth Option-Direct Plan;63.3148;19-Dec-2022
+
+SBI Mutual Fund
+
+119727;INF200K01RJ1;-;SBI FOCUSED EQUITY FUND - DIRECT PLAN -GROWTH;254.2988;19-Dec-2022
+102756;INF200K01370;-;SBI FOCUSED EQUITY FUND - REGULAR PLAN -GROWTH;231.5600;19-Dec-2022
+
+Sundaram Mutual Fund
+
+149533;INF173K01EK6;-;Sundaram Focused Fund (Formerly Known as Principal Focused Multicap Fund)- Direct Plan - Growth Option;120.9083;19-Dec-2022
+149532;INF173K01189;-;Sundaram Focused Fund (Formerly Known as Principal Focused Multicap Fund)-Growth Option;112.1325;19-Dec-2022
+
+Tata Mutual Fund
+
+147757;INF277K017X9;-;Tata Focused Equity Fund-Direct Plan-Growth;16.9487;19-Dec-2022
+147760;INF277K010Y2;-;Tata Focused Equity Fund-Regular Plan-Growth;16.0319;19-Dec-2022
+
+Union Mutual Fund
+
+147492;INF582M01FS4;-;Union Focused Fund - Direct Plan - Growth Option;19.21;19-Dec-2022
+147490;INF582M01FW6;-;Union Focused Fund - Regular Plan - Growth Option;18.62;19-Dec-2022
+
+UTI Mutual Fund
+
+149091;INF789F1AVA3;-;UTI Focused Equity Fund - Direct Plan - Growth Option;10.6652;19-Dec-2022
+149090;INF789F1AUY5;-;UTI Focused Equity Fund - Regular Plan - Growth Option;10.4188;19-Dec-2022
