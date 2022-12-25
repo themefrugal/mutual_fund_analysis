@@ -918,3 +918,87 @@ WhiteOak Capital Mutual Fund
 
 150584;INF03VN01597;-;WhiteOak Capital Mid Cap Fund Direct Plan Growth;10.307;19-Dec-2022
 150583;INF03VN01563;-;WhiteOak Capital Mid Cap Fund Regular Plan Growth;10.258;19-Dec-2022
+
+Open Ended Schemes(Equity Scheme - Multi Cap Fund)
+
+Aditya Birla Sun Life Mutual Fund
+
+148921;INF209KB1Y49;-;Aditya Birla Sun Life Multi-Cap Fund-Direct Growth;13.;19-Dec-2022
+148918;INF209KB1Y23;-;Aditya Birla Sun Life Multi-Cap Fund-Regular Growth;12.64;19-Dec-2022
+
+Axis Mutual Fund
+
+149383;INF846K013E0;-;Axis Multicap Fund - Direct Growth;10.20;19-Dec-2022
+149382;INF846K016E3;-;Axis Multicap Fund - Regular Plan - Growth;10.04;19-Dec-2022
+
+Bank of India Mutual Fund
+
+148404;INF761K01FF5;-;BANK OF INDIA Flexi Cap Fund Direct Plan -Growth;21.07;19-Dec-2022
+148405;INF761K01FI9;-;BANK OF INDIA Flexi Cap Fund Regular Plan -Growth;20.18;19-Dec-2022
+
+Baroda BNP Paribas Mutual Fund
+
+119354;INF955L01AG0;-;Baroda BNP Paribas MULTI CAP FUND - Direct Plan - Growth Option;191.1853;19-Dec-2022
+102020;INF955L01674;-;Baroda BNP Paribas MULTI CAP FUND - Regular Plan - Growth Option;174.9496;19-Dec-2022
+
+HDFC Mutual Fund
+
+149366;INF179KC1BV9;-;HDFC Multi Cap Fund - Growth Option;11.24;19-Dec-2022
+149368;INF179KC1BS5;-;HDFC Multi Cap Fund - Growth Option - Direct Plan;11.418;19-Dec-2022
+
+ICICI Prudential Mutual Fund
+
+120381;INF109K011N7;-;ICICI Prudential MidCap Fund - Direct Plan -  Growth;187.59;19-Dec-2022
+102528;INF109K01AN2;-;ICICI Prudential MidCap Fund - Growth;171.08;19-Dec-2022
+120599;INF109K014O9;-;ICICI Prudential Multicap Fund - Direct Plan -  Growth;519.72;19-Dec-2022
+101228;INF109K01613;-;ICICI Prudential Multicap Fund - Growth;475.67;19-Dec-2022
+
+IDFC Mutual Fund
+
+149303;INF194KB1CL0;-;IDFC MULTI CAP FUND - GROWTH - DIRECT PLAN;11.169;19-Dec-2022
+149305;INF194KB1CI6;-;IDFC MULTI CAP FUND - GROWTH - REGULAR PLAN;10.968;19-Dec-2022
+
+Invesco Mutual Fund
+
+120413;INF205K01MS2;-;Invesco India Multicap Fund - Direct Plan - Growth Option;93.12;19-Dec-2022
+107353;INF205K01DN2;-;Invesco India Multicap Fund - Growth Option;80.87;19-Dec-2022
+
+ITI Mutual Fund
+
+147183;INF00XX01168;-;ITI Multi Cap Fund - Direct Plan - Growth Option;15.5368;19-Dec-2022
+147184;INF00XX01135;-;ITI Multi Cap Fund - Regular Plan - Growth Option;14.3829;19-Dec-2022
+
+Kotak Mahindra Mutual Fund
+
+149185;INF174KA1HV3;-;Kotak Multicap Fund-Direct Plan-Growth;11.065;19-Dec-2022
+149182;INF174KA1HS9;-;Kotak Multicap Fund-Regular Plan-Growth;10.833;19-Dec-2022
+
+LIC Mutual Fund
+
+150659;INF767K01RK7;-;LIC MF Multi Cap Fund-Direct Growth;10.0586;19-Dec-2022
+150661;INF767K01RH3;-;LIC MF Multi Cap Fund-Regular Growth;10.0316;19-Dec-2022
+
+Mahindra Manulife Mutual Fund
+
+141226;INF174V01341;-;Mahindra Manulife Multi Cap Badhat Yojana - Direct Plan -Growth;23.7705;19-Dec-2022
+141224;INF174V01317;-;Mahindra Manulife Multi Cap Badhat Yojana - Regular Plan - Growth;21.2990;19-Dec-2022
+
+Nippon India Mutual Fund
+
+118650;INF204K01XF9;-;Nippon India Multi Cap Fund - Direct Plan Growth Plan - Growth Option;182.3632;19-Dec-2022
+101161;INF204K01489;-;Nippon India Multi Cap Fund-Growth Plan-Growth Option;169.5685;19-Dec-2022
+
+quant Mutual Fund
+
+100631;INF966L01234;-;quant Active Fund-GROWTH OPTION - Regular Plan;470.5933;19-Dec-2022
+120823;INF966L01614;-;quant Active Fund-GROWTH OPTION-Direct Plan;498.3309;19-Dec-2022
+
+SBI Mutual Fund
+
+149882;INF200KA18E2;-;SBI Multicap Fund- Direct Plan- Growth option;10.9106;19-Dec-2022
+149886;INF200KA15E8;-;SBI Multicap Fund- Regular Plan- Growth Option;10.8123;19-Dec-2022
+
+Sundaram Mutual Fund
+
+149669;INF173K01FQ0;-;Sundaram Multi Cap Fund (Formerly Known as Principal Multi Cap Growth Fund)-Direct Plan - Growth Option;262.2516;19-Dec-2022
+149667;INF173K01940;-;Sundaram Multi Cap Fund (Formerly Known as Principal Multi Cap Growth Fund)-Growth Option;242.3479;19-Dec-2022
