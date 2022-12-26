@@ -1002,3 +1002,337 @@ Sundaram Mutual Fund
 
 149669;INF173K01FQ0;-;Sundaram Multi Cap Fund (Formerly Known as Principal Multi Cap Growth Fund)-Direct Plan - Growth Option;262.2516;19-Dec-2022
 149667;INF173K01940;-;Sundaram Multi Cap Fund (Formerly Known as Principal Multi Cap Growth Fund)-Growth Option;242.3479;19-Dec-2022
+
+
+Open Ended Schemes(Equity Scheme - Sectoral/ Thematic)
+
+Aditya Birla Sun Life Mutual Fund
+
+125597;INF209K014W1;-;Aditya Birla Sun Life Banking and Financial Services Fund - Direct Plan - Growth;46.03;19-Dec-2022
+125595;INF209K011W7;-;Aditya Birla Sun Life Banking and Financial Services Fund - Regular Plan - Growth;42.06;19-Dec-2022
+149295;INF209KB14D2;-;Aditya Birla Sun Life Business Cycle Fund-Direct Growth;10.88;19-Dec-2022
+149296;INF209KB12D6;-;Aditya Birla Sun Life Business Cycle Fund-Regular-Growth;10.69;19-Dec-2022
+119576;INF209K01VL0;-;Aditya Birla Sun Life Commodity Equities Fund - Global Agri Plan - Growth - Direct Plan;38.222;19-Dec-2022
+111349;INF209K01207;-;Aditya Birla Sun Life Commodity Equities Fund - Global Agri Plan - Growth - Regular Plan;36.7314;19-Dec-2022
+120539;INF209K01VF2;-;Aditya Birla Sun Life Digital India Fund - Growth - Direct Plan;128.04;19-Dec-2022
+103168;INF209K01140;-;Aditya Birla Sun Life Digital India Fund - Growth - Regular Plan;117.09;19-Dec-2022
+148637;INF209KB1U76;-;Aditya Birla Sun Life ESG Fund-Direct Plan-Growth;12.59;19-Dec-2022
+148635;INF209KB1U43;-;Aditya Birla Sun Life ESG Fund-Regular Plan-Growth;12.15;19-Dec-2022
+119591;INF209K01WC7;-;Aditya Birla Sun Life India Gennext Fund - Growth - Direct Plan;163.17;19-Dec-2022
+103111;INF209K01447;-;Aditya Birla Sun Life India Gennext Fund-Growth Option;146.76;19-Dec-2022
+119514;INF209K01WH6;-;Aditya Birla Sun Life Infrastructure Fund - Growth - Direct Plan;58.;19-Dec-2022
+103476;INF209K01504;-;Aditya Birla Sun Life Infrastructure Fund-Growth;53.79;19-Dec-2022
+119517;INF209K01WS3;-;Aditya Birla Sun Life International Equity Fund - Plan A - Growth - Direct Plan;31.4075;19-Dec-2022
+106873;INF209K01520;-;Aditya Birla Sun Life International Equity Fund - Plan A - Growth - Regular Plan;29.5938;19-Dec-2022
+119518;INF209K01WU9;-;Aditya Birla Sun Life International Equity Fund - Plan B - Growth - Direct Plan;28.2009;19-Dec-2022
+106876;INF209K01546;-;Aditya Birla Sun Life International Equity Fund - Plan B - Growth - Regular Plan;26.8903;19-Dec-2022
+133516;INF209KA1YK0;-;Aditya Birla Sun Life Manufacturing Equity Fund - Direct Plan - Growth;21.4;19-Dec-2022
+133513;INF209KA1YH6;-;Aditya Birla Sun Life Manufacturing Equity Fund - Regular Plan - Growth;19.94;19-Dec-2022
+119646;INF209K01VT3;-;Aditya Birla Sun Life MNC Fund - Growth - Direct Plan;1029.61;19-Dec-2022
+100064;INF209K01322;-;Aditya Birla Sun Life MNC Fund - Growth - Regular Plan;942.31;19-Dec-2022
+147409;INF209KB1O25;-;Aditya Birla Sun Life Pharma and Healthcare Fund-Direct-Growth;18.32;19-Dec-2022
+147407;INF209KB1N91;-;Aditya Birla Sun Life Pharma and Healthcare Fund-Regular-Growth;17.28;19-Dec-2022
+147844;INF209KB1O82;-;Aditya Birla Sun Life PSU Equity Fund-Direct Plan-Growth;18.44;19-Dec-2022
+147846;INF209KB1O66;-;Aditya Birla Sun Life PSU Equity Fund-Regular Plan-Growth;17.47;19-Dec-2022
+148539;INF209KB1T79;-;Aditya Birla Sun Life Special Opportunities Fund-Direct-Growth;16.35;19-Dec-2022
+148537;INF209KB1T46;-;Aditya Birla Sun Life Special Opportunities Fund-Regular Plan-Growth;15.74;19-Dec-2022
+
+Axis Mutual Fund
+
+147928;INF846K01W23;-;Axis ESG Equity Fund - Direct Plan - Growth Option;15.56;19-Dec-2022
+147929;INF846K01W56;-;Axis ESG Equity Fund - Regular Plan - Growth Option;14.88;19-Dec-2022
+148993;INF846K01Z87;-;Axis Quant Fund - Direct Plan - Growth;11.36;19-Dec-2022
+148992;INF846K011A2;-;Axis Quant Fund - Regular Plan - Growth;11.08;19-Dec-2022
+148634;INF846K01X71;-;Axis Special Situations Fund - Direct Plan - Growth Option;12.21;19-Dec-2022
+148631;INF846K01Y05;-;Axis Special Situations Fund - Regular Plan - Growth Option;11.84;19-Dec-2022
+
+Bank of India Mutual Fund
+
+119364;INF761K01702;-;BANK OF INDIA Manufacturing & Infrastructure Fund-Direct Plan-Growth;35.03;19-Dec-2022
+112359;INF761K01199;-;BANK OF INDIA Manufacturing & Infrastructure Fund-Growth;31.03;19-Dec-2022
+
+Baroda BNP Paribas Mutual Fund
+
+119333;INF955L01971;-;Baroda BNP Paribas Banking and Financial Services Fund - Direct - Growth Option;35.1439;19-Dec-2022
+117549;INF955L01856;-;Baroda BNP Paribas Banking and Financial Services Fund - Regular - Growth Option;32.4772;19-Dec-2022
+149141;INF955L01KK1;-;Baroda BNP Paribas Business Cycle Fund - Direct Plan - Growth;10.5178;19-Dec-2022
+149140;INF955L01KH7;-;Baroda BNP Paribas Business Cycle Fund - Regular Plan - Growth;10.2947;19-Dec-2022
+150266;INF251K01PT7;-;BARODA BNP PARIBAS India Consumption Fund - Direct Plan - Growth Option;22.0965;19-Dec-2022
+150268;INF251K01PQ3;-;BARODA BNP PARIBAS India Consumption Fund - Regular Plan - Growth Option;20.7102;19-Dec-2022
+
+Canara Robeco Mutual Fund
+
+118273;INF760K01DU1;-;CANARA ROBECO CONSUMER TRENDS FUND - DIRECT PLAN - GROWTH OPTION;80.7300;19-Dec-2022
+112152;INF760K01241;-;CANARA ROBECO CONSUMER TRENDS FUND - REGULAR PLAN - GROWTH OPTION;72.5300;19-Dec-2022
+118267;INF760K01FO9;-;CANARA ROBECO INFRASTRUCTURE FUND - DIRECT PLAN - GROWTH OPTION;91.6000;19-Dec-2022
+103390;INF760K01274;-;CANARA ROBECO INFRASTRUCTURE FUND - REGULAR PLAN - GROWTH OPTION;84.1700;19-Dec-2022
+
+DSP Mutual Fund
+
+145454;INF740KA1LG1;-;DSP Healthcare Fund - Direct Plan - Growth;23.399;19-Dec-2022
+145456;INF740KA1LD8;-;DSP Healthcare Fund - Regular Plan - Growth;21.943;19-Dec-2022
+119247;INF740K01PU7;-;DSP India T.I.G.E.R. Fund - Direct Plan - Growth;176.679;19-Dec-2022
+102434;INF740K01151;-;DSP India T.I.G.E.R. Fund - Regular Plan - Growth;166.498;19-Dec-2022
+119028;INF740K01QA7;-;DSP Natural Resources and New Energy Fund - Direct Plan - Growth;61.904;19-Dec-2022
+108202;INF740K01060;-;DSP Natural Resources And New Energy Fund - Regular - Growth;57.244;19-Dec-2022
+147306;INF740KA1NQ6;-;DSP Quant Fund - Direct Plan - Growth;16.753;19-Dec-2022
+147303;INF740KA1NN3;-;DSP Quant Fund - Regular Plan - Growth;16.317;19-Dec-2022
+
+Edelweiss Mutual Fund
+
+142388;INF754K01ML4;-;Edelweiss Recently Listed IPO Fund Direct Plan Growth;17.4558;19-Dec-2022
+142383;INF754K01MH2;-;Edelweiss Recently Listed IPO Fund Regular Plan Growth;16.8594;19-Dec-2022
+
+Franklin Templeton Mutual Fund
+
+118559;INF090I01IZ5;-;Franklin Asian Equity Fund - Direct - Growth;26.9503;19-Dec-2022
+106979;INF090I01AB3;-;Franklin Asian Equity Fund - Growth Plan;25.2343;19-Dec-2022
+118557;INF090I01JF5;-;Franklin Build India Fund - Direct - Growth;82.0324;19-Dec-2022
+112092;INF090I01AE7;-;Franklin Build India Fund Growth Plan;73.3000;19-Dec-2022
+118539;INF090I01GC8;-;Franklin India Opportunities Fund - Direct - Growth;130.2448;19-Dec-2022
+103151;INF090I01841;-;Franklin India Opportunities Fund - Growth;121.5537;19-Dec-2022
+118537;INF090I01FE6;-;Franklin India Technology Fund - Direct - Growth;304.5045;19-Dec-2022
+100522;INF090I01742;-;Franklin India Technology Fund-Growth;284.1992;19-Dec-2022
+
+HDFC Mutual Fund
+
+148987;INF179KC1BJ4;-;HDFC Banking & Financial Services Fund - Growth Option;11.734;19-Dec-2022
+148986;INF179KC1BG0;-;HDFC Banking & Financial Services Fund - Growth Option - Direct Plan;12.042;19-Dec-2022
+150803;INF179KC1EB5;-;HDFC Business Cycle Fund - Growth Option;9.987;19-Dec-2022
+150805;INF179KC1DY9;-;HDFC Business Cycle Fund - Growth Option - Direct Plan;9.995;19-Dec-2022
+141923;INF179KC1AX7;-;HDFC Housing Opportunities Fund  - Growth Option;14.349;19-Dec-2022
+141924;INF179KC1AU3;-;HDFC Housing Opportunities Fund  - Growth Option - Direct Plan;15.118;19-Dec-2022
+118979;INF179K01WQ2;-;HDFC Infrastructure Fund - Growth Option - Direct Plan;26.89;19-Dec-2022
+107524;INF179K01GF8;-;HDFC Infrastructure Fund - Growth Plan;24.878;19-Dec-2022
+
+HSBC Mutual Fund
+
+151142;INF917K01RI2;-;HSBC Business Cycles Fund - Direct Growth;26.2727;19-Dec-2022
+151144;INF917K01RF8;-;HSBC Business Cycles Fund - Regular Growth;24.5487;19-Dec-2022
+151040;INF917K01FW8;-;HSBC Infrastructure Fund - Direct Growth;28.0059;19-Dec-2022
+151037;INF917K01536;-;HSBC Infrastructure Fund - Regular Growth;25.5867;19-Dec-2022
+
+ICICI Prudential Mutual Fund
+
+109445;INF109K01BU5;-;ICICI Prudential Banking and Financial Services Fund -  Growth;92.39;19-Dec-2022
+120244;INF109K013J1;-;ICICI Prudential Banking and Financial Services Fund - Direct Plan -  Growth;101.87;19-Dec-2022
+146951;INF109KC1YD4;-;ICICI Prudential Bharat Consumption Fund - Direct Plan - Growth Option;16.98;19-Dec-2022
+146950;INF109KC1YA0;-;ICICI Prudential Bharat Consumption Fund - Growth Option;16.16;19-Dec-2022
+148651;INF109KC1P24;-;ICICI Prudential Business Cycle Fund Direct Plan Growth;14.57;19-Dec-2022
+148653;INF109KC1O90;-;ICICI Prudential Business Cycle Fund Growth;14.17;19-Dec-2022
+147662;INF109KC1F91;-;ICICI Prudential Commodities Fund - Direct Plan - Growth Option;29.57;19-Dec-2022
+147661;INF109KC1F67;-;ICICI Prudential Commodities Fund - Growth Option;28.19;19-Dec-2022
+148516;INF109KC1O09;-;ICICI Prudential ESG FUND - Direct Plan - Growth;13.98;19-Dec-2022
+148517;INF109KC1N75;-;ICICI Prudential ESG FUND - Growth;13.53;19-Dec-2022
+120688;INF109K01W25;-;ICICI Prudential Exports & Services Fund - Direct Plan - Growth;107.32;19-Dec-2022
+103312;INF109K01BB5;-;ICICI Prudential Exports & Services Fund - Growth;100.10;19-Dec-2022
+120587;INF109K01Z14;-;ICICI Prudential FMCG Fund - Direct Plan -  Growth;425.27;19-Dec-2022
+100352;INF109K01415;-;ICICI Prudential FMCG Fund - Growth;394.47;19-Dec-2022
+150310;INF109KC10C2;-;ICICI PRUDENTIAL HOUSING OPPORTUNITIES FUND - Direct Plan Growth;11.21;19-Dec-2022
+150308;INF109KC17B9;-;ICICI PRUDENTIAL HOUSING OPPORTUNITIES FUND - Growth;11.08;19-Dec-2022
+145896;INF109KC1RE6;-;ICICI Prudential India Opportunities Fund - Cumulative Option;20.44;19-Dec-2022
+145897;INF109KC1RH9;-;ICICI Prudential India Opportunities Fund - Direct Plan - Cumulative Option;21.67;19-Dec-2022
+120621;INF109K018M4;-;ICICI Prudential Infrastructure Fund - Direct Plan -  Growth;109.71;19-Dec-2022
+103149;INF109K01AV5;-;ICICI Prudential Infrastructure Fund - Growth;102.91;19-Dec-2022
+145077;INF109KC1LG4;-;ICICI Prudential Manufacturing Fund - Cumulative Option;18.73;19-Dec-2022
+145075;INF109KC1LJ8;-;ICICI Prudential Manufacturing Fund - Direct Plan - Cumulative Option;19.64;19-Dec-2022
+147346;INF109KC1D93;-;ICICI Prudential MNC Fund - Direct Plan - Growth Option;20.32;19-Dec-2022
+147345;INF109KC1D69;-;ICICI Prudential MNC Fund - Growth Option;19.34;19-Dec-2022
+143873;INF109KC1GE9;-;ICICI Prudential Pharma Healthcare and Diagnostics (P.H.D) Fund - Cumulative Option;19.24;19-Dec-2022
+143874;INF109KC1GH2;-;ICICI Prudential Pharma Healthcare and Diagnostics (P.H.D) Fund - Direct Plan - Cumulative Option;20.27;19-Dec-2022
+150539;-;INF109KC12I5;ICICI Prudential PSU Equity Fund - Direct Plan - Growth;10.62;19-Dec-2022
+150538;-;INF109KC19H2;ICICI Prudential PSU Equity Fund - Growth;10.57;19-Dec-2022
+148600;INF109KC1O66;-;ICICI Prudential Quant Fund Direct Plan Growth;14.96;19-Dec-2022
+148598;INF109KC1O33;-;ICICI Prudential Quant Fund Growth;14.75;19-Dec-2022
+120594;INF109K01Z48;-;ICICI Prudential Technology Fund - Direct Plan -  Growth;146.13;19-Dec-2022
+100363;INF109K01506;-;ICICI Prudential Technology Fund - Growth;134.17;19-Dec-2022
+150685;-;INF109KC12K1;ICICI PRUDENTIAL TRANSPORTATION AND LOGISTICS FUND - Direct Plan - Growth;9.97;19-Dec-2022
+150684;-;INF109KC19J8;ICICI PRUDENTIAL TRANSPORTATION AND LOGISTICS FUND - Growth;9.94;19-Dec-2022
+120186;INF109K01Z71;-;ICICI Prudential US Bluechip Equity Fund - Direct Plan -  Growth;47.08;19-Dec-2022
+117620;INF109K01E35;-;ICICI Prudential US Bluechip Equity Fund - Growth;43.11;19-Dec-2022
+
+IDBI Mutual Fund
+
+143353;INF397L01KM2;-;IDBI Banking & Financial Services Fund - Direct Plan (Growth);15.29;19-Dec-2022
+143351;INF397L01KI0;-;IDBI Banking & Financial Services Fund - Regular Plan (Growth);14.39;19-Dec-2022
+146517;INF397L01LK4;-;IDBI Healthcare Fund - Direct Plan - Growth;17.90;19-Dec-2022
+146518;INF397L01LG2;-;IDBI Healthcare Fund - Regular Plan - Growth;16.92;19-Dec-2022
+
+IDFC Mutual Fund
+
+114476;INF194K01BY9;-;IDFC Infrastructure Fund - Regular Plan - Growth;25.476;19-Dec-2022
+118469;INF194K01X46;-;IDFC Infrastructure Fund-Direct Plan-Growth ;28.840;19-Dec-2022
+150716;INF194KB1EB7;-;IDFC TRANSPORTATION AND LOGISTICS FUND - GROWTH - DIRECT PLAN;10.180;19-Dec-2022
+150717;INF194KB1EE1;-;IDFC TRANSPORTATION AND LOGISTICS FUND - GROWTH - REGULAR PLAN;10.152;19-Dec-2022
+
+IIFL Mutual Fund
+
+149318;INF579M01AI2;-;IIFL QUANT FUND DIRECT GROWTH;10.7371;19-Dec-2022
+149317;INF579M01AF8;-;IIFL QUANT FUND REGULAR GROWTH;10.6074;19-Dec-2022
+
+Invesco Mutual Fund
+
+148751;INF205KA1338;-;Invesco India ESG Equity Fund - Direct Plan - Growth;12.44;19-Dec-2022
+148753;INF205KA1304;-;Invesco India ESG Equity Fund - Growth;12.05;19-Dec-2022
+120385;INF205K01KY4;-;Invesco India Financial Services Fund - Direct Plan - Growth;98.15;19-Dec-2022
+108378;INF205K01155;-;Invesco India Financial Services Fund - Retail Growth;84.99;19-Dec-2022
+120405;INF205K01MD4;-;Invesco India Infrastructure Fund - Direct Pan - Growth Option;38.31;19-Dec-2022
+106654;INF205K01CD5;-;Invesco India Infrastructure Fund - Growth Option;33.03;19-Dec-2022
+120395;INF205K01NG5;-;Invesco India PSU Equity Fund - Direct Plan - Growth;35.87;19-Dec-2022
+112171;INF205K01338;-;Invesco India PSU Equity Fund - Growth;31.29;19-Dec-2022
+
+ITI Mutual Fund
+
+149321;INF00XX01BU6;-;ITI Banking and Financial Services Fund - Direct Plan - Growth Option;11.4305;19-Dec-2022
+149324;INF00XX01BR2;-;ITI Banking and Financial Services Fund -Regular Plan - Growth Option;11.1645;19-Dec-2022
+149268;INF00XX01BO9;-;ITI Pharma and Healthcare Fund - Direct Plan - Growth Option;9.6090;19-Dec-2022
+149270;INF00XX01BL5;-;ITI Pharma and Healthcare Fund - Regular Plan - Growth Option;9.3723;19-Dec-2022
+
+Kotak Mahindra Mutual Fund
+
+150624;INF174KA1JN6;-;Kotak Business Cycle - Direct Plan - Growth;10.267;19-Dec-2022
+150626;INF174KA1JK2;-;Kotak Business Cycle Fund-Regular Plan--Growth;10.225;19-Dec-2022
+148606;INF174KA1FI4;-;Kotak ESG Opportunities Fund - Direct Plan - Growth Option;12.721;19-Dec-2022
+148602;INF174KA1FF0;-;Kotak ESG Opportunities Fund - Regular Plan - Growth Option;12.284;19-Dec-2022
+133796;INF178L01095;-;Kotak Infrastructure & Economic Reform Fund - Standard Plan-Growth;37.938;19-Dec-2022
+133801;INF178L01AL9;-;Kotak Infrastructure & Economic Reform Fund- Direct Plan- Growth Option;43.194;19-Dec-2022
+149841;INF174KA1IF4;-;Kotak Manufacture in India Fund - Direct Plan Growth;11.459;19-Dec-2022
+149840;INF174KA1IC1;-;Kotak Manufacture in India Fund - Regular Plan Growth;11.295;19-Dec-2022
+147727;INF174KA1EZ1;-;Kotak Pioneer Fund- Direct Plan- Growth Option;18.409;19-Dec-2022
+147724;INF174KA1EW8;-;Kotak Pioneer Fund- Regular Plan- Growth Option;17.45;19-Dec-2022
+
+LIC Mutual Fund
+
+134017;INF767K01NK6;-;LIC MF Banking and Financial Services Fund-Direct Plan-Growth;17.5236;19-Dec-2022
+134016;INF767K01NH2;-;LIC MF Banking and Financial Services Fund-Regular Plan-Growth;16.1111;19-Dec-2022
+120351;INF767K01GW5;-;LIC MF Infrastructure Fund-Direct Plan-Growth;27.0574;19-Dec-2022
+107763;INF767K01501;-;LIC MF Infrastructure Fund-Regular Plan-Growth;24.4221;19-Dec-2022
+
+Mahindra Manulife Mutual Fund
+
+145356;INF174V01663;-;Mahindra Manulife Rural Bharat and Consumption Yojana - Direct Plan -Growth;16.2594;19-Dec-2022
+145355;INF174V01630;-;Mahindra Manulife Rural Bharat and Consumption Yojana - Regular Plan - Growth;15.1481;19-Dec-2022
+
+Mirae Asset Mutual Fund
+
+148623;INF769K01GX9;-;Mirae Asset Banking and Financial Services Fund Direct Growth;14.303;19-Dec-2022
+148621;INF769K01GU5;-;Mirae Asset Banking and Financial Services Fund Regular Growth;13.820;19-Dec-2022
+118837;INF769K01BL5;-;Mirae Asset Great Consumer Fund - Direct Plan - Growth;69.229;19-Dec-2022
+114931;INF769K01135;-;Mirae Asset Great Consumer Fund - Regular Plan - Growth option;60.309;19-Dec-2022
+143785;INF769K01EA2;-;Mirae Asset Healthcare Fund -Regular Growth;21.370;19-Dec-2022
+143783;INF769K01ED6;-;Mirae Asset Healthcare Fund Direct Growth;22.935;19-Dec-2022
+
+Nippon India Mutual Fund
+
+118589;INF204K01XO1;-;Nippon India Banking & Financial Services Fund - Direct Plan Growth Plan - Growth Option;444.4829;19-Dec-2022
+101862;INF204K01927;-;Nippon India Banking & Financial Services Fund-Growth Plan-Growth Option;415.2501;19-Dec-2022
+118724;INF204K01G52;-;Nippon India Consumption Fund - Direct Plan Growth Plan - Growth Option;142.7758;19-Dec-2022
+102751;INF204K01AQ4;-;Nippon India Consumption Fund-Growth Plan-Growth Option;131.2768;19-Dec-2022
+130860;INF204KA1SI1;-;Nippon India Japan Equity Fund- Direct Plan- Growth Plan- Growth Option;15.6419;19-Dec-2022
+130863;INF204KA1SH3;-;Nippon India Japan Equity Fund- Growth Plan- Growth Option;14.4661;19-Dec-2022
+118759;INF204K01I50;-;Nippon India Pharma Fund - Direct Plan Growth Plan - Growth Option;308.6674;19-Dec-2022
+102431;INF204K01968;-;Nippon India Pharma Fund-Growth Plan-Growth Option;283.5412;19-Dec-2022
+118763;INF204K01I92;-;Nippon India Power & Infra Fund - Direct Plan Growth Plan - Growth Option;189.8035;19-Dec-2022
+101262;INF204K01AE0;-;Nippon India Power & Infra Fund-Growth Plan -Growth Option;178.8113;19-Dec-2022
+118769;INF204K01J34;-;Nippon India Quant Fund - Direct Plan Growth Plan - Growth Option;46.4506;19-Dec-2022
+108249;INF204K01760;-;Nippon India Quant Fund -Growth Plan - Growth Option;43.4554;19-Dec-2022
+149329;INF204KC1303;-;Nippon India Taiwan Equity Fund- Direct Plan- Growth Option;7.0491;19-Dec-2022
+149328;INF204KC1279;-;Nippon India Taiwan Equity fund- Regular Plan- Growth Option;6.9285;19-Dec-2022
+134923;INF204KA15G5;-;Nippon India US Equity Opportunites Fund- Direct Plan- Growth Plan- Growth Option;22.4840;19-Dec-2022
+134922;INF204KA12G2;-;Nippon India US Equity Opportunites Fund- Growth Plan- Growth Option;20.7471;19-Dec-2022
+
+quant Mutual Fund
+
+148564;INF966L01AD4;-;quant ESG Equity Fund - Growth Option - Direct Plan;23.4063;19-Dec-2022
+148560;INF966L01AB8;-;quant ESG Equity Fund - Growth Option - Regular Plan;22.6925;19-Dec-2022
+106170;INF966L01523;-;quant Infrastructure Fund - Growth Option;24.7316;19-Dec-2022
+120833;INF966L01721;-;quant Infrastructure Fund - Growth Option-Direct Plan;26.2091;19-Dec-2022
+148925;INF966L01AK9;-;quant Quantamental Fund - Growth Option - Direct Plan;14.5408;19-Dec-2022
+148923;INF966L01AH5;-;quant Quantamental Fund - Growth Option - Regular Plan;14.1255;19-Dec-2022
+
+Quantum Mutual Fund
+
+147372;INF082J01382;-;QUANTUM INDIA ESG EQUITY FUND - DIRECT PLAN - GROWTH OPTION;17.24;19-Dec-2022
+147371;INF082J01390;-;QUANTUM INDIA ESG EQUITY FUND - REGULAR PLAN - GROWTH OPTION;16.84;19-Dec-2022
+
+SBI Mutual Fund
+
+133859;INF200KA1507;-;SBI BANKING & FINANCIAL SERVICES FUND - DIRECT PLAN - GROWTH;29.3919;19-Dec-2022
+133858;INF200KA1473;-;SBI BANKING & FINANCIAL SERVICES FUND - REGULAR PLAN - GROWTH;27.0833;19-Dec-2022
+120575;INF200K01RM5;-;SBI CONSUMPTION OPPORTUNITIES FUND - DIRECT PLAN - GROWTH;232.6518;19-Dec-2022
+120576;INF200K01VR6;-;SBI CONSUMPTION OPPORTUNITIES FUND - REGULAR - GROWTH;209.6673;19-Dec-2022
+146643;INF200KA1A71;-;SBI Equity Minimum Variance Fund - Direct Plan - Growth;17.3758;19-Dec-2022
+146644;INF200KA1A48;-;SBI Equity Minimum Variance Fund - Regular Plan - Growth;17.1239;19-Dec-2022
+119783;INF200K01UP2;-;SBI HEALTHCARE OPPORTUNITIES FUND - DIRECT PLAN -GROWTH;247.3775;19-Dec-2022
+102823;INF200K01446;-;SBI HEALTHCARE OPPORTUNITIES FUND - REGULAR PLAN -GROWTH;222.0163;19-Dec-2022
+119700;INF200K01RS2;-;SBI INFRASTRUCTURE FUND -  DIRECT PLAN - GROWTH;29.9399;19-Dec-2022
+106096;INF200K01CT2;-;SBI INFRASTRUCTURE FUND -  REGULAR PLAN - GROWTH;28.2227;19-Dec-2022
+119705;INF200K01SB6;-;SBI Magnum COMMA Fund - DIRECT PLAN - Growth;73.1444;19-Dec-2022
+103145;INF200K01339;-;SBI Magnum COMMA Fund - REGULAR PLAN - Growth;68.6507;19-Dec-2022
+119709;INF200K01SE0;-;SBI Magnum Equity ESG Fund - DIRECT PLAN -GROWTH;180.7746;19-Dec-2022
+104523;INF200K01214;-;SBI Magnum Equity ESG Fund- REGULAR PLAN - Growth;167.6486;19-Dec-2022
+119711;INF200K01SN1;-;SBI MAGNUM GLOBAL FUND - DIRECT PLAN -GROWTH;309.4061;19-Dec-2022
+103034;INF200K01271;-;SBI MAGNUM GLOBAL FUND - REGULAR PLAN -GROWTH;285.8411;19-Dec-2022
+119732;INF200K01UY4;-;SBI PSU Fund - DIRECT PLAN - GROWTH;17.3732;19-Dec-2022
+113099;INF200K01BC0;-;SBI PSU Fund - REGULAR PLAN -Growth;16.2346;19-Dec-2022
+120578;INF200K01RV6;-;SBI TECHNOLOGY OPPORTUNITIES FUND - DIRECT PLAN - GROWTH;155.1936;19-Dec-2022
+120577;INF200K01VS4;-;SBI TECHNOLOGY OPPORTUNITIES FUND - REGULAR PLAN - GROWTH;140.1248;19-Dec-2022
+
+Sundaram Mutual Fund
+
+119595;INF903J01NH5;-;Sundaram Consumption Fund (Formerly Known as Sundaram Rural and Consumption Fund Direct Plan - Growth);68.9192;19-Dec-2022
+102142;INF903J01561;-;Sundaram Consumption Fund(Formerly Known as Sundaram Rural and Consumption Fund Regular Plan - Growth);64.2840;19-Dec-2022
+119597;INF903J01NB8;-;Sundaram Financial Services Opportunities Fund Direct Plan - Growth;73.7842;19-Dec-2022
+109061;INF903J01652;-;Sundaram Financial Services Opportunities Fund Institutional Plan - Growth;75.8635;19-Dec-2022
+109059;INF903J01629;-;Sundaram Financial Services Opportunities Fund Regular Plan - Growth;67.8118;19-Dec-2022
+129212;INF903J01F92;-;Sundaram Infrastructure Advantage Fund Direct Plan - Growth;57.3172;19-Dec-2022
+129213;INF903J01F68;-;Sundaram Infrastructure Advantage Fund Regular Plan - Growth;54.4333;19-Dec-2022
+144835;INF903JA1FA2;-;Sundaram Services Fund Direct Plan - Growth;23.2605;19-Dec-2022
+144838;INF903JA1EX7;-;Sundaram Services Fund Regular Plan - Growth;22.1425;19-Dec-2022
+
+Tata Mutual Fund
+
+135793;INF277K01Z10;-;Tata Banking And Financial Services Fund-Direct Plan-Growth;32.8263;19-Dec-2022
+135794;INF277K01Y86;-;Tata Banking And Financial Services Fund-Regular Plan-Growth;29.2943;19-Dec-2022
+149071;INF277KA1166;-;Tata Business Cycle Fund-Direct Plan-Growth;12.3216;19-Dec-2022
+149068;INF277KA1190;-;Tata Business Cycle Fund-Regular Plan-Growth;12.0346;19-Dec-2022
+135800;INF277K01Z77;-;Tata Digital India Fund-Direct Plan-Growth;35.4561;19-Dec-2022
+135797;INF277K01Z44;-;Tata Digital India Fund-Regular Plan-Growth;31.5174;19-Dec-2022
+119172;INF277K01NG4;-;Tata Ethical Fund -Direct Plan- Growth Option;310.8763;19-Dec-2022
+100415;INF277K01956;-;Tata Ethical Fund-Regular Plan - Growth Option;281.0658;19-Dec-2022
+150532;INF277KA1497;-;Tata Housing Opportunities Fund - Direct Plan - Growth;10.2342;19-Dec-2022
+150537;INF277KA1521;-;Tata Housing Opportunities Fund - Regular Plan - Growth;10.1695;19-Dec-2022
+135805;INF277K013A6;-;Tata India Consumer Fund-Direct Plan-Growth;30.5375;19-Dec-2022
+135804;INF277K010A2;-;Tata India Consumer Fund-Regular Plan-Growth;27.4192;19-Dec-2022
+135810;INF277K019A3;-;Tata India Pharma & Healthcare Fund-Direct Plan-Growth;18.6111;19-Dec-2022
+135812;INF277K016A9;-;Tata India Pharma & Healthcare Fund-Regular Plan-Growth;16.6254;19-Dec-2022
+119243;INF277K01PQ8;-;Tata Infrastructure Fund -Direct Plan -Growth Option;110.2567;19-Dec-2022
+101766;INF277K01782;-;Tata Infrastructure Fund-Regular Plan- Growth Option;103.8538;19-Dec-2022
+147864;INF277K013Y6;-;Tata Quant Fund-Direct Plan-Growth;11.5469;19-Dec-2022
+147867;INF277K016Y9;-;Tata Quant Fund-Regular Plan-Growth;10.9887;19-Dec-2022
+135813;INF277K015B9;-;Tata Resources & Energy Fund-Direct Plan-Growth;33.1057;19-Dec-2022
+135815;INF277K012B6;-;Tata Resources & Energy Fund-Regular Plan-Growth;29.4076;19-Dec-2022
+
+Taurus Mutual Fund
+
+118868;INF044D01CN2;-;Taurus Banking & Financial Services Fund - Direct Plan - Growth;43.75;19-Dec-2022
+117312;INF044D01BI4;-;Taurus Banking & Financial Services Fund - Regular Plan - Growth;39.93;19-Dec-2022
+118876;INF044D01CJ0;-;Taurus Ethical Fund - Direct Plan - Growth;93.16;19-Dec-2022
+111787;INF044D01864;-;Taurus Ethical Fund - Regular Plan - Growth;85.48;19-Dec-2022
+118879;INF044D01CD3;-;Taurus Infrastructure Fund - Direct Plan - Growth ;44.19;19-Dec-2022
+105417;INF044D01906;-;Taurus Infrastructure Fund - Regular Plan - Growth;41.69;19-Dec-2022
+
+UTI Mutual Fund
+
+120733;INF789F01SN3;-;UTI Banking and Financial Services Fund - Direct Plan - Growth Option;144.8137;19-Dec-2022
+102401;INF789F01372;-;UTI Banking and Financial Services Fund - Regular Plan - Growth Option;130.5447;19-Dec-2022
+120782;INF789F01TO9;-;UTI Healthcare Fund - Direct Plan - Growth Option;163.5305;19-Dec-2022
+100807;INF789F01695;-;UTI Healthcare Fund - Regular Plan - Growth Option;148.7768;19-Dec-2022
+120780;INF789F01VF3;-;UTI India Consumer Fund - Direct Plan - Growth Option;41.9218;19-Dec-2022
+106425;INF789F01CE6;-;UTI India Consumer Fund - Regular Plan - Growth Option;39.6335;19-Dec-2022
+102395;INF789F01752;-;UTI Infrastructure Fund-Growth Option;86.1915;19-Dec-2022
+120728;INF789F01TU6;-;UTI Infrastructure Fund-Growth Option- Direct;89.7381;19-Dec-2022
+120682;INF789F01UD0;-;UTI - MNC Fund - Growth Option - Direct;303.2541;19-Dec-2022
+100740;INF789F01844;-;UTI - MNC Fund - Regular Plan - Growth Option;278.2916;19-Dec-2022
+102398;INF789F01299;-;UTI-Transpotation and Logistics  Fund-Growth Option;152.82;19-Dec-2022
+120731;INF789F01SH5;-;UTI-Transpotation and Logistics  Fund-Growth Option- Direct;170.177;19-Dec-2022
