@@ -1336,3 +1336,226 @@ UTI Mutual Fund
 100740;INF789F01844;-;UTI - MNC Fund - Regular Plan - Growth Option;278.2916;19-Dec-2022
 102398;INF789F01299;-;UTI-Transpotation and Logistics  Fund-Growth Option;152.82;19-Dec-2022
 120731;INF789F01SH5;-;UTI-Transpotation and Logistics  Fund-Growth Option- Direct;170.177;19-Dec-2022
+
+pen Ended Schemes(Equity Scheme - Small Cap Fund)
+
+Aditya Birla Sun Life Mutual Fund
+
+105804;INF209K01EN2;-;Aditya Birla Sun Life Small Cap Fund - GROWTH;52.933;19-Dec-2022
+119556;INF209K01WN4;-;Aditya Birla Sun Life Small Cap Fund - Growth - Direct Plan;58.5417;19-Dec-2022
+
+Axis Mutual Fund
+
+125354;INF846K01K35;-;Axis Small Cap Fund - Direct Plan - Growth;72.65;19-Dec-2022
+125350;INF846K01K01;-;Axis Small Cap Fund - Regular Plan - Growth;64.69;19-Dec-2022
+
+Bank of India Mutual Fund
+
+145678;INF761K01EP7;-;BANK OF INDIA Small Cap Fund Direct Plan Growth;29.26;19-Dec-2022
+145677;INF761K01ER3;-;BANK OF INDIA Small Cap Fund Regular Plan Growth;27.25;19-Dec-2022
+
+Canara Robeco Mutual Fund
+
+146130;INF760K01JC6;-;CANARA ROBECO SMALL CAP FUND - DIRECT PLAN - GROWTH OPTION;26.9000;19-Dec-2022
+146127;INF760K01JF9;-;CANARA ROBECO SMALL CAP FUND - REGULAR PLAN - GROWTH OPTION;25.1700;19-Dec-2022
+
+DSP Mutual Fund
+
+119212;INF740K01QD1;-;DSP Small Cap Fund - Direct Plan - Growth;123.131;19-Dec-2022
+105989;INF740K01797;-;DSP Small Cap Fund - Regular - Growth;114.642;19-Dec-2022
+
+Edelweiss Mutual Fund
+
+146196;INF754K01JN6;-;Edelweiss Small Cap Fund - Direct Plan - Growth;27.469;19-Dec-2022
+146193;INF754K01JJ4;-;Edelweiss Small Cap Fund - Regular Plan - Growth;25.821;19-Dec-2022
+
+Franklin Templeton Mutual Fund
+
+118525;INF090I01IQ4;-;Franklin India Smaller Companies Fund - Direct - Growth;108.2138;19-Dec-2022
+103360;INF090I01569;-;Franklin India Smaller Companies Fund-Growth;97.7209;19-Dec-2022
+
+HDFC Mutual Fund
+
+130502;INF179KA1RZ8;-;HDFC Small Cap Fund - Growth Option;80.352;19-Dec-2022
+130503;INF179KA1RW5;-;HDFC Small Cap Fund - Growth Option - Direct Plan;89.267;19-Dec-2022
+
+HSBC Mutual Fund
+
+151130;INF917K01QA1;-;HSBC Small Cap Fund - Direct Growth;51.9721;19-Dec-2022
+151133;INF917K01QC7;-;HSBC Small Cap Fund - Regular Growth;48.0252;19-Dec-2022
+
+ICICI Prudential Mutual Fund
+
+149283;INF109KC1V18;-;ICICI Prudential Nifty Smallcap 250 Index Fund - Direct Plan - Growth;10.0370;19-Dec-2022
+149281;INF109KC1U84;-;ICICI Prudential Nifty Smallcap 250 Index Fund - Growth;9.9574;19-Dec-2022
+120591;INF109K015M0;-;ICICI Prudential Smallcap Fund - Direct Plan - Growth;59.91;19-Dec-2022
+106823;INF109K01BI0;-;ICICI Prudential Smallcap Fund - Growth;54.89;19-Dec-2022
+
+IDBI Mutual Fund
+
+141475;INF397L01JS1;-;IDBI Small Cap Fund - Growth Direct;20.39;19-Dec-2022
+141462;INF397L01JW3;-;IDBI Small Cap Fund Growth Regular;18.73;19-Dec-2022
+
+IDFC Mutual Fund
+
+147946;INF194KB1AL4;-;IDFC EMERGING BUSINESSES FUND  - DIRECT PLAN GROWTH;22.790;19-Dec-2022
+147944;INF194KB1AJ8;-;IDFC EMERGING BUSINESSES FUND  - REGULAR PLAN GROWTH;21.660;19-Dec-2022
+
+Invesco Mutual Fund
+
+145137;INF205K013T3;-;Invesco India Smallcap Fund - Direct Plan - Growth;23.56;19-Dec-2022
+145139;INF205K011T7;-;Invesco India Smallcap Fund - Regular Plan - Growth;22.04;19-Dec-2022
+
+ITI Mutual Fund
+
+147919;INF00XX01747;-;ITI Small Cap Fund - Direct Plan - Growth Option;15.5687;19-Dec-2022
+147920;INF00XX01713;-;ITI Small Cap Fund - Regular Plan - Growth Option;14.6383;19-Dec-2022
+
+Kotak Mahindra Mutual Fund
+
+102875;INF174K01211;-;Kotak-Small Cap Fund - Growth;165.553;19-Dec-2022
+120164;INF174K01KT2;-;Kotak-Small Cap Fund - Growth - Direct;188.375;19-Dec-2022
+
+Mahindra Manulife Mutual Fund
+
+150915;INF174V01BK7;-;Mahindra Manulife Small Cap Fund - Direct Plan - Growth;9.9876;19-Dec-2022
+150912;INF174V01BH3;-;Mahindra Manulife Small Cap Fund - Regular Plan - Growth;9.9831;19-Dec-2022
+
+Nippon India Mutual Fund
+
+118778;INF204K01K15;-;Nippon India Small Cap Fund - Direct Plan Growth Plan - Growth Option;104.2345;19-Dec-2022
+113177;INF204K01HY3;-;Nippon India Small Cap Fund - Growth Plan - Growth Option;94.9574;19-Dec-2022
+
+PGIM India Mutual Fund
+
+149019;INF663L01W06;-;PGIM India Small Cap Fund - Direct Plan- Growth Option;11.45;19-Dec-2022
+149020;INF663L01W30;-;PGIM India Small Cap Fund - Regular Plan - Growth Option;11.14;19-Dec-2022
+
+quant Mutual Fund
+
+100177;INF966L01AA0;-;quant Small Cap Fund - Growth - Regular Plan;146.9937;19-Dec-2022
+120828;INF966L01689;-;quant Small Cap Fund - Growth Option - Direct Plan;155.5452;19-Dec-2022
+
+SBI Mutual Fund
+
+125497;INF200K01T51;-;SBI Small Cap Fund - Direct Plan - Growth;129.9222;19-Dec-2022
+125494;INF200K01T28;-;SBI Small Cap Fund - Regular Plan - Growth;116.3803;19-Dec-2022
+
+Sundaram Mutual Fund
+
+119589;INF903J01NK9;-;Sundaram Small Cap Fund Direct Plan - Growth;163.7108;19-Dec-2022
+100795;INF903J01470;-;Sundaram Small Cap Fund Regular Plan - Growth;152.1371;19-Dec-2022
+
+Tata Mutual Fund
+
+145206;INF277K011O1;-;Tata Small Cap Fund-Direct Plan-Growth;26.3986;19-Dec-2022
+145208;INF277K015O2;-;Tata Small Cap Fund-Regular Plan-Growth;24.4175;19-Dec-2022
+
+Union Mutual Fund
+
+129649;INF582M01BU9;-;Union Small Cap Fund - Direct Plan - Growth Option;31.91;19-Dec-2022
+129647;INF582M01BY1;-;Union Small Cap Fund - Regular Plan - Growth Option;29.78;19-Dec-2022
+
+UTI Mutual Fund
+
+148618;INF789F1AUQ1;-;UTI Small Cap Fund - Direct Plan - Growth Option;16.4689;19-Dec-2022
+148617;INF789F1AUO6;-;UTI Small Cap Fund - Regular Plan - Growth Option;15.8526;19-Dec-2022
+
+Open Ended Schemes(Equity Scheme - Value Fund)
+
+Aditya Birla Sun Life Mutual Fund
+
+119658;INF209K01WP9;-;Aditya Birla Sun Life Pure Value Fund - Direct - IDCW;54.718;19-Dec-2022
+119659;INF209K01WQ7;-;Aditya Birla Sun Life Pure Value Fund - Growth - Direct Plan;83.2425;19-Dec-2022
+108167;INF209K01LF3;-;Aditya Birla Sun Life Pure Value Fund - Growth Option;75.596;19-Dec-2022
+108166;INF209K01LE6;INF209K01LG1;Aditya Birla Sun Life Pure Value Fund - Regular - IDCW;30.6536;19-Dec-2022
+
+Axis Mutual Fund
+
+149166;INF846K010C0;-;Axis Value Fund - Direct Plan - Growth;10.67;19-Dec-2022
+149167;INF846K013C4;-;Axis Value Fund - Regular Plan - Growth;10.48;19-Dec-2022
+
+Canara Robeco Mutual Fund
+
+149085;INF760K01JW4;-;Canara Robeco Value Fund - Direct Plan - Growth Option;11.9900;19-Dec-2022
+149088;INF760K01JZ7;-;Canara Robeco Value Fund - Regular Plan - Growth Option;11.7200;19-Dec-2022
+
+DSP Mutual Fund
+
+148595;INF740KA1PP3;-;DSP Value Fund - Direct Plan - Growth;13.467;19-Dec-2022
+148594;INF740KA1PM0;-;DSP Value Fund - Regular Plan - Growth;13.261;19-Dec-2022
+
+Franklin Templeton Mutual Fund
+
+118494;INF090I01GY2;-;Templeton India Value Fund - Direct - Growth;498.4791;19-Dec-2022
+100496;INF090I01296;-;Templeton India Value Fund - Growth Plan;461.1289;19-Dec-2022
+
+HDFC Mutual Fund
+
+118935;INF179K01VC4;-;HDFC Capital Builder Value Fund - Growth Option - Direct Plan;504.514;19-Dec-2022
+101764;INF179K01426;-;HDFC Capital Builder Value Fund - Growth Plan;461.726;19-Dec-2022
+
+HSBC Mutual Fund
+
+151113;INF917K01HD4;-;HSBC Value Fund - Direct Growth;67.4696;19-Dec-2022
+151110;INF677K01023;-;HSBC Value Fund - Regular Growth;61.9588;19-Dec-2022
+
+ICICI Prudential Mutual Fund
+
+120323;INF109K012K1;-;ICICI Prudential Value Discovery Fund - Direct Plan - Growth;304.13;19-Dec-2022
+102594;INF109K01AF8;-;ICICI Prudential Value Discovery Fund - Growth;280.59;19-Dec-2022
+
+IDBI Mutual Fund
+
+144455;INF397L01KU5;-;IDBI Long Term Value Fund-Direct Plan- Growth;17.61;19-Dec-2022
+144453;INF397L01KQ3;-;IDBI Long Term Value Fund-Regular Plan-Growth;16.79;19-Dec-2022
+
+IDFC Mutual Fund
+
+108909;INF194K01342;-;IDFC Sterling Value Fund - Regular Plan - Growth;94.285;19-Dec-2022
+118481;INF194K01Z85;-;IDFC Sterling Value Fund-Direct Plan-Growth  ;104.001;19-Dec-2022
+
+Indiabulls Mutual Fund
+
+135341;INF666M01BE4;-;Indiabulls Value Fund - Direct Plan - Growth Option;20.2914;19-Dec-2022
+135343;INF666M01BH7;-;Indiabulls Value Fund - Regular Plan - Growth Option;17.6481;19-Dec-2022
+
+ITI Mutual Fund
+
+148972;INF00XX01AQ6;-;ITI Value Fund - Direct Plan - Growth Option;10.9500;19-Dec-2022
+148973;INF00XX01AN3;-;ITI Value Fund - Regular Plan - Growth Option;10.5752;19-Dec-2022
+
+JM Financial Mutual Fund
+
+120486;INF192K01BT3;-;JM Value Fund (Direct) - Growth Option;60.2328;19-Dec-2022
+100254;INF137A01037;-;JM Value Fund (Regular) - Growth Option;55.1252;19-Dec-2022
+
+Nippon India Mutual Fund
+
+118784;INF204K01K49;-;Nippon India Value Fund - Direct Plan Growth Plan;139.7360;19-Dec-2022
+103085;INF204K01GB3;-;Nippon India Value Fund- Growth Plan;130.0136;19-Dec-2022
+
+quant Mutual Fund
+
+149335;INF966L01AN3;-;Quant Value Fund - Growth Option  - Direct Plan;12.1386;19-Dec-2022
+149337;INF966L01AQ6;-;Quant Value Fund - Growth Option - Regular Plan;11.8884;19-Dec-2022
+
+Quantum Mutual Fund
+
+103490;INF082J01036;-;Quantum Long Term Equity Value Fund - Direct Plan Growth Option;82.79;19-Dec-2022
+141068;INF082J01242;-;Quantum Long Term Equity Value Fund - Regular Plan Growth Option;80.96;19-Dec-2022
+
+Tata Mutual Fund
+
+101672;INF277K01451;-;Tata Equity P/E Fund - Regular Plan -Growth Option;214.9480;19-Dec-2022
+119231;INF277K01ND1;-;Tata Equity P/E Fund -Direct Plan Growth Option;236.0140;19-Dec-2022
+
+Union Mutual Fund
+
+145473;INF582M01EK4;-;Union Value Discovery Fund - Direct Plan - Growth Option;18.54;19-Dec-2022
+145471;INF582M01EO6;-;Union Value Discovery Fund - Regular Plan - Growth Option;17.95;19-Dec-2022
+
+UTI Mutual Fund
+
+120751;INF789F01VB2;-;UTI Value Opportunities Fund- Direct Plan - Growth Option;113.6217;19-Dec-2022
+103098;INF789F01AG5;-;UTI Value Opportunities Fund- Regular Plan - Growth Option;105.7104;19-Dec-2022
