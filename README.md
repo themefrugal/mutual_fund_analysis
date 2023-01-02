@@ -1,2 +1,2 @@
 # mutual_fund_analysis
-Return Analysis of Mutual Funds on IRR of SIP, SWP, STP, Lumpsum investments
+Return Analysis of Equity Mutual Funds on IRR of SIP, SWP, STP, Lumpsum investments
