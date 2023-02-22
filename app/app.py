@@ -2,6 +2,9 @@
 # The idea is to use the R functions directly from this Python file
 # Need a complete listing of to-do and pending activities
 
+# NAV History from AMFI can be downloaded from
+# https://portal.amfiindia.com/DownloadNAVHistoryReport_Po.aspx?mf=64&frmdt=01-Feb-2023&todt=21-Feb-2023
+
 import pandas as pd
 import urllib.request, json
 import plotly_express as px
@@ -12,11 +15,26 @@ from pyxirr import xirr
 import datetime
 
 @st.cache
-def get_scheme_codes():
+def get_scheme_codes_old():
     with urllib.request.urlopen('https://api.mfapi.in/mf') as url:
         data = json.load(url)
     df_mfs = pd.DataFrame(data)
     return df_mfs
+
+@st.cache
+def get_scheme_codes():
+    with open('./data/mf_codes.txt', 'r') as fp:
+        list_code = []
+        line = fp.readline()
+        while line:
+            words = line.strip().split(';')
+            if len(words) > 5:
+                list_code.append([words[i] for i in [0, 1, 3]])
+            line = fp.readline()
+
+    df_codes = pd.DataFrame(list_code)
+    df_codes.columns = ['schemeCode', 'schemeISIN', 'schemeName']
+    return df_codes
 
 @st.cache(allow_output_mutation=True)
 def get_nav(scheme_code = '122639'):
