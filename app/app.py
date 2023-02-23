@@ -14,14 +14,14 @@ import numpy as np
 from pyxirr import xirr
 import datetime
 
-@st.cache
+@st.cache_data
 def get_scheme_codes_old():
     with urllib.request.urlopen('https://api.mfapi.in/mf') as url:
         data = json.load(url)
     df_mfs = pd.DataFrame(data)
     return df_mfs
 
-@st.cache
+@st.cache_data
 def get_scheme_codes():
     with open('./data/mf_codes.txt', 'r') as fp:
         list_code = []
@@ -36,7 +36,8 @@ def get_scheme_codes():
     df_codes.columns = ['schemeCode', 'schemeISIN', 'schemeName']
     return df_codes
 
-@st.cache(allow_output_mutation=True)
+# @st.cache(allow_output_mutation=True)
+@st.cache_data
 def get_nav(scheme_code = '122639'):
     # scheme_code = '122639'
     mf_url = 'https://api.mfapi.in/mf/' + scheme_code
@@ -51,7 +52,7 @@ def get_nav(scheme_code = '122639'):
     df_navs = df_navs.join(df_dates, how='outer').ffill().reset_index()
     return df_navs
 
-@st.cache
+@st.cache_data
 def get_cagr(df_navs_orig, num_years = 1):
     df_navs = df_navs_orig.copy()
     df_navs['prev_nav'] = df_navs.nav.shift(365 * num_years)
@@ -90,7 +91,8 @@ if sel_names == []:
 
 sel_name = sel_names[0]
 st.write(sel_name)
-tab_nav, tab_cagr, tab_comp, tab_sip = st.tabs(["Home / NAV History", "CAGR Charts", "Comparative Analysis", "SIP"])
+tab_nav, tab_cagr, tab_comp, tab_sip, tab_swp = \
+    st.tabs(["Home / NAV History", "CAGR Charts", "Comparative Analysis", "SIP", "SWP"])
 # st.write(df_mfs[df_mfs['schemeName'] == sel_name].schemeCode.to_list()[0])
 sel_code = df_mfs[df_mfs['schemeName'] == sel_name].schemeCode.to_list()[0]
 
@@ -232,3 +234,10 @@ with tab_sip:
     # fig7 = px.line(df_cfs, x='date', y='cum_units')
     st.plotly_chart(fig7)
 
+with tab_swp:
+    st.write('Systematic Withdrawal Plan - Analysis')
+    col1, col2 = st.columns(2)
+    with col1:
+        start_date = st.date_input('Start Date:', datetime.date(2005, 4, 1), key='st_date_swp')
+    with col2:
+        end_date = st.date_input('End Date:', datetime.date(2022, 4, 1), key='end_date_swp')
