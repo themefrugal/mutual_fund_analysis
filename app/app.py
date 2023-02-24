@@ -241,3 +241,5 @@ with tab_swp:
         start_date = st.date_input('Start Date:', datetime.date(2005, 4, 1), key='st_date_swp')
     with col2:
         end_date = st.date_input('End Date:', datetime.date(2022, 4, 1), key='end_date_swp')
+
+    # To incorporate XIRR calculations and graphing for SWP.
