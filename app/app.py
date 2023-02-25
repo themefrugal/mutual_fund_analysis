@@ -243,3 +243,9 @@ with tab_swp:
         end_date = st.date_input('End Date:', datetime.date(2022, 4, 1), key='end_date_swp')
 
     # To incorporate XIRR calculations and graphing for SWP.
+    df_dates = pd.DataFrame(pd.date_range(start=start_date, end=end_date, freq='M'))
+    df_dates.columns = ['date']
+
+    df_cf = df_navs.merge(df_dates, on='date')
+    df_cf['amount'] = 1000
+    df_cf['units'] = df_cf['amount'] / df_cf['nav']
