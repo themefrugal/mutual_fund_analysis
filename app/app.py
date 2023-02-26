@@ -242,7 +242,6 @@ with tab_swp:
     with col2:
         end_date = st.date_input('End Date:', datetime.date(2022, 4, 1), key='end_date_swp')
 
-    # To incorporate XIRR calculations and graphing for SWP.
     df_dates = pd.DataFrame(pd.date_range(start=start_date, end=end_date, freq='M'))
     df_dates.columns = ['date']
 
