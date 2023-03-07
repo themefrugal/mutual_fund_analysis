@@ -241,10 +241,16 @@ with tab_swp:
         start_date = st.date_input('Start Date:', datetime.date(2005, 4, 1), key='st_date_swp')
     with col2:
         end_date = st.date_input('End Date:', datetime.date(2022, 4, 1), key='end_date_swp')
+        redeem_date = st.date_input('Redeem Date:', datetime.date(2022, 4, 1), key='red_date_swp')
 
     df_dates = pd.DataFrame(pd.date_range(start=start_date, end=end_date, freq='M'))
     df_dates.columns = ['date']
 
     df_cf = df_navs.merge(df_dates, on='date')
-    df_cf['amount'] = 1000
-    df_cf['units'] = df_cf['amount'] / df_cf['nav']
+    df_cf['start_value'] = 100000
+    df_cf['swp_amount'] = -1000
+    df_cf['start_units'] = df_cf['start_value'] / df_cf['nav']
+    df_cf['redeemed_units'] = df_cf['swp_amount'] / df_cf['nav']
+    df_cf['redeemed_total'] = df_cf['units'].cumsum()
+    df_cf['units_remaining'] = df_cf['start_units'] - df_cf['redeemed_total']
+    df_cf['cur_value'] = df_cf['units_remaining'] * df_cf['nav']
