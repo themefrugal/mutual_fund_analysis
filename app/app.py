@@ -196,6 +196,8 @@ with tab_sip:
     df_cf['cum_units'] = df_cf['units'].cumsum()
     df_cf['cur_value'] = df_cf['cum_units'] * df_cf['nav']
     df_cf['inv_amount'] = df_cf['amount'].cumsum()
+    df_cf = df_cf.reset_index()
+    df_cf['amount'] = df_cf['amount'] * (1.05)**(df_cf['index'] // 12)
 
     df_investment = df_cf[['date', 'amount']]
     df_redemption = pd.DataFrame(
