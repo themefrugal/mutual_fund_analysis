@@ -256,3 +256,5 @@ with tab_swp:
     df_cf['redeemed_total'] = df_cf['units'].cumsum()
     df_cf['units_remaining'] = df_cf['start_units'] - df_cf['redeemed_total']
     df_cf['cur_value'] = df_cf['units_remaining'] * df_cf['nav']
+
+    # Similarly implement a step-up swp
