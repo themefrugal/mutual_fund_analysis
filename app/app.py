@@ -236,7 +236,7 @@ with tab_sip:
     # fig7 = px.line(df_cfs, x='date', y='cum_units')
     st.plotly_chart(fig7)
 
-with tab_swp:
+with tab_swp: # Still in Progress, need to refine this logic
     st.write('Systematic Withdrawal Plan - Analysis')
     col1, col2 = st.columns(2)
     with col1:
