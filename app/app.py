@@ -258,3 +258,5 @@ with tab_swp: # Still in Progress, need to refine this logic
     df_cf['cur_value'] = df_cf['units_remaining'] * df_cf['nav']
 
     # Similarly implement a step-up swp
+
+# To do: Implementation of STP systematic transfer plan
