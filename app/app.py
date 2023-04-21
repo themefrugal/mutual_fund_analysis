@@ -240,22 +240,46 @@ with tab_swp: # Still in Progress, need to refine this logic
     st.write('Systematic Withdrawal Plan - Analysis')
     col1, col2 = st.columns(2)
     with col1:
+        inv_amount = st.number_input('Amount Invested:', value=100000, min_value=100000, step=10000)
         start_date = st.date_input('Start Date:', datetime.date(2005, 4, 1), key='st_date_swp')
     with col2:
+        red_amount = st.number_input('Monthly Withdrawn:', value=1000, min_value=1000, step=100)
         end_date = st.date_input('End Date:', datetime.date(2022, 4, 1), key='end_date_swp')
-        redeem_date = st.date_input('Redeem Date:', datetime.date(2022, 4, 1), key='red_date_swp')
 
     df_dates = pd.DataFrame(pd.date_range(start=start_date, end=end_date, freq='M'))
     df_dates.columns = ['date']
 
     df_cf = df_navs.merge(df_dates, on='date')
-    df_cf['start_value'] = 100000
-    df_cf['swp_amount'] = -1000
-    df_cf['start_units'] = df_cf['start_value'] / df_cf['nav']
-    df_cf['redeemed_units'] = df_cf['swp_amount'] / df_cf['nav']
-    df_cf['redeemed_total'] = df_cf['units'].cumsum()
-    df_cf['units_remaining'] = df_cf['start_units'] - df_cf['redeemed_total']
-    df_cf['cur_value'] = df_cf['units_remaining'] * df_cf['nav']
+    df_cf['inv_value'] = inv_amount
+    df_cf['init_units'] = df_cf['inv_value'] / df_cf['nav'][0]
+    df_cf['amount'] = red_amount
+    df_cf['units'] = df_cf['amount'] / df_cf['nav']
+    df_cf['cum_units'] = df_cf['units'].cumsum()
+    df_cf['cur_units'] = df_cf['init_units'] - df_cf['cum_units']
+    df_cf['cur_value'] = df_cf['cur_units'] * df_cf['nav']
+
+    df_investment = df_cf[['date', 'inv_value']].head(1)
+    df_investment.columns = ['date', 'amount']
+    df_redemption = df_cf[['date', 'amount']]
+    df_remaining = df_cf.iloc[-1:][['date', 'cur_value']]
+    df_remaining.columns = df_investment.columns
+    df_redemption = pd.concat([df_redemption, df_remaining]).reset_index(drop=True)
+    df_redemption['amount'] = -1 * df_redemption['amount']
+    df_irr = pd.concat([df_investment, df_redemption]).reset_index(drop=True)
+
+    xirr_value = xirr(df_irr[['date', 'amount']]) * 100
+    st.write(xirr_value)
+
+    df_cf['cum_amount'] = df_cf['amount'].cumsum()
+    df_cf['total'] = df_cf['cur_value'] + df_cf['cum_amount']
+    df_cf_long = pd.melt(df_cf[['date', 'inv_value', 'cur_value', 'cum_amount', 'total']],
+                         id_vars = ['date'],
+                         value_vars = ['inv_value', 'cur_value', 'cum_amount', 'total'],
+                         var_name = 'component',
+                         value_name = 'amount')
+
+    fig = px.line(df_cf_long, x='date', y='amount', color='component')
+    st.plotly_chart(fig)
 
     # Similarly implement a step-up swp
 
