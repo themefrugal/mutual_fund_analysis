@@ -91,8 +91,8 @@ if sel_names == []:
 
 sel_name = sel_names[0]
 st.write(sel_name)
-tab_nav, tab_cagr, tab_comp, tab_sip, tab_swp = \
-    st.tabs(["Home / NAV History", "CAGR Charts", "Comparative Analysis", "SIP", "SWP"])
+tab_nav, tab_cagr, tab_comp, tab_sip, tab_swp, tab_stp = \
+    st.tabs(["Home / NAV History", "CAGR Charts", "Comparative Analysis", "SIP", "SWP", "STP"])
 # st.write(df_mfs[df_mfs['schemeName'] == sel_name].schemeCode.to_list()[0])
 sel_code = df_mfs[df_mfs['schemeName'] == sel_name].schemeCode.to_list()[0]
 
@@ -282,5 +282,6 @@ with tab_swp: # Still in Progress, need to refine this logic
     st.plotly_chart(fig)
 
     # Similarly implement a step-up swp
-
-# To do: Implementation of STP systematic transfer plan
+with tab_stp:
+    # To do: Implementation of STP systematic transfer plan
+    st.write('STP - In Progress')
