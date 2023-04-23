@@ -285,3 +285,4 @@ with tab_swp: # Still in Progress, need to refine this logic
 with tab_stp:
     # To do: Implementation of STP systematic transfer plan
     st.write('STP - In Progress')
+    # A combination of SWP from one scheme and SIP into another scheme
