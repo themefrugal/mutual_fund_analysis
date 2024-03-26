@@ -113,7 +113,9 @@ with tab_cagr:
     st.write('CAGR Chart' + sub_name)
     fig2 = px.line(df_cagrs, x='date', y='cagr', color='years')
     st.plotly_chart(fig2)
-    dfx = df_cagrs[['date', 'years', 'cagr']].groupby('years').describe().reset_index()
+    dfx = df_cagrs[['years', 'cagr']].groupby('years').describe().reset_index()
+    # st.write(df_cagrs)
+    # st.write([[a for (a, b) in dfx.columns][0]] + [a for a in dfx.columns.droplevel()][1:])
     dfx.columns = [[a for (a, b) in dfx.columns][0]] + [a for a in dfx.columns.droplevel()][1:]
     st.write('CAGR - Min, Median and Max')
     st.write(dfx)
@@ -268,7 +270,8 @@ with tab_swp: # Still in Progress, need to refine this logic
     df_irr = pd.concat([df_investment, df_redemption]).reset_index(drop=True)
 
     xirr_value = xirr(df_irr[['date', 'amount']]) * 100
-    st.write(xirr_value)
+    st.write("XIRR: (%)")
+    st.write(round(xirr_value,2))
 
     df_cf['cum_amount'] = df_cf['amount'].cumsum()
     df_cf['total'] = df_cf['cur_value'] + df_cf['cum_amount']
