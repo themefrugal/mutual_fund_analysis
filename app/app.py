@@ -122,6 +122,7 @@ with tab_cagr:
 
 with tab_comp:
     # Comparisons with other mutual funds
+    check_combo = st.checkbox("Compare against a combination of MF?", value=False, label_visibility="visible")
     names_comp = st.multiselect("Select Mutual Funds to Compare:", df_mfs.schemeName.unique(), max_selections=5)
     all_names = [sel_name] + names_comp
     codes_comp = [df_mfs[df_mfs['schemeName'] == x].schemeCode.to_list()[0] for x in all_names]
@@ -147,6 +148,39 @@ with tab_comp:
         list_cagrs.append(df_cagrs_comp)
 
     df_nav_all = pd.concat(list_navs, axis=1).dropna()
+
+    if check_combo:
+        if len(names_comp) == 0:
+            wt = "100.0"
+        else:
+            wt = ((str(round(100 / len(names_comp), 2)) + ", ") * len(names_comp)).rstrip(", ")
+        wt_text = st.text_input("Weightage:", value=wt)
+        wt_nums = [float(x.strip()) for x in wt_text.split(",")]
+
+        if sum(wt_nums) != 100.0:
+            st.error("Weights do not add up to 100.0. Please Check!")
+        else:
+            st.write("Weights add up to 100.0.  Okay!")
+
+        ctr = 0
+        for name in names_comp:
+            df_nav_all[name + '_wt'] = df_nav_all[name] * wt_nums[ctr] / 100
+            ctr += 1
+        names_wt = [name + '_wt' for name in names_comp]
+        df_nav_all['combo'] = df_nav_all[names_wt].sum(axis=1)
+
+        df_nav = df_nav_all.reset_index()[['date', 'combo']]
+        df_nav.columns = ['date', 'nav']
+        list_cagr = []
+        for y in years:
+            df_cagr = get_cagr(df_nav, y)
+            list_cagr.append(df_cagr)
+        df_cagrs_comp = pd.concat(list_cagr)
+        df_cagrs_comp = df_cagrs_comp.set_index(['date', 'years'])
+        df_cagrs_comp = df_cagrs_comp.rename(columns={'cagr': 'combo'})
+        list_cagrs.append(df_cagrs_comp)
+        all_names = all_names + ['combo']
+
     df_cagr_all = pd.concat(list_cagrs, axis=1).dropna()
 
     df_navs_date = df_nav_all.reset_index()
