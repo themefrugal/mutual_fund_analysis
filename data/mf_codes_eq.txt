@@ -1,0 +1,2483 @@
+Open Ended Schemes(Equity Scheme - ELSS)
+
+Aditya Birla Sun Life Mutual Fund
+
+119661;INF209K01VV9;-;Aditya Birla Sun Life Tax Plan - Direct Plan - Growth Option;54.9;16-Dec-2022
+104331;INF209K01348;-;Aditya Birla Sun Life Tax Plan - Regular Plan - Growth Option;50.4;16-Dec-2022
+119544;INF209K01UN8;-;Aditya Birla Sun Life Tax Relief '96 - Growth - Direct Plan;45.53;16-Dec-2022
+107745;INF209K01108;-;Aditya Birla Sun Life Tax Relief '96 - Growth Option;41.6;16-Dec-2022
+
+Axis Mutual Fund
+
+120503;INF846K01EW2;-;Axis Long Term Equity Fund - Direct Plan - Growth Option;73.0535;16-Dec-2022
+112323;INF846K01131;-;Axis Long Term Equity Fund - Regular Plan - Growth;65.9515;16-Dec-2022
+
+Bank of India Mutual Fund
+
+119351;INF761K01884;-;BANK OF INDIA Tax Advantage Fund-Direct Plan- Growth;116.12;16-Dec-2022
+111709;INF761K01157;-;BANK OF INDIA Tax Advantage Fund-ECO Plan-Growth;110.23;16-Dec-2022
+111710;INF761K01181;-;BANK OF INDIA Tax Advantage Fund-Regular Plan- Growth;102.60;16-Dec-2022
+
+Baroda BNP Paribas Mutual Fund
+
+150159;INF251K01HF3;-;BARODA BNP PARIBAS ELSS Fund - Direct Plan - Growth Option;64.8265;16-Dec-2022
+150156;INF251K01985;-;BARODA BNP PARIBAS ELSS Fund - Regular - Growth Option;59.3303;16-Dec-2022
+
+Canara Robeco Mutual Fund
+
+118285;INF760K01EL8;-;CANARA ROBECO EQUITY TAX SAVER FUND - DIRECT PLAN - GROWTH OPTION;128.5100;16-Dec-2022
+111722;INF760K01100;-;CANARA ROBECO EQUITY TAX SAVER FUND - REGULAR PLAN - GROWTH OPTION;118.5400;16-Dec-2022
+
+DSP Mutual Fund
+
+119242;INF740K01OK1;-;DSP Tax Saver Fund - Direct Plan - Growth;91.803;16-Dec-2022
+104772;INF740K01185;-;DSP Tax Saver Fund - Regular Plan - Growth;84.666;16-Dec-2022
+
+Edelweiss Mutual Fund
+
+118620;INF754K01CA8;-;Edelweiss Long Term Equity Fund (Tax Savings) - Direct Plan-Growth Option;81.93;16-Dec-2022
+111638;INF754K01517;-;Edelweiss Long Term Equity Fund (Tax Savings) - Regular Plan - Growth Option;72.29;16-Dec-2022
+
+Franklin Templeton Mutual Fund
+
+118540;INF090I01JS8;-;Franklin India TAXSHIELD - Direct - Growth;1010.1652;16-Dec-2022
+100526;INF090I01775;-;Franklin India Taxshield-Growth;925.4117;16-Dec-2022
+
+HDFC Mutual Fund
+
+118929;INF179K01WX8;-;HDFC Long Term Advantage Plan - Growth Option - Direct Plan;625.385;14-Jan-2022
+100998;INF179K01996;-;HDFC Long Term Advantage Plan - Growth Plan;595.168;14-Jan-2022
+119060;INF179K01YS4;-;HDFC Taxsaver - Growth Option - Direct Plan;878.516;16-Dec-2022
+101979;INF179K01BB8;-;HDFC Taxsaver - Growth Plan;826.539;16-Dec-2022
+
+HSBC Mutual Fund
+
+151078;INF917K01GP0;-;HSBC ELSS Fund - Direct Growth;85.5943;16-Dec-2022
+151076;INF677K01064;-;HSBC ELSS Fund - Regular Growth;80.1529;16-Dec-2022
+104707;INF336L01BA4;-;HSBC Tax Saver Equity Fund - Growth;57.7099;16-Dec-2022
+120079;INF336L01EE0;-;HSBC Tax Saver Equity Fund - Growth Direct;63.2376;16-Dec-2022
+
+ICICI Prudential Mutual Fund
+
+120592;INF109K01Y31;-;ICICI Prudential Long Term Equity Fund (Tax Saving) - Direct Plan -  Growth;670.82;16-Dec-2022
+100354;INF109K01464;-;ICICI Prudential Long Term Equity Fund (Tax Saving) - Growth;614.14;16-Dec-2022
+
+IDBI Mutual Fund
+
+123637;INF397L01EC6;-;IDBI Equity Advantage Fund - Growth Direct;44.33;16-Dec-2022
+123638;INF397L01DY2;-;IDBI Equity Advantage Fund - Growth Regular;39.73;16-Dec-2022
+
+IDFC Mutual Fund
+
+118473;INF194K01Y29;-;IDFC Tax Advantage  (ELSS) Fund-Direct Plan-Growth ;114.272;16-Dec-2022
+111569;INF194K01292;-;IDFC Tax Advantage (ELSS) Fund - Regular Plan - Growth;102.434;16-Dec-2022
+
+Indiabulls Mutual Fund
+
+141808;INF666M01DK7;-;Indiabulls Tax Savings Fund- Direct Plan- Growth Option;15.02;16-Dec-2022
+141862;INF666M01DN1;-;Indiabulls Tax Savings Fund-Regular Plan-Growth Option;13.8;16-Dec-2022
+
+Invesco Mutual Fund
+
+120416;INF205K01NT8;-;Invesco India Tax Plan - Direct Plan - Growth;90.73;16-Dec-2022
+104636;INF205K01270;-;Invesco India Tax Plan - Growth;79.05;16-Dec-2022
+
+ITI Mutual Fund
+
+147541;INF00XX01390;-;ITI Long Term Equity Fund - Direct Plan - Growth Option;15.4241;16-Dec-2022
+147544;INF00XX01374;-;ITI Long Term Equity Fund - Regular Plan - Growth Option;14.4041;16-Dec-2022
+
+JM Financial Mutual Fund
+
+120494;INF192K01CE3;-;JM Tax Gain Fund (Direct) - Growth Option;32.5140;16-Dec-2022
+107288;INF192K01650;-;JM Tax Gain Fund (Regular) - Growth option;29.3207;16-Dec-2022
+
+Kotak Mahindra Mutual Fund
+
+103339;INF174K01369;-;Kotak Tax Saver-Scheme-Growth;77.177;16-Dec-2022
+119773;INF174K01LI3;-;Kotak Tax Saver-Scheme-Growth - Direct;87.605;16-Dec-2022
+
+LIC Mutual Fund
+
+120270;INF767K01EM1;-;LIC MF Tax Plan-Direct Plan-Growth;110.423;16-Dec-2022
+100865;INF767K01956;-;LIC MF Tax Plan-Regular Plan-Growth;99.6481;16-Dec-2022
+
+Mahindra Manulife Mutual Fund
+
+139781;INF174V01093;-;Mahindra Manulife ELSS Kar Bachat Yojana - Direct Plan -Growth;21.8900;16-Dec-2022
+139783;INF174V01077;-;Mahindra Manulife ELSS Kar Bachat Yojana - Regular Plan - Growth;19.4498;16-Dec-2022
+
+Mirae Asset Mutual Fund
+
+135781;INF769K01DM9;-;Mirae Asset Tax Saver Fund-Direct Plan -Growth;35.068;16-Dec-2022
+135784;INF769K01DK3;-;Mirae Asset Tax Saver Fund-Regular Plan-Growth;31.809;16-Dec-2022
+
+Motilal Oswal Mutual Fund
+
+133386;INF247L01569;-;Motilal Oswal Long Term Equity Fund (MOFLTE) - Direct Plan - Growth Option;30.8253;16-Dec-2022
+133385;INF247L01544;-;Motilal Oswal Long Term Equity Fund (MOFLTE) - Regular Plan - Growth Option;27.7521;16-Dec-2022
+
+Navi Mutual Fund
+
+135654;INF959L01CD5;-;Navi ELSS Tax Saver Fund- Direct Plan- Growth Option;23.506;16-Dec-2022
+135655;INF959L01CF0;-;Navi ELSS Tax Saver Fund- Regular Plan- Growth Option;20.8256;16-Dec-2022
+
+Nippon India Mutual Fund
+
+103196;INF204K01GK4;-;Nippon India Tax Saver (ELSS) Fund-Growth Plan-Growth Option;82.4472;16-Dec-2022
+118803;INF204K01L55;-;Nippon India Tax Saver Fund - Direct Plan Growth Plan - Growth Option;88.9434;16-Dec-2022
+
+PGIM India Mutual Fund
+
+135601;INF663L01FN5;-;PGIM India ELSS Tax Saver Fund - Direct Plan - Growth Option;27.62;16-Dec-2022
+135598;INF663L01FQ8;-;PGIM India ELSS Tax Saver Fund - Regular Plan - Growth Option;25.09;16-Dec-2022
+
+PPFAS Mutual Fund
+
+147481;INF879O01100;-;Parag Parikh Tax Saver Fund- Direct Growth;20.9344;16-Dec-2022
+147482;INF879O01092;-;Parag Parikh Tax Saver Fund- Regular Growth;20.0495;16-Dec-2022
+
+quant Mutual Fund
+
+120847;INF966L01986;-;quant Tax Plan - Growth Option - Direct Plan;274.3081;16-Dec-2022
+100175;INF966L01135;-;quant Tax Plan - Growth Option - Regular Plan;252.4503;16-Dec-2022
+
+Quantum Mutual Fund
+
+111549;INF082J01069;-;Quantum Tax Saving Fund - Direct Plan Growth Option;81.86;16-Dec-2022
+141070;INF082J01366;-;Quantum Tax Saving Fund - Regular Plan Growth Option;80.06;16-Dec-2022
+
+SBI Mutual Fund
+
+119723;INF200K01UM9;-;SBI LONG TERM EQUITY FUND - DIRECT PLAN -GROWTH;256.8939;16-Dec-2022
+105628;INF200K01495;-;SBI LONG TERM EQUITY FUND - REGULAR PLAN- GROWTH;241.9260;16-Dec-2022
+
+Shriram Mutual Fund
+
+145819;INF680P01158;-;Shriram Long Term Equity Fund - Direct Growth;17.0402;16-Dec-2022
+145820;INF680P01133;-;Shriram Long Term Equity Fund - Regular Growth;15.8415;16-Dec-2022
+
+Sundaram Mutual Fund
+
+119549;INF903J01NN3;-;Sundaram Diversified Equity (ELSS) Direct Plan - Growth;163.2619;16-Dec-2022
+101853;INF903J01538;-;Sundaram Diversified Equity (ELSS) Regular Plan - Growth;156.3184;16-Dec-2022
+149570;INF173K01HZ7;-;Sundaram Tax Savings Fund (Formerly Known as Principal Tax Savings Fund) - Direct Plan Growth;363.7590;16-Dec-2022
+149569;INF173K01361;-;Sundaram Tax Savings Fund (Formerly Known as Principal Tax Savings Fund) Regular Growth;345.1272;16-Dec-2022
+
+Tata Mutual Fund
+
+132756;INF277K01I86;-;Tata India Tax Savings Fund-Growth-Direct Plan;33.4690;16-Dec-2022
+132757;INF277K01I52;-;Tata India Tax Savings Fund-Growth-Regular Plan;30.1055;16-Dec-2022
+
+Taurus Mutual Fund
+
+118866;INF044D01CG6;INF044D01AA3;Taurus Taxshield - Direct Plan - Growth;127.94;16-Dec-2022
+100480;INF044D01AC9;-;Taurus Taxshield - Regular Plan - Growth;119.33;16-Dec-2022
+
+Union Mutual Fund
+
+119307;INF582M01765;-;Union Long Term Equity Fund - Direct Plan - Growth Option;46.22;16-Dec-2022
+116051;INF582M01302;-;Union Long Term Equity Fund - Growth Option;43.55;16-Dec-2022
+
+UTI Mutual Fund
+
+120715;INF789F01TF7;-;UTI - Long Term Equity Fund (Tax Saving) - Direct Plan - Growth Option;157.2693;16-Dec-2022
+100821;INF789F01547;-;UTI - Long Term Equity Fund (Tax Saving) - Regular Plan - Growth Option;144.2399;16-Dec-2022
+
+WhiteOak Capital Mutual Fund
+
+150587;INF03VN01621;-;WhiteOak Capital Tax Saver Fund Direct Plan Growth;10.276;16-Dec-2022
+150589;INF03VN01647;-;WhiteOak Capital Tax Saver Fund Regular Plan Growth;10.243;16-Dec-2022
+
+Open Ended Schemes(Equity Scheme - Flexi Cap Fund)
+
+Aditya Birla Sun Life Mutual Fund
+
+120564;INF209K01XX1;-;Aditya Birla Sun Life Flexi Cap Fund - Growth - Direct Plan;1260.3;16-Dec-2022
+103166;INF209K01AJ8;-;Aditya Birla Sun Life Flexi Cap Fund - Growth - Regular Plan;1151.63;16-Dec-2022
+
+Axis Mutual Fund
+
+141925;INF846K01B28;-;Axis Flexi Cap Fund - Direct Plan - Growth;19.26;16-Dec-2022
+141927;INF846K01B51;-;Axis Flexi Cap Fund - Regular Plan - Growth;17.92;16-Dec-2022
+
+Baroda BNP Paribas Mutual Fund
+
+150387;INF251K01QZ2;-;Baroda BNP Paribas Flexi Cap Fund - Direct Plan - Growth Option;10.2724;16-Dec-2022
+150385;INF251K01QW9;-;Baroda BNP Paribas Flexi Cap Fund - Regular Plan - Growth Option;10.2103;16-Dec-2022
+
+Canara Robeco Mutual Fund
+
+118275;INF760K01EF0;-;CANARA ROBECO FLEXICAP FUND - DIRECT PLAN - GROWTH OPTION;247.9600;16-Dec-2022
+101922;INF760K01019;-;CANARA ROBECO FLEXICAP FUND - REGULAR PLAN - GROWTH OPTION;227.8600;16-Dec-2022
+
+DSP Mutual Fund
+
+119076;INF740K01PI2;-;DSP Flexi Cap Fund - Direct Plan - Growth;70.201;16-Dec-2022
+105875;INF740K01037;-;DSP Flexi Cap Fund - Regular Plan - Growth;64.853;16-Dec-2022
+
+Edelweiss Mutual Fund
+
+140353;INF843K01KK1;-;Edelweiss Flexi Cap Fund - Direct Plan - Growth Option;26.243;16-Dec-2022
+140355;INF843K01KN5;-;Edelweiss Flexi Cap Fund - Regular Plan - Growth Option;23.627;16-Dec-2022
+
+Franklin Templeton Mutual Fund
+
+118535;INF090I01FK3;-;Franklin India Flexi Cap Fund - Direct - Growth;1120.5401;16-Dec-2022
+100520;INF090I01239;-;Franklin India Flexi Cap Fund - Growth;1027.1731;16-Dec-2022
+
+HDFC Mutual Fund
+
+118955;INF179K01UT0;-;HDFC Flexi Cap Fund - Growth Option - Direct Plan;1249.642;16-Dec-2022
+101762;INF179K01608;-;HDFC Flexi Cap Fund - Growth Plan;1162.676;16-Dec-2022
+
+HSBC Mutual Fund
+
+120046;INF336L01DH5;-;HSBC Flexi Cap Fund - Direct Growth;143.0788;16-Dec-2022
+102252;INF336L01AF5;-;HSBC Flexi Cap Fund - Regular Growth;130.8709;16-Dec-2022
+
+ICICI Prudential Mutual Fund
+
+148990;INF109KC1R14;-;ICICI Prudential Flexicap Fund - Direct Plan - Growth;11.96;16-Dec-2022
+148989;INF109KC1Q80;-;ICICI Prudential Flexicap Fund - Growth;11.71;16-Dec-2022
+
+IDBI Mutual Fund
+
+128236;INF397L01HF2;-;IDBI FLEXI CAP FUND Growth Direct;39.54;16-Dec-2022
+128235;INF397L01HJ4;-;IDBI FLEXI CAP FUND Growth Regular;35.30;16-Dec-2022
+
+IDFC Mutual Fund
+
+108594;INF194K01391;-;IDFC Flexi Cap Fund - Regular Plan - Growth;139.133;16-Dec-2022
+118424;INF194K01W62;-;IDFC Flexi Cap Fund-Direct Plan-Growth;149.321;16-Dec-2022
+
+Invesco Mutual Fund
+
+149763;INF205KA1494;-;Invesco India Flexi Cap Fund - Direct Plan - Growth;10.81;16-Dec-2022
+149766;INF205KA1460;-;Invesco India Flexi Cap Fund - Growth;10.65;16-Dec-2022
+
+JM Financial Mutual Fund
+
+120492;INF192K01CC7;-;JM Flexicap Fund (Direct) - Growth Option;61.9372;16-Dec-2022
+109522;INF192K01635;-;JM Flexicap Fund (Regular) - Growth option;56.2783;16-Dec-2022
+
+Kotak Mahindra Mutual Fund
+
+112090;INF174K01336;-;Kotak Flexicap Fund - Growth;55.264;16-Dec-2022
+120166;INF174K01LS2;-;Kotak Flexicap Fund - Growth - Direct;60.872;16-Dec-2022
+
+LIC Mutual Fund
+
+120264;INF767K01EG3;-;LIC MF Flexi Cap Fund-Direct Plan-Growth;71.6847;16-Dec-2022
+100313;INF767K01071;-;LIC MF Flexi Cap Fund-Regular Plan-Growth;66.5664;16-Dec-2022
+
+Mahindra Manulife Mutual Fund
+
+149104;INF174V01AS2;-;Mahindra Manulife Flexi Cap Yojana - Direct Plan -Growth;10.7967;16-Dec-2022
+149101;INF174V01AP8;-;Mahindra Manulife Flexi Cap Yojana - Regular Plan -Growth;10.5025;16-Dec-2022
+
+Motilal Oswal Mutual Fund
+
+129046;INF247L01502;-;Motilal Oswal Flexi cap Fund Direct Plan-Growth Option;36.9975;16-Dec-2022
+129048;INF247L01478;-;Motilal Oswal Flexi Cap Fund Regular Plan-Growth Option;34.1276;16-Dec-2022
+
+Navi Mutual Fund
+
+143793;INF959L01DT9;-;Navi Flexi Cap Fund - Direct Plan - Growth;18.0603;16-Dec-2022
+143787;INF959L01EE9;-;Navi Flexi Cap Fund - Regular Plan - Growth;16.4889;16-Dec-2022
+
+Nippon India Mutual Fund
+
+149094;INF204KC1121;-;Nippon India Flexi Cap Fund - Direct Plan - Growth Plan - Growth Option;11.1521;16-Dec-2022
+149089;INF204KC1097;-;Nippon India Flexi Cap Fund - Regular Plan - Growth Plan - Growth Option;10.9099;16-Dec-2022
+
+PGIM India Mutual Fund
+
+133839;INF663L01FF1;-;PGIM India Flexi Cap Fund - Direct Plan - Growth Option;29.11;16-Dec-2022
+133836;INF663L01FJ3;-;PGIM India Flexi Cap Fund - Regular Plan - Growth Option;25.82;16-Dec-2022
+
+PPFAS Mutual Fund
+
+122639;INF879O01027;-;Parag Parikh Flexi Cap Fund - Direct Plan - Growth;51.7298;16-Dec-2022
+122640;INF879O01019;-;Parag Parikh Flexi Cap Fund - Regular Plan - Growth;48.3786;16-Dec-2022
+
+quant Mutual Fund
+
+109830;INF966L01457;-;quant Flexi Cap Fund - Growth Option - Regular Plan;64.8473;16-Dec-2022
+120843;INF966L01911;-;quant Flexi Cap Fund - Growth Option-Direct Plan;69.7708;16-Dec-2022
+
+Samco Mutual Fund
+
+149450;INF0K1H01024;-;Samco Flexi Cap Fund - Direct Plan - Growth Option;9.62;16-Dec-2022
+149449;INF0K1H01016;-;Samco Flexi Cap Fund - Regular Plan - Growth Option;9.49;16-Dec-2022
+
+SBI Mutual Fund
+
+119718;INF200K01UG1;-;SBI Flexicap Fund - DIRECT PLAN - Growth Option;84.3748;16-Dec-2022
+103215;INF200K01222;-;SBI Flexicap Fund - REGULAR PLAN -Growth Option;77.2128;16-Dec-2022
+
+Shriram Mutual Fund
+
+144905;INF680P01109;-;Shriram Flexi Cap Fund - Direct Growth;16.3931;16-Dec-2022
+144902;INF680P01075;-;Shriram Flexi Cap Fund - Regular Growth;15.1827;16-Dec-2022
+
+Sundaram Mutual Fund
+
+150571;INF903JA1LE2;-;Sundaram Flexicap Fund Direct Growth;10.1867;16-Dec-2022
+150568;INF903JA1LB8;-;Sundaram Flexicap Fund Regular Growth;10.1342;16-Dec-2022
+
+Tata Mutual Fund
+
+144548;INF277K019K2;-;Tata Flexi Cap Fund -Regular Plan-Growth;15.8758;16-Dec-2022
+144546;INF277K015K0;-;Tata Flexi Cap Fund-Direct Plan-Growth;17.0510;16-Dec-2022
+
+Taurus Mutual Fund
+
+118883;INF044D01BU9;-;Taurus Flexi Cap Fund - Direct Plan - Growth;162.03;16-Dec-2022
+100476;INF044D01989;-;Taurus Flexi Cap Fund - Regular Plan - Growth ;155.97;16-Dec-2022
+
+Union Mutual Fund
+
+119292;INF582M01633;-;Union Flexi Cap Fund - Direct Plan - Growth Option;37.09;16-Dec-2022
+115270;INF582M01104;-;Union Flexi Cap Fund - Growth Option;34.31;16-Dec-2022
+
+UTI Mutual Fund
+
+100669;INF789F01513;-;UTI - Flexi Cap Fund-Growth Option;234.8052;16-Dec-2022
+120662;INF789F01TC4;-;UTI - Flexi Cap Fund-Growth Option - Direct;247.2277;16-Dec-2022
+
+WhiteOak Capital Mutual Fund
+
+150347;INF03VN01506;-;WhiteOak Capital Flexi Cap Fund Regular Plan Growth;10.546;16-Dec-2022
+150346;INF03VN01530;-;WhiteOak Capital Flexi Cap Fund Direct Plan Growth;10.607;16-Dec-2022
+
+Open Ended Schemes(Equity Scheme - Focused Fund)
+
+Aditya Birla Sun Life Mutual Fund
+
+119564;INF209K01WE3;-;Aditya Birla Sun Life Focused Equity Fund - Growth - Direct Plan;104.0331;19-Dec-2022
+103309;INF209K01462;-;Aditya Birla Sun Life Focused Equity Fund -Growth Option;94.6118;19-Dec-2022
+
+Axis Mutual Fund
+
+120468;INF846K01CQ8;-;Axis Focused 25 Fund - Direct Plan - Growth Option;45.26;19-Dec-2022
+117560;INF846K01CH7;-;Axis Focused 25 Fund - Regular Plan - Growth Option;40.18;19-Dec-2022
+
+Baroda BNP Paribas Mutual Fund
+
+150264;INF251K01PN0;-;BARODA BNP PARIBAS Focused Fund - Direct Plan - Growth Option;16.3458;19-Dec-2022
+150263;INF251K01PK6;-;BARODA BNP PARIBAS Focused Fund - Regular Plan-Growth Option;15.1249;19-Dec-2022
+
+Canara Robeco Mutual Fund
+
+148883;INF760K01JQ6;-;Canara Robeco Focused Equity Fund - Direct Plan - Growth Option;13.2000;19-Dec-2022
+148884;INF760K01JT0;-;Canara Robeco Focused Equity Fund - Regular Plan - Growth Option;12.8400;19-Dec-2022
+
+DSP Mutual Fund
+
+119096;INF740K01OB0;-;DSP Focus Fund - Direct Plan - Growth;36.525;19-Dec-2022
+112901;INF740K01532;-;DSP Focus Fund - Regular Plan - Growth;33.608;19-Dec-2022
+
+Edelweiss Mutual Fund
+
+150376;INF754K01OP1;-;Edelweiss Focused Equity Fund - Direct Plan - Growth;10.587;19-Dec-2022
+150382;INF754K01OL0;-;Edelweiss Focused Equity Fund - Regular Plan - Growth;10.517;19-Dec-2022
+
+Franklin Templeton Mutual Fund
+
+118564;INF090I01IW2;-;Franklin India Focused Equity Fund - Direct - Growth;79.8332;19-Dec-2022
+105817;INF090I01981;-;Franklin India Focused Equity Fund - Growth Plan;72.3878;19-Dec-2022
+
+HDFC Mutual Fund
+
+118950;INF179K01VK7;-;HDFC Focused 30 Fund - Growth Option - Direct Plan;149.385;19-Dec-2022
+102760;INF179K01574;-;HDFC Focused 30 Fund - GROWTH PLAN;135.895;19-Dec-2022
+
+HSBC Mutual Fund
+
+148411;INF336L01PB2;-;HSBC Focused Fund - Direct Growth;17.0241;19-Dec-2022
+148409;INF336L01PE6;-;HSBC Focused Fund - Regular Growth;16.3624;19-Dec-2022
+
+ICICI Prudential Mutual Fund
+
+120722;INF109K018N2;-;ICICI Prudential Focused Equity Fund - Direct Plan - Growth;58.95;19-Dec-2022
+111957;INF109K01BZ4;-;ICICI Prudential Focused Equity Fund - Growth;53.04;19-Dec-2022
+
+IDBI Mutual Fund
+
+141920;INF397L01KA7;-;IDBI FOCUSED 30 EQUITY FUND - Growth Direct;17.00;19-Dec-2022
+141919;INF397L01KE9;-;IDBI FOCUSED 30 EQUITY FUND - Growth Regular;15.84;19-Dec-2022
+
+IDFC Mutual Fund
+
+108592;INF194K01466;-;IDFC Focused Equity Fund - Regular Plan - Growth;53.088;19-Dec-2022
+118421;INF194K01W21;-;IDFC Focused Equity Fund-Direct Plan-Growth ;60.468;19-Dec-2022
+
+IIFL Mutual Fund
+
+131578;INF579M01878;-;IIFL Focused Equity Fund -Regular Plan - Growth;31.0930;19-Dec-2022
+131580;INF579M01902;-;IIFL Focused Equity Fund-Direct Plan-Growth;34.3661;19-Dec-2022
+
+Invesco Mutual Fund
+
+148481;INF205KA1213;-;Invesco India Focused 20 Equity Fund - Direct Plan - Growth;15.82;19-Dec-2022
+148483;INF205KA1189;-;Invesco India Focused 20 Equity Fund - Growth;15.23;19-Dec-2022
+
+JM Financial Mutual Fund
+
+120488;INF192K01BW7;-;JM Focused Fund (Direct)  - Growth Option;14.2695;19-Dec-2022
+107410;INF192K01577;-;JM Focused Fund (Regular) - Growth Option;12.6322;19-Dec-2022
+
+Kotak Mahindra Mutual Fund
+
+147473;INF174KA1EN7;-;Kotak Focused equity Fund- Direct Plan- Growth option;18.052;19-Dec-2022
+147477;INF174KA1EK3;-;Kotak Focused Equity Fund- Regular plan _ Growth Option;17.032;19-Dec-2022
+
+Mahindra Manulife Mutual Fund
+
+148567;INF174V01AG7;-;Mahindra Manulife Focused Equity Yojana - Direct Plan -Growth;17.2899;19-Dec-2022
+148571;INF174V01AD4;-;Mahindra Manulife Focused Equity Yojana - Regular Plan - Growth;16.5285;19-Dec-2022
+
+Mirae Asset Mutual Fund
+
+147206;INF769K01EU0;-;Mirae Asset Focused Fund Direct Plan Growth;20.076;19-Dec-2022
+147203;INF769K01ES4;-;Mirae Asset Focused Fund Regular Plan Growth;19.022;19-Dec-2022
+
+Motilal Oswal Mutual Fund
+
+122389;INF247L01189;-;Motilal Oswal Focused 25 Fund (MOF25)- Direct Plan Growth Option;38.5081;19-Dec-2022
+122387;INF247L01155;-;Motilal Oswal Focused 25 Fund (MOF25)- Regular Plan Growth Option;33.9307;19-Dec-2022
+
+Nippon India Mutual Fund
+
+118692;INF204K01F95;-;Nippon India Focused Equity Fund - Direct Plan Growth Plan - Growth Option;90.2818;19-Dec-2022
+104637;INF204K01GE7;-;Nippon India Focused Equity Fund -Growth Plan -Growth Option;83.5253;19-Dec-2022
+
+quant Mutual Fund
+
+109275;INF966L01374;-;quant Focused Fund - Growth Option - Regular Plan;59.4246;19-Dec-2022
+120834;INF966L01853;-;quant Focused Fund - Growth Option-Direct Plan;63.3148;19-Dec-2022
+
+SBI Mutual Fund
+
+119727;INF200K01RJ1;-;SBI FOCUSED EQUITY FUND - DIRECT PLAN -GROWTH;254.2988;19-Dec-2022
+102756;INF200K01370;-;SBI FOCUSED EQUITY FUND - REGULAR PLAN -GROWTH;231.5600;19-Dec-2022
+
+Sundaram Mutual Fund
+
+149533;INF173K01EK6;-;Sundaram Focused Fund (Formerly Known as Principal Focused Multicap Fund)- Direct Plan - Growth Option;120.9083;19-Dec-2022
+149532;INF173K01189;-;Sundaram Focused Fund (Formerly Known as Principal Focused Multicap Fund)-Growth Option;112.1325;19-Dec-2022
+
+Tata Mutual Fund
+
+147757;INF277K017X9;-;Tata Focused Equity Fund-Direct Plan-Growth;16.9487;19-Dec-2022
+147760;INF277K010Y2;-;Tata Focused Equity Fund-Regular Plan-Growth;16.0319;19-Dec-2022
+
+Union Mutual Fund
+
+147492;INF582M01FS4;-;Union Focused Fund - Direct Plan - Growth Option;19.21;19-Dec-2022
+147490;INF582M01FW6;-;Union Focused Fund - Regular Plan - Growth Option;18.62;19-Dec-2022
+
+UTI Mutual Fund
+
+149091;INF789F1AVA3;-;UTI Focused Equity Fund - Direct Plan - Growth Option;10.6652;19-Dec-2022
+149090;INF789F1AUY5;-;UTI Focused Equity Fund - Regular Plan - Growth Option;10.4188;19-Dec-2022
+
+Open Ended Schemes(Equity Scheme - Large & Mid Cap Fund)
+
+Aditya Birla Sun Life Mutual Fund
+
+119436;INF209K01VH8;-;Aditya Birla Sun Life Equity Advantage Fund - Growth - Direct Plan;667.;19-Dec-2022
+100033;INF209K01165;-;Aditya Birla Sun Life Equity Advantage Fund - Regular Growth;612.31;19-Dec-2022
+
+Axis Mutual Fund
+
+145110;INF846K01J46;-;Axis Growth Opportunities Fund - Direct Plan - Growth;21.28;19-Dec-2022
+145112;INF846K01J79;-;Axis Growth Opportunities Fund - Regular Plan - Growth;19.89;19-Dec-2022
+
+Bank of India Mutual Fund
+
+119350;INF761K01652;-;BANK OF INDIA Large & Mid Cap Equity Fund Direct Plan-Growth;64.79;19-Dec-2022
+110603;INF761K01108;-;BANK OF INDIA Large & Mid Cap Equity Fund Regular Plan- Growth;57.98;19-Dec-2022
+
+Baroda BNP Paribas Mutual Fund
+
+148474;INF955L01JU2;-;Baroda BNP Paribas Large and Mid Cap Fund- Direct Plan -Growth Option;17.5632;19-Dec-2022
+148471;INF955L01JR8;-;Baroda BNP Paribas Large and Mid Cap Fund-Regular Plan-Growth Option;16.9031;19-Dec-2022
+
+Canara Robeco Mutual Fund
+
+118278;INF760K01EI4;-;CANARA ROBECO EMERGING EQUITIES - DIRECT PLAN - GROWTH OPTION;184.2300;19-Dec-2022
+102920;INF760K01167;-;CANARA ROBECO EMERGING EQUITIES - REGULAR PLAN - GROWTH OPTION;165.3000;19-Dec-2022
+
+DSP Mutual Fund
+
+119218;INF740K01PL6;-;DSP Equity Opportunities Fund - Direct Plan - Growth;404.854;19-Dec-2022
+103819;INF740K01094;-;DSP Equity Opportunities Fund-Regular Plan - Growth;371.800;19-Dec-2022
+
+Edelweiss Mutual Fund
+
+140175;INF843K01AL0;-;Edelweiss Large & Mid Cap Fund - Direct Plan - Growth Option;61.812;19-Dec-2022
+140172;INF843K01047;-;Edelweiss Large & Mid Cap Fund - Regular Plan - Growth Option;54.567;19-Dec-2022
+
+Franklin Templeton Mutual Fund
+
+118510;INF090I01IN1;-;Franklin India Equity Advantage Fund - Direct - Growth;132.6853;19-Dec-2022
+102883;INF090I01205;-;Franklin India Equity Advantage Fund - Growth Plan;123.1426;19-Dec-2022
+
+HDFC Mutual Fund
+
+130496;INF179KA1RT1;-;HDFC Large and Mid Cap Fund - Growth Option;203.74;19-Dec-2022
+130498;INF179KA1RQ7;-;HDFC Large and Mid Cap Fund - Growth Option - Direct Plan;209.745;19-Dec-2022
+
+HSBC Mutual Fund
+
+146772;INF336L01NV5;-;HSBC Large & Mid Cap Fund - Direct Growth;16.9081;19-Dec-2022
+146771;INF336L01NY9;-;HSBC Large & Mid Cap Fund - Regular Growth;15.8933;19-Dec-2022
+
+ICICI Prudential Mutual Fund
+
+120596;INF109K011O5;-;ICICI Prudential Large & Mid Cap Fund - Direct Plan - Growth;652.27;19-Dec-2022
+100349;INF109K01431;-;ICICI Prudential Large & Mid Cap Fund - Growth;597.05;19-Dec-2022
+
+IDFC Mutual Fund
+
+108596;INF194K01524;-;IDFC Core Equity Fund - Regular Plan - Growth;75.362;19-Dec-2022
+118419;INF194K01V89;-;IDFC Core Equity Fund-Direct Plan-Growth;85.239;19-Dec-2022
+
+Invesco Mutual Fund
+
+120357;INF205K01MA0;-;Invesco India Growth Opportunities Fund - Direct Plan - Growth;62.04;19-Dec-2022
+106144;INF205K01247;-;Invesco India Growth Opportunities Fund - Growth;54.02;19-Dec-2022
+
+Kotak Mahindra Mutual Fund
+
+103234;INF174K01187;-;Kotak Equity Opportunities Fund - Growth;211.215;19-Dec-2022
+120158;INF174K01LF9;-;Kotak Equity Opportunities Fund - Growth - Direct;235.585;19-Dec-2022
+
+LIC Mutual Fund
+
+133710;INF767K01NE9;-;LIC MF Large & Mid Cap Fund-Direct Plan-Growth;27.299;19-Dec-2022
+133711;INF767K01NB5;-;LIC MF Large & Mid Cap Fund-Regular Plan-Growth;24.5288;19-Dec-2022
+
+Mahindra Manulife Mutual Fund
+
+147840;INF174V01945;-;Mahindra Manulife Top 250 Nivesh Yojana - Direct Plan -Growth;18.6003;19-Dec-2022
+147843;INF174V01911;-;Mahindra Manulife Top 250 Nivesh Yojana - Regular Plan - Growth;17.5860;19-Dec-2022
+
+Mirae Asset Mutual Fund
+
+118834;INF769K01BI1;-;Mirae Asset Emerging Bluechip Fund - Direct Plan - Growth;108.159;19-Dec-2022
+112932;INF769K01101;-;Mirae Asset Emerging Bluechip Fund - Regular Plan - Growth Option;98.477;19-Dec-2022
+
+Motilal Oswal Mutual Fund
+
+147704;INF247L01999;-;Motilal Oswal Large and Midcap Fund - Direct Plan Growth;18.3800;19-Dec-2022
+147701;INF247L01965;-;Motilal Oswal Large and Midcap Fund - Regular Plan Growth;17.4352;19-Dec-2022
+
+Navi Mutual Fund
+
+135677;INF959L01CH6;-;Navi Large & Midcap Fund- Direct Plan- Growth Option;28.6756;19-Dec-2022
+135678;INF959L01CK0;-;Navi Large & Midcap Fund- Regular Plan- Growth Option;25.1781;19-Dec-2022
+
+Nippon India Mutual Fund
+
+118678;INF204K01F20;-;Nippon India Vision Fund - Direct Plan Growth Plan - Growth Option;911.6851;19-Dec-2022
+100380;INF204K01406;-;Nippon India Vision Fund-GROWTH PLAN-Growth Option;859.5445;19-Dec-2022
+
+quant Mutual Fund
+
+104513;INF966L01341;-;quant Large & Mid Cap Fund - Growth Option;76.3637;19-Dec-2022
+120826;INF966L01648;-;quant Large & Mid Cap Fund - Growth Option-Direct Plan;80.6404;19-Dec-2022
+
+SBI Mutual Fund
+
+119721;INF200K01UJ5;-;SBI LARGE & MIDCAP FUND -DIRECT PLAN -Growth;425.9572;19-Dec-2022
+103024;INF200K01305;-;SBI LARGE & MIDCAP FUND- REGULAR PLAN -Growth;401.6426;19-Dec-2022
+
+Sundaram Mutual Fund
+
+119566;INF903J01PR9;-;Sundaram Large and Midcap Fund Direct Plan - Growth;61.8227;19-Dec-2022
+105001;INF903J01DT1;-;Sundaram Large and Midcap Fund Regular Plan - Growth;56.5202;19-Dec-2022
+
+Tata Mutual Fund
+
+119202;INF277K01MK8;-;Tata Large & MId Cap Fund -Direct Plan- Growth Option;410.2746;19-Dec-2022
+101824;INF277K01428;-;Tata Large & Mid Cap Fund- Regular Plan - Growth Option;370.1834;19-Dec-2022
+
+Union Mutual Fund
+
+147750;INF582M01GA0;-;Union Large & Midcap Fund - Direct Plan - Growth Option;17.67;19-Dec-2022
+147748;INF582M01GD4;-;Union Large & Midcap Fund - Regular Plan - Growth Option;17.09;19-Dec-2022
+
+UTI Mutual Fund
+
+120665;INF789F01UG3;-;UTI - Core Equity Fund - Direct Plan - Growth Option;109.218;19-Dec-2022
+100664;INF789F01869;-;UTI - Core Equity Fund - Regular Plan - Growth Option;104.0944;19-Dec-2022
+
+Open Ended Schemes(Equity Scheme - Large Cap Fund)
+
+Aditya Birla Sun Life Mutual Fund
+
+119528;INF209K01YY7;-;Aditya Birla Sun Life Frontline Equity Fund - Growth - Direct Plan;389.81;19-Dec-2022
+103174;INF209K01BR9;-;Aditya Birla Sun Life Frontline Equity Fund-Growth;358.86;19-Dec-2022
+
+Axis Mutual Fund
+
+120465;INF846K01DP8;-;Axis Bluechip Fund - Direct Plan - Growth;49.78;19-Dec-2022
+112277;INF846K01164;-;Axis Bluechip Fund - Regular Plan - Growth;44.30;19-Dec-2022
+
+Bank of India Mutual Fund
+
+148980;INF761K01FL3;-;BANK OF INDIA Bluechip Fund Direct Plan Growth;11.12;19-Dec-2022
+148982;INF761K01FO7;-;BANK OF INDIA Bluechip Fund Regular Plan Growth;10.89;19-Dec-2022
+
+Baroda BNP Paribas Mutual Fund
+
+150187;INF251K01HN7;-;BARODA BNP PARIBAS LARGE CAP Fund - Direct Plan - Growth Option;165.1743;19-Dec-2022
+150185;INF251K01894;-;BARODA BNP PARIBAS LARGE CAP Fund- Regular Plan - Growth Option;147.6227;19-Dec-2022
+
+Canara Robeco Mutual Fund
+
+118269;INF760K01FR2;-;CANARA ROBECO BLUE CHIP EQUITY FUND - DIRECT PLAN - GROWTH OPTION;47.7600;19-Dec-2022
+113221;INF760K01AR3;-;CANARA ROBECO BLUE CHIP EQUITY FUND - REGULAR PLAN - GROWTH OPTION;42.6500;19-Dec-2022
+
+DSP Mutual Fund
+
+119250;INF740K01PR3;-;DSP Top 100 Equity Fund - Direct Plan - Growth;319.834;19-Dec-2022
+101635;INF740K01243;-;DSP Top 100 Equity Fund - Regular Plan - Growth;298.912;19-Dec-2022
+
+Edelweiss Mutual Fund
+
+118617;INF754K01BW4;-;Edelweiss Large Cap Fund - Direct Plan-Growth option;63.27;19-Dec-2022
+111940;INF754K01046;-;Edelweiss Large Cap Fund - Regular Plan - Growth Option;57.33;19-Dec-2022
+
+Franklin Templeton Mutual Fund
+
+118531;INF090I01FN7;-;Franklin India Bluechip Fund- Direct - Growth;766.3928;19-Dec-2022
+100471;INF090I01171;-;Franklin India Bluechip Fund-Growth;707.3374;19-Dec-2022
+
+HDFC Mutual Fund
+
+119018;INF179K01YV8;-;HDFC Top 100 Fund - Growth Option - Direct Plan;815.27;19-Dec-2022
+102000;INF179K01BE2;-;HDFC Top 100 Fund - Growth Option - Regular Plan;765.416;19-Dec-2022
+
+HSBC Mutual Fund
+
+120030;INF336L01CM7;-;HSBC Large Cap Fund - Direct Growth;355.5852;19-Dec-2022
+101594;INF336L01016;-;HSBC Large Cap Fund - Regular Growth;327.9629;19-Dec-2022
+
+ICICI Prudential Mutual Fund
+
+120586;INF109K016L0;-;ICICI Prudential Bluechip Fund - Direct Plan - Growth;76.54;19-Dec-2022
+108466;INF109K01BL4;-;ICICI Prudential Bluechip Fund - Growth;70.73;19-Dec-2022
+
+IDBI Mutual Fund
+
+117311;INF397L01869;-;IDBI India Top 100 Equity Fund Growth;41.32;19-Dec-2022
+118344;INF397L01BV2;-;IDBI India Top 100 Equity Fund Growth Direct;46.13;19-Dec-2022
+
+IDFC Mutual Fund
+
+108799;INF194K01516;-;IDFC Large Cap Fund - Regular Plan - Growth;50.066;19-Dec-2022
+118479;INF194K01Z44;-;IDFC Large Cap Fund-Direct Plan-Growth ;55.773;19-Dec-2022
+
+Indiabulls Mutual Fund
+
+119133;INF666M01600;-;Indiabulls Blue Chip Fund - Direct Plan - Growth Option;35.38;19-Dec-2022
+116547;INF666M01162;-;Indiabulls Blue Chip Fund - Regular Plan- Growth Option;30.53;19-Dec-2022
+
+Invesco Mutual Fund
+
+120392;INF205K01LB0;-;Invesco India Largecap Fund - Direct Plan - Growth;51.6;19-Dec-2022
+112098;INF205K01304;-;Invesco India Largecap Fund - Growth;44.58;19-Dec-2022
+
+ITI Mutual Fund
+
+148353;INF00XX01804;-;ITI Large Cap Fund - Direct Plan - Growth Option;13.0224;19-Dec-2022
+148351;INF00XX01770;-;ITI Large Cap Fund - Regular Plan - Growth Option;12.4553;19-Dec-2022
+
+JM Financial Mutual Fund
+
+120490;INF192K01BZ0;-;JM Large Cap Fund (Direct) - Growth Option;115.4065;19-Dec-2022
+100219;INF192K01601;-;JM Large Cap Fund (Regular) - Growth Option;104.0356;19-Dec-2022
+
+Kotak Mahindra Mutual Fund
+
+114458;INF174K01153;-;Kotak Bluechip Fund - Growth;389.379;19-Dec-2022
+120152;INF174K01KW6;-;Kotak Bluechip Fund - Growth - Direct;434.369;19-Dec-2022
+
+LIC Mutual Fund
+
+120267;INF767K01EJ7;-;LIC MF Large Cap Fund-Direct Plan-Growth;45.4889;19-Dec-2022
+106871;INF767K01105;-;LIC MF Large Cap Fund-Regular Plan-Growth;41.1754;19-Dec-2022
+
+Mahindra Manulife Mutual Fund
+
+146549;INF174V01721;-;Mahindra Manulife Large Cap Pragati Yojana - Direct Plan -Growth;17.3761;19-Dec-2022
+146551;INF174V01697;-;Mahindra Manulife Large Cap Pragati Yojana - Regular Plan - Growth;16.1829;19-Dec-2022
+
+Mirae Asset Mutual Fund
+
+118825;INF769K01AX2;-;Mirae Asset Large Cap Fund - Direct Plan - Growth;89.529;19-Dec-2022
+107578;INF769K01010;-;Mirae Asset Large Cap Fund - Growth Plan;81.475;19-Dec-2022
+
+Nippon India Mutual Fund
+
+106235;INF204K01562;-;Nippon India Large Cap  Fund- Growth Plan -Growth Option;56.2524;19-Dec-2022
+118632;INF204K01XI3;-;Nippon India Large Cap Fund - Direct Plan Growth Plan - Growth Option;61.3839;19-Dec-2022
+
+PGIM India Mutual Fund
+
+138312;INF663L01GR4;-;PGIM India Large Cap Fund - Direct Plan - Growth;289.93;19-Dec-2022
+138308;INF663L01GW4;-;PGIM India Large Cap Fund - Growth;254.14;19-Dec-2022
+
+quant Mutual Fund
+
+150440;INF966L01AT0;-;quant Large Cap Fund - Growth Option - Direct Plan;10.4043;19-Dec-2022
+150441;INF966L01AW4;-;quant Large Cap Fund - Growth Option - Regular Plan;10.3317;19-Dec-2022
+
+SBI Mutual Fund
+
+119598;INF200K01QX4;-;SBI BLUE CHIP FUND-DIRECT PLAN -GROWTH;70.4426;19-Dec-2022
+103504;INF200K01180;-;SBI BLUE CHIP FUND-REGULAR PLAN GROWTH;64.7473;19-Dec-2022
+
+Sundaram Mutual Fund
+
+148507;INF903JA1JC0;-;Sundaram Large Cap Fund (Formerly Known as Sundaram Blue Chip Fund)Direct Plan - Growth;16.2867;19-Dec-2022
+148504;INF903JA1IZ3;-;Sundaram Large Cap Fund(Formerly Known as Sundaram Blue Chip Fund) Regular Plan - Growth;15.6865;19-Dec-2022
+
+Tata Mutual Fund
+
+119160;INF277K01QZ7;-;Tata Large Cap Fund -Direct Plan Growth Option;391.1206;19-Dec-2022
+100475;INF277K01931;-;Tata Large Cap Fund -Regular Plan - Growth Option;349.6423;19-Dec-2022
+
+Taurus Mutual Fund
+
+118870;INF044D01BX3;-;Taurus Largecap Equity Fund - Direct Plan - Growth;116.07;19-Dec-2022
+101209;INF044D01773;-;Taurus Largecap Equity Fund - Regular Plan - Growth;110.04;19-Dec-2022
+
+Union Mutual Fund
+
+141248;INF582M01CU7;-;Union Largecap Fund - Direct Plan - Growth Option;17.67;19-Dec-2022
+141247;INF582M01CQ5;-;Union Largecap Fund - Regular Plan - Growth Option;17.01;19-Dec-2022
+
+UTI Mutual Fund
+
+100651;INF789F01976;-;UTI - Master Share-Growth Option;197.7181;19-Dec-2022
+120656;INF789F01US8;-;UTI - Master Share-Growth Option - Direct;211.9774;19-Dec-2022
+
+WhiteOak Capital Mutual Fund
+
+150797;INF03VN01696;-;WhiteOak Capital Large Cap Fund Direct Plan Growth;9.770;19-Dec-2022
+150799;INF03VN01662;-;WhiteOak Capital Large Cap Fund Regular Plan Growth;9.762;19-Dec-2022
+
+Open Ended Schemes(Equity Scheme - Mid Cap Fund)
+
+Aditya Birla Sun Life Mutual Fund
+
+119620;INF209K01Q30;-;Aditya Birla Sun Life Midcap Fund - Growth - Direct Plan;501.71;19-Dec-2022
+101592;INF209K01363;-;Aditya Birla Sun Life MIDCAP Fund-Growth;460.3;19-Dec-2022
+
+Axis Mutual Fund
+
+120505;INF846K01EH3;-;Axis Midcap Fund - Direct Plan - Growth;77.10;19-Dec-2022
+114564;INF846K01859;-;Axis Midcap Fund - Regular Plan - Growth;68.17;19-Dec-2022
+
+Bank of India Mutual Fund
+
+139527;INF761K01DM6;-;BANK OF INDIA MID & SMALL CAP EQUITY & DEBT FUND - DIRECT PLAN GROWTH;24.82;19-Dec-2022
+139529;INF761K01DP9;-;BANK OF INDIA MID & SMALL CAP EQUITY & DEBT FUND - REGULAR  PLAN  GROWTH;23.45;19-Dec-2022
+
+Baroda BNP Paribas Mutual Fund
+
+150212;INF251K01HQ0;-;BARODA BNP PARIBAS Mid Cap Fund - Direct Plan - Growth Option;69.8491;19-Dec-2022
+150209;INF251K01AW3;-;BARODA BNP PARIBAS Mid Cap Fund - Regular Plan - Growth Option;60.9397;19-Dec-2022
+
+Canara Robeco Mutual Fund
+
+150817;INF760K01KI1;-;Canara Robeco Mid Cap Fund- Direct Plan- Growth Option;9.9900;19-Dec-2022
+150816;INF760K01KL5;-;Canara Robeco Mid Cap Fund- Regular Plan- Growth Option;9.9800;19-Dec-2022
+
+DSP Mutual Fund
+
+119071;INF740K01PX1;-;DSP Midcap Fund - Direct Plan - Growth;95.639;19-Dec-2022
+104481;INF740K01128;-;DSP Midcap Fund - Regular Plan - Growth;88.126;19-Dec-2022
+
+Edelweiss Mutual Fund
+
+140228;INF843K01AO4;-;Edelweiss Mid Cap Fund - Direct Plan - Growth Option;60.295;19-Dec-2022
+140225;INF843K01013;-;Edelweiss Mid Cap Fund - Regular Plan - Growth Option;53.534;19-Dec-2022
+
+Franklin Templeton Mutual Fund
+
+118533;INF090I01FH9;-;Franklin India Prima Fund - Direct - Growth;1719.8350;19-Dec-2022
+100473;INF090I01809;-;Franklin India Prima Fund-Growth;1563.0499;19-Dec-2022
+
+HDFC Mutual Fund
+
+118989;INF179K01XQ0;-;HDFC Mid-Cap Opportunities Fund - Growth Option - Direct Plan;112.625;19-Dec-2022
+105758;INF179K01CR2;-;HDFC Mid-Cap Opportunities Fund - Growth Plan;104.016;19-Dec-2022
+
+HSBC Mutual Fund
+
+151036;INF917K01FZ1;-;HSBC Midcap Fund - Direct Growth;232.9894;19-Dec-2022
+151034;INF917K01254;-;HSBC Midcap Fund - Regular Growth;211.9103;19-Dec-2022
+
+IDBI Mutual Fund
+
+140461;INF397L01JK8;-;IDBI Midcap Fund Growth Direct;18.85;19-Dec-2022
+140460;INF397L01JO0;-;IDBI Midcap Fund Growth Regular;17.28;19-Dec-2022
+
+IDFC Mutual Fund
+
+150404;INF194KB1DJ2;-;IDFC MIDCAP FUND - GROWTH - DIRECT PLAN;10.026;19-Dec-2022
+150402;INF194KB1DM6;-;IDFC MIDCAP FUND - GROWTH - REGULAR PLAN;9.966;19-Dec-2022
+
+Invesco Mutual Fund
+
+120403;INF205K01MV6;-;Invesco India Midcap Fund - Direct Plan - Growth Option;105.89;19-Dec-2022
+105503;INF205K01BC9;-;Invesco India Midcap Fund - Growth Option;91;19-Dec-2022
+
+ITI Mutual Fund
+
+148733;INF00XX01929;-;ITI Mid Cap Cap Fund - Direct Plan - Growth Option;12.2380;19-Dec-2022
+148732;INF00XX01895;-;ITI Mid Cap Cap Fund - Regular Plan - Growth Option;11.7430;19-Dec-2022
+
+JM Financial Mutual Fund
+
+150815;INF192K01MV6;-;JM Midcap Fund (Direct) - Growth;10.1688;19-Dec-2022
+150812;INF192K01MS2;-;JM Midcap Fund (Regular) - Growth;10.1511;19-Dec-2022
+
+Kotak Mahindra Mutual Fund
+
+104908;INF174K01DS9;-;Kotak Emerging Equity Scheme - Growth;77.403;19-Dec-2022
+119775;INF174K01LT0;-;Kotak Emerging Equity Scheme - Growth - Direct;87.087;19-Dec-2022
+
+Mahindra Manulife Mutual Fund
+
+142110;INF174V01507;-;Mahindra Manulife Mid Cap Unnati Yojana - Direct Plan -Growth;19.5114;19-Dec-2022
+142109;INF174V01473;-;Mahindra Manulife Mid Cap Unnati Yojana - Regular Plan - Growth;17.9170;19-Dec-2022
+
+Mirae Asset Mutual Fund
+
+147479;INF769K01EY2;-;Mirae Asset Midcap Fund - Regular Plan;21.949;19-Dec-2022
+147445;INF769K01FA9;-;Mirae Asset Midcap Fund- Direct Growth Fund;23.072;19-Dec-2022
+
+Motilal Oswal Mutual Fund
+
+127042;INF247L01445;-;Motilal Oswal Midcap Fund-Direct Plan-Growth Option;58.0256;19-Dec-2022
+127039;INF247L01411;-;Motilal Oswal Midcap Fund-Regular Plan-Growth Option;52.0661;19-Dec-2022
+
+Nippon India Mutual Fund
+
+118668;INF204K01E54;-;Nippon India Growth Fund - Direct Plan Growth Plan - Growth Option;2378.2488;19-Dec-2022
+100377;INF204K01323;-;Nippon India Growth Fund-Growth Plan-Growth Option;2216.1889;19-Dec-2022
+
+PGIM India Mutual Fund
+
+125307;INF663L01DV3;-;PGIM India Midcap Opportunities Fund - Direct Plan - Growth Option;50.08;19-Dec-2022
+125305;INF663L01DZ4;-;PGIM India Midcap Opportunities Fund - Regular Plan - Growth Option;44.7;19-Dec-2022
+
+quant Mutual Fund
+
+120841;INF966L01887;-;quant Mid Cap Fund - Growth Option - Direct Plan;152.521;19-Dec-2022
+101065;INF966L01176;-;quant Mid Cap Fund - Growth Option - Regular Plan;140.9535;19-Dec-2022
+
+SBI Mutual Fund
+
+119716;INF200K01TP4;-;SBI Magnum MIDCAP FUND - DIRECT PLAN - GROWTH;162.3086;19-Dec-2022
+102941;INF200K01560;-;SBI Magnum MIDCAP FUND - REGULAR PLAN - GROWTH;148.1154;19-Dec-2022
+
+Sundaram Mutual Fund
+
+119581;INF903J01MJ3;-;Sundaram Mid Cap Fund Direct Plan - Growth;812.0870;19-Dec-2022
+101539;INF903J01173;-;Sundaram Mid Cap Fund Regular Plan - Growth;759.9214;19-Dec-2022
+
+Tata Mutual Fund
+
+119178;INF277K01PY2;-;Tata Mid Cap Growth Fund - Direct Plan- Growth Option;277.8600;19-Dec-2022
+102328;INF277K01626;-;Tata Mid Cap Growth Fund Regular Plan- Growth Option;251.9668;19-Dec-2022
+
+Taurus Mutual Fund
+
+118872;INF044D01CA9;-;Taurus Discovery (Midcap) Fund - Direct Plan - Growth;82.32;19-Dec-2022
+100477;INF044D01815;-;Taurus Discovery (Midcap) Fund - Regular Plan - Growth;78.76;19-Dec-2022
+
+Union Mutual Fund
+
+148073;INF582M01GI3;-;Union Midcap Fund - Direct Plan - Growth Option;29.68;19-Dec-2022
+148071;INF582M01GM5;-;Union Midcap Fund - Regular Plan - Growth Option;28.64;19-Dec-2022
+
+UTI Mutual Fund
+
+102394;INF789F01810;-;UTI Mid Cap Fund-Growth Option;193.2716;19-Dec-2022
+120726;INF789F01UA6;-;UTI Mid Cap Fund-Growth Option- Direct;210.3645;19-Dec-2022
+
+WhiteOak Capital Mutual Fund
+
+150584;INF03VN01597;-;WhiteOak Capital Mid Cap Fund Direct Plan Growth;10.307;19-Dec-2022
+150583;INF03VN01563;-;WhiteOak Capital Mid Cap Fund Regular Plan Growth;10.258;19-Dec-2022
+
+Open Ended Schemes(Equity Scheme - Multi Cap Fund)
+
+Aditya Birla Sun Life Mutual Fund
+
+148921;INF209KB1Y49;-;Aditya Birla Sun Life Multi-Cap Fund-Direct Growth;13.;19-Dec-2022
+148918;INF209KB1Y23;-;Aditya Birla Sun Life Multi-Cap Fund-Regular Growth;12.64;19-Dec-2022
+
+Axis Mutual Fund
+
+149383;INF846K013E0;-;Axis Multicap Fund - Direct Growth;10.20;19-Dec-2022
+149382;INF846K016E3;-;Axis Multicap Fund - Regular Plan - Growth;10.04;19-Dec-2022
+
+Bank of India Mutual Fund
+
+148404;INF761K01FF5;-;BANK OF INDIA Flexi Cap Fund Direct Plan -Growth;21.07;19-Dec-2022
+148405;INF761K01FI9;-;BANK OF INDIA Flexi Cap Fund Regular Plan -Growth;20.18;19-Dec-2022
+
+Baroda BNP Paribas Mutual Fund
+
+119354;INF955L01AG0;-;Baroda BNP Paribas MULTI CAP FUND - Direct Plan - Growth Option;191.1853;19-Dec-2022
+102020;INF955L01674;-;Baroda BNP Paribas MULTI CAP FUND - Regular Plan - Growth Option;174.9496;19-Dec-2022
+
+HDFC Mutual Fund
+
+149366;INF179KC1BV9;-;HDFC Multi Cap Fund - Growth Option;11.24;19-Dec-2022
+149368;INF179KC1BS5;-;HDFC Multi Cap Fund - Growth Option - Direct Plan;11.418;19-Dec-2022
+
+ICICI Prudential Mutual Fund
+
+120381;INF109K011N7;-;ICICI Prudential MidCap Fund - Direct Plan -  Growth;187.59;19-Dec-2022
+102528;INF109K01AN2;-;ICICI Prudential MidCap Fund - Growth;171.08;19-Dec-2022
+120599;INF109K014O9;-;ICICI Prudential Multicap Fund - Direct Plan -  Growth;519.72;19-Dec-2022
+101228;INF109K01613;-;ICICI Prudential Multicap Fund - Growth;475.67;19-Dec-2022
+
+IDFC Mutual Fund
+
+149303;INF194KB1CL0;-;IDFC MULTI CAP FUND - GROWTH - DIRECT PLAN;11.169;19-Dec-2022
+149305;INF194KB1CI6;-;IDFC MULTI CAP FUND - GROWTH - REGULAR PLAN;10.968;19-Dec-2022
+
+Invesco Mutual Fund
+
+120413;INF205K01MS2;-;Invesco India Multicap Fund - Direct Plan - Growth Option;93.12;19-Dec-2022
+107353;INF205K01DN2;-;Invesco India Multicap Fund - Growth Option;80.87;19-Dec-2022
+
+ITI Mutual Fund
+
+147183;INF00XX01168;-;ITI Multi Cap Fund - Direct Plan - Growth Option;15.5368;19-Dec-2022
+147184;INF00XX01135;-;ITI Multi Cap Fund - Regular Plan - Growth Option;14.3829;19-Dec-2022
+
+Kotak Mahindra Mutual Fund
+
+149185;INF174KA1HV3;-;Kotak Multicap Fund-Direct Plan-Growth;11.065;19-Dec-2022
+149182;INF174KA1HS9;-;Kotak Multicap Fund-Regular Plan-Growth;10.833;19-Dec-2022
+
+LIC Mutual Fund
+
+150659;INF767K01RK7;-;LIC MF Multi Cap Fund-Direct Growth;10.0586;19-Dec-2022
+150661;INF767K01RH3;-;LIC MF Multi Cap Fund-Regular Growth;10.0316;19-Dec-2022
+
+Mahindra Manulife Mutual Fund
+
+141226;INF174V01341;-;Mahindra Manulife Multi Cap Badhat Yojana - Direct Plan -Growth;23.7705;19-Dec-2022
+141224;INF174V01317;-;Mahindra Manulife Multi Cap Badhat Yojana - Regular Plan - Growth;21.2990;19-Dec-2022
+
+Nippon India Mutual Fund
+
+118650;INF204K01XF9;-;Nippon India Multi Cap Fund - Direct Plan Growth Plan - Growth Option;182.3632;19-Dec-2022
+101161;INF204K01489;-;Nippon India Multi Cap Fund-Growth Plan-Growth Option;169.5685;19-Dec-2022
+
+quant Mutual Fund
+
+100631;INF966L01234;-;quant Active Fund-GROWTH OPTION - Regular Plan;470.5933;19-Dec-2022
+120823;INF966L01614;-;quant Active Fund-GROWTH OPTION-Direct Plan;498.3309;19-Dec-2022
+
+SBI Mutual Fund
+
+149882;INF200KA18E2;-;SBI Multicap Fund- Direct Plan- Growth option;10.9106;19-Dec-2022
+149886;INF200KA15E8;-;SBI Multicap Fund- Regular Plan- Growth Option;10.8123;19-Dec-2022
+
+Sundaram Mutual Fund
+
+149669;INF173K01FQ0;-;Sundaram Multi Cap Fund (Formerly Known as Principal Multi Cap Growth Fund)-Direct Plan - Growth Option;262.2516;19-Dec-2022
+149667;INF173K01940;-;Sundaram Multi Cap Fund (Formerly Known as Principal Multi Cap Growth Fund)-Growth Option;242.3479;19-Dec-2022
+
+
+Open Ended Schemes(Equity Scheme - Sectoral/ Thematic)
+
+Aditya Birla Sun Life Mutual Fund
+
+125597;INF209K014W1;-;Aditya Birla Sun Life Banking and Financial Services Fund - Direct Plan - Growth;46.03;19-Dec-2022
+125595;INF209K011W7;-;Aditya Birla Sun Life Banking and Financial Services Fund - Regular Plan - Growth;42.06;19-Dec-2022
+149295;INF209KB14D2;-;Aditya Birla Sun Life Business Cycle Fund-Direct Growth;10.88;19-Dec-2022
+149296;INF209KB12D6;-;Aditya Birla Sun Life Business Cycle Fund-Regular-Growth;10.69;19-Dec-2022
+119576;INF209K01VL0;-;Aditya Birla Sun Life Commodity Equities Fund - Global Agri Plan - Growth - Direct Plan;38.222;19-Dec-2022
+111349;INF209K01207;-;Aditya Birla Sun Life Commodity Equities Fund - Global Agri Plan - Growth - Regular Plan;36.7314;19-Dec-2022
+120539;INF209K01VF2;-;Aditya Birla Sun Life Digital India Fund - Growth - Direct Plan;128.04;19-Dec-2022
+103168;INF209K01140;-;Aditya Birla Sun Life Digital India Fund - Growth - Regular Plan;117.09;19-Dec-2022
+148637;INF209KB1U76;-;Aditya Birla Sun Life ESG Fund-Direct Plan-Growth;12.59;19-Dec-2022
+148635;INF209KB1U43;-;Aditya Birla Sun Life ESG Fund-Regular Plan-Growth;12.15;19-Dec-2022
+119591;INF209K01WC7;-;Aditya Birla Sun Life India Gennext Fund - Growth - Direct Plan;163.17;19-Dec-2022
+103111;INF209K01447;-;Aditya Birla Sun Life India Gennext Fund-Growth Option;146.76;19-Dec-2022
+119514;INF209K01WH6;-;Aditya Birla Sun Life Infrastructure Fund - Growth - Direct Plan;58.;19-Dec-2022
+103476;INF209K01504;-;Aditya Birla Sun Life Infrastructure Fund-Growth;53.79;19-Dec-2022
+119517;INF209K01WS3;-;Aditya Birla Sun Life International Equity Fund - Plan A - Growth - Direct Plan;31.4075;19-Dec-2022
+106873;INF209K01520;-;Aditya Birla Sun Life International Equity Fund - Plan A - Growth - Regular Plan;29.5938;19-Dec-2022
+119518;INF209K01WU9;-;Aditya Birla Sun Life International Equity Fund - Plan B - Growth - Direct Plan;28.2009;19-Dec-2022
+106876;INF209K01546;-;Aditya Birla Sun Life International Equity Fund - Plan B - Growth - Regular Plan;26.8903;19-Dec-2022
+133516;INF209KA1YK0;-;Aditya Birla Sun Life Manufacturing Equity Fund - Direct Plan - Growth;21.4;19-Dec-2022
+133513;INF209KA1YH6;-;Aditya Birla Sun Life Manufacturing Equity Fund - Regular Plan - Growth;19.94;19-Dec-2022
+119646;INF209K01VT3;-;Aditya Birla Sun Life MNC Fund - Growth - Direct Plan;1029.61;19-Dec-2022
+100064;INF209K01322;-;Aditya Birla Sun Life MNC Fund - Growth - Regular Plan;942.31;19-Dec-2022
+147409;INF209KB1O25;-;Aditya Birla Sun Life Pharma and Healthcare Fund-Direct-Growth;18.32;19-Dec-2022
+147407;INF209KB1N91;-;Aditya Birla Sun Life Pharma and Healthcare Fund-Regular-Growth;17.28;19-Dec-2022
+147844;INF209KB1O82;-;Aditya Birla Sun Life PSU Equity Fund-Direct Plan-Growth;18.44;19-Dec-2022
+147846;INF209KB1O66;-;Aditya Birla Sun Life PSU Equity Fund-Regular Plan-Growth;17.47;19-Dec-2022
+148539;INF209KB1T79;-;Aditya Birla Sun Life Special Opportunities Fund-Direct-Growth;16.35;19-Dec-2022
+148537;INF209KB1T46;-;Aditya Birla Sun Life Special Opportunities Fund-Regular Plan-Growth;15.74;19-Dec-2022
+
+Axis Mutual Fund
+
+147928;INF846K01W23;-;Axis ESG Equity Fund - Direct Plan - Growth Option;15.56;19-Dec-2022
+147929;INF846K01W56;-;Axis ESG Equity Fund - Regular Plan - Growth Option;14.88;19-Dec-2022
+148993;INF846K01Z87;-;Axis Quant Fund - Direct Plan - Growth;11.36;19-Dec-2022
+148992;INF846K011A2;-;Axis Quant Fund - Regular Plan - Growth;11.08;19-Dec-2022
+148634;INF846K01X71;-;Axis Special Situations Fund - Direct Plan - Growth Option;12.21;19-Dec-2022
+148631;INF846K01Y05;-;Axis Special Situations Fund - Regular Plan - Growth Option;11.84;19-Dec-2022
+
+Bank of India Mutual Fund
+
+119364;INF761K01702;-;BANK OF INDIA Manufacturing & Infrastructure Fund-Direct Plan-Growth;35.03;19-Dec-2022
+112359;INF761K01199;-;BANK OF INDIA Manufacturing & Infrastructure Fund-Growth;31.03;19-Dec-2022
+
+Baroda BNP Paribas Mutual Fund
+
+119333;INF955L01971;-;Baroda BNP Paribas Banking and Financial Services Fund - Direct - Growth Option;35.1439;19-Dec-2022
+117549;INF955L01856;-;Baroda BNP Paribas Banking and Financial Services Fund - Regular - Growth Option;32.4772;19-Dec-2022
+149141;INF955L01KK1;-;Baroda BNP Paribas Business Cycle Fund - Direct Plan - Growth;10.5178;19-Dec-2022
+149140;INF955L01KH7;-;Baroda BNP Paribas Business Cycle Fund - Regular Plan - Growth;10.2947;19-Dec-2022
+150266;INF251K01PT7;-;BARODA BNP PARIBAS India Consumption Fund - Direct Plan - Growth Option;22.0965;19-Dec-2022
+150268;INF251K01PQ3;-;BARODA BNP PARIBAS India Consumption Fund - Regular Plan - Growth Option;20.7102;19-Dec-2022
+
+Canara Robeco Mutual Fund
+
+118273;INF760K01DU1;-;CANARA ROBECO CONSUMER TRENDS FUND - DIRECT PLAN - GROWTH OPTION;80.7300;19-Dec-2022
+112152;INF760K01241;-;CANARA ROBECO CONSUMER TRENDS FUND - REGULAR PLAN - GROWTH OPTION;72.5300;19-Dec-2022
+118267;INF760K01FO9;-;CANARA ROBECO INFRASTRUCTURE FUND - DIRECT PLAN - GROWTH OPTION;91.6000;19-Dec-2022
+103390;INF760K01274;-;CANARA ROBECO INFRASTRUCTURE FUND - REGULAR PLAN - GROWTH OPTION;84.1700;19-Dec-2022
+
+DSP Mutual Fund
+
+145454;INF740KA1LG1;-;DSP Healthcare Fund - Direct Plan - Growth;23.399;19-Dec-2022
+145456;INF740KA1LD8;-;DSP Healthcare Fund - Regular Plan - Growth;21.943;19-Dec-2022
+119247;INF740K01PU7;-;DSP India T.I.G.E.R. Fund - Direct Plan - Growth;176.679;19-Dec-2022
+102434;INF740K01151;-;DSP India T.I.G.E.R. Fund - Regular Plan - Growth;166.498;19-Dec-2022
+119028;INF740K01QA7;-;DSP Natural Resources and New Energy Fund - Direct Plan - Growth;61.904;19-Dec-2022
+108202;INF740K01060;-;DSP Natural Resources And New Energy Fund - Regular - Growth;57.244;19-Dec-2022
+147306;INF740KA1NQ6;-;DSP Quant Fund - Direct Plan - Growth;16.753;19-Dec-2022
+147303;INF740KA1NN3;-;DSP Quant Fund - Regular Plan - Growth;16.317;19-Dec-2022
+
+Edelweiss Mutual Fund
+
+142388;INF754K01ML4;-;Edelweiss Recently Listed IPO Fund Direct Plan Growth;17.4558;19-Dec-2022
+142383;INF754K01MH2;-;Edelweiss Recently Listed IPO Fund Regular Plan Growth;16.8594;19-Dec-2022
+
+Franklin Templeton Mutual Fund
+
+118559;INF090I01IZ5;-;Franklin Asian Equity Fund - Direct - Growth;26.9503;19-Dec-2022
+106979;INF090I01AB3;-;Franklin Asian Equity Fund - Growth Plan;25.2343;19-Dec-2022
+118557;INF090I01JF5;-;Franklin Build India Fund - Direct - Growth;82.0324;19-Dec-2022
+112092;INF090I01AE7;-;Franklin Build India Fund Growth Plan;73.3000;19-Dec-2022
+118539;INF090I01GC8;-;Franklin India Opportunities Fund - Direct - Growth;130.2448;19-Dec-2022
+103151;INF090I01841;-;Franklin India Opportunities Fund - Growth;121.5537;19-Dec-2022
+118537;INF090I01FE6;-;Franklin India Technology Fund - Direct - Growth;304.5045;19-Dec-2022
+100522;INF090I01742;-;Franklin India Technology Fund-Growth;284.1992;19-Dec-2022
+
+HDFC Mutual Fund
+
+148987;INF179KC1BJ4;-;HDFC Banking & Financial Services Fund - Growth Option;11.734;19-Dec-2022
+148986;INF179KC1BG0;-;HDFC Banking & Financial Services Fund - Growth Option - Direct Plan;12.042;19-Dec-2022
+150803;INF179KC1EB5;-;HDFC Business Cycle Fund - Growth Option;9.987;19-Dec-2022
+150805;INF179KC1DY9;-;HDFC Business Cycle Fund - Growth Option - Direct Plan;9.995;19-Dec-2022
+141923;INF179KC1AX7;-;HDFC Housing Opportunities Fund  - Growth Option;14.349;19-Dec-2022
+141924;INF179KC1AU3;-;HDFC Housing Opportunities Fund  - Growth Option - Direct Plan;15.118;19-Dec-2022
+118979;INF179K01WQ2;-;HDFC Infrastructure Fund - Growth Option - Direct Plan;26.89;19-Dec-2022
+107524;INF179K01GF8;-;HDFC Infrastructure Fund - Growth Plan;24.878;19-Dec-2022
+
+HSBC Mutual Fund
+
+151142;INF917K01RI2;-;HSBC Business Cycles Fund - Direct Growth;26.2727;19-Dec-2022
+151144;INF917K01RF8;-;HSBC Business Cycles Fund - Regular Growth;24.5487;19-Dec-2022
+151040;INF917K01FW8;-;HSBC Infrastructure Fund - Direct Growth;28.0059;19-Dec-2022
+151037;INF917K01536;-;HSBC Infrastructure Fund - Regular Growth;25.5867;19-Dec-2022
+
+ICICI Prudential Mutual Fund
+
+109445;INF109K01BU5;-;ICICI Prudential Banking and Financial Services Fund -  Growth;92.39;19-Dec-2022
+120244;INF109K013J1;-;ICICI Prudential Banking and Financial Services Fund - Direct Plan -  Growth;101.87;19-Dec-2022
+146951;INF109KC1YD4;-;ICICI Prudential Bharat Consumption Fund - Direct Plan - Growth Option;16.98;19-Dec-2022
+146950;INF109KC1YA0;-;ICICI Prudential Bharat Consumption Fund - Growth Option;16.16;19-Dec-2022
+148651;INF109KC1P24;-;ICICI Prudential Business Cycle Fund Direct Plan Growth;14.57;19-Dec-2022
+148653;INF109KC1O90;-;ICICI Prudential Business Cycle Fund Growth;14.17;19-Dec-2022
+147662;INF109KC1F91;-;ICICI Prudential Commodities Fund - Direct Plan - Growth Option;29.57;19-Dec-2022
+147661;INF109KC1F67;-;ICICI Prudential Commodities Fund - Growth Option;28.19;19-Dec-2022
+148516;INF109KC1O09;-;ICICI Prudential ESG FUND - Direct Plan - Growth;13.98;19-Dec-2022
+148517;INF109KC1N75;-;ICICI Prudential ESG FUND - Growth;13.53;19-Dec-2022
+120688;INF109K01W25;-;ICICI Prudential Exports & Services Fund - Direct Plan - Growth;107.32;19-Dec-2022
+103312;INF109K01BB5;-;ICICI Prudential Exports & Services Fund - Growth;100.10;19-Dec-2022
+120587;INF109K01Z14;-;ICICI Prudential FMCG Fund - Direct Plan -  Growth;425.27;19-Dec-2022
+100352;INF109K01415;-;ICICI Prudential FMCG Fund - Growth;394.47;19-Dec-2022
+150310;INF109KC10C2;-;ICICI PRUDENTIAL HOUSING OPPORTUNITIES FUND - Direct Plan Growth;11.21;19-Dec-2022
+150308;INF109KC17B9;-;ICICI PRUDENTIAL HOUSING OPPORTUNITIES FUND - Growth;11.08;19-Dec-2022
+145896;INF109KC1RE6;-;ICICI Prudential India Opportunities Fund - Cumulative Option;20.44;19-Dec-2022
+145897;INF109KC1RH9;-;ICICI Prudential India Opportunities Fund - Direct Plan - Cumulative Option;21.67;19-Dec-2022
+120621;INF109K018M4;-;ICICI Prudential Infrastructure Fund - Direct Plan -  Growth;109.71;19-Dec-2022
+103149;INF109K01AV5;-;ICICI Prudential Infrastructure Fund - Growth;102.91;19-Dec-2022
+145077;INF109KC1LG4;-;ICICI Prudential Manufacturing Fund - Cumulative Option;18.73;19-Dec-2022
+145075;INF109KC1LJ8;-;ICICI Prudential Manufacturing Fund - Direct Plan - Cumulative Option;19.64;19-Dec-2022
+147346;INF109KC1D93;-;ICICI Prudential MNC Fund - Direct Plan - Growth Option;20.32;19-Dec-2022
+147345;INF109KC1D69;-;ICICI Prudential MNC Fund - Growth Option;19.34;19-Dec-2022
+143873;INF109KC1GE9;-;ICICI Prudential Pharma Healthcare and Diagnostics (P.H.D) Fund - Cumulative Option;19.24;19-Dec-2022
+143874;INF109KC1GH2;-;ICICI Prudential Pharma Healthcare and Diagnostics (P.H.D) Fund - Direct Plan - Cumulative Option;20.27;19-Dec-2022
+150539;-;INF109KC12I5;ICICI Prudential PSU Equity Fund - Direct Plan - Growth;10.62;19-Dec-2022
+150538;-;INF109KC19H2;ICICI Prudential PSU Equity Fund - Growth;10.57;19-Dec-2022
+148600;INF109KC1O66;-;ICICI Prudential Quant Fund Direct Plan Growth;14.96;19-Dec-2022
+148598;INF109KC1O33;-;ICICI Prudential Quant Fund Growth;14.75;19-Dec-2022
+120594;INF109K01Z48;-;ICICI Prudential Technology Fund - Direct Plan -  Growth;146.13;19-Dec-2022
+100363;INF109K01506;-;ICICI Prudential Technology Fund - Growth;134.17;19-Dec-2022
+150685;-;INF109KC12K1;ICICI PRUDENTIAL TRANSPORTATION AND LOGISTICS FUND - Direct Plan - Growth;9.97;19-Dec-2022
+150684;-;INF109KC19J8;ICICI PRUDENTIAL TRANSPORTATION AND LOGISTICS FUND - Growth;9.94;19-Dec-2022
+120186;INF109K01Z71;-;ICICI Prudential US Bluechip Equity Fund - Direct Plan -  Growth;47.08;19-Dec-2022
+117620;INF109K01E35;-;ICICI Prudential US Bluechip Equity Fund - Growth;43.11;19-Dec-2022
+
+IDBI Mutual Fund
+
+143353;INF397L01KM2;-;IDBI Banking & Financial Services Fund - Direct Plan (Growth);15.29;19-Dec-2022
+143351;INF397L01KI0;-;IDBI Banking & Financial Services Fund - Regular Plan (Growth);14.39;19-Dec-2022
+146517;INF397L01LK4;-;IDBI Healthcare Fund - Direct Plan - Growth;17.90;19-Dec-2022
+146518;INF397L01LG2;-;IDBI Healthcare Fund - Regular Plan - Growth;16.92;19-Dec-2022
+
+IDFC Mutual Fund
+
+114476;INF194K01BY9;-;IDFC Infrastructure Fund - Regular Plan - Growth;25.476;19-Dec-2022
+118469;INF194K01X46;-;IDFC Infrastructure Fund-Direct Plan-Growth ;28.840;19-Dec-2022
+150716;INF194KB1EB7;-;IDFC TRANSPORTATION AND LOGISTICS FUND - GROWTH - DIRECT PLAN;10.180;19-Dec-2022
+150717;INF194KB1EE1;-;IDFC TRANSPORTATION AND LOGISTICS FUND - GROWTH - REGULAR PLAN;10.152;19-Dec-2022
+
+IIFL Mutual Fund
+
+149318;INF579M01AI2;-;IIFL QUANT FUND DIRECT GROWTH;10.7371;19-Dec-2022
+149317;INF579M01AF8;-;IIFL QUANT FUND REGULAR GROWTH;10.6074;19-Dec-2022
+
+Invesco Mutual Fund
+
+148751;INF205KA1338;-;Invesco India ESG Equity Fund - Direct Plan - Growth;12.44;19-Dec-2022
+148753;INF205KA1304;-;Invesco India ESG Equity Fund - Growth;12.05;19-Dec-2022
+120385;INF205K01KY4;-;Invesco India Financial Services Fund - Direct Plan - Growth;98.15;19-Dec-2022
+108378;INF205K01155;-;Invesco India Financial Services Fund - Retail Growth;84.99;19-Dec-2022
+120405;INF205K01MD4;-;Invesco India Infrastructure Fund - Direct Pan - Growth Option;38.31;19-Dec-2022
+106654;INF205K01CD5;-;Invesco India Infrastructure Fund - Growth Option;33.03;19-Dec-2022
+120395;INF205K01NG5;-;Invesco India PSU Equity Fund - Direct Plan - Growth;35.87;19-Dec-2022
+112171;INF205K01338;-;Invesco India PSU Equity Fund - Growth;31.29;19-Dec-2022
+
+ITI Mutual Fund
+
+149321;INF00XX01BU6;-;ITI Banking and Financial Services Fund - Direct Plan - Growth Option;11.4305;19-Dec-2022
+149324;INF00XX01BR2;-;ITI Banking and Financial Services Fund -Regular Plan - Growth Option;11.1645;19-Dec-2022
+149268;INF00XX01BO9;-;ITI Pharma and Healthcare Fund - Direct Plan - Growth Option;9.6090;19-Dec-2022
+149270;INF00XX01BL5;-;ITI Pharma and Healthcare Fund - Regular Plan - Growth Option;9.3723;19-Dec-2022
+
+Kotak Mahindra Mutual Fund
+
+150624;INF174KA1JN6;-;Kotak Business Cycle - Direct Plan - Growth;10.267;19-Dec-2022
+150626;INF174KA1JK2;-;Kotak Business Cycle Fund-Regular Plan--Growth;10.225;19-Dec-2022
+148606;INF174KA1FI4;-;Kotak ESG Opportunities Fund - Direct Plan - Growth Option;12.721;19-Dec-2022
+148602;INF174KA1FF0;-;Kotak ESG Opportunities Fund - Regular Plan - Growth Option;12.284;19-Dec-2022
+133796;INF178L01095;-;Kotak Infrastructure & Economic Reform Fund - Standard Plan-Growth;37.938;19-Dec-2022
+133801;INF178L01AL9;-;Kotak Infrastructure & Economic Reform Fund- Direct Plan- Growth Option;43.194;19-Dec-2022
+149841;INF174KA1IF4;-;Kotak Manufacture in India Fund - Direct Plan Growth;11.459;19-Dec-2022
+149840;INF174KA1IC1;-;Kotak Manufacture in India Fund - Regular Plan Growth;11.295;19-Dec-2022
+147727;INF174KA1EZ1;-;Kotak Pioneer Fund- Direct Plan- Growth Option;18.409;19-Dec-2022
+147724;INF174KA1EW8;-;Kotak Pioneer Fund- Regular Plan- Growth Option;17.45;19-Dec-2022
+
+LIC Mutual Fund
+
+134017;INF767K01NK6;-;LIC MF Banking and Financial Services Fund-Direct Plan-Growth;17.5236;19-Dec-2022
+134016;INF767K01NH2;-;LIC MF Banking and Financial Services Fund-Regular Plan-Growth;16.1111;19-Dec-2022
+120351;INF767K01GW5;-;LIC MF Infrastructure Fund-Direct Plan-Growth;27.0574;19-Dec-2022
+107763;INF767K01501;-;LIC MF Infrastructure Fund-Regular Plan-Growth;24.4221;19-Dec-2022
+
+Mahindra Manulife Mutual Fund
+
+145356;INF174V01663;-;Mahindra Manulife Rural Bharat and Consumption Yojana - Direct Plan -Growth;16.2594;19-Dec-2022
+145355;INF174V01630;-;Mahindra Manulife Rural Bharat and Consumption Yojana - Regular Plan - Growth;15.1481;19-Dec-2022
+
+Mirae Asset Mutual Fund
+
+148623;INF769K01GX9;-;Mirae Asset Banking and Financial Services Fund Direct Growth;14.303;19-Dec-2022
+148621;INF769K01GU5;-;Mirae Asset Banking and Financial Services Fund Regular Growth;13.820;19-Dec-2022
+118837;INF769K01BL5;-;Mirae Asset Great Consumer Fund - Direct Plan - Growth;69.229;19-Dec-2022
+114931;INF769K01135;-;Mirae Asset Great Consumer Fund - Regular Plan - Growth option;60.309;19-Dec-2022
+143785;INF769K01EA2;-;Mirae Asset Healthcare Fund -Regular Growth;21.370;19-Dec-2022
+143783;INF769K01ED6;-;Mirae Asset Healthcare Fund Direct Growth;22.935;19-Dec-2022
+
+Nippon India Mutual Fund
+
+118589;INF204K01XO1;-;Nippon India Banking & Financial Services Fund - Direct Plan Growth Plan - Growth Option;444.4829;19-Dec-2022
+101862;INF204K01927;-;Nippon India Banking & Financial Services Fund-Growth Plan-Growth Option;415.2501;19-Dec-2022
+118724;INF204K01G52;-;Nippon India Consumption Fund - Direct Plan Growth Plan - Growth Option;142.7758;19-Dec-2022
+102751;INF204K01AQ4;-;Nippon India Consumption Fund-Growth Plan-Growth Option;131.2768;19-Dec-2022
+130860;INF204KA1SI1;-;Nippon India Japan Equity Fund- Direct Plan- Growth Plan- Growth Option;15.6419;19-Dec-2022
+130863;INF204KA1SH3;-;Nippon India Japan Equity Fund- Growth Plan- Growth Option;14.4661;19-Dec-2022
+118759;INF204K01I50;-;Nippon India Pharma Fund - Direct Plan Growth Plan - Growth Option;308.6674;19-Dec-2022
+102431;INF204K01968;-;Nippon India Pharma Fund-Growth Plan-Growth Option;283.5412;19-Dec-2022
+118763;INF204K01I92;-;Nippon India Power & Infra Fund - Direct Plan Growth Plan - Growth Option;189.8035;19-Dec-2022
+101262;INF204K01AE0;-;Nippon India Power & Infra Fund-Growth Plan -Growth Option;178.8113;19-Dec-2022
+118769;INF204K01J34;-;Nippon India Quant Fund - Direct Plan Growth Plan - Growth Option;46.4506;19-Dec-2022
+108249;INF204K01760;-;Nippon India Quant Fund -Growth Plan - Growth Option;43.4554;19-Dec-2022
+149329;INF204KC1303;-;Nippon India Taiwan Equity Fund- Direct Plan- Growth Option;7.0491;19-Dec-2022
+149328;INF204KC1279;-;Nippon India Taiwan Equity fund- Regular Plan- Growth Option;6.9285;19-Dec-2022
+134923;INF204KA15G5;-;Nippon India US Equity Opportunites Fund- Direct Plan- Growth Plan- Growth Option;22.4840;19-Dec-2022
+134922;INF204KA12G2;-;Nippon India US Equity Opportunites Fund- Growth Plan- Growth Option;20.7471;19-Dec-2022
+
+quant Mutual Fund
+
+148564;INF966L01AD4;-;quant ESG Equity Fund - Growth Option - Direct Plan;23.4063;19-Dec-2022
+148560;INF966L01AB8;-;quant ESG Equity Fund - Growth Option - Regular Plan;22.6925;19-Dec-2022
+106170;INF966L01523;-;quant Infrastructure Fund - Growth Option;24.7316;19-Dec-2022
+120833;INF966L01721;-;quant Infrastructure Fund - Growth Option-Direct Plan;26.2091;19-Dec-2022
+148925;INF966L01AK9;-;quant Quantamental Fund - Growth Option - Direct Plan;14.5408;19-Dec-2022
+148923;INF966L01AH5;-;quant Quantamental Fund - Growth Option - Regular Plan;14.1255;19-Dec-2022
+
+Quantum Mutual Fund
+
+147372;INF082J01382;-;QUANTUM INDIA ESG EQUITY FUND - DIRECT PLAN - GROWTH OPTION;17.24;19-Dec-2022
+147371;INF082J01390;-;QUANTUM INDIA ESG EQUITY FUND - REGULAR PLAN - GROWTH OPTION;16.84;19-Dec-2022
+
+SBI Mutual Fund
+
+133859;INF200KA1507;-;SBI BANKING & FINANCIAL SERVICES FUND - DIRECT PLAN - GROWTH;29.3919;19-Dec-2022
+133858;INF200KA1473;-;SBI BANKING & FINANCIAL SERVICES FUND - REGULAR PLAN - GROWTH;27.0833;19-Dec-2022
+120575;INF200K01RM5;-;SBI CONSUMPTION OPPORTUNITIES FUND - DIRECT PLAN - GROWTH;232.6518;19-Dec-2022
+120576;INF200K01VR6;-;SBI CONSUMPTION OPPORTUNITIES FUND - REGULAR - GROWTH;209.6673;19-Dec-2022
+146643;INF200KA1A71;-;SBI Equity Minimum Variance Fund - Direct Plan - Growth;17.3758;19-Dec-2022
+146644;INF200KA1A48;-;SBI Equity Minimum Variance Fund - Regular Plan - Growth;17.1239;19-Dec-2022
+119783;INF200K01UP2;-;SBI HEALTHCARE OPPORTUNITIES FUND - DIRECT PLAN -GROWTH;247.3775;19-Dec-2022
+102823;INF200K01446;-;SBI HEALTHCARE OPPORTUNITIES FUND - REGULAR PLAN -GROWTH;222.0163;19-Dec-2022
+119700;INF200K01RS2;-;SBI INFRASTRUCTURE FUND -  DIRECT PLAN - GROWTH;29.9399;19-Dec-2022
+106096;INF200K01CT2;-;SBI INFRASTRUCTURE FUND -  REGULAR PLAN - GROWTH;28.2227;19-Dec-2022
+119705;INF200K01SB6;-;SBI Magnum COMMA Fund - DIRECT PLAN - Growth;73.1444;19-Dec-2022
+103145;INF200K01339;-;SBI Magnum COMMA Fund - REGULAR PLAN - Growth;68.6507;19-Dec-2022
+119709;INF200K01SE0;-;SBI Magnum Equity ESG Fund - DIRECT PLAN -GROWTH;180.7746;19-Dec-2022
+104523;INF200K01214;-;SBI Magnum Equity ESG Fund- REGULAR PLAN - Growth;167.6486;19-Dec-2022
+119711;INF200K01SN1;-;SBI MAGNUM GLOBAL FUND - DIRECT PLAN -GROWTH;309.4061;19-Dec-2022
+103034;INF200K01271;-;SBI MAGNUM GLOBAL FUND - REGULAR PLAN -GROWTH;285.8411;19-Dec-2022
+119732;INF200K01UY4;-;SBI PSU Fund - DIRECT PLAN - GROWTH;17.3732;19-Dec-2022
+113099;INF200K01BC0;-;SBI PSU Fund - REGULAR PLAN -Growth;16.2346;19-Dec-2022
+120578;INF200K01RV6;-;SBI TECHNOLOGY OPPORTUNITIES FUND - DIRECT PLAN - GROWTH;155.1936;19-Dec-2022
+120577;INF200K01VS4;-;SBI TECHNOLOGY OPPORTUNITIES FUND - REGULAR PLAN - GROWTH;140.1248;19-Dec-2022
+
+Sundaram Mutual Fund
+
+119595;INF903J01NH5;-;Sundaram Consumption Fund (Formerly Known as Sundaram Rural and Consumption Fund Direct Plan - Growth);68.9192;19-Dec-2022
+102142;INF903J01561;-;Sundaram Consumption Fund(Formerly Known as Sundaram Rural and Consumption Fund Regular Plan - Growth);64.2840;19-Dec-2022
+119597;INF903J01NB8;-;Sundaram Financial Services Opportunities Fund Direct Plan - Growth;73.7842;19-Dec-2022
+109061;INF903J01652;-;Sundaram Financial Services Opportunities Fund Institutional Plan - Growth;75.8635;19-Dec-2022
+109059;INF903J01629;-;Sundaram Financial Services Opportunities Fund Regular Plan - Growth;67.8118;19-Dec-2022
+129212;INF903J01F92;-;Sundaram Infrastructure Advantage Fund Direct Plan - Growth;57.3172;19-Dec-2022
+129213;INF903J01F68;-;Sundaram Infrastructure Advantage Fund Regular Plan - Growth;54.4333;19-Dec-2022
+144835;INF903JA1FA2;-;Sundaram Services Fund Direct Plan - Growth;23.2605;19-Dec-2022
+144838;INF903JA1EX7;-;Sundaram Services Fund Regular Plan - Growth;22.1425;19-Dec-2022
+
+Tata Mutual Fund
+
+135793;INF277K01Z10;-;Tata Banking And Financial Services Fund-Direct Plan-Growth;32.8263;19-Dec-2022
+135794;INF277K01Y86;-;Tata Banking And Financial Services Fund-Regular Plan-Growth;29.2943;19-Dec-2022
+149071;INF277KA1166;-;Tata Business Cycle Fund-Direct Plan-Growth;12.3216;19-Dec-2022
+149068;INF277KA1190;-;Tata Business Cycle Fund-Regular Plan-Growth;12.0346;19-Dec-2022
+135800;INF277K01Z77;-;Tata Digital India Fund-Direct Plan-Growth;35.4561;19-Dec-2022
+135797;INF277K01Z44;-;Tata Digital India Fund-Regular Plan-Growth;31.5174;19-Dec-2022
+119172;INF277K01NG4;-;Tata Ethical Fund -Direct Plan- Growth Option;310.8763;19-Dec-2022
+100415;INF277K01956;-;Tata Ethical Fund-Regular Plan - Growth Option;281.0658;19-Dec-2022
+150532;INF277KA1497;-;Tata Housing Opportunities Fund - Direct Plan - Growth;10.2342;19-Dec-2022
+150537;INF277KA1521;-;Tata Housing Opportunities Fund - Regular Plan - Growth;10.1695;19-Dec-2022
+135805;INF277K013A6;-;Tata India Consumer Fund-Direct Plan-Growth;30.5375;19-Dec-2022
+135804;INF277K010A2;-;Tata India Consumer Fund-Regular Plan-Growth;27.4192;19-Dec-2022
+135810;INF277K019A3;-;Tata India Pharma & Healthcare Fund-Direct Plan-Growth;18.6111;19-Dec-2022
+135812;INF277K016A9;-;Tata India Pharma & Healthcare Fund-Regular Plan-Growth;16.6254;19-Dec-2022
+119243;INF277K01PQ8;-;Tata Infrastructure Fund -Direct Plan -Growth Option;110.2567;19-Dec-2022
+101766;INF277K01782;-;Tata Infrastructure Fund-Regular Plan- Growth Option;103.8538;19-Dec-2022
+147864;INF277K013Y6;-;Tata Quant Fund-Direct Plan-Growth;11.5469;19-Dec-2022
+147867;INF277K016Y9;-;Tata Quant Fund-Regular Plan-Growth;10.9887;19-Dec-2022
+135813;INF277K015B9;-;Tata Resources & Energy Fund-Direct Plan-Growth;33.1057;19-Dec-2022
+135815;INF277K012B6;-;Tata Resources & Energy Fund-Regular Plan-Growth;29.4076;19-Dec-2022
+
+Taurus Mutual Fund
+
+118868;INF044D01CN2;-;Taurus Banking & Financial Services Fund - Direct Plan - Growth;43.75;19-Dec-2022
+117312;INF044D01BI4;-;Taurus Banking & Financial Services Fund - Regular Plan - Growth;39.93;19-Dec-2022
+118876;INF044D01CJ0;-;Taurus Ethical Fund - Direct Plan - Growth;93.16;19-Dec-2022
+111787;INF044D01864;-;Taurus Ethical Fund - Regular Plan - Growth;85.48;19-Dec-2022
+118879;INF044D01CD3;-;Taurus Infrastructure Fund - Direct Plan - Growth ;44.19;19-Dec-2022
+105417;INF044D01906;-;Taurus Infrastructure Fund - Regular Plan - Growth;41.69;19-Dec-2022
+
+UTI Mutual Fund
+
+120733;INF789F01SN3;-;UTI Banking and Financial Services Fund - Direct Plan - Growth Option;144.8137;19-Dec-2022
+102401;INF789F01372;-;UTI Banking and Financial Services Fund - Regular Plan - Growth Option;130.5447;19-Dec-2022
+120782;INF789F01TO9;-;UTI Healthcare Fund - Direct Plan - Growth Option;163.5305;19-Dec-2022
+100807;INF789F01695;-;UTI Healthcare Fund - Regular Plan - Growth Option;148.7768;19-Dec-2022
+120780;INF789F01VF3;-;UTI India Consumer Fund - Direct Plan - Growth Option;41.9218;19-Dec-2022
+106425;INF789F01CE6;-;UTI India Consumer Fund - Regular Plan - Growth Option;39.6335;19-Dec-2022
+102395;INF789F01752;-;UTI Infrastructure Fund-Growth Option;86.1915;19-Dec-2022
+120728;INF789F01TU6;-;UTI Infrastructure Fund-Growth Option- Direct;89.7381;19-Dec-2022
+120682;INF789F01UD0;-;UTI - MNC Fund - Growth Option - Direct;303.2541;19-Dec-2022
+100740;INF789F01844;-;UTI - MNC Fund - Regular Plan - Growth Option;278.2916;19-Dec-2022
+102398;INF789F01299;-;UTI-Transpotation and Logistics  Fund-Growth Option;152.82;19-Dec-2022
+120731;INF789F01SH5;-;UTI-Transpotation and Logistics  Fund-Growth Option- Direct;170.177;19-Dec-2022
+
+pen Ended Schemes(Equity Scheme - Small Cap Fund)
+
+Aditya Birla Sun Life Mutual Fund
+
+105804;INF209K01EN2;-;Aditya Birla Sun Life Small Cap Fund - GROWTH;52.933;19-Dec-2022
+119556;INF209K01WN4;-;Aditya Birla Sun Life Small Cap Fund - Growth - Direct Plan;58.5417;19-Dec-2022
+
+Axis Mutual Fund
+
+125354;INF846K01K35;-;Axis Small Cap Fund - Direct Plan - Growth;72.65;19-Dec-2022
+125350;INF846K01K01;-;Axis Small Cap Fund - Regular Plan - Growth;64.69;19-Dec-2022
+
+Bank of India Mutual Fund
+
+145678;INF761K01EP7;-;BANK OF INDIA Small Cap Fund Direct Plan Growth;29.26;19-Dec-2022
+145677;INF761K01ER3;-;BANK OF INDIA Small Cap Fund Regular Plan Growth;27.25;19-Dec-2022
+
+Canara Robeco Mutual Fund
+
+146130;INF760K01JC6;-;CANARA ROBECO SMALL CAP FUND - DIRECT PLAN - GROWTH OPTION;26.9000;19-Dec-2022
+146127;INF760K01JF9;-;CANARA ROBECO SMALL CAP FUND - REGULAR PLAN - GROWTH OPTION;25.1700;19-Dec-2022
+
+DSP Mutual Fund
+
+119212;INF740K01QD1;-;DSP Small Cap Fund - Direct Plan - Growth;123.131;19-Dec-2022
+105989;INF740K01797;-;DSP Small Cap Fund - Regular - Growth;114.642;19-Dec-2022
+
+Edelweiss Mutual Fund
+
+146196;INF754K01JN6;-;Edelweiss Small Cap Fund - Direct Plan - Growth;27.469;19-Dec-2022
+146193;INF754K01JJ4;-;Edelweiss Small Cap Fund - Regular Plan - Growth;25.821;19-Dec-2022
+
+Franklin Templeton Mutual Fund
+
+118525;INF090I01IQ4;-;Franklin India Smaller Companies Fund - Direct - Growth;108.2138;19-Dec-2022
+103360;INF090I01569;-;Franklin India Smaller Companies Fund-Growth;97.7209;19-Dec-2022
+
+HDFC Mutual Fund
+
+130502;INF179KA1RZ8;-;HDFC Small Cap Fund - Growth Option;80.352;19-Dec-2022
+130503;INF179KA1RW5;-;HDFC Small Cap Fund - Growth Option - Direct Plan;89.267;19-Dec-2022
+
+HSBC Mutual Fund
+
+151130;INF917K01QA1;-;HSBC Small Cap Fund - Direct Growth;51.9721;19-Dec-2022
+151133;INF917K01QC7;-;HSBC Small Cap Fund - Regular Growth;48.0252;19-Dec-2022
+
+ICICI Prudential Mutual Fund
+
+149283;INF109KC1V18;-;ICICI Prudential Nifty Smallcap 250 Index Fund - Direct Plan - Growth;10.0370;19-Dec-2022
+149281;INF109KC1U84;-;ICICI Prudential Nifty Smallcap 250 Index Fund - Growth;9.9574;19-Dec-2022
+120591;INF109K015M0;-;ICICI Prudential Smallcap Fund - Direct Plan - Growth;59.91;19-Dec-2022
+106823;INF109K01BI0;-;ICICI Prudential Smallcap Fund - Growth;54.89;19-Dec-2022
+
+IDBI Mutual Fund
+
+141475;INF397L01JS1;-;IDBI Small Cap Fund - Growth Direct;20.39;19-Dec-2022
+141462;INF397L01JW3;-;IDBI Small Cap Fund Growth Regular;18.73;19-Dec-2022
+
+IDFC Mutual Fund
+
+147946;INF194KB1AL4;-;IDFC EMERGING BUSINESSES FUND  - DIRECT PLAN GROWTH;22.790;19-Dec-2022
+147944;INF194KB1AJ8;-;IDFC EMERGING BUSINESSES FUND  - REGULAR PLAN GROWTH;21.660;19-Dec-2022
+
+Invesco Mutual Fund
+
+145137;INF205K013T3;-;Invesco India Smallcap Fund - Direct Plan - Growth;23.56;19-Dec-2022
+145139;INF205K011T7;-;Invesco India Smallcap Fund - Regular Plan - Growth;22.04;19-Dec-2022
+
+ITI Mutual Fund
+
+147919;INF00XX01747;-;ITI Small Cap Fund - Direct Plan - Growth Option;15.5687;19-Dec-2022
+147920;INF00XX01713;-;ITI Small Cap Fund - Regular Plan - Growth Option;14.6383;19-Dec-2022
+
+Kotak Mahindra Mutual Fund
+
+102875;INF174K01211;-;Kotak-Small Cap Fund - Growth;165.553;19-Dec-2022
+120164;INF174K01KT2;-;Kotak-Small Cap Fund - Growth - Direct;188.375;19-Dec-2022
+
+Mahindra Manulife Mutual Fund
+
+150915;INF174V01BK7;-;Mahindra Manulife Small Cap Fund - Direct Plan - Growth;9.9876;19-Dec-2022
+150912;INF174V01BH3;-;Mahindra Manulife Small Cap Fund - Regular Plan - Growth;9.9831;19-Dec-2022
+
+Nippon India Mutual Fund
+
+118778;INF204K01K15;-;Nippon India Small Cap Fund - Direct Plan Growth Plan - Growth Option;104.2345;19-Dec-2022
+113177;INF204K01HY3;-;Nippon India Small Cap Fund - Growth Plan - Growth Option;94.9574;19-Dec-2022
+
+PGIM India Mutual Fund
+
+149019;INF663L01W06;-;PGIM India Small Cap Fund - Direct Plan- Growth Option;11.45;19-Dec-2022
+149020;INF663L01W30;-;PGIM India Small Cap Fund - Regular Plan - Growth Option;11.14;19-Dec-2022
+
+quant Mutual Fund
+
+100177;INF966L01AA0;-;quant Small Cap Fund - Growth - Regular Plan;146.9937;19-Dec-2022
+120828;INF966L01689;-;quant Small Cap Fund - Growth Option - Direct Plan;155.5452;19-Dec-2022
+
+SBI Mutual Fund
+
+125497;INF200K01T51;-;SBI Small Cap Fund - Direct Plan - Growth;129.9222;19-Dec-2022
+125494;INF200K01T28;-;SBI Small Cap Fund - Regular Plan - Growth;116.3803;19-Dec-2022
+
+Sundaram Mutual Fund
+
+119589;INF903J01NK9;-;Sundaram Small Cap Fund Direct Plan - Growth;163.7108;19-Dec-2022
+100795;INF903J01470;-;Sundaram Small Cap Fund Regular Plan - Growth;152.1371;19-Dec-2022
+
+Tata Mutual Fund
+
+145206;INF277K011O1;-;Tata Small Cap Fund-Direct Plan-Growth;26.3986;19-Dec-2022
+145208;INF277K015O2;-;Tata Small Cap Fund-Regular Plan-Growth;24.4175;19-Dec-2022
+
+Union Mutual Fund
+
+129649;INF582M01BU9;-;Union Small Cap Fund - Direct Plan - Growth Option;31.91;19-Dec-2022
+129647;INF582M01BY1;-;Union Small Cap Fund - Regular Plan - Growth Option;29.78;19-Dec-2022
+
+UTI Mutual Fund
+
+148618;INF789F1AUQ1;-;UTI Small Cap Fund - Direct Plan - Growth Option;16.4689;19-Dec-2022
+148617;INF789F1AUO6;-;UTI Small Cap Fund - Regular Plan - Growth Option;15.8526;19-Dec-2022
+
+Open Ended Schemes(Equity Scheme - Value Fund)
+
+Aditya Birla Sun Life Mutual Fund
+
+119658;INF209K01WP9;-;Aditya Birla Sun Life Pure Value Fund - Direct - IDCW;54.718;19-Dec-2022
+119659;INF209K01WQ7;-;Aditya Birla Sun Life Pure Value Fund - Growth - Direct Plan;83.2425;19-Dec-2022
+108167;INF209K01LF3;-;Aditya Birla Sun Life Pure Value Fund - Growth Option;75.596;19-Dec-2022
+108166;INF209K01LE6;INF209K01LG1;Aditya Birla Sun Life Pure Value Fund - Regular - IDCW;30.6536;19-Dec-2022
+
+Axis Mutual Fund
+
+149166;INF846K010C0;-;Axis Value Fund - Direct Plan - Growth;10.67;19-Dec-2022
+149167;INF846K013C4;-;Axis Value Fund - Regular Plan - Growth;10.48;19-Dec-2022
+
+Canara Robeco Mutual Fund
+
+149085;INF760K01JW4;-;Canara Robeco Value Fund - Direct Plan - Growth Option;11.9900;19-Dec-2022
+149088;INF760K01JZ7;-;Canara Robeco Value Fund - Regular Plan - Growth Option;11.7200;19-Dec-2022
+
+DSP Mutual Fund
+
+148595;INF740KA1PP3;-;DSP Value Fund - Direct Plan - Growth;13.467;19-Dec-2022
+148594;INF740KA1PM0;-;DSP Value Fund - Regular Plan - Growth;13.261;19-Dec-2022
+
+Franklin Templeton Mutual Fund
+
+118494;INF090I01GY2;-;Templeton India Value Fund - Direct - Growth;498.4791;19-Dec-2022
+100496;INF090I01296;-;Templeton India Value Fund - Growth Plan;461.1289;19-Dec-2022
+
+HDFC Mutual Fund
+
+118935;INF179K01VC4;-;HDFC Capital Builder Value Fund - Growth Option - Direct Plan;504.514;19-Dec-2022
+101764;INF179K01426;-;HDFC Capital Builder Value Fund - Growth Plan;461.726;19-Dec-2022
+
+HSBC Mutual Fund
+
+151113;INF917K01HD4;-;HSBC Value Fund - Direct Growth;67.4696;19-Dec-2022
+151110;INF677K01023;-;HSBC Value Fund - Regular Growth;61.9588;19-Dec-2022
+
+ICICI Prudential Mutual Fund
+
+120323;INF109K012K1;-;ICICI Prudential Value Discovery Fund - Direct Plan - Growth;304.13;19-Dec-2022
+102594;INF109K01AF8;-;ICICI Prudential Value Discovery Fund - Growth;280.59;19-Dec-2022
+
+IDBI Mutual Fund
+
+144455;INF397L01KU5;-;IDBI Long Term Value Fund-Direct Plan- Growth;17.61;19-Dec-2022
+144453;INF397L01KQ3;-;IDBI Long Term Value Fund-Regular Plan-Growth;16.79;19-Dec-2022
+
+IDFC Mutual Fund
+
+108909;INF194K01342;-;IDFC Sterling Value Fund - Regular Plan - Growth;94.285;19-Dec-2022
+118481;INF194K01Z85;-;IDFC Sterling Value Fund-Direct Plan-Growth  ;104.001;19-Dec-2022
+
+Indiabulls Mutual Fund
+
+135341;INF666M01BE4;-;Indiabulls Value Fund - Direct Plan - Growth Option;20.2914;19-Dec-2022
+135343;INF666M01BH7;-;Indiabulls Value Fund - Regular Plan - Growth Option;17.6481;19-Dec-2022
+
+ITI Mutual Fund
+
+148972;INF00XX01AQ6;-;ITI Value Fund - Direct Plan - Growth Option;10.9500;19-Dec-2022
+148973;INF00XX01AN3;-;ITI Value Fund - Regular Plan - Growth Option;10.5752;19-Dec-2022
+
+JM Financial Mutual Fund
+
+120486;INF192K01BT3;-;JM Value Fund (Direct) - Growth Option;60.2328;19-Dec-2022
+100254;INF137A01037;-;JM Value Fund (Regular) - Growth Option;55.1252;19-Dec-2022
+
+Nippon India Mutual Fund
+
+118784;INF204K01K49;-;Nippon India Value Fund - Direct Plan Growth Plan;139.7360;19-Dec-2022
+103085;INF204K01GB3;-;Nippon India Value Fund- Growth Plan;130.0136;19-Dec-2022
+
+quant Mutual Fund
+
+149335;INF966L01AN3;-;Quant Value Fund - Growth Option  - Direct Plan;12.1386;19-Dec-2022
+149337;INF966L01AQ6;-;Quant Value Fund - Growth Option - Regular Plan;11.8884;19-Dec-2022
+
+Quantum Mutual Fund
+
+103490;INF082J01036;-;Quantum Long Term Equity Value Fund - Direct Plan Growth Option;82.79;19-Dec-2022
+141068;INF082J01242;-;Quantum Long Term Equity Value Fund - Regular Plan Growth Option;80.96;19-Dec-2022
+
+Tata Mutual Fund
+
+101672;INF277K01451;-;Tata Equity P/E Fund - Regular Plan -Growth Option;214.9480;19-Dec-2022
+119231;INF277K01ND1;-;Tata Equity P/E Fund -Direct Plan Growth Option;236.0140;19-Dec-2022
+
+Union Mutual Fund
+
+145473;INF582M01EK4;-;Union Value Discovery Fund - Direct Plan - Growth Option;18.54;19-Dec-2022
+145471;INF582M01EO6;-;Union Value Discovery Fund - Regular Plan - Growth Option;17.95;19-Dec-2022
+
+UTI Mutual Fund
+
+120751;INF789F01VB2;-;UTI Value Opportunities Fund- Direct Plan - Growth Option;113.6217;19-Dec-2022
+103098;INF789F01AG5;-;UTI Value Opportunities Fund- Regular Plan - Growth Option;105.7104;19-Dec-2022
+
+Open Ended Schemes(Other Scheme - Index Funds)
+
+Aditya Birla Sun Life Mutual Fund
+
+150702;INF209KB14N1;-;Aditya Birla Sun Life Crisil IBX 50:50 Gilt Plus SDL Apr 2028 Index Fund-Direct Growth;10.4416;03-Apr-2023
+150704;INF209KB15N8;-;Aditya Birla Sun Life Crisil IBX 50:50 Gilt Plus SDL APR 2028 Index Fund-Direct IDCW;10.4415;03-Apr-2023
+150703;INF209KB12N5;-;Aditya Birla Sun Life Crisil IBX 50:50 Gilt Plus SDL Apr 2028 Index Fund-Regular Growth;10.4333;03-Apr-2023
+150705;INF209KB13N3;-;Aditya Birla Sun Life Crisil IBX 50:50 Gilt Plus SDL Apr 2028 Index Fund-Regular IDCW;10.4342;03-Apr-2023
+150938;INF209KB10P4;-;Aditya Birla Sun Life Crisil IBX 60:40 SDL + AAA PSU APR 2026 Index Fund-Direct Growth;10.2131;03-Apr-2023
+150939;INF209KB11P2;-;Aditya Birla Sun Life Crisil IBX 60:40 SDL+ AAA PSU APR 2026 Index Fund-Direct IDCW Payout;10.213;03-Apr-2023
+150936;INF209KB18O0;-;Aditya Birla Sun Life Crisil IBX 60:40 SDL+AAA PSU APR 2026 Index Fund-Regular Growth;10.2046;03-Apr-2023
+150937;INF209KB19O8;-;Aditya Birla Sun Life Crisil IBX 60:40 SDL+AAA PSU APR 2026 Index Fund-Regular IDCW Payout;10.2054;03-Apr-2023
+150357;INF209KB13I3;-;Aditya Birla Sun Life Crisil IBX 60:40 SDL+AAA PSU-APR 2025 Index Fund-Direct Growth;10.3255;03-Apr-2023
+150355;INF209KB14I1;-;Aditya Birla Sun Life Crisil IBX 60:40 SDL+AAA PSU-APR 2025 Index Fund-Direct IDCW;10.3263;03-Apr-2023
+150354;INF209KB11I7;-;Aditya Birla Sun Life Crisil IBX 60:40 SDL+AAA PSU-APR 2025 Index Fund-Regular Growth;10.3098;03-Apr-2023
+150356;INF209KB12I5;-;Aditya Birla Sun Life Crisil IBX 60:40 SDL+AAA PSU-APR 2025 Index Fund-Regular IDCW;10.3099;03-Apr-2023
+150353;INF209KB19H2;-;Aditya Birla Sun Life Crisil IBX 60:40 SDL+AAA PSU-Apr 2027 Index Fund-Direct Growth;10.3346;03-Apr-2023
+150352;INF209KB10I9;-;Aditya Birla Sun Life Crisil IBX 60:40 SDL+AAA PSU-Apr 2027 Index Fund-Direct IDCW;10.3363;03-Apr-2023
+150351;INF209KB17H6;-;Aditya Birla Sun Life Crisil IBX 60:40 SDL+AAA PSU-Apr 2027 Index Fund-Regular Growth;10.3141;03-Apr-2023
+150350;INF209KB18H4;-;Aditya Birla Sun Life Crisil IBX 60:40 SDL+AAA PSU-Apr 2027 Index Fund-Regular IDCW;10.3112;03-Apr-2023
+149889;INF209KB18G6;-;Aditya Birla Sun Life Crisil IBX AAA Jun-2023 Index Fund-Regular Growth;10.5145;03-Apr-2023
+149888;INF209KB19G4;-;Aditya Birla Sun Life Crisil IBX AAA Jun-2023 Index Fund-Regular IDCW Payout;10.5156;03-Apr-2023
+149891;INF209KB10H1;-;Aditya Birla Sun Life Crisil IBX AAA- Jun 2023 Index Fund;10.5386;03-Apr-2023
+149890;INF209KB11H9;-;Aditya Birla Sun Life Crisil IBX AAA-Jun 2023 Index Fund-Direct IDCW Payout;10.5388;03-Apr-2023
+151396;INF209KB10S8;-;Aditya Birla Sun Life Crisil IBX AAA Mar 2024 Index Fund-Direct Growth;10.1215;03-Apr-2023
+151394;INF209KB11S6;-;Aditya Birla Sun Life Crisil IBX AAA Mar 2024 Index Fund-Direct IDCW;10.1215;03-Apr-2023
+151393;INF209KB18R3;-;Aditya Birla Sun Life Crisil IBX AAA Mar 2024 Index Fund-Regular Growth;10.118;03-Apr-2023
+151395;INF209KB19R1;-;Aditya Birla Sun Life Crisil IBX AAA Mar 2024 Index Fund-Regular IDCW;10.1181;03-Apr-2023
+150780;INF209KB13O1;-;Aditya Birla Sun Life Crisil IBX Gilt-Apr 2029 Index Fund-Direct IDCW;10.1965;03-Apr-2023
+150777;INF209KB10O7;-;Aditya Birla Sun Life Crisil IBX Gilt-Apr 2029 Index Fund-Regular Growth;10.449;03-Apr-2023
+150779;INF209KB11O5;-;Aditya Birla Sun Life Crisil IBX Gilt-Apr 2029 Index Fund-Regular IDCW;10.1286;03-Apr-2023
+150778;INF209KB12O3;-;Aditya Birla Sun Life Crisil IBX Gilt-Apr-2029 Index Fund-Direct Growth;10.4563;03-Apr-2023
+151577;INF209KB11U2;-;Aditya Birla Sun Life Crisil IBX Gilt Apr 2028 Index Fund-Direct Growth;10.0575;03-Apr-2023
+151584;INF209KB12U0;-;Aditya Birla Sun Life Crisil IBX Gilt Apr 2028 Index Fund-Direct IDCW;10.0577;03-Apr-2023
+151583;INF209KB19T7;-;Aditya Birla Sun Life Crisil IBX Gilt Apr 2028 Index Fund-Regular Growth;10.0558;03-Apr-2023
+151582;INF209KB10U4;-;Aditya Birla Sun Life Crisil IBX Gilt Apr 2028 Index Fund-Regular IDCW;10.0559;03-Apr-2023
+150699;INF209KB11N7;-;Aditya Birla Sun Life Crisil IBX Gilt- April 2026 Index Fund-Direct IDCW;10.3904;03-Apr-2023
+150698;INF209KB10N9;-;Aditya Birla Sun Life Crisil IBX Gilt-April 2026 Index Fund-Direct Growth;10.3897;03-Apr-2023
+150701;INF209KB18M4;-;Aditya Birla Sun Life Crisil IBX Gilt-April 2026 Index Fund-Regular Growth;10.3819;03-Apr-2023
+150700;INF209KB19M2;-;Aditya Birla Sun Life Crisil IBX Gilt-April 2026 Index Fund-Regular IDCW;10.3824;03-Apr-2023
+151427;-;-;Aditya Birla Sun Life CRISIL IBX SDL Jun 2032 INDEX FUND - Direct Growth;10.1239;03-Apr-2023
+151425;-;-;Aditya Birla Sun Life CRISIL IBX SDL Jun 2032 INDEX FUND - Direct IDCW Payout;10.1251;03-Apr-2023
+151428;-;-;Aditya Birla Sun Life CRISIL IBX SDL Jun 2032 INDEX FUND - Regular Growth;10.119;03-Apr-2023
+151426;-;-;Aditya Birla Sun Life CRISIL IBX SDL Jun 2032 INDEX FUND - Regular IDCW Payout;10.1192;03-Apr-2023
+148962;INF209KB1Z71;-;Aditya Birla Sun Life Nifty 50 Equal Weight Index Fund-Direct Growth;11.205;03-Apr-2023
+148963;INF209KB1Z89;INF209KB1Z97;Aditya Birla Sun Life Nifty 50 Equal Weight Index Fund-Direct-IDCW;11.2049;03-Apr-2023
+148965;INF209KB1Z48;-;Aditya Birla Sun Life Nifty 50 Equal Weight Index Fund-Regular Growth;11.0734;03-Apr-2023
+148964;INF209KB1Z55;INF209KB1Z63;Aditya Birla Sun Life Nifty 50 Equal Weight Index Fund-Regular IDCW;11.0734;03-Apr-2023
+119648;INF209K01VY3;-;Aditya Birla Sun Life Nifty 50 Index Fund - Growth - Direct Plan;175.5471;03-Apr-2023
+101314;INF209K01LB2;-;Aditya Birla Sun Life Nifty 50 Index Fund - Growth - Regular Plan;172.8977;03-Apr-2023
+119649;INF209K01VX5;-;Aditya Birla Sun Life Nifty 50 Index Fund -DIRECT - IDCW;18.1486;03-Apr-2023
+101313;INF209K01LA4;INF209K01LC0;Aditya Birla Sun Life Nifty 50 Index Fund -REGULAR - IDCW;17.6687;03-Apr-2023
+148809;INF209KB1W82;INF209KB1W90;Aditya Birla Sun Life Nifty Midcap 150 Index Fund - Direct - Payout of IDCW;12.7722;03-Apr-2023
+148806;INF209KB1W58;INF209KB1W66;Aditya Birla Sun Life Nifty Midcap 150 Index Fund - Regular - Payout of IDCW;12.598;03-Apr-2023
+148807;INF209KB1W74;-;Aditya Birla Sun Life Nifty Midcap 150 Index Fund-Direct Growth;12.7725;03-Apr-2023
+148805;INF209KB1W41;-;Aditya Birla Sun Life Nifty Midcap 150 Index Fund-Regular Growth;12.5997;03-Apr-2023
+149838;INF209KB10G3;-;Aditya Birla Sun Life Nifty Next 50 Index Fund-Direct Growth;9.3362;03-Apr-2023
+149839;INF209KB11G1;-;Aditya Birla Sun Life Nifty Next 50 Index Fund-Direct IDCW;9.3356;03-Apr-2023
+149837;INF209KB12G9;-;Aditya Birla Sun Life Nifty Next 50 Index Fund-Regular Growth;9.2615;03-Apr-2023
+149836;INF209KB13G7;-;Aditya Birla Sun Life Nifty Next 50 Index Fund-Regular IDCW;9.2613;03-Apr-2023
+149794;INF209KB11F3;-;Aditya Birla Sun Life Nifty SDL Apr 2027 Index Fund-Direct Growth;10.4826;03-Apr-2023
+149793;INF209KB12F1;-;Aditya Birla Sun Life Nifty SDL Apr 2027 Index Fund-Direct IDCW Payout;10.4825;03-Apr-2023
+149792;INF209KB19E9;-;Aditya Birla Sun Life Nifty SDL Apr 2027 Index Fund-Regular Growth;10.4459;03-Apr-2023
+149791;INF209KB10F5;-;Aditya Birla Sun Life Nifty SDL Apr 2027 Index Fund-Regular-IDCW Payout;10.446;03-Apr-2023
+149199;INF209KB18B7;-;Aditya Birla Sun Life Nifty SDL Plus PSU Bond SEP 2026 60:40 Index Fund-Direct Growth;10.4958;03-Apr-2023
+149200;INF209KB19B5;-;Aditya Birla Sun Life Nifty SDL Plus PSU Bond SEP 2026 60:40 Index Fund-Direct IDCW;10.496;03-Apr-2023
+149198;INF209KB16B1;-;Aditya Birla Sun Life Nifty SDL Plus PSU Bond SEP 2026 60:40 Index Fund-Regular Growth;10.4702;03-Apr-2023
+149201;INF209KB17B9;-;Aditya Birla Sun Life Nifty SDL Plus PSU Bond SEP 2026 60:40 Index Fund-Regular IDCW;10.4709;03-Apr-2023
+150663;INF209KB10M1;-;Aditya Birla Sun Life Nifty SDL Sep 2025 Index Fund-Direct Growth;10.3915;03-Apr-2023
+150664;INF209KB11M9;-;Aditya Birla Sun Life Nifty SDL Sep 2025 Index Fund-Direct IDCW;10.3915;03-Apr-2023
+150665;INF209KB18L6;-;Aditya Birla Sun Life Nifty SDL SEP 2025 Index Fund-Regular Growth;10.3835;03-Apr-2023
+150667;INF209KB19L4;-;Aditya Birla Sun Life Nifty SDL Sep 2025 Index Fund-Regular IDCW;10.3835;03-Apr-2023
+151562;INF209KB16T3;-;Aditya Birla Sun Life Nifty SDL SEP 2027 Index Fund-Direct Growth;10.1489;03-Apr-2023
+151563;INF209KB17T1;-;Aditya Birla Sun Life Nifty SDL SEP 2027 Index Fund-Direct IDCW;10.1489;03-Apr-2023
+151560;INF209KB14T8;-;Aditya Birla Sun Life Nifty SDL SEP 2027 Index Fund-Regular Growth;10.1468;03-Apr-2023
+151561;INF209KB15T5;-;Aditya Birla Sun Life Nifty SDL SEP 2027 Index Fund-Regular IDCW;10.1468;03-Apr-2023
+148814;INF209KB1W25;INF209KB1W33;Aditya Birla Sun Life Nifty Smallcap 50 Index Fund-Direct - Payout of IDCW;10.182;03-Apr-2023
+148815;INF209KB1W17;-;Aditya Birla Sun Life Nifty Smallcap 50 Index Fund-Direct Growth;10.1839;03-Apr-2023
+148812;INF209KB1V91;INF209KB1W09;Aditya Birla Sun Life Nifty Smallcap 50 Index Fund-Regular - Payout of IDCW;10.0423;03-Apr-2023
+148811;INF209KB1V83;-;Aditya Birla Sun Life Nifty Smallcap 50 Index Fund-Regular Growth;10.0423;03-Apr-2023
+
+Axis Mutual Fund
+
+151300;INF846K010N7;-;Axis CRISIL IBX 50:50 Gilt Plus SDL June 2028 Index Fund - Direct Plan - Growth;10.1191;03-Apr-2023
+151299;INF846K011N5;INF846K012N3;Axis CRISIL IBX 50:50 Gilt Plus SDL June 2028 Index Fund - Direct Plan - IDCW;10.1193;03-Apr-2023
+151297;INF846K013N1;-;Axis CRISIL IBX 50:50 Gilt Plus SDL June 2028 Index Fund - Regular Plan - Growth;10.1148;03-Apr-2023
+151298;INF846K014N9;INF846K015N6;Axis CRISIL IBX 50:50 Gilt Plus SDL June 2028 Index Fund - Regular Plan - IDCW;10.1148;03-Apr-2023
+149753;INF846K015F2;-;Axis CRISIL IBX 70:30 CPSE Plus SDL April 2025 Index Fund - Direct Plan - Growth;10.3730;03-Apr-2023
+149755;INF846K018F6;-;Axis CRISIL IBX 70:30 CPSE Plus SDL April 2025 Index Fund - Regular Plan - Growth;10.3547;03-Apr-2023
+149756;INF846K019F4;INF846K010G1;Axis CRISIL IBX 70:30 CPSE Plus SDL April 2025 Index Fund - Regular Plan - IDCW;10.3547;03-Apr-2023
+149754;INF846K016F0;INF846K017F8;Axis CRISIL IBX 70:30 CPSE Plus SDL April 2025 Index Fund- Direct Plan - IDCW;10.3731;03-Apr-2023
+149873;INF846K017G6;-;Axis CRISIL IBX SDL May 2027 Index Fund - Direct Plan - Growth;10.3598;03-Apr-2023
+149874;INF846K018G4;INF846K019G2;Axis CRISIL IBX SDL May 2027 Index Fund - Direct Plan - IDCW;10.3595;03-Apr-2023
+149872;INF846K010H9;-;Axis CRISIL IBX SDL May 2027 Index Fund - Regular Plan - Growth;10.3425;03-Apr-2023
+149875;INF846K011H7;INF846K012H5;Axis CRISIL IBX SDL May 2027 Index Fund - Regular Plan - IDCW;10.3424;03-Apr-2023
+147666;INF846K01S29;-;Axis Nifty 100 Index Fund - Direct Plan - Growth Option;14.9801;03-Apr-2023
+147668;INF846K01S37;INF846K01S45;Axis Nifty 100 Index Fund - Direct Plan - IDCW;15.0015;03-Apr-2023
+147665;INF846K01S52;-;Axis Nifty 100 Index Fund - Regular Plan - Growth Option;14.5556;03-Apr-2023
+147667;INF846K01S60;INF846K01S78;Axis Nifty 100 Index Fund - Regular Plan - IDCW;14.5565;03-Apr-2023
+149373;INF846K013D2;-;Axis Nifty 50 Index Fund - Direct Plan - Growth;10.2103;03-Apr-2023
+149374;INF846K014D0;INF846K015D7;Axis Nifty 50 Index Fund - Direct Plan - IDCW;10.2103;03-Apr-2023
+149371;INF846K016D5;-;Axis Nifty 50 Index Fund - Regular Plan - Growth Option;10.1695;03-Apr-2023
+149372;INF846K017D3;INF846K018D1;Axis Nifty 50 Index Fund - Regular Plan - IDCW;10.1695;03-Apr-2023
+149936;INF846K019H0;-;Axis Nifty Midcap 50 Index Fund - Direct Plan - Growth Option;10.3122;03-Apr-2023
+149935;INF846K010I7;INF846K011I5;Axis Nifty Midcap 50 Index Fund - Direct Plan - IDCW Option;10.3119;03-Apr-2023
+149938;INF846K012I3;-;Axis Nifty Midcap 50 Index Fund - Regular Plan - Growth Option;10.2334;03-Apr-2023
+149937;INF846K013I1;INF846K014I9;Axis Nifty Midcap 50 Index Fund - Regular Plan - IDCW Option;10.2334;03-Apr-2023
+149466;INF846K019E7;-;Axis Nifty Next 50 Index Fund - Direct Plan - Growth;9.2725;03-Apr-2023
+149469;INF846K010F3;INF846K011F1;Axis Nifty Next 50 Index Fund - Direct Plan - IDCW;9.2724;03-Apr-2023
+149467;INF846K012F9;-;Axis Nifty Next 50 Index Fund - Regular Plan - Growth;9.2069;03-Apr-2023
+149468;INF846K013F7;INF846K014F5;Axis Nifty Next 50 Index Fund - Regular Plan - IDCW;9.2069;03-Apr-2023
+150854;INF846K018K6;-;Axis Nifty SDL September 2026 Debt Index Fund - Direct Plan - Growth;10.2817;03-Apr-2023
+150852;INF846K019K4;INF846K010L1;Axis Nifty SDL September 2026 Debt Index Fund - Direct Plan - IDCW;10.2817;03-Apr-2023
+150853;INF846K012L7;INF846K013L5;Axis Nifty SDL September 2026 Debt Index Fund - Regular Plan -  IDCW;10.2760;03-Apr-2023
+150851;INF846K011L9;-;Axis Nifty SDL September 2026 Debt Index Fund - Regular Plan - Growth;10.2760;03-Apr-2023
+149894;INF846K013H3;-;Axis Nifty Smallcap 50 Index Fund - Direct Plan - Growth Option;8.8378;03-Apr-2023
+149895;INF846K014H1;INF846K015H8;Axis Nifty Smallcap 50 Index Fund - Direct Plan - IDCW;8.8378;03-Apr-2023
+149896;INF846K016H6;-;Axis Nifty Smallcap 50 Index Fund - Regular Plan - Growth Option;8.7672;03-Apr-2023
+149897;INF846K017H4;INF846K018H2;Axis Nifty Smallcap 50 Index Fund - Regular Plan - IDCW;8.7672;03-Apr-2023
+
+Bandhan Mutual Fund
+
+150871;INF194KB1EN2;-;BANDHAN CRISIL IBX 90:10 SDL PLUS GILT APRIL 2032 INDEX FUND - DIRECT GROWTH;10.2224;03-Apr-2023
+150872;INF194KB1EO0;INF194KB1EP7;BANDHAN CRISIL IBX 90:10 SDL PLUS GILT APRIL 2032 INDEX FUND - DIRECT IDCW;10.2232;03-Apr-2023
+150873;INF194KB1EQ5;-;BANDHAN CRISIL IBX 90:10 SDL PLUS GILT APRIL 2032 INDEX FUND - REGULAR GROWTH;10.2174;03-Apr-2023
+150874;INF194KB1ER3;INF194KB1ES1;BANDHAN CRISIL IBX 90:10 SDL PLUS GILT APRIL 2032 INDEX FUND - REGULAR IDCW;10.2177;03-Apr-2023
+150868;INF194KB1ET9;-;BANDHAN CRISIL IBX 90:10 SDL PLUS GILT - NOV 2026 INDEX FUND - DIRECT GROWTH;10.2806;03-Apr-2023
+150867;INF194KB1EU7;INF194KB1EV5;BANDHAN CRISIL IBX 90:10 SDL PLUS GILT - NOV 2026 INDEX FUND - DIRECT IDCW;10.2743;03-Apr-2023
+150869;INF194KB1EW3;-;BANDHAN CRISIL IBX 90:10 SDL PLUS GILT - NOV 2026 INDEX FUND - REGULAR GROWTH;10.2707;03-Apr-2023
+150870;INF194KB1EX1;INF194KB1EY9;BANDHAN CRISIL IBX 90:10 SDL PLUS GILT - NOV 2026 INDEX FUND - REGULAR IDCW;10.2709;03-Apr-2023
+150888;INF194KB1EZ6;-;BANDHAN CRISIL IBX 90:10 SDL PLUS GILT - SEP27 INDEX FUND - DIRECT GROWTH;10.2735;03-Apr-2023
+150889;INF194KB1FA6;INF194KB1FB4;BANDHAN CRISIL IBX 90:10 SDL PLUS GILT SEP27 INDEX FUND - DIRECT IDCW;10.2736;03-Apr-2023
+150890;INF194KB1FC2;-;BANDHAN CRISIL IBX 90:10 SDL PLUS GILT SEP27 INDEX FUND - REGULAR GROWTH;10.2643;03-Apr-2023
+150891;INF194KB1FD0;INF194KB1FE8;BANDHAN CRISIL IBX 90:10 SDL PLUS GILT SEP27 INDEX FUND - REGULAR IDCW;10.2643;03-Apr-2023
+150746;INF194KB1EH4;-;BANDHAN CRISIL IBX GILT APRIL 2026 INDEX FUND - DIRECT PLAN - GROWTH;10.3734;03-Apr-2023
+150747;INF194KB1EI2;INF194KB1EJ0;BANDHAN CRISIL IBX GILT APRIL 2026 INDEX FUND - DIRECT PLAN - IDCW;10.3741;03-Apr-2023
+150744;INF194KB1EK8;-;BANDHAN CRISIL IBX GILT APRIL 2026 INDEX FUND - REGULAR PLAN - GROWTH;10.3614;03-Apr-2023
+150745;INF194KB1EL6;INF194KB1EM4;BANDHAN CRISIL IBX GILT APRIL 2026 INDEX FUND - REGULAR PLAN - IDCW;10.3617;03-Apr-2023
+148792;INF194KB1BV1;-;BANDHAN CRISIL IBX Gilt April 2028 Index Fund Direct Plan-Growth;10.9482;03-Apr-2023
+148791;INF194KB1BW9;INF194KB1BX7;BANDHAN CRISIL IBX Gilt April 2028 Index Fund Direct Plan-IDCW;10.4590;03-Apr-2023
+148790;INF194KB1BS7;-;BANDHAN CRISIL IBX Gilt April 2028 Index Fund Regular Plan-Growth;10.8930;03-Apr-2023
+148793;INF194KB1BT5;INF194KB1BU3;BANDHAN CRISIL IBX Gilt April 2028 Index Fund Regular Plan-IDCW;10.4458;03-Apr-2023
+151408;INF194KB1FF5;-;BANDHAN CRISIL IBX GILT APRIL 2032 INDEX FUND - DIRECT GROWTH;10.1226;03-Apr-2023
+151411;INF194KB1FG3;INF194KB1FH1;BANDHAN CRISIL IBX GILT APRIL 2032 INDEX FUND - DIRECT IDCW;10.1235;03-Apr-2023
+151409;INF194KB1FI9;-;BANDHAN CRISIL IBX GILT APRIL 2032 INDEX FUND - REGULAR GROWTH;10.1198;03-Apr-2023
+151410;INF194KB1FJ7;INF194KB1FK5;BANDHAN CRISIL IBX GILT APRIL 2032 INDEX FUND - REGULAR IDCW;10.1200;03-Apr-2023
+148789;INF194KB1BP3;-;BANDHAN CRISIL IBX Gilt June 2027 Index Fund Direct Plan-Growth;10.9242;03-Apr-2023
+148788;INF194KB1BQ1;INF194KB1BR9;BANDHAN CRISIL IBX Gilt June 2027 Index Fund Direct Plan-IDCW;10.4151;03-Apr-2023
+148786;INF194KB1BL2;-;BANDHAN CRISIL IBX Gilt June 2027 Index Fund Regular Plan-Growth;10.8690;03-Apr-2023
+148787;INF194KB1BM0;INF194KB1BO6;BANDHAN CRISIL IBX Gilt June 2027 Index Fund Regular Plan-IDCW;10.4018;03-Apr-2023
+149832;INF194KB1CR7;-;BANDHAN NIFTY 100 INDEX FUND - DIRECT PLAN - GROWTH;10.0096;03-Apr-2023
+149835;INF194KB1CS5;INF194KB1CT3;BANDHAN NIFTY 100 INDEX FUND - DIRECT PLAN - IDCW;10.0092;03-Apr-2023
+149833;INF194KB1CO4;-;BANDHAN NIFTY 100 INDEX FUND - REGULAR PLAN - GROWTH;9.9539;03-Apr-2023
+149834;INF194KB1CP1;INF194KB1CQ9;BANDHAN NIFTY 100 INDEX FUND - REGULAR PLAN - IDCW;9.9538;03-Apr-2023
+112877;INF194K01920;-;BANDHAN Nifty 50 Index Fund - Regular Plan - Growth;36.9195;03-Apr-2023
+112878;INF194K01938;INF194K01946;BANDHAN Nifty 50 Index Fund - Regular Plan - IDCW;33.4979;03-Apr-2023
+118482;INF194K012A8;-;BANDHAN Nifty 50 Index Fund-Direct Plan-Growth;37.5971;03-Apr-2023
+118483;INF194K013A6;INF194K014A4;BANDHAN Nifty 50 Index Fund-Direct Plan-IDCW;34.1713;03-Apr-2023
+150636;INF194KB1DV7;-;BANDHAN NIFTY100 LOW VOLATILITY 30 INDEX FUND - GROWTH - DIRECT PLAN;10.1232;03-Apr-2023
+150633;INF194KB1DY1;-;BANDHAN NIFTY100 LOW VOLATILITY 30 INDEX FUND - GROWTH - REGULAR PLAN;10.0893;03-Apr-2023
+150634;INF194KB1DW5;INF194KB1DX3;BANDHAN NIFTY100 LOW VOLATILITY 30 INDEX FUND - IDCW - DIRECT PLAN;10.1182;03-Apr-2023
+150635;INF194KB1DZ8;INF194KB1EA9;BANDHAN NIFTY100 LOW VOLATILITY 30 INDEX FUND - IDCW - REGULAR PLAN;10.0893;03-Apr-2023
+150591;INF194KB1DP9;-;BANDHAN NIFTY200 MOMENTUM 30 INDEX FUND - GROWTH - DIRECT PLAN;9.3994;03-Apr-2023
+150592;INF194KB1DS3;-;BANDHAN NIFTY200 MOMENTUM 30 INDEX FUND - GROWTH - REGULAR PLAN;9.3675;03-Apr-2023
+150590;INF194KB1DQ7;INF194KB1DR5;BANDHAN NIFTY200 MOMENTUM 30 INDEX FUND - IDCW - DIRECT PLAN;9.3994;03-Apr-2023
+150593;INF194KB1DT1;INF194KB1DU9;BANDHAN NIFTY200 MOMENTUM 30 INDEX FUND - IDCW - REGULAR PLAN;9.3675;03-Apr-2023
+
+Baroda BNP Paribas Mutual Fund
+
+151283;INF251K01RL0;-;Baroda BNP Paribas Nifty SDL December 2026 Index Fund - Direct Plan - Growth Option;10.1497;03-Apr-2023
+151281;INF251K01RM8;-;Baroda BNP Paribas Nifty SDL December 2026 Index Fund - Direct Plan - IDCW Option;10.0000;03-Apr-2023
+151279;INF251K01RI6;-;Baroda BNP Paribas Nifty SDL December 2026 Index Fund - Regular Plan - Growth Option;10.1439;03-Apr-2023
+151280;INF251K01RJ4;-;Baroda BNP Paribas Nifty SDL December 2026 Index Fund - Regular Plan - IDCW Option;10.1439;03-Apr-2023
+151574;INF251K01RR7;-;Baroda BNP Paribas NIFTY SDL December 2028 Index Fund - Direct Plan - Growth Option;10.0684;03-Apr-2023
+151575;INF251K01RS5;INF251K01RT3;Baroda BNP Paribas NIFTY SDL December 2028 Index Fund - Direct Plan - IDCW Option;10.0684;03-Apr-2023
+151576;INF251K01RO4;-;Baroda BNP Paribas NIFTY SDL December 2028 Index Fund - Regular Plan - Growth Option;10.0675;03-Apr-2023
+151573;INF251K01RP1;INF251K01RQ9;Baroda BNP Paribas NIFTY SDL December 2028 Index Fund - Regular Plan - IDCW Option;10.0676;03-Apr-2023
+
+DSP Mutual Fund
+
+151329;INF740KA1SB7;-;DSP CRISIL SDL Plus G-Sec Apr 2033 50:50 Index Fund - Direct - Growth;10.1563;03-Apr-2023
+151328;INF740KA1SC5;INF740KA1SD3;DSP CRISIL SDL Plus G-Sec Apr 2033 50:50 Index Fund - Direct - IDCW;10.1563;03-Apr-2023
+151327;INF740KA1RY1;-;DSP CRISIL SDL Plus G-Sec Apr 2033 50:50 Index Fund - Regular - Growth;10.1516;03-Apr-2023
+151330;INF740KA1RZ8;INF740KA1SA9;DSP CRISIL SDL Plus G-Sec Apr 2033 50:50 Index Fund - Regular - IDCW;10.1516;03-Apr-2023
+141877;INF740KA1CR7;-;DSP Nifty 50 Equal Weight Index Fund - Direct Plan - Growth;16.1337;03-Apr-2023
+141878;INF740KA1CS5;INF740KA1CT3;DSP Nifty 50 Equal Weight Index Fund - Direct Plan - IDCW;15.3548;03-Apr-2023
+141875;INF740KA1CO4;-;DSP Nifty 50 Equal Weight Index Fund - Regular Plan - Growth;15.7254;03-Apr-2023
+141876;INF740KA1CP1;INF740KA1CQ9;DSP Nifty 50 Equal Weight Index Fund - Regular Plan - IDCW;14.9470;03-Apr-2023
+146376;INF740KA1MM7;-;DSP Nifty 50 Index Fund - Direct Plan - Growth;16.5846;03-Apr-2023
+146377;INF740KA1MN5;INF740KA1MO3;DSP Nifty 50 Index Fund - Direct Plan - IDCW;15.7073;03-Apr-2023
+146379;INF740KA1MJ3;-;DSP Nifty 50 Index Fund - Regular Plan - Growth;16.4546;03-Apr-2023
+146378;INF740KA1MK1;INF740KA1ML9;DSP Nifty 50 Index Fund - Regular Plan - IDCW;15.6751;03-Apr-2023
+150428;INF740KA1RB9;-;DSP Nifty Midcap 150 Quality 50 Index Fund - Direct - Growth;9.1944;03-Apr-2023
+150429;INF740KA1RC7;INF740KA1RD5;DSP Nifty Midcap 150 Quality 50 Index Fund - Direct - IDCW;9.1944;03-Apr-2023
+150427;INF740KA1QY3;-;DSP Nifty Midcap 150 Quality 50 Index Fund - Regular - Growth;9.1468;03-Apr-2023
+150430;INF740KA1QZ0;INF740KA1RA1;DSP Nifty Midcap 150 Quality 50 Index Fund - Regular - IDCW;9.1468;03-Apr-2023
+146381;INF740KA1MG9;-;DSP Nifty Next 50 Index Fund - Direct Plan - Growth;14.7898;03-Apr-2023
+146382;INF740KA1MH7;INF740KA1MI5;DSP Nifty Next 50 Index Fund - Direct Plan - IDCW;14.1046;03-Apr-2023
+146380;INF740KA1MD6;-;DSP Nifty Next 50 Index Fund - Regular Plan - Growth;14.6108;03-Apr-2023
+146383;INF740KA1ME4;INF740KA1MF1;DSP Nifty Next 50 Index Fund - Regular Plan - IDCW;13.9258;03-Apr-2023
+149970;INF740KA1QV9;-;DSP Nifty SDL Plus G-Sec Jun 2028 30:70 Index Fund - Direct - Growth;10.4380;03-Apr-2023
+149971;INF740KA1QW7;INF740KA1QX5;DSP Nifty SDL Plus G-Sec Jun 2028 30:70 Index Fund - Direct - IDCW;10.4380;03-Apr-2023
+149968;INF740KA1QS5;-;DSP Nifty SDL Plus G-Sec Jun 2028 30:70 Index Fund - Regular - Growth;10.4197;03-Apr-2023
+149969;INF740KA1QT3;INF740KA1QU1;DSP Nifty SDL Plus G-Sec Jun 2028 30:70 Index Fund - Regular - IDCW;10.4197;03-Apr-2023
+151373;INF740KA1SH4;-;DSP Nifty SDL Plus G-Sec Sep 2027 50:50 Index Fund - Direct - Growth;10.1652;03-Apr-2023
+151371;INF740KA1SI2;INF740KA1SJ0;DSP Nifty SDL Plus G-Sec Sep 2027 50:50 Index Fund - Direct - IDCW;10.1652;03-Apr-2023
+151370;INF740KA1SE1;-;DSP Nifty SDL Plus G-Sec Sep 2027 50:50 Index Fund - Regular - Growth;10.1629;03-Apr-2023
+151372;INF740KA1SF8;INF740KA1SG6;DSP Nifty SDL Plus G-Sec Sep 2027 50:50 Index Fund - Regular - IDCW;10.1629;03-Apr-2023
+
+Edelweiss Mutual Fund
+
+150671;INF754K01PF9;-;Edelweiss CRISIL IBX 50:50 Gilt Plus SDL April 2037 Index Fund - Direct Plan - Growth;10.4795;03-Apr-2023
+150722;INF754K01PG7;INF754K01PH5;Edelweiss CRISIL IBX 50:50 Gilt Plus SDL April 2037 Index Fund - Direct Plan - IDCW Option;10.4794;03-Apr-2023
+150720;INF754K01PB8;-;Edelweiss CRISIL IBX 50:50 Gilt Plus SDL April 2037 Index Fund - Regular Plan - Growth;10.4652;03-Apr-2023
+150721;INF754K01PC6;INF754K01PD4;Edelweiss CRISIL IBX 50:50 Gilt Plus SDL April 2037 Index Fund - Regular Plan - IDCW Option;10.4651;03-Apr-2023
+150727;INF754K01PN3;-;Edelweiss CRISIL IBX 50:50 Gilt Plus SDL June 2027 Index Fund - Direct Plan - Growth;10.3986;03-Apr-2023
+150770;INF754K01PO1;INF754K01PP8;Edelweiss CRISIL IBX 50:50 Gilt Plus SDL June 2027 Index Fund - Direct Plan - IDCW;10.3976;03-Apr-2023
+150771;INF754K01PJ1;-;Edelweiss CRISIL IBX 50:50 Gilt Plus SDL June 2027 Index Fund - Regular Plan - Growth;10.3868;03-Apr-2023
+150772;INF754K01PK9;INF754K01PL7;Edelweiss CRISIL IBX 50:50 Gilt Plus SDL June 2027 Index Fund - Regular Plan - IDCW;10.387;03-Apr-2023
+150807;INF754K01PV6;-;Edelweiss CRISIL IBX 50:50 Gilt Plus SDL Sep 2028 Index Fund - Direct Plan - Growth;10.3592;03-Apr-2023
+150850;INF754K01PW4;INF754K01PX2;Edelweiss CRISIL IBX 50:50 Gilt Plus SDL Sep 2028 Index Fund - Direct Plan - IDCW;10.3594;03-Apr-2023
+150848;INF754K01PR4;-;Edelweiss CRISIL IBX 50:50 Gilt Plus SDL Sep 2028 Index Fund - Regular Plan - Growth;10.3479;03-Apr-2023
+150849;INF754K01PS2;INF754K01PT0;Edelweiss CRISIL IBX 50:50 Gilt Plus SDL Sep 2028 Index Fund - Regular Plan - IDCW;10.348;03-Apr-2023
+151365;INF754K01RK5;-;Edelweiss CRISIL IBX 50:50 Gilt Plus SDL Short Duration Index fund - Direct Plan - Growth;10.144;03-Apr-2023
+151397;INF754K01RL3;INF754K01RM1;Edelweiss CRISIL IBX 50:50 Gilt Plus SDL Short Duration Index fund - Direct Plan - IDCW;10.1441;03-Apr-2023
+151398;INF754K01RG3;-;Edelweiss CRISIL IBX 50:50 Gilt Plus SDL Short Duration Index fund - Regular Plan - Growth;10.1374;03-Apr-2023
+151399;INF754K01RH1;INF754K01RI9;Edelweiss CRISIL IBX 50:50 Gilt Plus SDL Short Duration Index fund - Regular Plan - IDCW;10.1375;03-Apr-2023
+149945;INF754K01OH8;INF754K01OI6;Edelweiss CRISIL PSU Plus SDL 50:50 Oct 2025 Index Fund - Direct Plan - IDCW Payout;10.3678;03-Apr-2023
+149950;INF754K01OG0;-;Edelweiss CRISIL PSU Plus SDL 50:50 Oct 2025 Index Fund - Direct Plan Growth;10.3673;03-Apr-2023
+149947;INF754K01OD7;INF754K01OE5;Edelweiss CRISIL PSU Plus SDL 50:50 Oct 2025 Index Fund - Regular Plan - IDCW Payout;10.346;03-Apr-2023
+149949;INF754K01OC9;-;Edelweiss CRISIL PSU Plus SDL 50:50 Oct 2025 Index Fund - Regular Plan Growth;10.3456;03-Apr-2023
+148556;INF754K01LW3;INF754K01LX1;Edelweiss MSCI India Domestic & World Healthcare 45 Index Fund - Direct Plan - IDCW Option;11.9316;03-Apr-2023
+148558;INF754K01LS1;INF754K01LT9;Edelweiss MSCI India Domestic & World Healthcare 45 Index Fund - Regular Plan - IDCW Option;11.7609;03-Apr-2023
+148555;INF754K01LV5;-;Edelweiss MSCI India Domestic & World Healthcare 45 Index Fund Direct Plan - Growth;11.9316;03-Apr-2023
+148557;INF754K01LR3;-;Edelweiss MSCI India Domestic & World Healthcare 45 index Fund Regular Plan - Growth;11.7609;03-Apr-2023
+149254;INF754K01NJ6;-;Edelweiss Nifty 100 Quality 30 Index Fund Direct Plan Growth;9.6847;03-Apr-2023
+149255;INF754K01NK4;INF754K01NL2;Edelweiss Nifty 100 Quality 30 Index Fund Direct Plan IDCW;9.5492;03-Apr-2023
+149256;INF754K01NF4;-;Edelweiss Nifty 100 Quality 30 Index Fund Regular Plan Growth;9.5914;03-Apr-2023
+149257;INF754K01NG2;INF754K01NH0;Edelweiss Nifty 100 Quality 30 Index Fund Regular Plan IDCW;9.5911;03-Apr-2023
+149250;INF754K01NB3;-;Edelweiss Nifty 50 Index Fund Direct Plan Growth;9.973;03-Apr-2023
+149251;INF754K01NC1;INF754K01ND9;Edelweiss Nifty 50 Index Fund Direct Plan IDCW;9.8349;03-Apr-2023
+149252;INF754K01MX9;-;Edelweiss Nifty 50 Index Fund Regular Plan Growth;9.7625;03-Apr-2023
+149253;INF754K01MY7;INF754K01MZ4;Edelweiss Nifty 50 Index Fund Regular Plan IDCW;9.7623;03-Apr-2023
+149343;INF754K01NR9;-;Edelweiss NIFTY Large Midcap 250 Index Fund - Direct Plan Growth;9.9025;03-Apr-2023
+149339;INF754K01NS7;-;Edelweiss NIFTY Large Midcap 250 Index Fund - Direct Plan Payout;9.9025;03-Apr-2023
+149341;INF754K01NN8;-;Edelweiss NIFTY Large Midcap 250 Index Fund - Regular Plan Growth;9.8161;03-Apr-2023
+149342;INF754K01NO6;-;Edelweiss NIFTY Large Midcap 250 Index Fund - Regular Plan Payout;9.8156;03-Apr-2023
+150902;INF754K01QD2;-;Edelweiss Nifty Midcap150 Momentum 50 Index Fund - Direct Plan - Growth;9.3119;03-Apr-2023
+150903;INF754K01QE0;INF754K01QF7;Edelweiss Nifty Midcap150 Momentum 50 Index Fund - Direct Plan - IDCW;9.3132;03-Apr-2023
+150900;INF754K01PZ7;-;Edelweiss Nifty Midcap150 Momentum 50 Index Fund - Regular Plan - Growth;9.2865;03-Apr-2023
+150901;INF754K01QA8;INF754K01QB6;Edelweiss Nifty Midcap150 Momentum 50 Index Fund - Regular Plan - IDCW;9.2864;03-Apr-2023
+150899;INF754K01QL5;-;Edelweiss Nifty Next 50 Index Fund - Direct Plan - Growth;8.715;03-Apr-2023
+150896;INF754K01QM3;INF754K01QN1;Edelweiss Nifty Next 50 Index Fund - Direct Plan - IDCW;8.715;03-Apr-2023
+150897;INF754K01QH3;-;Edelweiss Nifty Next 50 Index Fund - Regular Plan - Growth;8.6911;03-Apr-2023
+150898;INF754K01QI1;INF754K01QJ9;Edelweiss Nifty Next 50 Index Fund - Regular Plan - IDCW;8.6912;03-Apr-2023
+148794;INF754K01MA7;INF754K01MB5;Edelweiss NIFTY PSU Bond Plus SDL Apr 2026 50: 50 Index Fund - Regular Plan - IDCW Option;11.0391;03-Apr-2023
+148795;INF754K01MD1;-;Edelweiss NIFTY PSU Bond Plus SDL Apr 2026 50:50 Index Fund - Direct Plan - Growth;11.075;03-Apr-2023
+148796;INF754K01ME9;INF754K01MF6;Edelweiss NIFTY PSU Bond Plus SDL Apr 2026 50:50 Index Fund - Direct Plan - IDCW Option;11.0757;03-Apr-2023
+148797;INF754K01LZ6;-;Edelweiss NIFTY PSU Bond Plus SDL Apr 2026 50:50 Index Fund - Regular Plan - Growth;11.038;03-Apr-2023
+149246;INF754K01MU5;INF754K01MV3;Edelweiss NIFTY PSU Bond Plus SDL Apr 2027 50:50 Index Fund - Direct Plan - IDCW;10.5165;03-Apr-2023
+149247;INF754K01MT7;-;Edelweiss NIFTY PSU Bond Plus SDL Apr 2027 50:50 Index Fund - Direct Plan Growth;10.5177;03-Apr-2023
+149249;INF754K01MP5;-;Edelweiss NIFTY PSU Bond Plus SDL Apr 2027 50:50 Index Fund - Regular Plan - Growth;10.4906;03-Apr-2023
+149248;INF754K01MQ3;INF754K01MR1;Edelweiss NIFTY PSU Bond Plus SDL Apr 2027 50:50 Index Fund - Regular Plan - IDCW;10.4912;03-Apr-2023
+150892;INF754K01QT8;-;Edelweiss Nifty Smallcap 250 Index Fund - Direct Plan - Growth;9.1605;03-Apr-2023
+150895;INF754K01QU6;INF754K01QV4;Edelweiss Nifty Smallcap 250 Index Fund - Direct Plan - IDCW;9.1606;03-Apr-2023
+150894;INF754K01QP6;-;Edelweiss Nifty Smallcap 250 Index Fund - Regular Plan - Growth;9.1404;03-Apr-2023
+150893;INF754K01QQ4;INF754K01QR2;Edelweiss Nifty Smallcap 250 Index Fund - Regular Plan - IDCW;9.1404;03-Apr-2023
+
+Franklin Templeton Mutual Fund
+
+118580;INF090I01GQ8;INF090I01GR6;Franklin India INDEX FUND- NSE Nifty 50 Index Fund - Direct - IDCW;144.0467;03-Apr-2023
+100484;INF090I01890;-;Franklin India Index Fund- NSE Nifty 50 Index Fund - Growth;138.3097;03-Apr-2023
+105067;INF090I01874;INF090I01882;Franklin India INDEX FUND- NSE NIFTY 50 INDEX FUND - IDCW;138.3097;03-Apr-2023
+118581;INF090I01GS4;-;Franklin India INDEX FUND- NSE NIFTY 50 INDEX FUND- Direct - Growth;144.0467;03-Apr-2023
+
+HDFC Mutual Fund
+
+119063;INF179K01WM1;-;HDFC Index Fund-NIFTY 50 Plan - Direct Plan;164.6194;03-Apr-2023
+101525;INF179K01KZ8;-;HDFC Index Fund-NIFTY 50 Plan - Growth Plan;161.6137;03-Apr-2023
+119065;INF179K01WN9;-;HDFC Index Fund-S&P BSE Sensex Plan - Direct Plan;546.1109;03-Apr-2023
+101281;INF179K01LA9;-;HDFC Index Fund-S&P BSE Sensex Plan - Growth Plan;535.1293;03-Apr-2023
+149870;INF179KC1CA1;-;HDFC Nifty 100 Equal Weight Index Fund - Direct Plan - Growth Option;9.7023;03-Apr-2023
+149871;INF179KC1CB9;-;HDFC Nifty 100 Equal Weight Index Fund - Growth Option;9.6382;03-Apr-2023
+149868;INF179KC1BY3;-;HDFC NIFTY 100 Index Fund - Direct Plan - Growth Option;10.0181;03-Apr-2023
+149869;INF179KC1BZ0;-;HDFC NIFTY 100 Index Fund - Growth Option;9.9495;03-Apr-2023
+151496;INF179KC1FR8;-;HDFC Nifty G-Sec Apr 2029 Index Fund - Growth Option;10.1363;03-Apr-2023
+151495;INF179KC1FQ0;-;HDFC Nifty G-Sec Apr 2029 Index Fund - Growth Option - Direct Plan;10.1375;03-Apr-2023
+150844;INF179KC1EG4;-;HDFC Nifty G-Sec Dec 2026 Index Fund - Growth Option;10.2967;03-Apr-2023
+150845;INF179KC1EE9;-;HDFC Nifty G-Sec Dec 2026 Index Fund - Growth Option - Direct Plan;10.3029;03-Apr-2023
+150846;INF179KC1EI0;-;HDFC Nifty G-Sec July 2031 Index Fund - Growth Option;10.3114;03-Apr-2023
+150847;INF179KC1EH2;-;HDFC Nifty G-Sec July 2031 Index Fund - Growth Option - Direct Plan;10.3196;03-Apr-2023
+151180;INF179KC1EK6;-;HDFC Nifty G-Sec Jun 2027 Index Fund - Growth Option;10.2164;03-Apr-2023
+151181;INF179KC1EJ8;-;HDFC Nifty G-Sec Jun 2027 Index Fund - Growth Option - Direct Plan;10.2215;03-Apr-2023
+151490;INF179KC1FT4;-;HDFC Nifty G-Sec Jun 2036 Index Fund - Growth Option;10.1406;03-Apr-2023
+151489;INF179KC1FS6;-;HDFC Nifty G-Sec Jun 2036 Index Fund - Growth Option - Direct Plan;10.1438;03-Apr-2023
+151182;INF179KC1EM2;-;HDFC Nifty G-Sec Sep 2032 Index Fund - Growth Option;10.2229;03-Apr-2023
+151183;INF179KC1EL4;-;HDFC Nifty G-Sec Sep 2032 Index Fund - Growth Option - Direct Plan;10.2279;03-Apr-2023
+149288;INF179KC1BR7;-;HDFC NIFTY Next 50 Index Fund - Direct Plan - Growth Option;8.8908;03-Apr-2023
+149287;INF179KC1BQ9;-;HDFC NIFTY Next 50 Index Fund - Growth Option;8.8159;03-Apr-2023
+151455;-;-;HDFC Nifty SDL Oct 2026 Index Fund - Growth Option;10.1524;03-Apr-2023
+151456;-;-;HDFC Nifty SDL Oct 2026 Index Fund - Growth Option - Direct Plan;10.156;03-Apr-2023
+151571;-;-;HDFC NIFTY SDL Plus G-Sec Jun 2027 40:60 Index Fund - Growth Option;10.0435;03-Apr-2023
+151570;-;-;HDFC NIFTY SDL Plus G-Sec Jun 2027 40:60 Index Fund - Growth Option - Direct Plan;10.0441;03-Apr-2023
+149107;INF179KC1BM8;-;HDFC NIFTY50 Equal weight Index Fund - Direct Plan - Growth Option;10.9526;03-Apr-2023
+149106;INF179KC1BN6;-;HDFC NIFTY50 Equal weight Index Fund - Growth Option;10.8391;03-Apr-2023
+
+HSBC Mutual Fund
+
+149966;INF336L01QH7;-;HSBC CRISIL IBX 50:50 Gilt Plus SDL Apr 2028 Index Fund - Direct - Growth;10.4430;03-Apr-2023
+149962;INF336L01QI5;INF336L01QJ3;HSBC CRISIL IBX 50:50 Gilt Plus SDL Apr 2028 Index Fund - Direct - Payout of IDCW;10.4430;03-Apr-2023
+149963;INF336L01QK1;-;HSBC CRISIL IBX 50:50 Gilt Plus SDL Apr 2028 Index Fund - Regular - Growth;10.4215;03-Apr-2023
+149964;INF336L01QL9;INF336L01QM7;HSBC CRISIL IBX 50:50 Gilt Plus SDL Apr 2028 Index Fund - Regular - payout of IDCW;10.4216;03-Apr-2023
+151479;INF336L01QT2;-;HSBC CRISIL IBX Gilt June 2027 Index Fund - Direct - Growth;10.0377;03-Apr-2023
+151482;INF336L01QU0;INF336L01QV8;HSBC CRISIL IBX Gilt June 2027 Index Fund - Direct - IDCW;10.0377;03-Apr-2023
+151480;INF336L01QW6;-;HSBC CRISIL IBX Gilt June 2027 Index Fund - Regular - Growth;10.0367;03-Apr-2023
+151481;INF336L01QX4;INF336L01QY2;HSBC CRISIL IBX Gilt June 2027 Index Fund - Regular - IDCW;10.0368;03-Apr-2023
+151157;INF917K01D12;-;HSBC NIFTY 50 INDEX FUND - Direct Growth;19.8970;03-Apr-2023
+151156;INF917K01C96;INF917K01D04;HSBC NIFTY 50 INDEX FUND - Direct IDCW;19.8970;03-Apr-2023
+151158;INF917K01D38;-;HSBC NIFTY 50 INDEX FUND - Regular Growth;19.6702;03-Apr-2023
+151159;INF917K01D20;INF917K01D46;HSBC NIFTY 50 INDEX FUND - Regular IDCW;19.6702;03-Apr-2023
+151160;INF917K01D79;-;HSBC NIFTY NEXT 50 INDEX FUND - Direct Growth;16.5254;03-Apr-2023
+151163;INF917K01D53;INF917K01D61;HSBC NIFTY NEXT 50 INDEX FUND - Direct IDCW;16.5253;03-Apr-2023
+151162;INF917K01D95;-;HSBC NIFTY NEXT 50 INDEX FUND - Regular Growth;16.3059;03-Apr-2023
+151161;INF917K01D87;INF917K01E03;HSBC NIFTY NEXT 50 INDEX FUND - Regular IDCW;16.3060;03-Apr-2023
+
+ICICI Prudential Mutual Fund
+
+149219;INF109KC1U50;-;ICICI Prudential NASDAQ 100 Index Fund - Direct Plan - Growth;9.4005;03-Apr-2023
+149221;INF109KC1U68;INF109KC1U76;ICICI Prudential NASDAQ 100 Index Fund - Direct Plan - IDCW;9.3998;03-Apr-2023
+149218;INF109KC1U27;-;ICICI Prudential NASDAQ 100 Index Fund - Growth;9.3316;03-Apr-2023
+149220;INF109KC1U35;INF109KC1U43;ICICI Prudential NASDAQ 100 Index Fund - IDCW;9.3315;03-Apr-2023
+150452;INF109KC11D8;-;ICICI Prudential Nifty 200 Momentum 30 Index Fund - Direct Plan - Growth;9.9744;03-Apr-2023
+150453;INF109KC12D6;INF109KC13D4;ICICI Prudential Nifty 200 Momentum 30 Index Fund - Direct Plan - IDCW;9.9734;03-Apr-2023
+150454;INF109KC18C5;-;ICICI Prudential Nifty 200 Momentum 30 Index Fund - Growth;9.9310;03-Apr-2023
+150451;INF109KC19C3;INF109KC10D0;ICICI Prudential Nifty 200 Momentum 30 Index Fund - IDCW;9.9309;03-Apr-2023
+101349;INF109K01PI0;-;ICICI Prudential Nifty 50 Index Fund - Cumulative Option;171.4715;03-Apr-2023
+120620;INF109K012M7;-;ICICI Prudential Nifty 50 Index Fund - Direct Plan Cumulative Option;177.9957;03-Apr-2023
+135391;INF109KB1NL1;INF109KB1NM9;ICICI Prudential Nifty 50 Index Fund - Direct Plan IDCW Option;23.9356;03-Apr-2023
+135390;INF109KB1NN7;INF109KB1NO5;ICICI Prudential Nifty 50 Index Fund - IDCW Option;22.8442;03-Apr-2023
+150643;-;INF109KC16J4;ICICI Prudential Nifty Auto Index Fund - Direct Plan - Growth;9.8986;03-Apr-2023
+150644;INF109KC17J2;INF109KC18J0;ICICI Prudential Nifty Auto Index Fund - Direct Plan - IDCW;9.8986;03-Apr-2023
+150645;-;INF109KC13J1;ICICI Prudential Nifty Auto Index Fund - Growth;9.8703;03-Apr-2023
+150646;INF109KC14J9;INF109KC15J6;ICICI Prudential Nifty Auto Index Fund - IDCW;9.8703;03-Apr-2023
+149858;INF109KC11A4;-;ICICI Prudential Nifty Bank Index Fund - Direct Plan Growth;11.5353;03-Apr-2023
+149861;INF109KC12A2;INF109KC13A0;ICICI Prudential Nifty Bank Index Fund - Direct Plan IDCW;11.5353;03-Apr-2023
+149859;INF109KC1Z89;-;ICICI Prudential Nifty Bank Index Fund - Growth;11.4353;03-Apr-2023
+149860;INF109KC1Z97;INF109KC10A6;ICICI Prudential Nifty Bank Index Fund - IDCW;11.4352;03-Apr-2023
+150734;INF109KC16K2;INF109KC17K0;ICICI Prudential Nifty G-Sec Dec 2030 Index Fund - Annual IDCW;10.4384;03-Apr-2023
+150735;INF109KC19K6;INF109KC10L3;ICICI Prudential Nifty G-Sec Dec 2030 Index Fund - Direct Plan - Annual IDCW;10.4477;03-Apr-2023
+150733;-;INF109KC18K8;ICICI Prudential Nifty G-Sec Dec 2030 Index Fund - Direct Plan - Growth;10.4483;03-Apr-2023
+150732;-;INF109KC15K4;ICICI Prudential Nifty G-Sec Dec 2030 Index Fund - Growth;10.4383;03-Apr-2023
+150468;-;INF109KC13E2;ICICI Prudential Nifty IT Index Fund - Direct Plan - Growth;9.5808;03-Apr-2023
+150469;INF109KC14E0;INF109KC15E7;ICICI Prudential Nifty IT Index Fund - Direct Plan - IDCW;9.5857;03-Apr-2023
+150466;-;INF109KC10E8;ICICI Prudential Nifty IT Index Fund - Growth;9.5439;03-Apr-2023
+150467;INF109KC11E6;INF109KC12E4;ICICI Prudential Nifty IT Index Fund - IDCW;9.5441;03-Apr-2023
+149389;INF109KC1W58;-;ICICI Prudential Nifty Midcap 150 Index Fund - Direct Plan - Growth;10.1521;03-Apr-2023
+149391;INF109KC1W66;INF109KC1W74;ICICI Prudential Nifty Midcap 150 Index Fund - Direct Plan - IDCW;10.1520;03-Apr-2023
+149390;INF109KC1W25;-;ICICI Prudential Nifty Midcap 150 Index Fund - Growth;10.0482;03-Apr-2023
+149388;INF109KC1W33;INF109KC1W41;ICICI Prudential Nifty Midcap 150 Index Fund - IDCW;10.0481;03-Apr-2023
+120684;INF109K01Y80;-;ICICI Prudential Nifty Next 50 Index Fund - Direct Plan -  Growth;34.8823;03-Apr-2023
+120683;INF109K01Y64;INF109K01Y72;ICICI Prudential Nifty Next 50 Index Fund - Direct Plan -  IDCW;34.8696;03-Apr-2023
+112957;INF109K01IF1;-;ICICI Prudential Nifty Next 50 Index Fund - Growth;33.3500;03-Apr-2023
+112958;INF109K01PR1;INF109K01IE4;ICICI Prudential Nifty Next 50 Index Fund -IDCW;33.3497;03-Apr-2023
+150930;INF109KC11M9;-;ICICI Prudential Nifty Pharma Index Fund - Direct Plan - Growth;9.3834;03-Apr-2023
+150928;INF109KC12M7;INF109KC13M5;ICICI Prudential Nifty Pharma Index Fund - Direct Plan - IDCW;9.3834;03-Apr-2023
+150929;INF109KC18L6;-;ICICI Prudential Nifty Pharma Index Fund - Growth;9.3637;03-Apr-2023
+150931;INF109KC19L4;INF109KC10M1;ICICI Prudential Nifty Pharma Index Fund - IDCW;9.3637;03-Apr-2023
+149224;INF109KC1S62;INF109KC1S70;ICICI Prudential Nifty PSU Bond Plus SDL Sep 2027 40:60 Index Fund - Annual - IDCW;10.4526;03-Apr-2023
+149227;INF109KC1T46;INF109KC1T53;ICICI Prudential Nifty PSU Bond Plus SDL Sep 2027 40:60 Index Fund - Direct Plan Annual - IDCW;10.4842;03-Apr-2023
+149210;INF109KC1S88;-;ICICI Prudential Nifty PSU Bond Plus SDL Sep 2027 40:60 Index Fund - Direct Plan Growth;10.4842;03-Apr-2023
+149226;INF109KC1T12;INF109KC1T38;ICICI Prudential Nifty PSU Bond Plus SDL Sep 2027 40:60 Index Fund - Direct Plan Quarterly - IDCW;10.1235;16-Sep-2022
+149225;INF109KC1T04;INF109KC1S96;ICICI Prudential Nifty PSU Bond Plus SDL Sep 2027 40:60 Index Fund - Direct Plan Weekly - IDCW;9.9460;16-Sep-2022
+149208;INF109KC1S13;-;ICICI Prudential Nifty PSU Bond Plus SDL Sep 2027 40:60 Index Fund - Growth;10.4528;03-Apr-2023
+149223;INF109KC1S47;INF109KC1S54;ICICI Prudential Nifty PSU Bond Plus SDL Sep 2027 40:60 Index Fund - Quarterly - IDCW;10.1040;16-Sep-2022
+149222;INF109KC1S39;INF109KC1S21;ICICI Prudential Nifty PSU Bond Plus SDL Sep 2027 40:60 Index Fund - Weekly - IDCW;9.9457;16-Sep-2022
+150731;INF109KC12L9;INF109KC13L7;ICICI Prudential Nifty SDL Dec 2028 Index Fund - Annual IDCW;10.4162;03-Apr-2023
+150730;INF109KC15L2;INF109KC16L0;ICICI Prudential Nifty SDL Dec 2028 Index Fund - Direct Plan - Annual IDCW;10.4263;03-Apr-2023
+150729;-;INF109KC14L5;ICICI Prudential Nifty SDL Dec 2028 Index Fund - Direct Plan - Growth;10.4260;03-Apr-2023
+150728;-;INF109KC11L1;ICICI Prudential Nifty SDL Dec 2028 Index Fund - Growth;10.4162;03-Apr-2023
+151209;INF109KC11P2;INF109KC12P0;ICICI Prudential Nifty SDL Sep 2026 Index Fund - Annual IDCW;10.1988;03-Apr-2023
+151210;INF109KC14P6;INF109KC15P3;ICICI Prudential Nifty SDL Sep 2026 Index Fund - Direct Plan - Annual IDCW;10.2045;03-Apr-2023
+151211;INF109KC13P8;-;ICICI Prudential Nifty SDL Sep 2026 Index Fund - Direct Plan - Growth;10.2045;03-Apr-2023
+151208;INF109KC10P4;-;ICICI Prudential Nifty SDL Sep 2026 Index Fund - Growth;10.1988;03-Apr-2023
+149996;INF109KC12B0;INF109KC13B8;ICICI Prudential Nifty SDL Sep 2027 Index Fund - Annual IDCW;10.3661;03-Apr-2023
+149997;INF109KC15B3;INF109KC16B1;ICICI Prudential Nifty SDL Sep 2027 Index Fund - Direct Plan - Annual IDCW;10.3821;03-Apr-2023
+149999;INF109KC14B6;-;ICICI Prudential Nifty SDL Sep 2027 Index Fund - Direct Plan - Growth;10.3821;03-Apr-2023
+149998;INF109KC11B2;-;ICICI Prudential Nifty SDL Sep 2027 Index Fund - Growth;10.3661;03-Apr-2023
+150639;-;INF109KC10J7;ICICI Prudential Nifty50 Equal Weight Index Fund- Direct Plan - Growth;10.1010;03-Apr-2023
+150640;INF109KC11J5;INF109KC12J3;ICICI Prudential Nifty50 Equal Weight Index Fund- Direct Plan - IDCW;10.1010;03-Apr-2023
+150637;-;INF109KC17I4;ICICI Prudential Nifty50 Equal Weight Index Fund- Growth;10.0683;03-Apr-2023
+150638;INF109KC18I2;INF109KC19I0;ICICI Prudential Nifty50 Equal Weight Index Fund- IDCW;10.0683;03-Apr-2023
+141839;INF109KB17W7;-;ICICI Prudential S&P BSE Sensex Index Fund - Cumulative Option;18.8423;03-Apr-2023
+141841;INF109KB10X0;-;ICICI Prudential S&P BSE Sensex Index Fund - Direct Plan - Cumulative Option;19.0478;03-Apr-2023
+141842;INF109KB12X6;-;ICICI Prudential S&P BSE Sensex Index Fund - Direct Plan - IDCW Option;19.0477;03-Apr-2023
+141840;INF109KB19W3;-;ICICI Prudential S&P BSE Sensex Index Fund - IDCW Option;18.8428;03-Apr-2023
+
+IDBI Mutual Fund
+
+118347;INF397L01AP6;-;IDBI NIFTY 50  Index Fund Growth Direct;34.6964;03-Apr-2023
+113062;INF397L01083;INF397L01075;IDBI Nifty 50  Index Fund IDCW;30.4963;03-Apr-2023
+113063;INF397L01091;-;IDBI NIFTY 50 Index Fund Growth;31.9619;03-Apr-2023
+118455;INF397L01AN1;INF397L01AO9;IDBI Nifty 50 Index Fund IDCW Direct;33.0830;03-Apr-2023
+113250;INF397L01166;INF397L01182;IDBI Nifty Next 50  Index Fund IDCW;28.3260;03-Apr-2023
+113249;INF397L01174;-;IDBI Nifty Next 50 Index Fund Growth;28.3260;03-Apr-2023
+118348;INF397L01AW2;-;IDBI Nifty Next 50 Index Fund Growth Direct;30.6647;03-Apr-2023
+118456;INF397L01AY8;INF397L01AX0;IDBI Nifty Next 50 Index Fund IDCW Direct;30.6647;03-Apr-2023
+
+Invesco Mutual Fund
+
+151593;INF205KA1775;-;Invesco India Nifty G-sec Jul 2027 Index Fund - Direct - Growth;1002.9534;03-Apr-2023
+151592;INF205KA1783;-;Invesco India Nifty G-sec Jul 2027 Index Fund - Direct - IDCW Payout;1002.9518;03-Apr-2023
+151590;INF205KA1759;-;Invesco India Nifty G-sec Jul 2027 Index Fund - Regular - Growth;1002.8807;03-Apr-2023
+151591;INF205KA1767;-;Invesco India Nifty G-sec Jul 2027 Index Fund - Regular - IDCW Payout;1002.8911;03-Apr-2023
+151597;INF205KA1817;-;Invesco India Nifty G-sec Sep 2032 Index Fund - Direct - Growth;999.959;03-Apr-2023
+151596;INF205KA1825;-;Invesco India Nifty G-sec Sep 2032 Index Fund - Direct - IDCW Payout;999.9592;03-Apr-2023
+151594;INF205KA1791;-;Invesco India Nifty G-sec Sep 2032 Index Fund - Regular - Growth;999.9199;03-Apr-2023
+151595;INF205KA1809;-;Invesco India Nifty G-sec Sep 2032 Index Fund - Regular - IDCW Payout;999.9347;03-Apr-2023
+
+Kotak Mahindra Mutual Fund
+
+148978;INF174KA1HA7;-;Kotak Nifty 50 Index Fund - Direct Plan-Growth;11.198;03-Apr-2023
+148976;INF174KA1HB5;-;Kotak Nifty 50 Index Fund - Direct Plan-IDCW Payout;11.198;03-Apr-2023
+148974;INF174KA1GX1;-;Kotak Nifty 50 Index Fund - Regular Plan-Growth;11.132;03-Apr-2023
+148979;INF174KA1GY9;-;Kotak Nifty 50 Index Fund - Regular Plan-IDCW Payout;11.132;03-Apr-2023
+148745;INF174KA1GA9;-;Kotak Nifty Next 50 Index Fund - Direct Plan - Growth Option;10.9342;03-Apr-2023
+148746;INF174KA1FZ8;INF174KA1GB7;Kotak Nifty Next 50 Index Fund - Direct Plan -Payout of Income Distribution cum capital withdrawal option;10.9341;03-Apr-2023
+148743;INF174KA1FX3;-;Kotak Nifty Next 50 Index Fund - Regular Plan - Growth Option;10.8153;03-Apr-2023
+148744;INF174KA1FW5;INF174KA1FY1;Kotak Nifty Next 50 Index Fund - Regular Plan - Payout of Income Distribution cum capital withdrawal option;10.8156;03-Apr-2023
+149855;INF174KA1IL2;-;Kotak Nifty SDL Apr  2027 Top 12 Equal Weight Index Fund-Direct Plan-Growth;10.385;03-Apr-2023
+149852;INF174KA1II8;-;Kotak Nifty SDL Apr  2027 Top 12 Equal Weight Index Fund-Regular Plan- Growth;10.3662;03-Apr-2023
+149853;INF174KA1IJ6;INF174KA1IK4;Kotak Nifty SDL Apr  2027 Top 12 Equal Weight Index Fund-Regular Plan-IDCW Option;10.3664;03-Apr-2023
+149854;INF174KA1IM0;INF174KA1IN8;Kotak Nifty SDL Apr 2027 Top 12 Equal Weight Index Fund-Direct Plan-IDCW Option;10.3851;03-Apr-2023
+149865;INF174KA1IR9;-;Kotak Nifty SDL Apr 2032 Top 12 Equal Weight Index Fund-Direct Plan- Growth;10.4773;03-Apr-2023
+149864;INF174KA1IS7;INF174KA1IT5;Kotak Nifty SDL Apr 2032 Top 12 Equal Weight Index Fund-Direct Plan-IDCW Option;10.477;03-Apr-2023
+149862;INF174KA1IO6;-;Kotak Nifty SDL Apr 2032 Top 12 Equal Weight Index Fund-Regular Plan-Growth;10.455;03-Apr-2023
+149866;INF174KA1IP3;INF174KA1IQ1;Kotak Nifty SDL Apr 2032 Top 12 Equal Weight Index Fund-Regular Plan-IDCW Option;10.4582;03-Apr-2023
+151216;INF174KA1KZ8;-;Kotak Nifty SDL Jul 20226 Index Fund Regular Plan Growth;10.1966;03-Apr-2023
+151217;INF174KA1LA9;INF174KA1LB7;Kotak Nifty SDL Jul 20226 Index Fund Regular Plan IDCW;10.1967;03-Apr-2023
+151218;INF174KA1LC5;-;Kotak Nifty SDL Jul 2026 Index Fund Direct Plan Growth;10.2025;03-Apr-2023
+151420;INF174KA1MJ8;-;Kotak Nifty SDL Jul 2033 Index Fund Direct Plan Growth Option;10.1065;03-Apr-2023
+151417;INF174KA1MG4;-;Kotak Nifty SDL Jul 2033 Index Fund Regular Plan Growth Option;10.1032;03-Apr-2023
+151419;INF174KA1MH2;INF174KA1MI0;Kotak Nifty SDL Jul 2033 Index Fund Regular Plan IDCW;10.1032;03-Apr-2023
+150725;INF174KA1JT3;-;Kotak Nifty SDL Plus AAA PSU Bond Jul 2028 60:40 Index Fund Direct Plan - Growth;10.3623;03-Apr-2023
+150726;INF174KA1JU1;INF174KA1JV9;Kotak Nifty SDL Plus AAA PSU Bond Jul 2028 60:40 Index Fund Direct Plan - IDCW;10.3624;03-Apr-2023
+150723;INF174KA1JQ9;-;Kotak Nifty SDL Plus AAA PSU Bond Jul 2028 60:40 Index Fund Regular Plan - Growth;10.3526;03-Apr-2023
+150724;INF174KA1JR7;INF174KA1JS5;Kotak Nifty SDL Plus AAA PSU Bond Jul 2028 60:40 Index Fund Regular Plan - IDCW;10.3493;03-Apr-2023
+
+LIC Mutual Fund
+
+120307;INF767K01FF2;-;LIC MF Nifty 50 Index Fund-Direct Plan-Growth;101.4159;03-Apr-2023
+120309;INF767K01FG0;INF767K01FH8;LIC MF Nifty 50 Index Fund-Direct Plan-IDCW;37.3717;03-Apr-2023
+101201;INF767K01162;-;LIC MF Nifty 50 Index Fund-Regular Plan-Growth;95.8339;03-Apr-2023
+101200;INF767K01154;INF767K01147;LIC MF Nifty 50 Index Fund-Regular Plan-IDCW;35.3526;03-Apr-2023
+120308;INF767K01FJ4;-;LIC MF S & P BSE Sensex Index Fund-Direct Plan-Growth;116.0601;03-Apr-2023
+120312;INF767K01FI6;INF767K01FK2;LIC MF S & P BSE Sensex Index Fund-Direct Plan-IDCW;38.9127;03-Apr-2023
+101199;INF767K01139;-;LIC MF S & P BSE Sensex Index Fund-Regular Plan-Growth;109.9114;03-Apr-2023
+101198;INF767K01121;INF767K01113;LIC MF S & P BSE Sensex Index Fund-Regular Plan-IDCW;37.6729;03-Apr-2023
+
+Mirae Asset Mutual Fund
+
+150792;INF769K01IX5;-;Mirae Asset CRISIL IBX Gilt Index - April 2033 Index Fund - Direct Plan - Growth;10.4536;03-Apr-2023
+150789;INF769K01IW7;INF769K01IY3;Mirae Asset CRISIL IBX Gilt Index - April 2033 Index Fund - Direct Plan - IDCW;10.4522;03-Apr-2023
+150790;INF769K01IU1;-;Mirae Asset CRISIL IBX Gilt Index - April 2033 Index Fund - Regular Plan - Growth;10.4379;03-Apr-2023
+150791;INF769K01IT3;INF769K01IV9;Mirae Asset CRISIL IBX Gilt Index - April 2033 Index Fund - Regular Plan - IDCW;10.4385;03-Apr-2023
+150788;INF769K01JD5;-;Mirae Asset Nifty AAA PSU Bond Plus SDL Apr 2026 50:50 Index Fund - Direct Plan - Growth;10.3283;03-Apr-2023
+150787;INF769K01JC7;INF769K01JE3;Mirae Asset Nifty AAA PSU Bond Plus SDL Apr 2026 50:50 Index Fund - Direct Plan - IDCW;10.3283;03-Apr-2023
+150786;INF769K01JA1;-;Mirae Asset Nifty AAA PSU Bond Plus SDL Apr 2026 50:50 Index Fund - Regular Plan - Growth;10.3167;03-Apr-2023
+150785;INF769K01IZ0;INF769K01JB9;Mirae Asset Nifty AAA PSU Bond Plus SDL Apr 2026 50:50 Index Fund - Regular Plan - IDCW;10.3163;03-Apr-2023
+150359;INF769K01IG0;INF769K01II6;Mirae Asset Nifty SDL Jun 2027 Index Fund - Direct Plan - IDCW;10.3747;03-Apr-2023
+150360;INF769K01IE5;-;Mirae Asset Nifty SDL Jun 2027 Index Fund - Regular Plan - Growth;10.3575;03-Apr-2023
+150361;INF769K01ID7;INF769K01IF2;Mirae Asset Nifty SDL Jun 2027 Index Fund - Regular Plan - IDCW;10.3581;03-Apr-2023
+150358;INF769K01IH8;-;Mirae Asset Nifty SDL Jun 2027 Index Fund -Direct Plan - Growth;10.3745;03-Apr-2023
+151691;INF769K01JZ8;-;Mirae Asset Nifty SDL June 2028 Index Fund - Direct Plan - Growth;10.0074;03-Apr-2023
+151692;INF769K01JY1;INF769K01KA9;Mirae Asset Nifty SDL June 2028 Index Fund - Direct Plan - IDCW;10.0074;03-Apr-2023
+151693;INF769K01JV7;INF769K01JX3;Mirae Asset Nifty SDL June 2028 Index Fund - Regular Plan - IDCW;10.0070;03-Apr-2023
+151694;INF769K01JW5;-;Mirae Asset Nifty SDL June 2028 Index Fund -Regular Plan - Growth;10.0070;03-Apr-2023
+
+Motilal Oswal Mutual Fund
+
+149349;INF247L01AS7;-;Motilal Oswal MSCI EAFE Top 100 Select Index Fund - Direct Plan Growth;10.9672;03-Apr-2023
+149350;INF247L01AT5;-;Motilal Oswal MSCI EAFE Top 100 Select Index Fund - Regular Plan Growth;10.8778;03-Apr-2023
+149800;INF247L01AV1;-;Motilal Oswal Nifty 200 Momentum 30 Index Fund-Direct Plan;9.0927;03-Apr-2023
+149799;INF247L01AW9;-;Motilal Oswal Nifty 200 Momentum 30 Index Fund-Regular Plan;9.0239;03-Apr-2023
+147794;INF247L01AE7;-;Motilal Oswal Nifty 50 Index Fund - Direct plan - Growth;14.6374;03-Apr-2023
+147795;INF247L01AF4;-;Motilal Oswal Nifty 50 Index Fund - Regular plan - Growth;14.4395;03-Apr-2023
+147625;INF247L01957;-;Motilal Oswal Nifty 500 Index Fund - Direct Plan;16.6336;03-Apr-2023
+147626;INF247L01940;-;Motilal Oswal Nifty 500 Index Fund - Regular Plan;16.2506;03-Apr-2023
+147619;INF247L01882;-;Motilal Oswal Nifty Bank Index - Regular Plan;14.4943;03-Apr-2023
+147620;INF247L01890;-;Motilal Oswal Nifty Bank Index Fund - Direct Plan;14.8607;03-Apr-2023
+151550;INF247L01BP1;-;Motilal Oswal Nifty G-sec May 2029 Index Fund-  Regualr Plan Growth ption;10.1479;03-Apr-2023
+151551;INF247L01BO4;-;Motilal Oswal Nifty G-sec May 2029 Index Fund- Direct Plan Growth Option;10.1492;03-Apr-2023
+147622;INF247L01916;-;Motilal Oswal Nifty Midcap 150 Index Fund - Direct Plan;20.4033;03-Apr-2023
+147621;INF247L01908;-;Motilal Oswal Nifty Midcap 150 Index Fund - Regular Plan;19.8767;03-Apr-2023
+147796;INF247L01AC1;-;Motilal Oswal Nifty Next 50 Index Fund - Direct plan - Growth;13.4068;03-Apr-2023
+147797;INF247L01AD9;-;Motilal Oswal Nifty Next 50 Index Fund - Regular plan - Growth;13.1187;03-Apr-2023
+147624;INF247L01924;-;Motilal Oswal Nifty Smallcap 250 Index - Regular Plan;19.2386;03-Apr-2023
+147623;INF247L01932;-;Motilal Oswal Nifty Smallcap 250 Index Fund- Direct Plan;19.7183;03-Apr-2023
+148381;INF247L01AG2;-;Motilal Oswal S&P 500 Index Fund - Direct Plan Growth;15.4519;03-Apr-2023
+148382;INF247L01AH0;-;Motilal Oswal S&P 500 Index Fund - Regular Plan Growth;15.1763;03-Apr-2023
+150518;INF247L01BF2;-;Motilal Oswal S&P BSE Enhanced Value Index Fund-Direct plan;11.8169;03-Apr-2023
+150519;INF247L01BG0;-;Motilal Oswal S&P BSE Enhanced Value Index Fund-Regular plan;11.7697;03-Apr-2023
+150443;INF247L01BC9;-;Motilal Oswal S&P BSE Financials ex Bank 30 Index Fund Direct Growth;9.2518;03-Apr-2023
+150444;INF247L01BD7;-;Motilal Oswal S&P BSE Financials ex Bank 30 Index Fund Regular Growth;9.2077;03-Apr-2023
+149919;INF247L01AY5;-;Motilal Oswal S&P BSE Low Volatility Index Fund-Direct plan;10.9068;03-Apr-2023
+149920;INF247L01AZ2;-;Motilal Oswal S&P BSE Low Volatility Index Fund-Regular plan;10.8393;03-Apr-2023
+150522;INF247L01BJ4;-;Motilal Oswal S&P BSE Quality Index Fund-Regular plan;10.1417;03-Apr-2023
+150521;INF247L01BI6;-;Motilal Oswal SP BSE Quality Index Fund-Direct plan;10.1824;03-Apr-2023
+
+Navi Mutual Fund
+
+149039;INF959L01FP2;-;Navi Nifty 50 Index Fund-Direct Plan-Growth;11.0778;03-Apr-2023
+149040;INF959L01FQ0;-;Navi Nifty 50 Index Fund-Regular Plan-Growth;11.0385;03-Apr-2023
+149804;INF959L01FT4;-;Navi Nifty Bank Index Fund- Direct Plan- Growth;10.545;03-Apr-2023
+149805;INF959L01FU2;-;Navi Nifty Bank Index Fund- Regular Plan- Growth;10.4598;03-Apr-2023
+150515;-;-;Navi Nifty India Manufacturing Index Fund- Direct Plan- Growth;9.5953;03-Apr-2023
+150516;-;-;Navi Nifty India Manufacturing Index Fund- Regular Plan- Growth;9.5448;03-Apr-2023
+149892;INF959L01FX6;-;Navi Nifty Midcap 150 Index Fund Direct Plan- Growth;10.7548;03-Apr-2023
+149893;INF959L01FY4;-;Navi Nifty Midcap 150 Index Fund Regular Plan- Growth;10.6512;03-Apr-2023
+149447;INF959L01FR8;-;Navi Nifty Next 50 Index Fund- Direct Plan- Growth;8.9134;03-Apr-2023
+149448;INF959L01FS6;-;Navi Nifty Next 50 Index Fund- Regular Plan- Growth;8.862;03-Apr-2023
+
+Nippon India Mutual Fund
+
+113300;INF204K01II4;INF204K01IL8;NIPPON INDIA INDEX FUND - NIFTY 50 PLAN - ANNUAL - IDCW Option;22.8059;03-Apr-2023
+118743;INF204K01H10;INF204K01H28;NIPPON INDIA INDEX FUND - NIFTY 50 PLAN - DIRECT Plan - ANNUAL - IDCW Option;24.7302;03-Apr-2023
+118745;INF204K01H44;INF204K01H51;NIPPON INDIA INDEX FUND - NIFTY 50 PLAN - DIRECT Plan - HALF YEARLY - IDCW Option;24.6951;03-Apr-2023
+118740;INF204K01H69;INF204K01H77;NIPPON INDIA INDEX FUND - NIFTY 50 PLAN - DIRECT Plan - QUARTERLY - IDCW Option;24.6903;03-Apr-2023
+118742;INF204K01H02;-;Nippon India Index Fund - Nifty 50 Plan - Direct Plan Growth Plan - Bonus Option;30.9955;03-Apr-2023
+118741;INF204K01H36;-;Nippon India Index Fund - Nifty 50 Plan - Direct Plan Growth Plan - Growth Option;30.9955;03-Apr-2023
+113297;INF204K01IF0;-;Nippon India Index Fund - Nifty 50 Plan - Growth Plan - Bonus Option;29.0196;03-Apr-2023
+113296;INF204K01IE3;-;Nippon India Index Fund - Nifty 50 Plan - Growth Plan - Growth Option;29.0196;03-Apr-2023
+113299;INF204K01IH6;INF204K01IK0;NIPPON INDIA INDEX FUND - NIFTY 50 PLAN - HALF YEARLY - IDCW Option;22.8847;03-Apr-2023
+113298;INF204K01IG8;INF204K01IJ2;NIPPON INDIA INDEX FUND - NIFTY 50 PLAN - QUARTERLY - IDCW Option;22.8846;03-Apr-2023
+113295;INF204K01IQ7;INF204K01IT1;NIPPON INDIA INDEX FUND - S&P BSE SENSEX PLAN - ANNUAL - IDCW Option;23.2599;03-Apr-2023
+118786;INF204K01K64;INF204K01K72;NIPPON INDIA INDEX FUND - S&P BSE SENSEX PLAN - DIRECT Plan - ANNUAL - IDCW Option;24.6776;03-Apr-2023
+118788;INF204K01K98;INF204K01L06;NIPPON INDIA INDEX FUND - S&P BSE SENSEX PLAN - DIRECT Plan - HALF YEARLY - IDCW Option;24.6452;03-Apr-2023
+118790;INF204K01L14;INF204K01L22;NIPPON INDIA INDEX FUND - S&P BSE SENSEX PLAN - DIRECT Plan - QUARTERLY - IDCW Option;24.6793;03-Apr-2023
+118785;INF204K01K56;-;Nippon India Index Fund - S&P BSE Sensex Plan - Direct Plan Growth Plan - Bonus Option;31.0237;03-Apr-2023
+118791;INF204K01K80;-;Nippon India Index Fund - S&P BSE Sensex Plan - Direct Plan Growth Plan - Growth Option;31.0237;03-Apr-2023
+113270;INF204K01IN4;-;Nippon India Index Fund - S&P BSE Sensex Plan - Growth Plan - Bonus Option;29.5101;03-Apr-2023
+113269;INF204K01IM6;-;Nippon India Index Fund - S&P BSE Sensex Plan - Growth Plan - Growth Option;29.5101;03-Apr-2023
+113294;INF204K01IP9;INF204K01IS3;NIPPON INDIA INDEX FUND - S&P BSE SENSEX PLAN - HALF YEARLY - IDCW Option;23.2648;03-Apr-2023
+113271;INF204K01IO2;INF204K01IR5;NIPPON INDIA INDEX FUND - S&P BSE SENSEX PLAN - QUARTERLY - IDCW Option;23.2624;03-Apr-2023
+148721;INF204KB12Z0;-;Nippon India Nifty 50 Value 20 Index Fund - Direct Plan - Growth Option;13.0498;03-Apr-2023
+148722;INF204KB13Z8;INF204KB14Z6;NIPPON INDIA NIFTY 50 VALUE 20 INDEX FUND - DIRECT Plan - IDCW Option;13.0498;03-Apr-2023
+148720;INF204KB10Z4;INF204KB11Z2;NIPPON INDIA NIFTY 50 VALUE 20 INDEX FUND - IDCW Option;12.8811;03-Apr-2023
+148719;INF204KB19Y8;-;Nippon India Nifty 50 Value 20 Index Fund - Regular Plan - Growth Option;12.8811;03-Apr-2023
+150012;INF204KC1527;-;Nippon India Nifty AAA CPSE Bond Plus SDL - Apr 2027 Maturity 60:40 Index Fund - Direct Plan - Growth Option;10.3145;03-Apr-2023
+150008;INF204KC1535;-;Nippon India Nifty AAA CPSE Bond Plus SDL - Apr 2027 Maturity 60:40 Index Fund - Direct Plan - IDCW Option;10.0396;03-Apr-2023
+150011;INF204KC1493;-;Nippon India Nifty AAA CPSE Bond Plus SDL - Apr 2027 Maturity 60:40 Index Fund - Regular Plan - Growth Option;10.2935;03-Apr-2023
+150009;-;INF204KC1519;Nippon India Nifty AAA CPSE Bond Plus SDL - Apr 2027 Maturity 60:40 Index Fund - Regular Plan - IDCW Option;10.0392;03-Apr-2023
+150754;INF204KC1683;-;Nippon India Nifty AAA PSU Bond Plus SDL - Sep 2026 Maturity 50:50 Index Fund-Direct Plan-Growth Option;10.3316;03-Apr-2023
+150753;INF204KC1691;-;Nippon India Nifty AAA PSU Bond Plus SDL - Sep 2026 Maturity 50:50 Index Fund-Direct Plan-IDCW Option;10.3316;03-Apr-2023
+150752;INF204KC1659;-;Nippon India Nifty AAA PSU Bond Plus SDL - Sep 2026 Maturity 50:50 Index Fund-Regular Plan-Growth Option;10.3223;03-Apr-2023
+150755;INF204KC1667;-;Nippon India Nifty AAA PSU Bond Plus SDL - Sep 2026 Maturity 50:50 Index Fund-Regular Plan-IDCW Option;10.3223;03-Apr-2023
+150487;INF204KC1584;-;Nippon India Nifty Alpha Low Volatility 30 Index Fund - Direct Plan - Growth Option;10.0273;03-Apr-2023
+150488;INF204KC1592;-;Nippon India Nifty Alpha Low Volatility 30 Index Fund - Direct Plan - IDCW Option;10.0273;03-Apr-2023
+150490;INF204KC1550;-;Nippon India Nifty Alpha Low Volatility 30 Index Fund - Regular Plan - Growth Option;9.9829;03-Apr-2023
+150491;INF204KC1568;-;Nippon India Nifty Alpha Low Volatility 30 Index Fund - Regular Plan - IDCW Option;9.9829;03-Apr-2023
+150920;INF204KC1AC0;-;Nippon India Nifty G-Sec Jun 2036 Maturity Index Fund-Direct Plan-Growth Option;10.2254;03-Apr-2023
+150921;INF204KC1AD8;INF204KC1AE6;Nippon India Nifty G-Sec Jun 2036 Maturity Index fund-Direct Plan-IDCW Option;10.2254;03-Apr-2023
+150923;INF204KC1998;-;Nippon India Nifty G-Sec Jun 2036 Maturity Index Fund-Regular Plan-Growth Option;10.2193;03-Apr-2023
+150922;INF204KC1AA4;INF204KC1AB2;Nippon India Nifty G-Sec Jun 2036 Maturity Index Fund-Regular Plan-IDCW Option;10.2193;03-Apr-2023
+151440;INF204KC1AO5;-;Nippon India Nifty G-Sec Oct 2028 Maturity Index Fund-Direct Plan-Growth Option;10.1559;03-Apr-2023
+151442;INF204KC1AP2;-;Nippon India Nifty G-Sec Oct 2028 Maturity Index Fund-Direct Plan-IDCW Option;10.1559;03-Apr-2023
+151439;INF204KC1AL1;-;Nippon India Nifty G-Sec Oct 2028 Maturity Index Fund-Regular Plan-Growth Option;10.1547;03-Apr-2023
+151441;INF204KC1AM9;-;Nippon India Nifty G-Sec Oct 2028 Maturity Index Fund-Regular Plan-IDCW Option;10.1547;03-Apr-2023
+150906;INF204KC1881;-;Nippon India Nifty G-Sec Sep 2027 Maturity Index Fund-Direct Plan-Growth Option;10.1937;03-Apr-2023
+150907;INF204KC1899;INF204KC1907;Nippon India Nifty G-Sec Sep 2027 Maturity Index Fund-Direct Plan-IDCW Option;10.1937;03-Apr-2023
+150904;INF204KC1857;-;Nippon India Nifty G-Sec Sep 2027 Maturity Index Fund-Regular Plan-Growth Option;10.1867;03-Apr-2023
+150905;INF204KC1865;INF204KC1873;Nippon India Nifty G-Sec Sep 2027 Maturity Index Fund-Regular Plan-IDCW Option;10.1867;03-Apr-2023
+148726;INF204KB18Z7;-;Nippon India Nifty Midcap 150 Index Fund - Direct Plan - Growth Option;13.1129;03-Apr-2023
+148725;INF204KB19Z5;INF204KC1014;NIPPON INDIA NIFTY MIDCAP 150 INDEX FUND - DIRECT Plan - IDCW Option;13.1129;03-Apr-2023
+148724;INF204KB16Z1;INF204KB17Z9;NIPPON INDIA NIFTY MIDCAP 150 INDEX FUND - IDCW Option;12.9495;03-Apr-2023
+148723;INF204KB15Z3;-;Nippon India Nifty Midcap 150 Index Fund - Regular Plan - Growth Option;12.9495;03-Apr-2023
+150824;INF204KC1741;-;Nippon India Nifty SDL Plus G-Sec - Jun 2028 Maturity 70:30 Index Fund-Direct Plan-Growth Option;10.2595;03-Apr-2023
+150826;INF204KC1758;INF204KC1766;Nippon India Nifty SDL Plus G-Sec - Jun 2028 Maturity 70:30 Index Fund-Direct Plan-IDCW Option;10.2595;03-Apr-2023
+150827;INF204KC1725;INF204KC1733;Nippon India Nifty SDL Plus G-Sec - Jun 2028 Maturity 70:30 Index Fund-Regular Plan IDCW Option;10.2523;03-Apr-2023
+150825;INF204KC1717;-;Nippon India Nifty SDL Plus G-Sec - Jun 2028 Maturity 70:30 Index Fund-Regular Plan-Growth Option;10.2523;03-Apr-2023
+151389;-;INF204KC1AH9;Nippon India Nifty SDL Plus G-Sec - Jun 2029 Maturity 70:30 Index Fund-Regular Plan-IDCW Option;10.0798;03-Apr-2023
+151390;INF204KC1AI7;-;Nippon India Nifty SDL Plus G-Sec-Jun 2029 Maturity 70:30 Index Fund-Direct Plan-Growth Option;10.0816;03-Apr-2023
+151391;INF204KC1AJ5;-;Nippon India Nifty SDL Plus G-Sec-Jun 2029 Maturity 70:30 Index Fund-Direct Plan-IDCW Option;10.2371;03-Apr-2023
+151392;-;INF204KC1AK3;Nippon India Nifty SDL Plus G-Sec-Jun 2029 Maturity 70:30 Index Fund-Regular Plan-Growth Option;10.0798;03-Apr-2023
+148519;INF204KB15W0;-;Nippon India Nifty Smallcap 250 Index Fund - Direct Plan - Growth Option;17.6603;03-Apr-2023
+148521;INF204KB16W8;INF204KB17W6;NIPPON INDIA NIFTY SMALLCAP 250 INDEX FUND - DIRECT Plan - IDCW Option;17.6603;03-Apr-2023
+148520;INF204KB13W5;INF204KB14W3;NIPPON INDIA NIFTY SMALLCAP 250 INDEX FUND - IDCW Option;17.3370;03-Apr-2023
+148518;INF204KB12W7;-;Nippon India Nifty Smallcap 250 Index Fund - Regular Plan - Growth Option;17.3369;03-Apr-2023
+
+PGIM India Mutual Fund
+
+151407;INF663L01X21;-;PGIM India CRISIL IBX Gilt Index - Apr 2028 Fund - Direct Plan, Growth Option;10.1485;03-Apr-2023
+151406;INF663L01X39;INF663L01X47;PGIM India CRISIL IBX Gilt Index - Apr 2028 Fund - Direct Plan, IDCW Option;10.1485;03-Apr-2023
+151404;INF663L01X54;-;PGIM India CRISIL IBX Gilt Index - Apr 2028 Fund - Regular Plan, Growth Option;10.1456;03-Apr-2023
+151405;INF663L01X62;INF663L01X70;PGIM India CRISIL IBX Gilt Index - Apr 2028 Fund - Regular Plan, IDCW Option;10.1456;03-Apr-2023
+
+SBI Mutual Fund
+
+149474;INF200KA13D5;-;SBI CPSE Bond Plus SDL Sep 2026 50:50 Index Fund - Direct Plan - Growth;10.4225;03-Apr-2023
+149475;INF200KA14D3;INF200KA15D0;SBI CPSE Bond Plus SDL Sep 2026 50:50 Index Fund - Direct Plan - Income Distribution cum Capital Withdrawal Option (IDCW);10.4676;03-Apr-2023
+149472;INF200KA10D1;-;SBI CPSE Bond Plus SDL Sep 2026 50:50 Index Fund - Regular Plan - Growth;10.3969;03-Apr-2023
+149473;INF200KA11D9;INF200KA12D7;SBI CPSE Bond Plus SDL Sep 2026 50:50 Index Fund - Regular Plan - Income Distribution cum Capital Withdrawal Option (IDCW);10.3971;03-Apr-2023
+150706;INF200KA18Q6;-;SBI CRISIL IBX Gilt Index - April 2029 Fund - Direct Plan - Growth;10.4248;03-Apr-2023
+150708;INF200KA19Q4;INF200KA10R1;SBI CRISIL IBX Gilt Index - April 2029 Fund - Direct Plan - Income Distribution cum Capital Withdrawal Option (IDCW);10.4249;03-Apr-2023
+150707;INF200KA15Q2;-;SBI CRISIL IBX Gilt Index - April 2029 Fund - Regular Plan - Growth;10.4123;03-Apr-2023
+150709;INF200KA16Q0;INF200KA17Q8;SBI CRISIL IBX Gilt Index - April 2029 Fund - Regular Plan - Income Distribution cum Capital Withdrawal Option (IDCW);10.4131;03-Apr-2023
+150681;INF200KA12Q9;-;SBI |CRISIL IBX Gilt Index - June 2036 Fund - Direct Plan - Growth;10.4761;03-Apr-2023
+150682;INF200KA13Q7;INF200KA14Q5;SBI CRISIL IBX Gilt Index - June 2036 Fund - Direct Plan - Income Distribution cum Capital Withdrawal Option (IDCW);10.4762;03-Apr-2023
+150683;INF200KA19P6;-;SBI CRISIL IBX Gilt Index - June 2036 Fund - Regular Plan - Growth;10.4624;03-Apr-2023
+150680;INF200KA10Q3;INF200KA11Q1;SBI CRISIL IBX Gilt Index - June 2036 Fund - Regular Plan - Income Distribution cum Capital Withdrawal Option (IDCW);10.4627;03-Apr-2023
+150711;INF200KA14R3;-;SBI CRISIL IBX SDL Index - September 2027 Fund - Direct Plan - Growth;10.3890;03-Apr-2023
+150713;INF200KA15R0;INF200KA16R8;SBI CRISIL IBX SDL Index - September 2027 Fund - Direct Plan - Income Distribution cum Capital Withdrawal Option (IDCW);10.3892;03-Apr-2023
+150712;INF200KA11R9;-;SBI CRISIL IBX SDL Index - September 2027 Fund - Regular Plan - Growth;10.3787;03-Apr-2023
+150710;INF200KA12R7;INF200KA13R5;SBI CRISIL IBX SDL Index - September 2027 Fund - Regular Plan - Income Distribution cum Capital Withdrawal Option (IDCW);10.3787;03-Apr-2023
+119827;INF200K01TE8;-;SBI NIFTY INDEX FUND - DIRECT PLAN - GROWTH;157.3040;03-Apr-2023
+119826;INF200K01TC2;INF200K01TD0;SBI Nifty Index Fund - Direct Plan - Income Distribution cum Capital Withdrawal Option (IDCW);80.7971;03-Apr-2023
+102272;INF200K01537;-;SBI NIFTY INDEX FUND - REGULAR PLAN - GROWTH;150.9389;03-Apr-2023
+102273;INF200K01545;INF200K01552;SBI Nifty Index Fund - Regular Plan - Income Distribution cum Capital Withdrawal Option (IDCW);77.4404;03-Apr-2023
+150673;INF200KA10P5;-;SBI Nifty Midcap 150 Index Fund - Direct Plan - Growth;9.8737;03-Apr-2023
+150675;INF200KA11P3;INF200KA12P1;SBI Nifty Midcap 150 Index Fund - Direct Plan - Income Distribution cum Capital Withdrawal Option (IDCW);9.8737;03-Apr-2023
+150672;INF200KA17O3;-;SBI Nifty Midcap 150 Index Fund - Regular Plan - Growth;9.8451;03-Apr-2023
+150674;INF200KA18O1;INF200KA19O9;SBI Nifty Midcap 150 Index Fund - Regular Plan - Income Distribution cum Capital Withdrawal Option (IDCW);9.8452;03-Apr-2023
+148945;INF200KA1W00;-;SBI Nifty Next 50 Index Fund - Direct Plan - Growth;10.3586;03-Apr-2023
+148946;INF200KA1W18;INF200KA1W26;SBI Nifty Next 50 Index Fund - Direct Plan - Income Distribution cum Capital Withdrawal Option (IDCW);10.3585;03-Apr-2023
+148943;INF200KA1V76;-;SBI Nifty Next 50 Index Fund - Regular Plan - Growth;10.2617;03-Apr-2023
+148944;INF200KA1V84;INF200KA1V92;SBI Nifty Next 50 Index Fund - Regular Plan - Income Distribution cum Capital Withdrawal Option (IDCW);10.2619;03-Apr-2023
+150677;INF200KA16P2;-;SBI Nifty Smallcap 250 Index Fund - Direct Plan - Growth;9.6563;03-Apr-2023
+150678;INF200KA17P0;INF200KA18P8;SBI Nifty Smallcap 250 Index Fund - Direct Plan - Income Distribution cum Capital Withdrawal Option (IDCW);9.6563;03-Apr-2023
+150676;INF200KA13P9;-;SBI Nifty Smallcap 250 Index Fund - Regular Plan - Growth;9.6283;03-Apr-2023
+150679;INF200KA14P7;INF200KA15P4;SBI Nifty Smallcap 250 Index Fund - Regular Plan - Income Distribution cum Capital Withdrawal Option (IDCW);9.6284;03-Apr-2023
+
+Sundaram Mutual Fund
+
+149483;INF173K01EZ4;-;Sundaram Nifty 100 Equal Weight Fund (Formerly Known as Principal Nifty 100 Equal Weight Fund) - Direct Plan - Growth Option;107.9921;03-Apr-2023
+149482;INF173K01EW1;INF173K01EX9;Sundaram Nifty 100 Equal Weight Fund (Formerly Known as Principal Nifty 100 Equal Weight Fund)- Direct Plan - Income Distribution CUM Capital Withdrawal Option;59.0027;03-Apr-2023
+149481;INF173K01AG2;-;Sundaram Nifty 100 Equal Weight Fund (Formerly Known as Principal Nifty 100 Equal Weight Fund)-Growth;103.6543;03-Apr-2023
+149480;INF173K01AH0;INF173K01AI8;Sundaram Nifty 100 Equal Weight Fund (Formerly Known as Principal Nifty 100 Equal Weight Fund-Income Distribution CUM Capital Withdrawal;56.6356;03-Apr-2023
+
+Tata Mutual Fund
+
+150692;INF277KA1554;-;TATA CRISIL-IBX GILT INDEX - APRIL 2026 INDEX FUND - DIRECT PLAN - GROWTH;10.3857;03-Apr-2023
+150693;INF277KA1570;-;TATA CRISIL-IBX GILT INDEX - APRIL 2026 INDEX FUND - DIRECT PLAN - IDCW PAYOUT;10.3857;03-Apr-2023
+150697;-;INF277KA1562;TATA CRISIL-IBX GILT INDEX - APRIL 2026 INDEX FUND - DIRECT PLAN - IDCW REINVESTMENT;10.3857;03-Apr-2023
+150694;INF277KA1588;-;TATA CRISIL-IBX GILT INDEX - APRIL 2026 INDEX FUND - REGULAR PLAN - GROWTH;10.3684;03-Apr-2023
+150695;INF277KA1604;-;TATA CRISIL-IBX GILT INDEX - APRIL 2026 INDEX FUND - REGULAR PLAN - IDCW PAYOUT;10.3684;03-Apr-2023
+150696;-;INF277KA1596;TATA CRISIL-IBX GILT INDEX - APRIL 2026 INDEX FUND - REGULAR PLAN - IDCW REINVESTMENT;10.3684;03-Apr-2023
+119288;INF277K01PJ3;-;Tata Nifty 50 Index Fund -Direct Plan;114.7242;03-Apr-2023
+101659;INF277K01741;-;Tata Nifty 50 Index Fund -Regular Plan;106.5673;03-Apr-2023
+151301;INF277KA1794;-;Tata Nifty G Sec Dec 2026 Index Fund-Direct Plan-Growth;10.1374;03-Apr-2023
+151302;INF277KA1810;-;Tata Nifty G Sec Dec 2026 Index Fund-Direct Plan-IDCW Payout;10.1374;03-Apr-2023
+151305;-;INF277KA1802;Tata Nifty G Sec Dec 2026 Index Fund-Direct Plan-IDCW Reinvestment;10.1374;03-Apr-2023
+151306;INF277KA1828;-;Tata Nifty G Sec Dec 2026 Index Fund-Regular Plan-Growth;10.1236;03-Apr-2023
+151304;INF277KA1844;-;Tata Nifty G Sec Dec 2026 Index Fund-Regular Plan-IDCW Payout;10.1236;03-Apr-2023
+151303;-;INF277KA1836;Tata Nifty G SEc Dec 2026 Index Fund-Regular Plan-IDCW Reinvestment;10.1236;03-Apr-2023
+151273;INF277KA1737;-;Tata Nifty G-Sec Dec 2029 Index Fund - Direct Plan - Growth;10.1700;03-Apr-2023
+151274;INF277KA1752;-;Tata Nifty G-Sec Dec 2029 Index Fund - Direct Plan - IDCW Payout;10.1700;03-Apr-2023
+151278;-;INF277KA1745;Tata Nifty G-Sec Dec 2029 Index Fund - Direct Plan - IDCW Reinvestment;10.1700;03-Apr-2023
+151275;INF277KA1760;-;Tata Nifty G-Sec Dec 2029 Index Fund - Regular Plan - Growth;10.1561;03-Apr-2023
+151277;INF277KA1786;-;Tata Nifty G-Sec Dec 2029 Index Fund - Regular Plan - IDCW Payout;10.1561;03-Apr-2023
+151276;-;INF277KA1778;Tata Nifty G-Sec Dec 2029 Index Fund - Regular Plan - IDCW Reinvestment;10.1561;03-Apr-2023
+150738;INF277KA1612;-;Tata Nifty Midcap 150 Momentum 50 Index Fund - Growth - Direct Plan;9.3970;03-Apr-2023
+150741;INF277KA1646;-;Tata Nifty Midcap 150 Momentum 50 Index Fund - Growth - Regular Plan;9.3529;03-Apr-2023
+150740;INF277KA1638;-;Tata Nifty Midcap 150 Momentum 50 Index Fund - IDCW Payout - Direct Plan;9.3970;03-Apr-2023
+150742;INF277KA1661;-;Tata Nifty Midcap 150 Momentum 50 Index Fund - IDCW Payout - Regular Plan;9.3529;03-Apr-2023
+150739;-;INF277KA1620;Tata Nifty Midcap 150 Momentum 50 Index Fund - IDCW Reinvestment - Direct Plan;9.3970;03-Apr-2023
+150743;-;INF277KA1653;Tata Nifty Midcap 150 Momentum 50 Index Fund - IDCW Reinvestment - Regular Plan;9.3529;03-Apr-2023
+150331;INF277KA1414;-;Tata Nifty SDL Plus AAA PSU Bond Dec 6040 Index Fund -Regular Plan-IDCW Payout;10.4444;03-Apr-2023
+150326;INF277KA1372;-;Tata Nifty SDL Plus AAA PSU Bond Dec 6040 Index Fund- Direct Plan-Growth;10.4796;03-Apr-2023
+150328;-;INF277KA1398;Tata Nifty SDL Plus AAA PSU Bond Dec 6040 Index Fund-Direct Plan- IDCW Reinvestment;10.4796;03-Apr-2023
+150327;INF277KA1380;-;Tata Nifty SDL Plus AAA PSU Bond Dec 6040 Index Fund-Direct Plan-IDCW Payout;10.4796;03-Apr-2023
+150330;INF277KA1406;-;Tata Nifty SDL Plus AAA PSU Bond Dec 6040 Index Fund-Regular Plan -Growth;10.4444;03-Apr-2023
+150329;-;INF277KA1422;Tata Nifty SDL Plus AAA PSU Bond Dec 6040 Index Fund-Regular Plan- IDCW Reinvestment;10.4444;03-Apr-2023
+119287;INF277K01PK1;-;Tata S&P BSE Sensex Index Fund - Direct Plan;153.3844;03-Apr-2023
+101746;INF277K01758;-;Tata S&P BSE Sensex Index Fund -Regular Plan;145.9522;03-Apr-2023
+
+Taurus Mutual Fund
+
+118881;INF044D01CQ5;-;Taurus Nifty 50 Index Fund - Direct Plan - Growth;35.1133;03-Apr-2023
+118882;INF044D01CR3;INF044D01CS1;Taurus Nifty 50 Index Fund - Direct Plan - Payout of Income Distribution cum Capital Withdrawal option;32.8620;03-Apr-2023
+112948;INF044D01948;-;Taurus Nifty 50 Index Fund - Regular Plan - Growth;33.1627;03-Apr-2023
+112949;INF044D01914;INF044D01922;Taurus Nifty 50 Index Fund - Regular Plan - Payout of Income Distribution cum Capital Withdrawal option;21.1377;03-Apr-2023
+
+UTI Mutual Fund
+
+143341;INF789FC12T1;-;UTI Nifty Next 50 Index Fund - Direct Plan - Growth Option;13.848;03-Apr-2023
+143340;INF789FC11T3;-;UTI Nifty Next 50 Index Fund - Regular Plan - Growth Option;13.4985;03-Apr-2023
+151185;INF789F1AWX3;-;UTI CRISIL SDL Maturity April 2033 Index Fund - Direct Plan - Growth Option;10.1595;03-Apr-2023
+151184;INF789F1AWW5;-;UTI CRISIL SDL Maturity April 2033 Index Fund - Regular Plan - Growth Option;10.1519;03-Apr-2023
+151239;INF789F1AWZ8;-;UTI CRISIL SDL Maturity June 2027 Index Fund - Direct Plan - Growth Option;10.1775;03-Apr-2023
+151238;INF789F1AWY1;-;UTI CRISIL SDL Maturity June 2027 Index Fund - Regular Plan - Growth Option;10.1716;03-Apr-2023
+148703;INF789F1AUT5;-;UTI Nifty 200 Momentum 30 Index Fund - Direct Plan - Growth Option;12.4918;03-Apr-2023
+148704;INF789F1AUS7;-;UTI Nifty 200 Momentum 30 Index Fund - Regular Plan - Growth Option;12.3609;03-Apr-2023
+120717;INF789F01WY2;INF789F01WZ9;UTI Nifty 50 Index Fund - Direct Plan - IDCW;59.5704;03-Apr-2023
+120716;INF789F01XA0;-;UTI Nifty 50 Index Fund - Growth Option- Direct;118.2387;03-Apr-2023
+100822;INF789F01JN2;-;UTI Nifty 50 Index Fund - Regular Plan - Growth Option;116.9267;03-Apr-2023
+100823;INF789F01JL6;INF789F01JM4;UTI Nifty 50 Index Fund - Regular Plan - IDCW;58.9075;03-Apr-2023
+150313;INF789F1AVH8;-;UTI Nifty Midcap 150 Quality 50 Index Fund - Direct Plan - Growth Option;8.9618;03-Apr-2023
+150312;INF789F1AVG0;-;UTI Nifty Midcap 150 Quality 50 Index Fund - Regular Plan - Growth Option;8.9204;03-Apr-2023
+151364;INF789F1AXL6;-;UTI NIFTY SDL Plus AAA PSU Bond Apr 2026 75:25 Index Fund - Direct Plan - Growth Option;10.1253;03-Apr-2023
+151363;INF789F1AXK8;-;UTI NIFTY SDL Plus AAA PSU Bond Apr 2026 75:25 Index Fund - Regular Plan - Growth Option;10.1216;03-Apr-2023
+151487;-;-;UTI NIFTY SDL Plus AAA PSU Bond Apr 2028- 75:25 Index Fund - Direct Plan - Growth Option;10.1151;03-Apr-2023
+151488;-;-;UTI NIFTY SDL Plus AAA PSU Bond Apr 2028- 75:25 Index Fund - Regular Plan - Growth Option;10.1129;03-Apr-2023
+149881;INF789F1AVF2;-;UTI S&P BSE Low Volatility Index Fund - Direct Plan  - Growth Option;10.9631;03-Apr-2023
+149880;INF789F1AVE5;-;UTI S&P BSE Low Volatility Index Fund - Regular Plan - Growth Option;10.907;03-Apr-2023
+149803;INF789F1AVD7;-;UTI S&P BSE Sensex Index Fund - Direct Plan - Growth Option;10.3122;03-Apr-2023
+149802;INF789F1AVC9;-;UTI S&P BSE Sensex Index Fund - Regular Plan  -Growth Option;10.3002;03-Apr-2023
+
+Open Ended Schemes(Other Scheme - Other  ETFs)
+
+Aditya Birla Sun Life Mutual Fund
+
+151533;INF209KB18T9;-;Aditya Birla Sun Life CRISIL Overnight Fund AI Index ETF - IDCW Daily Reinvestment with Weekly Payout;1000.;04-Apr-2023
+150498;INF209KB14K7;-;Aditya Birla Sun Life Nifty 200 Momentum 30 ETF;18.3677;03-Apr-2023
+150497;INF209KB15K4;-;Aditya Birla Sun Life Nifty 200 Quality 30 ETF;14.1314;03-Apr-2023
+115512;INF209KB19D1;-;Aditya Birla Sun Life Nifty ETF;19.5845;03-Apr-2023
+147735;INF209KB17D5;-;Aditya Birla Sun Life Nifty Bank ETF;40.8446;03-Apr-2023
+149262;INF209KB10C2;-;Aditya Birla Sun Life Nifty Healthcare ETF;7.6886;03-Apr-2023
+149293;INF209KB11D8;-;Aditya Birla Sun Life Nifty IT ETF;29.1653;03-Apr-2023
+145881;INF209KB16D7;-;Aditya Birla Sunlife Nifty Next 50 ETF;38.9351;03-Apr-2023
+139581;INF209KB10E8;-;Aditya Birla Sun Life S&P BSE Sensex ETF;57.1747;03-Apr-2023
+149779;INF209KB19F6;-;Aditya Birla Sun Life Silver ETF;74.831;03-Apr-2023
+
+Axis Mutual Fund
+
+141545;INF846K01W98;-;Axis Nifty 50 ETF;185.0032;03-Apr-2023
+148926;INF846K01Z04;-;Axis Nifty AAA Bond Plus SDL Apr 2026 50:50 ETF;10.8453;03-Apr-2023
+148559;INF846K01X63;-;Axis NIFTY Bank ETF;411.3751;03-Apr-2023
+148934;INF846K01Z12;-;Axis NIFTY Healthcare ETF;76.8819;03-Apr-2023
+149156;INF846K016C7;-;Axis NIFTY India Consumption ETF;72.8347;03-Apr-2023
+148799;INF846K01Y96;-;Axis IT ETF;296.1218;03-Apr-2023
+151585;INF846K010Q0;-;Axis S & P BSE Sensex ETF;58.9489;03-Apr-2023
+150610;INF846K011K1;-;Axis Silver ETF;73.6143;03-Apr-2023
+
+Bandhan Mutual Fund
+
+139839;INF194KA1U07;-;BANDHAN Nifty 50 ETF;184.9945;03-Apr-2023
+139840;INF194KA1T91;-;BANDHAN S&P BSE Sensex ETF;624.2442;03-Apr-2023
+
+DSP Mutual Fund
+
+142589;-;INF740KA1EU7;DSP NIFTY 1D Rate Liquid ETF - IDCW - Daily Reinvest;1000.0000;04-Apr-2023
+149286;INF740KA1QK2;-;DSP Nifty 50 Equal Weight ETF;200.0098;03-Apr-2023
+149392;INF740KA1CL0;-;DSP Nifty 50 ETF;176.1266;03-Apr-2023
+151262;INF740KA1RX3;-;DSP Nifty Bank ETF;40.7857;03-Apr-2023
+149403;INF740KA1QL0;-;DSP Nifty Midcap 150 Quality 50 ETF;154.7332;03-Apr-2023
+150523;INF740KA1RE3;-;DSP Silver ETF;71.0173;03-Apr-2023
+
+Edelweiss Mutual Fund
+
+147848;INF754K01KN4;-;Bharat Bond ETF - April 2023;1230.0349;03-Apr-2023
+147849;INF754K01KO2;-;Bharat Bond ETF - April 2030;1249.9834;03-Apr-2023
+149398;INF754K01OB1;-;BHARAT Bond ETF - April 2032;1043.1415;03-Apr-2023
+150987;INF754K01QX0;-;BHARAT Bond ETF - April 2033;1013.7888;03-Apr-2023
+148444;INF754K01LD3;-;BHARAT Bond ETF April 2025;1114.808;03-Apr-2023
+148445;INF754K01LE1;-;BHARAT Bond ETF- April 2031;1114.5799;03-Apr-2023
+135859;INF754K01EL1;-;Edelweiss ETF - Nifty Bank;4160.5069;03-Apr-2023
+
+HDFC Mutual Fund
+
+150476;INF179KC1DB7;-;HDFC NIFTY 100 ETF - Growth Option;173.1661;03-Apr-2023
+135853;INF179KC1965;-;HDFC NIFTY 50 Exchange Traded Fund - Growth Plan;188.3974;03-Apr-2023
+148461;INF179KC1AN8;-;HDFC NIFTY Banking Exchange Traded Fund - GROWTH;410.4027;03-Apr-2023
+150621;INF179KC1DJ0;-;HDFC NIFTY GROWTH SECTORS 15 ETF - Growth Option;86.346;03-Apr-2023
+150801;INF179KC1DX1;-;HDFC NIFTY IT ETF - Growth option;286.6821;03-Apr-2023
+151374;-;-;HDFC NIFTY Midcap 150 ETF - Growth Option;114.0317;03-Apr-2023
+150477;INF179KC1DA9;-;HDFC NIFTY NEXT 50 ETF - Growth Option;380.1942;03-Apr-2023
+150802;INF179KC1DW3;-;HDFC NIFTY Private Bank ETF - Growth Option;207.7358;03-Apr-2023
+151375;-;-;HDFC NIFTY Smallcap 250 ETF - Growth Option;88.6393;03-Apr-2023
+150658;INF179KC1DN2;-;HDFC NIFTY100 Low Volatility 30 ETF - Growth Option;130.1225;03-Apr-2023
+150620;INF179KC1DL6;-;HDFC NIFTY100 QUALITY 30 ETF - Growth Option;38.3194;03-Apr-2023
+150657;INF179KC1DM4;-;HDFC NIFTY200 MOMENTUM 30 ETF - Growth Option;183.3815;03-Apr-2023
+150619;INF179KC1DK8;-;HDFC NIFTY 50 VALUE 20 ETF - Growth Option;92.2439;03-Apr-2023
+151376;-;-;HDFC S&P BSE 500 ETF - Growth Option;23.1694;03-Apr-2023
+135854;INF179KC1973;-;HDFC S&P BSE Sensex Exchange Traded Fund - Growth Plan;643.2488;03-Apr-2023
+150556;INF179KC1DI2;-;HDFC Silver ETF - Growth Option;71.6448;03-Apr-2023
+
+ICICI Prudential Mutual Fund
+
+141957;INF109KB15Y7;-;BHARAT 22 ETF;58.8696;03-Apr-2023
+151196;INF109KC18O0;-;ICICI Prudential Nifty 10 yr Benchmark G-sec ETF;210.4518;03-Apr-2023
+123004;INF109KA1962;-;ICICI Prudential Nifty 100 ETF;187.9792;03-Apr-2023
+141596;INF109KB10T8;-;ICICI Prudential Nifty 100 Low Volatility 30 ETF;140.2465;03-Apr-2023
+150455;INF109KC17C7;-;ICICI Prudential Nifty 200 Momentum 30 ETF;18.5321;03-Apr-2023
+149928;INF109KC14A8;-;ICICI Prudential Nifty 5 yr Benchmark G-SEC ETF;51.5624;03-Apr-2023
+121366;INF109K012R6;-;ICICI Prudential Nifty 50 ETF;189.3061;03-Apr-2023
+148456;INF109KC1N59;-;ICICI Prudential Nifty Alpha Low- Volatility 30 ETF;171.5780;03-Apr-2023
+149463;INF109KC1Y49;-;ICICI Prudential Nifty Auto ETF;125.4490;03-Apr-2023
+147483;INF109KC15I8;-;ICICI Prudential Nifty Bank ETF;40.8919;03-Apr-2023
+151207;INF109KC19O8;-;ICICI Prudential Nifty Commodities ETF;55.4846;03-Apr-2023
+150879;INF109KC17L8;-;ICICI Prudential Nifty Financial Services Ex-BaNk ETF;15.7966;03-Apr-2023
+149072;INF109KC1R48;-;ICICI Prudential Nifty FMCG ETF;469.7481;03-Apr-2023
+148957;INF109KC1Q72;-;ICICI Prudential Nifty Healthcare ETF;76.9744;03-Apr-2023
+149285;INF109KC1V42;-;ICICI Prudential Nifty India Consumption ETF;72.8613;03-Apr-2023
+150526;-;INF109KC16E5;ICICI Prudential Nifty Infrastructure ETF;51.9428;03-Apr-2023
+148466;INF109KC16I6;-;ICICI Prudential Nifty IT ETF;29.7679;03-Apr-2023
+147921;INF109KC1G82;-;ICICI Prudential Nifty Midcap 150 ETF;116.1592;03-Apr-2023
+144587;INF109KC1NS5;-;ICICI Prudential Nifty Next 50 ETF;39.0903;03-Apr-2023
+147530;INF109KC1E35;-;ICICI Prudential Nifty Private Bank ETF;205.8890;03-Apr-2023
+151572;INF109KC10S8;-;ICICI Prudential Nifty PSU Bank ETF;37.5470;03-Apr-2023
+139455;INF109KB1WY5;-;ICICI Prudential Nifty50 Value 20 ETF;100.2346;03-Apr-2023
+143247;INF109KC1V59;-;ICICI Prudential S&P BSE 500 ETF;24.3971;03-Apr-2023
+144947;INF109KC1KT9;-;ICICI Prudential S&P BSE Liquid Rate ETF;1000.0000;03-Apr-2023
+139519;INF109KB1XT3;-;ICICI Prudential S&P BSE Midcap Select ETF;92.7299;03-Apr-2023
+101705;INF346A01034;-;ICICI Prudential S&P BSE Sensex ETF;651.2965;03-Apr-2023
+149464;INF109KC1Y56;-;ICICI PRUDENTIAL SILVER ETF;73.2872;03-Apr-2023
+
+Indiabulls Mutual Fund
+
+147113;INF666M01FS5;-;Indiabulls Nifty50 Exchange Traded Fund;182.2584;03-Apr-2023
+
+Invesco Mutual Fund
+
+115284;INF205K01DA9;-;Invesco India Nifty 50 Exchange Traded Fund;1920.4974;03-Apr-2023
+
+Kotak Mahindra Mutual Fund
+
+150000;INF174KA1IY5;-;Kotak Nifty 100 Low Volatility 30 ETF;13.2237;03-Apr-2023
+151358;INF174KA1LV5;-;Kotak Nifty 1D Rate Liquid ETF;1000;04-Apr-2023
+112351;INF174K014P6;-;Kotak Nifty 50 ETF;185.5973;03-Apr-2023
+135744;INF174K01Z71;-;Kotak Nifty 50 Value 20 ETF - Payout of Income Distribution cum capital withdrawal option;102.1269;03-Apr-2023
+149397;INF174KA1IA5;-;Kotak Nifty Alpha 50 ETF;25.1514;03-Apr-2023
+133122;INF174K01F59;-;Kotak Nifty Bank ETF;413.8571;03-Apr-2023
+150492;INF174KA1JE5;-;Kotak Nifty India Consumption ETF;72.1104;03-Apr-2023
+148763;INF174KA1GC5;-;Kotak Nifty IT ETF;29.6285;03-Apr-2023
+149757;INF174KA1IB3;-;Kotak Nifty Midcap 50 ETF;85.5513;03-Apr-2023
+150531;INF174KA1JF2;-;Kotak Nifty MNC ETF;19.2984;03-Apr-2023
+106929;INF373I01023;-;Kotak Nifty PSU Bank ETF;372.4267;03-Apr-2023
+109010;INF174KA1JD7;-;Kotak S&P BSE Sensex ETF;62.5753;03-Apr-2023
+150948;INF174KA1KU9;-;Kotak Silver ETF;71.3751;03-Apr-2023
+
+LIC Mutual Fund
+
+136473;INF767K01PC8;-;LIC MF Nifty 100 ETF;183.5297;03-Apr-2023
+135607;INF767K01OS7;-;LIC MF Nifty 50 ETF;187.9855;03-Apr-2023
+133307;INF767K01MV5;-;LIC MF Nifty 8-13 yr G-Sec ETF;23.1183;03-Apr-2023
+135672;INF767K01OT5;-;LIC MF S & P BSE Sensex ETF;642.0393;03-Apr-2023
+
+Mirae Asset Mutual Fund
+
+149379;INF769K01HS7;-;Mirae Asset Hang Seng TECH ETF;14.9870;03-Apr-2023
+148572;INF769K01GS9;-;Mirae Asset ESG Sector Leaders ETF;28.3388;03-Apr-2023
+151604;INF769K01JU9;-;Mirae Asset Nifty 100 Low Volatility 30 ETF;130.1880;03-Apr-2023
+145633;INF769K01EG9;-;Mirae Asset Nifty 50 ETF (MAN50ETF);181.8219;03-Apr-2023
+151695;INF769K01KF8;-;Mirae Asset Nifty 8-13 yr Gsec ETF;23.7823;03-Apr-2023
+149105;INF769K01HI8;-;Mirae Asset Nifty Financial Services ETF;18.2849;03-Apr-2023
+149786;INF769K01IB1;-;Mirae Asset Nifty India Manufacturing ETF;80.4025;03-Apr-2023
+149918;INF769K01IC9;-;Mirae Asset Nifty Midcap 150 ETF Regular Growth Option;11.4534;03-Apr-2023
+147906;INF769K01FN2;-;Mirae Asset Nifty Next 50 ETF (MANxt50ETF);382.4961;03-Apr-2023
+148927;INF769K01HF4;-;Mirae Asset NYSE FANG + ETF;50.3662;03-Apr-2023
+149169;INF769K01HP3;-;Mirae Asset S&P 500 Top 50 ETF;28.7724;03-Apr-2023
+
+Motilal Oswal Mutual Fund
+
+114984;INF247L01AP3;-;Motilal Oswal Nasdaq 100 ETF (MOFN100);105.8452;03-Apr-2023
+149438;INF247L01AU3;-;Motilal Oswal Nasdaq Q50 ETF;54.1739;03-Apr-2023
+149801;INF247L01AX7;-;Motilal Oswal Nifty 200 Momentum 30 ETF;36.8255;03-Apr-2023
+148620;INF247L01AK4;-;Motilal Oswal Nifty 5 year Benchmark G-sec ETF;51.1916;03-Apr-2023
+113069;INF247L01536;-;Motilal Oswal Nifty 50 ETF;175.0040;03-Apr-2023
+114456;INF247L01023;-;Motilal Oswal Nifty Midcap 100 ETF;31.9567;03-Apr-2023
+150517;INF247L01BE5;-;Motilal Oswal SP BSE Enhanced Value ETF;48.1477;03-Apr-2023
+150445;INF247L01BB1;-;Motilal Oswal S&P BSE Healthcare ETF;22.0070;03-Apr-2023
+149921;INF247L01BA3;-;Motilal Oswal S&P BSE Low Volatility ETF;24.4585;03-Apr-2023
+150520;INF247L01BH8;-;Motilal Oswal S&P BSE Quality ETF;115.6538;03-Apr-2023
+
+Nippon India Mutual Fund
+
+140107;INF457M01133;-;CPSE ETF;40.0828;03-Apr-2023
+140095;INF204KB19I1;-;Nippon India ETF Hang Seng BeES;287.8986;03-Apr-2023
+121146;INF204K014N5;-;Nippon India ETF Nifty 100;178.8942;03-Apr-2023
+140086;INF732E01037;-;Nippon India ETF Nifty 1D Rate Liquid BeES - DAILY IDCW Option;1000.0000;04-Apr-2023
+148800;INF204KC1030;-;Nippon India ETF Nifty 5 yr Benchmark G-Sec;51.3647;03-Apr-2023
+140084;INF204KB14I2;-;Nippon India ETF Nifty 50 BeES;190.3581;03-Apr-2023
+140094;INF732E01128;-;Nippon India ETF Nifty 50 Shariah BeES;393.0330;03-Apr-2023
+134782;INF204KA17D8;-;Nippon India ETF Nifty 50 Value 20;102.9751;03-Apr-2023
+139496;INF204KB1882;-;Nippon India ETF Nifty 8-13 yr G-Sec Long Term Gilt;23.4623;03-Apr-2023
+140087;INF204KB15I9;-;Nippon India ETF Nifty Bank BeES;412.9415;03-Apr-2023
+148585;INF204KB18W4;-;Nippon India ETF Nifty CPSE Bond Plus SDL Sep2024 50:50;112.0968;03-Apr-2023
+128639;INF204KA1MS3;-;Nippon India ETF Nifty Dividend Opportunities 50;48.5890;03-Apr-2023
+128331;INF204KA1LD7;-;Nippon India ETF Nifty India Consumption;78.6572;03-Apr-2023
+140102;INF732E01268;-;Nippon India ETF Nifty Infrastructure BeES;530.0483;03-Apr-2023
+148408;INF204KB15V2;-;Nippon India ETF Nifty IT;29.8268;03-Apr-2023
+146271;INF204KB1V68;-;Nippon India ETF Nifty Midcap 150;116.3550;03-Apr-2023
+140085;INF732E01045;-;Nippon India ETF Nifty Next 50 Junior BeES;400.8995;03-Apr-2023
+140089;INF204KB16I7;-;Nippon India ETF Nifty PSU Bank BeES;41.5635;03-Apr-2023
+148798;INF204KC1022;-;Nippon India ETF Nifty SDL Apr 2026 Top 20 Equal Weight;111.7934;03-Apr-2023
+131331;INF204KA1UN7;-;Nippon India ETF S&P BSE Sensex;651.4121;03-Apr-2023
+147579;INF204KB15D0;-;Nippon India ETF S&P BSE Sensex Next 50;47.4939;03-Apr-2023
+149465;INF204KC1337;-;Nippon India Nifty Auto ETF;125.5202;03-Apr-2023
+149008;INF204KC1089;-;Nippon India Nifty Pharma ETF;12.2095;03-Apr-2023
+149758;INF204KC1402;-;Nippon India Silver ETF;70.8143;03-Apr-2023
+
+Quantum Mutual Fund
+
+108479;INF082J01028;-;Quantum Nifty 50 ETF;1842.9606;03-Apr-2023
+
+SBI Mutual Fund
+
+139430;INF200KA1JT1;-;SBI Nifty 10 yr Benchmark G-Sec ETF;209.7024;03-Apr-2023
+145648;INF200KA1WX6;-;SBI Nifty 200 Quality 30 ETF;148.0047;03-Apr-2023
+135106;INF200KA1FS1;-;SBI Nifty 50 ETF;179.9881;03-Apr-2023
+134008;INF200KA1580;-;SBI Nifty Bank ETF;409.5372;03-Apr-2023
+149041;INF200KA1X17;-;SBI Nifty Consumption ETF;72.7521;03-Apr-2023
+148542;INF200KA1S14;-;SBI Nifty IT ETF;297.8467;03-Apr-2023
+134013;INF200KA1598;-;SBI Nifty Next 50 ETF;396.8238;03-Apr-2023
+148541;INF200KA1S22;-;SBI Nifty Private Bank ETF;208.2505;03-Apr-2023
+134014;INF200KA1572;-;SBI S&P BSE 100 ETF;188.3989;03-Apr-2023
+121109;INF200K01VT2;-;SBI S&P BSE SENSEX ETF;632.2208;03-Apr-2023
+144916;INF200KA1VQ2;-;SBI S&P BSE Sensex Next 50 ETF;484.2131;03-Apr-2023
+
+Tata Mutual Fund
+
+145801;INF277K015R5;-;Tata Nifty 50 Exchange Traded Fund;182.3395;03-Apr-2023
+149959;INF277KA1364;-;Tata Nifty India Digital Exchange Traded Fund;52.3973;03-Apr-2023
+147614;INF277K010X4;-;Tata Nifty Private Bank Exchange Traded Fund;210.9045;03-Apr-2023
+
+UTI Mutual Fund
+
+141665;INF789F1AUW9;-;UTI Nifty Next 50 Exchange Traded Fund;39.9152;03-Apr-2023
+146388;INF789F1AUU3;-;UTI - S&P BSE Sensex Next 50 Exchange Traded Fund;48.2064;03-Apr-2023
+135320;INF789FB1X41;-;UTI Nifty 50 ETF;1852.7469;03-Apr-2023
+148173;INF789F1AUV1;-;UTI Nifty Bank ETF;41.1651;03-Apr-2023
+135321;INF789FB1X58;-;UTI S&P BSE Sensex ETF;628.2779;03-Apr-2023
