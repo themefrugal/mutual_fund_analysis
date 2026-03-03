@@ -522,8 +522,8 @@ with tab_stp:
         var_name='component', value_name='value'
     )
     df_val_long['component'] = df_val_long['component'].map({
-        'value_src': f'Source ({stp_source_name[:30]})',
-        'value_tgt': f'Target ({sel_name[:30]})',
+        'value_src': f'Source ({stp_source_name})',
+        'value_tgt': f'Target ({sel_name})',
         'total_value': 'Total Portfolio'
     })
     fig_stp1 = px.line(df_val_long, x='date', y='value', color='component')
