@@ -9,6 +9,7 @@ import pandas as pd
 import urllib.request, json
 import plotly_express as px
 import plotly.figure_factory as ff
+import plotly.graph_objects as go
 import streamlit as st
 import numpy as np
 from pyxirr import xirr
@@ -98,8 +99,11 @@ sel_code = df_mfs[df_mfs['schemeName'] == sel_name].schemeCode.to_list()[0]
 
 df_navs = get_nav(str(sel_code))
 with tab_nav:
-    fig1 = px.line(df_navs, x='date', y='nav', log_y=True)
     sub_name = ": " + sel_name if False else ""
+    st.write('NAV Data')
+    st.dataframe(df_navs, use_container_width=True)
+    nav_log_y = st.checkbox('Log Y-Axis', value=True, key='nav_log_y')
+    fig1 = px.line(df_navs, x='date', y='nav', log_y=nav_log_y)
     st.write('NAV Chart' + sub_name)
     st.plotly_chart(fig1)
 
@@ -110,6 +114,8 @@ with tab_cagr:
         df_cagr = get_cagr(df_navs, y)
         list_cagr.append(df_cagr)
     df_cagrs = pd.concat(list_cagr)
+    st.write('CAGR Data')
+    st.dataframe(df_cagrs, use_container_width=True)
     st.write('CAGR Chart' + sub_name)
     fig2 = px.line(df_cagrs, x='date', y='cagr', color='years')
     st.plotly_chart(fig2)
@@ -119,6 +125,36 @@ with tab_cagr:
     dfx.columns = [[a for (a, b) in dfx.columns][0]] + [a for a in dfx.columns.droplevel()][1:]
     st.write('CAGR - Min, Median and Max')
     st.write(dfx)
+
+    df_yield = df_cagrs.groupby('years')['cagr'].agg(['min', 'max']).reset_index()
+    df_yield_long = pd.melt(df_yield, id_vars='years', value_vars=['min', 'max'], var_name='stat', value_name='cagr')
+    fig_yield = px.line(df_yield_long, x='years', y='cagr', color='stat', markers=True)
+    st.write('Equity Yield Curve (Min/Max CAGR by Holding Period)')
+    st.plotly_chart(fig_yield)
+
+    hist_data = [df_cagrs[df_cagrs['years'] == y]['cagr'].dropna().values for y in range(1, 11)]
+    group_labels = [f'{y}Y' for y in range(1, 11)]
+    fig_density = ff.create_distplot(hist_data, group_labels, show_hist=False, show_rug=False)
+    st.write('CAGR Distribution (Density)')
+    st.plotly_chart(fig_density)
+
+    sel_year_hist = st.selectbox('Year for Histogram:', list(range(1, 11)), index=0)
+    df_hist = df_cagrs[df_cagrs['years'] == sel_year_hist]['cagr'].dropna()
+    mean_v, median_v = df_hist.mean(), df_hist.median()
+    p25, p75 = df_hist.quantile(0.25), df_hist.quantile(0.75)
+    min_v, max_v = df_hist.min(), df_hist.max()
+    fig_hist = go.Figure(go.Histogram(x=df_hist, nbinsx=50))
+    for val, color, label, dash in [
+        (mean_v, "black", "Mean", "dash"),
+        (median_v, "red", "Median", "dash"),
+        (p25, "blue", "P25", "dot"),
+        (p75, "blue", "P75", "dot"),
+        (min_v, "black", "Min", "solid"),
+        (max_v, "black", "Max", "solid"),
+    ]:
+        fig_hist.add_vline(x=val, line_dash=dash, line_color=color, annotation_text=label)
+    st.write(f'CAGR Histogram ({sel_year_hist}Y)')
+    st.plotly_chart(fig_hist)
 
 with tab_comp:
     # Comparisons with other mutual funds
@@ -187,13 +223,17 @@ with tab_comp:
     min_date = df_navs_date['date'].min()
     max_date = df_navs_date['date'].max()
     st.write('Cumulative Returns Comparisons')
-    from_date = st.date_input('From Date:', value=min_date, min_value=min_date, max_value=max_date)
+    col1_cr, col2_cr = st.columns(2)
+    with col1_cr:
+        from_date = st.date_input('From Date:', value=min_date, min_value=min_date, max_value=max_date)
+    with col2_cr:
+        cumr_log_y = st.checkbox('Log Y-Axis', value=True, key='cumr_log_y')
     df_nav_all = df_navs_date[df_navs_date['date'] >= np.datetime64(from_date)].set_index('date')
 
     df_rebased = df_nav_all.div(df_nav_all.iloc[0]).reset_index()
     df_rebased_long = pd.melt(df_rebased, id_vars='date', value_vars=all_names, var_name='mf', value_name='nav')
 
-    fig3 = px.line(df_rebased_long, x='date', y='nav', log_y=True, color='mf')
+    fig3 = px.line(df_rebased_long, x='date', y='nav', log_y=cumr_log_y, color='mf')
     fig3.update_layout(legend=dict(yanchor="bottom", y=-0.7, xanchor="left", x=0))
     st.plotly_chart(fig3)
 
@@ -213,6 +253,28 @@ with tab_comp:
     fig5 = px.line(df_rebased_long, x="date", y="draw_down", color="mf")
     fig5.update_layout(legend=dict(yanchor="bottom", y=-0.7, xanchor="left", x=0))
     st.plotly_chart(fig5)
+
+    st.write('Comparative Growth — Value of Rs 1000 Invested')
+    col1_g, col2_g = st.columns(2)
+    with col1_g:
+        sel_year_growth = st.number_input('Holding Period (Years):', value=5, min_value=1, max_value=10, step=1, key='growth_year')
+    with col2_g:
+        log_growth = st.checkbox("Log Y-axis", value=False, key='growth_log')
+    list_growth = []
+    for name in all_names:
+        code = df_mfs[df_mfs['schemeName'] == name].schemeCode.to_list()[0]
+        df_nav_g = get_nav(str(code))
+        df_g = df_nav_g.copy()
+        df_g['prev_nav'] = df_g['nav'].shift(365 * sel_year_growth)
+        df_g = df_g.dropna()
+        df_g['returns'] = df_g['nav'] / df_g['prev_nav'] - 1
+        df_g['end_value'] = 1000 * (1 + df_g['returns'])
+        df_g['fund'] = name
+        list_growth.append(df_g[['date', 'fund', 'end_value']])
+    df_growth_all = pd.concat(list_growth)
+    fig_growth = px.line(df_growth_all, x='date', y='end_value', color='fund', log_y=log_growth)
+    fig_growth.update_layout(legend=dict(yanchor="bottom", y=-0.7, xanchor="left", x=0))
+    st.plotly_chart(fig_growth)
 
 with tab_sip:
     #start_date = pd.to_datetime('2006-05-01')
