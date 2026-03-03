@@ -451,6 +451,101 @@ with tab_swp: # Still in Progress, need to refine this logic
 
     # Similarly implement a step-up swp
 with tab_stp:
-    # To do: Implementation of STP systematic transfer plan
-    st.write('STP - In Progress')
-    # A combination of SWP from one scheme and SIP into another scheme
+    st.write('Systematic Transfer Plan - Analysis')
+    st.write(f'Target Fund: **{sel_name}**')
+
+    # --- Inputs ---
+    stp_source_name = st.selectbox('Source Fund (transfer FROM):', df_mfs.schemeName.unique(), key='stp_source')
+
+    col1, col2 = st.columns(2)
+    with col1:
+        stp_inv_amount = st.number_input('Amount Invested in Source (₹):', value=100000, min_value=1000, step=10000, key='stp_inv')
+        stp_start = st.date_input('Start Date:', datetime.date(2010, 1, 1), key='stp_start')
+    with col2:
+        stp_transfer = st.number_input('Monthly Transfer Amount (₹):', value=5000, min_value=100, step=500, key='stp_transfer')
+        stp_end = st.date_input('End Date:', datetime.date(2022, 1, 1), key='stp_end')
+
+    # --- Validation ---
+    if stp_source_name == sel_name:
+        st.warning('Source and Target funds are the same. Please select a different source fund.')
+        st.stop()
+
+    # --- Data preparation ---
+    stp_source_code = df_mfs[df_mfs['schemeName'] == stp_source_name].schemeCode.to_list()[0]
+    df_src = get_nav(str(stp_source_code))
+
+    df_stp_dates = pd.DataFrame(pd.date_range(start=stp_start, end=stp_end, freq='MS'), columns=['date'])
+
+    df_src_m = df_src.merge(df_stp_dates, on='date').rename(columns={'nav': 'nav_src'})
+    df_tgt_m = df_navs.merge(df_stp_dates, on='date').rename(columns={'nav': 'nav_tgt'})
+    df_stp = df_src_m.merge(df_tgt_m, on='date')
+
+    if df_stp.empty:
+        st.error('No overlapping dates between source and target funds for the selected period. Try adjusting the dates.')
+        st.stop()
+
+    # --- Source fund (SWP side) ---
+    init_units_src = stp_inv_amount / df_stp['nav_src'].iloc[0]
+    df_stp['units_out'] = stp_transfer / df_stp['nav_src']
+    df_stp['cum_units_out'] = df_stp['units_out'].cumsum().clip(upper=init_units_src)
+    df_stp['remaining_units_src'] = (init_units_src - df_stp['cum_units_out']).clip(lower=0)
+    df_stp['value_src'] = df_stp['remaining_units_src'] * df_stp['nav_src']
+
+    # --- Target fund (SIP side) — only while source has units ---
+    df_stp['active'] = df_stp['remaining_units_src'].shift(1, fill_value=init_units_src) > 0
+    df_stp['units_in'] = (stp_transfer / df_stp['nav_tgt']).where(df_stp['active'], 0)
+    df_stp['cum_units_tgt'] = df_stp['units_in'].cumsum()
+    df_stp['value_tgt'] = df_stp['cum_units_tgt'] * df_stp['nav_tgt']
+
+    # --- Combined ---
+    df_stp['total_value'] = df_stp['value_src'] + df_stp['value_tgt']
+
+    # --- XIRR ---
+    df_xirr_stp = pd.DataFrame([
+        {'date': df_stp['date'].iloc[0],  'amount':  stp_inv_amount},
+        {'date': df_stp['date'].iloc[-1], 'amount': -df_stp['total_value'].iloc[-1]}
+    ])
+    xirr_stp = xirr(df_xirr_stp) * 100
+
+    # --- Metrics row ---
+    m1, m2, m3, m4 = st.columns(4)
+    m1.metric('XIRR (%)', f'{xirr_stp:.2f}%')
+    m2.metric('Final Source Value (₹)', f'{df_stp["value_src"].iloc[-1]:,.0f}')
+    m3.metric('Final Target Value (₹)', f'{df_stp["value_tgt"].iloc[-1]:,.0f}')
+    m4.metric('Total Portfolio Value (₹)', f'{df_stp["total_value"].iloc[-1]:,.0f}')
+
+    # --- Chart 1: Portfolio value over time ---
+    df_val_long = pd.melt(
+        df_stp[['date', 'value_src', 'value_tgt', 'total_value']],
+        id_vars='date',
+        value_vars=['value_src', 'value_tgt', 'total_value'],
+        var_name='component', value_name='value'
+    )
+    df_val_long['component'] = df_val_long['component'].map({
+        'value_src': f'Source ({stp_source_name[:30]})',
+        'value_tgt': f'Target ({sel_name[:30]})',
+        'total_value': 'Total Portfolio'
+    })
+    fig_stp1 = px.line(df_val_long, x='date', y='value', color='component')
+    fig_stp1.update_layout(legend=dict(yanchor="bottom", y=-0.5, xanchor="left", x=0))
+    st.write('Portfolio Value Over Time')
+    st.plotly_chart(fig_stp1)
+
+    # --- Chart 2: Units tracker (normalised) ---
+    df_stp['src_units_norm'] = df_stp['remaining_units_src'] / df_stp['remaining_units_src'].iloc[0]
+    max_tgt = df_stp['cum_units_tgt'].max()
+    df_stp['tgt_units_norm'] = df_stp['cum_units_tgt'] / max_tgt if max_tgt > 0 else 0
+    df_units_long = pd.melt(
+        df_stp[['date', 'src_units_norm', 'tgt_units_norm']],
+        id_vars='date',
+        value_vars=['src_units_norm', 'tgt_units_norm'],
+        var_name='component', value_name='proportion'
+    )
+    df_units_long['component'] = df_units_long['component'].map({
+        'src_units_norm': 'Source Units (depleting)',
+        'tgt_units_norm': 'Target Units (accumulating)'
+    })
+    fig_stp2 = px.line(df_units_long, x='date', y='proportion', color='component')
+    fig_stp2.update_layout(legend=dict(yanchor="bottom", y=-0.4, xanchor="left", x=0))
+    st.write('Units Tracker (Normalised)')
+    st.plotly_chart(fig_stp2)
