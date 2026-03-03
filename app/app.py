@@ -14,6 +14,9 @@ import streamlit as st
 import numpy as np
 from pyxirr import xirr
 import datetime
+import requests
+from io import BytesIO
+import re
 
 @st.cache_data
 def get_scheme_codes_old():
@@ -23,7 +26,52 @@ def get_scheme_codes_old():
     return df_mfs
 
 @st.cache_data
+def download_latest_nav():
+    url = "https://www.amfiindia.com/api/download-excel/latest-nav"
+    try:
+        response = requests.get(url, timeout=30)
+        response.raise_for_status()
+        df = pd.read_excel(BytesIO(response.content), header=None)
+        return df
+    except Exception as e:
+        print(f"Error downloading NAV from AMFI: {e}")
+        return None
+
+@st.cache_data
+def get_scheme_codes_from_amfi():
+    df = download_latest_nav()
+    if df is None:
+        return pd.DataFrame(columns=['schemeCode', 'schemeISIN', 'schemeName'])
+    list_code = []
+    for idx, row in df.iterrows():
+        row_values = [str(val) if pd.notna(val) else "" for val in row.values]
+        if all(val == "" for val in row_values):
+            continue
+        scheme_name = str(row[1]) if pd.notna(row[1]) else ""
+        scheme_isin = str(row[2]) if pd.notna(row[2]) else ""
+        scheme_isin_reinv = str(row[3]) if pd.notna(row[3]) else ""
+        is_valid_isin = scheme_isin and len(scheme_isin) > 10 and scheme_isin.startswith('INF')
+        if scheme_name.startswith(('A.', 'B.', 'C.', 'D.')) and not is_valid_isin:
+            continue
+        if is_valid_isin:
+            isin_to_use = scheme_isin
+            if not isin_to_use or len(isin_to_use) < 10:
+                if scheme_isin_reinv and len(scheme_isin_reinv) > 10:
+                    isin_to_use = scheme_isin_reinv
+            scheme_code = str(row[0]) if pd.notna(row[0]) else f"CODE_{idx}"
+            scheme_name_clean = re.sub(r'\s+', ' ', scheme_name).strip()
+            if isin_to_use and len(isin_to_use) > 10:
+                list_code.append([scheme_code, isin_to_use, scheme_name_clean])
+    df_codes = pd.DataFrame(list_code, columns=['schemeCode', 'schemeISIN', 'schemeName'])
+    df_codes = df_codes.drop_duplicates(subset=['schemeISIN'], keep='first').reset_index(drop=True)
+    return df_codes
+
+@st.cache_data
 def get_scheme_codes():
+    df = get_scheme_codes_from_amfi()
+    if not df.empty:
+        return df
+    # Fallback: read from local txt file
     with open('./data/mf_codes.txt', 'r') as fp:
         list_code = []
         line = fp.readline()
@@ -32,9 +80,7 @@ def get_scheme_codes():
             if len(words) > 5:
                 list_code.append([words[i] for i in [0, 1, 3]])
             line = fp.readline()
-
-    df_codes = pd.DataFrame(list_code)
-    df_codes.columns = ['schemeCode', 'schemeISIN', 'schemeName']
+    df_codes = pd.DataFrame(list_code, columns=['schemeCode', 'schemeISIN', 'schemeName'])
     return df_codes
 
 # @st.cache(allow_output_mutation=True)
@@ -165,6 +211,7 @@ with tab_comp:
 
     list_navs = []
     list_cagrs = []
+    list_date_markers = []
     for name in all_names:
         code = df_mfs[df_mfs['schemeName'] == name].schemeCode.to_list()[0]
         df_nav_comp = get_nav(str(code))
@@ -179,11 +226,33 @@ with tab_comp:
         df_nav_comp = df_nav_comp.rename(columns={'nav': name})
         list_navs.append(df_nav_comp)
 
+        # Drawdown recovery: find the earliest date when NAV was last at the current level
+        df_date_marker = df_nav_comp[name].reset_index()
+        df_date_marker['LatestDate'] = df_date_marker.date.max()
+        df_date_marker['LatestNAV'] = df_date_marker.loc[
+            df_date_marker['date'] == df_date_marker['LatestDate'], name]
+        df_date_marker['LatestNAV'] = df_date_marker['LatestNAV'].bfill()
+        df_date_marker['Cross'] = df_date_marker[name] > df_date_marker['LatestNAV']
+        df_marked = df_date_marker[df_date_marker['Cross']].head(1)
+        if not df_marked.empty:
+            back_to_date = pd.to_datetime(df_marked.date.values[0])
+            value_then = df_marked[name].values[0]
+            df_date_marker['BackToDate'] = back_to_date
+            df_date_marker['NAVThen'] = value_then
+            df_mark = df_date_marker[['LatestDate', 'LatestNAV', 'BackToDate', 'NAVThen']].tail(1).transpose()
+            df_mark.columns = [name]
+            list_date_markers.append(df_mark.transpose())
+
         df_cagrs_comp = df_cagrs_comp.set_index(['date', 'years'])
         df_cagrs_comp = df_cagrs_comp.rename(columns={'cagr': name})
         list_cagrs.append(df_cagrs_comp)
 
     df_nav_all = pd.concat(list_navs, axis=1).dropna()
+
+    if list_date_markers:
+        df_marker = pd.concat(list_date_markers, axis=0)
+        st.write('Drawdown Recovery — Current NAV Level Last Seen On')
+        st.dataframe(df_marker, use_container_width=True)
 
     if check_combo:
         if len(names_comp) == 0:
