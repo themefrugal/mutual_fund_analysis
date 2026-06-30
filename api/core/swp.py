@@ -61,7 +61,7 @@ def swp_analysis(
     df_navs = get_nav(scheme_code)
 
     monthly_dates = pd.DataFrame(
-        pd.date_range(start=start_date, end=end_date, freq="M"),
+        pd.date_range(start=start_date, end=end_date, freq="ME"),
         columns=["date"],
     )
 

@@ -62,7 +62,7 @@ def sip_analysis(
 
     # Monthly SIP dates (month-end)
     monthly_dates = pd.DataFrame(
-        pd.date_range(start=start_date, end=end_date, freq="M"),
+        pd.date_range(start=start_date, end=end_date, freq="ME"),
         columns=["date"],
     )
 

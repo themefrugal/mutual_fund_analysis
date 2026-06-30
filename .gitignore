@@ -1,0 +1,30 @@
+# Haskell build artifacts
+engine/dist-newstyle/
+engine/bin/*.exe
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# R
+*.RData
+*.Rhistory
+app/rsconnect/
+
+# Data files (large/generated)
+data/latestNAV_Reports.xlsx
+file_names.xlsx
+mf_aum.csv
+mf_categories.csv
+notebooks/holdings.csv
+notebooks/holdings.xlsx
+notebooks/test.csv
+notebooks/.ipynb_checkpoints/
+
+# JVM crash logs
+hs_err_pid*.log
+
+# Misc
+src/env.hist
+app/app_old.py

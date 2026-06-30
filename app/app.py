@@ -7,7 +7,7 @@
 
 import pandas as pd
 import urllib.request, json
-import plotly_express as px
+import plotly.express as px
 import plotly.figure_factory as ff
 import plotly.graph_objects as go
 import streamlit as st
@@ -17,6 +17,45 @@ import datetime
 import requests
 from io import BytesIO
 import re
+import subprocess
+import os
+
+ROLLING_XIRR_ENGINE = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), '..', 'engine', 'bin', 'rolling-sip-xirr.exe'
+)
+
+@st.cache_data
+def run_rolling_sip_xirr(df_navs, window_years, monthly_amount, step_up_pct):
+    """
+    Call the Haskell rolling-sip-xirr engine: simulates a monthly SIP over
+    every possible rolling `window_years`-long window in df_navs and returns
+    the XIRR of each window.
+
+    Returns a DataFrame with columns [startDate, endDate, xirr].
+    """
+    payload = {
+        'navs': [
+            {'date': d.strftime('%Y-%m-%d'), 'nav': float(n)}
+            for d, n in zip(df_navs['date'], df_navs['nav'])
+        ],
+        'windowYears': window_years,
+        'monthlyAmount': monthly_amount,
+        'stepUpPct': step_up_pct,
+    }
+    result = subprocess.run(
+        [ROLLING_XIRR_ENGINE],
+        input=json.dumps(payload),
+        capture_output=True,
+        text=True,
+        timeout=60,
+    )
+    if result.returncode != 0:
+        raise RuntimeError(f"rolling-sip-xirr engine failed: {result.stderr}")
+    data = json.loads(result.stdout)
+    df = pd.DataFrame(data)
+    df['startDate'] = pd.to_datetime(df['startDate'])
+    df['endDate'] = pd.to_datetime(df['endDate'])
+    return df
 
 @st.cache_data
 def get_scheme_codes_old():
@@ -86,7 +125,7 @@ def get_scheme_codes():
 # @st.cache(allow_output_mutation=True)
 @st.cache_data
 def get_nav(scheme_code = '122639'):
-    # scheme_code = '122639'
+    scheme_code = str(scheme_code).strip()
     mf_url = 'https://api.mfapi.in/mf/' + scheme_code
     with urllib.request.urlopen(mf_url) as url:
         data = json.load(url)
@@ -354,7 +393,7 @@ with tab_sip:
     with col2:
         end_date = st.date_input('End Date:', datetime.date(2022, 4, 1))
 
-    df_dates = pd.DataFrame(pd.date_range(start=start_date, end=end_date, freq='M'))
+    df_dates = pd.DataFrame(pd.date_range(start=start_date, end=end_date, freq='ME'))
     df_dates.columns = ['date']
 
     df_cf = df_navs.merge(df_dates, on='date')
@@ -403,6 +442,51 @@ with tab_sip:
     # fig7 = px.line(df_cfs, x='date', y='cum_units')
     st.plotly_chart(fig7)
 
+    st.write('---')
+    st.write('Rolling SIP XIRR Distribution')
+    st.write(
+        'For a fixed-length monthly SIP, this slides the window across the '
+        'entire NAV history and computes the XIRR of each window, showing how '
+        'returns vary depending purely on when you started.'
+    )
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        roll_window_years = st.number_input(
+            'SIP Duration (years):', value=7, min_value=1, max_value=20, step=1, key='roll_window_years')
+    with col2:
+        roll_monthly_amount = st.number_input(
+            'Monthly SIP Amount:', value=1000, min_value=100, step=100, key='roll_monthly_amount')
+    with col3:
+        roll_step_up_pct = st.number_input(
+            'Annual Step-up (%):', value=0.0, min_value=0.0, step=1.0, key='roll_step_up_pct')
+
+    if not os.path.exists(ROLLING_XIRR_ENGINE):
+        st.warning(
+            f'Rolling XIRR engine not found at {ROLLING_XIRR_ENGINE}. '
+            'Build it with `cabal build` in the engine/ directory.'
+        )
+    else:
+        try:
+            df_roll = run_rolling_sip_xirr(
+                df_navs, roll_window_years, float(roll_monthly_amount), float(roll_step_up_pct))
+            df_roll = df_roll.dropna(subset=['xirr'])
+            if df_roll.empty:
+                st.warning('No valid rolling windows found for this duration and date range.')
+            else:
+                fig8 = px.histogram(df_roll, x='xirr', nbins=40,
+                                     labels={'xirr': 'XIRR (%)'},
+                                     title=f'Distribution of {roll_window_years}-Year Rolling SIP XIRR')
+                st.plotly_chart(fig8)
+
+                fig9 = px.line(df_roll, x='startDate', y='xirr',
+                                labels={'startDate': 'SIP Start Date', 'xirr': 'XIRR (%)'},
+                                title='Rolling SIP XIRR by Start Date')
+                st.plotly_chart(fig9)
+
+                st.write(df_roll[['startDate', 'endDate', 'xirr']].describe())
+        except Exception as exc:
+            st.error(f'Rolling XIRR computation failed: {exc}')
+
 with tab_swp: # Still in Progress, need to refine this logic
     st.write('Systematic Withdrawal Plan - Analysis')
     col1, col2 = st.columns(2)
@@ -413,7 +497,7 @@ with tab_swp: # Still in Progress, need to refine this logic
         red_amount = st.number_input('Monthly Withdrawn:', value=1000, min_value=1000, step=100)
         end_date = st.date_input('End Date:', datetime.date(2022, 4, 1), key='end_date_swp')
 
-    df_dates = pd.DataFrame(pd.date_range(start=start_date, end=end_date, freq='M'))
+    df_dates = pd.DataFrame(pd.date_range(start=start_date, end=end_date, freq='ME'))
     df_dates.columns = ['date']
 
     df_cf = df_navs.merge(df_dates, on='date')
@@ -471,8 +555,8 @@ with tab_stp:
         st.stop()
 
     # --- Data preparation ---
-    stp_source_code = df_mfs[df_mfs['schemeName'] == stp_source_name].schemeCode.to_list()[0]
-    df_src = get_nav(str(stp_source_code))
+    stp_source_code = str(df_mfs[df_mfs['schemeName'] == stp_source_name].schemeCode.to_list()[0]).strip()
+    df_src = get_nav(stp_source_code)
 
     df_stp_dates = pd.DataFrame(pd.date_range(start=stp_start, end=stp_end, freq='MS'), columns=['date'])
 
