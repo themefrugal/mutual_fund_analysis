@@ -203,7 +203,7 @@ export default function SIPPage() {
                 <YAxis tick={{ fill: '#6b7280', fontSize: 10 }} tickLine={false} axisLine={{ stroke: '#1e2232' }}
                   tickFormatter={(v: number) => v >= 1_00_000 ? `₹${(v / 1_00_000).toFixed(1)}L` : `₹${(v / 1000).toFixed(0)}K`} width={65} />
                 <Tooltip contentStyle={{ background: '#0f1117', border: '1px solid #1e2232', borderRadius: 8, fontSize: 11, color: '#e2e8f0' }}
-                  formatter={(v: number) => [`₹${v?.toLocaleString('en-IN', { maximumFractionDigits: 0 })}`, undefined]} />
+                  formatter={(v) => [`₹${(v as number)?.toLocaleString('en-IN', { maximumFractionDigits: 0 })}`, undefined]} />
                 <Legend wrapperStyle={{ fontSize: 11, color: '#6b7280' }} />
                 <Area type="monotone" dataKey="invested_amount" name="Amount Invested" stroke="#6b7280"
                   fill="url(#gradInvested)" strokeWidth={1.5} dot={false} />
@@ -226,7 +226,7 @@ export default function SIPPage() {
                   <YAxis tick={{ fill: '#6b7280', fontSize: 10 }} tickLine={false} axisLine={{ stroke: '#1e2232' }}
                     tickFormatter={(v: number) => `${v.toFixed(0)}%`} width={48} />
                   <Tooltip contentStyle={{ background: '#0f1117', border: '1px solid #1e2232', borderRadius: 8, fontSize: 11, color: '#e2e8f0' }}
-                    formatter={(v: number, name: string) => [`${v?.toFixed(1)}%`, name]} />
+                    formatter={(v, name) => [`${(v as number)?.toFixed(1)}%`, name as string]} />
                   <Legend wrapperStyle={{ fontSize: 11, color: '#6b7280' }} />
                   <Line type="monotone" dataKey="invested_pct" name="Amount Invested %" stroke="#6b7280" strokeWidth={1.5} dot={false} />
                   <Line type="monotone" dataKey="units_pct" name="Units Accumulated %" stroke="#f59e0b" strokeWidth={2} dot={false} />
@@ -318,7 +318,7 @@ export default function SIPPage() {
                   <YAxis tick={{ fill: '#6b7280', fontSize: 10 }} tickLine={false}
                     axisLine={{ stroke: '#1e2232' }} width={36} />
                   <Tooltip contentStyle={{ background: '#0f1117', border: '1px solid #1e2232', borderRadius: 8, fontSize: 11, color: '#e2e8f0' }}
-                    formatter={(v: number) => [v, 'Windows']} labelFormatter={(l) => `XIRR ~${l}%`} />
+                    formatter={(v) => [v as number, 'Windows']} labelFormatter={(l) => `XIRR ~${l}%`} />
                   {hist.mean != null && (
                     <ReferenceLine x={hist.mean} stroke="#f59e0b" strokeDasharray="4 4"
                       label={{ value: 'Mean', fill: '#f59e0b', fontSize: 9 }} />
@@ -345,7 +345,7 @@ export default function SIPPage() {
                   <YAxis tick={{ fill: '#6b7280', fontSize: 10 }} tickLine={false}
                     axisLine={{ stroke: '#1e2232' }} tickFormatter={(v: number) => `${v.toFixed(0)}%`} width={48} />
                   <Tooltip contentStyle={{ background: '#0f1117', border: '1px solid #1e2232', borderRadius: 8, fontSize: 11, color: '#e2e8f0' }}
-                    formatter={(v: number) => [`${v?.toFixed(2)}%`, 'XIRR']} />
+                    formatter={(v) => [`${(v as number)?.toFixed(2)}%`, 'XIRR']} />
                   <ReferenceLine y={0} stroke="#1e2232" strokeDasharray="4 4" />
                   <Line type="monotone" dataKey="xirr" name="XIRR" stroke="#f59e0b" strokeWidth={1.5} dot={false} connectNulls />
                 </LineChart>

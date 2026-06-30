@@ -287,7 +287,7 @@ export default function ComparePage() {
                 <CartesianGrid strokeDasharray="3 3" stroke="#1e2232" />
                 <XAxis dataKey="date" {...axisProps} tickFormatter={(v: string) => v.slice(0, 7)} interval="preserveStartEnd" />
                 <YAxis {...axisProps} tickFormatter={(v: number) => `${v.toFixed(0)}%`} width={55} />
-                <Tooltip contentStyle={tooltipStyle} formatter={(v: number, name: string) => [`${v?.toFixed(2)}%`, name]} />
+                <Tooltip contentStyle={tooltipStyle} formatter={(v, name) => [`${(v as number)?.toFixed(2)}%`, name as string]} />
                 <Legend wrapperStyle={{ fontSize: 10, color: '#6b7280' }} />
                 {fundNames.map((name, i) => (
                   <Line key={name} type="monotone" dataKey={name} stroke={PALETTE[i % PALETTE.length]}
@@ -306,7 +306,7 @@ export default function ComparePage() {
                 <CartesianGrid strokeDasharray="3 3" stroke="#1e2232" />
                 <XAxis dataKey="date" {...axisProps} tickFormatter={(v: string) => v.slice(0, 7)} interval="preserveStartEnd" />
                 <YAxis {...axisProps} tickFormatter={(v: number) => `${v.toFixed(0)}%`} width={55} />
-                <Tooltip contentStyle={tooltipStyle} formatter={(v: number, name: string) => [`${v?.toFixed(2)}%`, name]} />
+                <Tooltip contentStyle={tooltipStyle} formatter={(v, name) => [`${(v as number)?.toFixed(2)}%`, name as string]} />
                 <Legend wrapperStyle={{ fontSize: 10, color: '#6b7280' }} />
                 {fundNames.map((name, i) => (
                   <Line key={name} type="monotone" dataKey={name} stroke={PALETTE[i % PALETTE.length]}
@@ -333,7 +333,7 @@ export default function ComparePage() {
                 <CartesianGrid strokeDasharray="3 3" stroke="#1e2232" />
                 <XAxis dataKey="date" {...axisProps} tickFormatter={(v: string) => v.slice(0, 7)} interval="preserveStartEnd" />
                 <YAxis {...axisProps} tickFormatter={(v: number) => `${v?.toFixed(0)}%`} width={55} />
-                <Tooltip contentStyle={tooltipStyle} formatter={(v: number, name: string) => [`${v?.toFixed(2)}%`, name]} />
+                <Tooltip contentStyle={tooltipStyle} formatter={(v, name) => [`${(v as number)?.toFixed(2)}%`, name as string]} />
                 <Legend wrapperStyle={{ fontSize: 10, color: '#6b7280' }} />
                 <ReferenceLine y={0} stroke="#1e2232" strokeDasharray="4 4" />
                 {fundNames.map((name, i) => (
@@ -364,7 +364,7 @@ export default function ComparePage() {
                 <CartesianGrid strokeDasharray="3 3" stroke="#1e2232" />
                 <XAxis dataKey="date" {...axisProps} tickFormatter={(v: string) => v.slice(0, 7)} interval="preserveStartEnd" />
                 <YAxis {...axisProps} tickFormatter={(v: number) => formatCurrency(v)} width={72} />
-                <Tooltip contentStyle={tooltipStyle} formatter={(v: number, name: string) => [formatCurrency(v), name]} />
+                <Tooltip contentStyle={tooltipStyle} formatter={(v, name) => [formatCurrency(v as number), name as string]} />
                 <Legend wrapperStyle={{ fontSize: 10, color: '#6b7280' }} />
                 <ReferenceLine y={1000} stroke="#4b5563" strokeDasharray="4 4" label={{ value: '₹1,000', fill: '#6b7280', fontSize: 9 }} />
                 {fundNames.map((name, i) => (
