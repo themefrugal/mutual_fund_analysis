@@ -13,7 +13,6 @@ import urllib.request
 import json
 from io import BytesIO
 from pathlib import Path
-from functools import lru_cache
 
 import pandas as pd
 import requests
@@ -81,24 +80,34 @@ def get_scheme_codes_from_amfi() -> pd.DataFrame:
     return df_codes
 
 
-@lru_cache(maxsize=1)
-def get_scheme_codes() -> pd.DataFrame:
-    """
-    Return a DataFrame with columns schemeCode, schemeISIN, schemeName.
-
-    Tries AMFI first; falls back to the local mf_codes.txt file.
-    """
-    df = get_scheme_codes_from_amfi()
-    if not df.empty:
-        return df
-
-    # Fallback: local txt file
+def _load_local_scheme_codes() -> pd.DataFrame:
     list_code: list[list[str]] = []
     with open(_DATA_FILE, "r") as fp:
         for line in fp:
             words = line.strip().split(";")
             if len(words) > 5:
                 list_code.append([words[i] for i in [0, 1, 3]])
+    return pd.DataFrame(list_code, columns=["schemeCode", "schemeISIN", "schemeName"])
 
-    df_codes = pd.DataFrame(list_code, columns=["schemeCode", "schemeISIN", "schemeName"])
-    return df_codes
+
+_scheme_codes_cache: pd.DataFrame | None = None
+
+
+def get_scheme_codes() -> pd.DataFrame:
+    """
+    Return a DataFrame with columns schemeCode, schemeISIN, schemeName.
+
+    Tries AMFI first; falls back to the local mf_codes.txt file.
+    Caches a non-empty result so AMFI is only hit once per process.
+    """
+    global _scheme_codes_cache
+    if _scheme_codes_cache is not None and not _scheme_codes_cache.empty:
+        return _scheme_codes_cache
+
+    df = get_scheme_codes_from_amfi()
+    if not df.empty:
+        _scheme_codes_cache = df
+        return _scheme_codes_cache
+
+    # Fallback: local txt file (not cached — always fresh if AMFI keeps failing)
+    return _load_local_scheme_codes()
