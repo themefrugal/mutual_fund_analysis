@@ -293,7 +293,7 @@ export default function CAGRPage() {
                   <YAxis tick={{ fill: '#6b7280', fontSize: 10 }} tickLine={false} axisLine={{ stroke: '#1e2232' }}
                     tickFormatter={(v: number) => `${v.toFixed(0)}%`} width={48} />
                   <Tooltip contentStyle={{ background: '#0f1117', border: '1px solid #1e2232', borderRadius: 8, fontSize: 11, color: '#e2e8f0' }}
-                    formatter={(v: number, name: string) => [`${v?.toFixed(2)}%`, name]} />
+                    formatter={(v, name) => [`${(v as number)?.toFixed(2)}%`, name]} />
                   <Legend wrapperStyle={{ fontSize: 11, color: '#6b7280' }} />
                   <ReferenceLine y={0} stroke="#1e2232" strokeDasharray="4 4" />
                   <Area type="monotone" dataKey="max" name="Max CAGR" stroke="#34d399" fill="#34d399" fillOpacity={0.15} strokeWidth={2} dot={{ r: 4 }} />
