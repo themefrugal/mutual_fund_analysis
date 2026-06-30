@@ -13,6 +13,8 @@ import {
   BarChart,
   Bar,
   ReferenceLine,
+  ComposedChart,
+  Area,
 } from 'recharts'
 import { useFund } from '@/lib/FundContext'
 import { apiCAGR, apiCAGRStats, type CAGRPoint, type CAGRStatPoint } from '@/lib/api'
@@ -276,6 +278,31 @@ export default function CAGRPage() {
               </BarChart>
             </ResponsiveContainer>
           </div>
+
+          {/* Equity Yield Curve */}
+          {stats.length > 0 && (
+            <div className="rounded-xl border border-border bg-card p-5">
+              <h2 className="text-sm font-semibold text-text mb-1">Equity Yield Curve</h2>
+              <p className="text-xs text-muted mb-4">
+                Min and max CAGR achieved across all windows, by holding period
+              </p>
+              <ResponsiveContainer width="100%" height={240}>
+                <ComposedChart data={stats.map((s) => ({ period: `${s.years}Y`, min: s.min, max: s.max, median: s.median }))}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#1e2232" />
+                  <XAxis dataKey="period" tick={{ fill: '#6b7280', fontSize: 10 }} tickLine={false} axisLine={{ stroke: '#1e2232' }} />
+                  <YAxis tick={{ fill: '#6b7280', fontSize: 10 }} tickLine={false} axisLine={{ stroke: '#1e2232' }}
+                    tickFormatter={(v: number) => `${v.toFixed(0)}%`} width={48} />
+                  <Tooltip contentStyle={{ background: '#0f1117', border: '1px solid #1e2232', borderRadius: 8, fontSize: 11, color: '#e2e8f0' }}
+                    formatter={(v: number, name: string) => [`${v?.toFixed(2)}%`, name]} />
+                  <Legend wrapperStyle={{ fontSize: 11, color: '#6b7280' }} />
+                  <ReferenceLine y={0} stroke="#1e2232" strokeDasharray="4 4" />
+                  <Area type="monotone" dataKey="max" name="Max CAGR" stroke="#34d399" fill="#34d399" fillOpacity={0.15} strokeWidth={2} dot={{ r: 4 }} />
+                  <Line type="monotone" dataKey="median" name="Median CAGR" stroke="#f59e0b" strokeWidth={2} dot={{ r: 4 }} strokeDasharray="5 3" />
+                  <Area type="monotone" dataKey="min" name="Min CAGR" stroke="#f87171" fill="#f87171" fillOpacity={0.15} strokeWidth={2} dot={{ r: 4 }} />
+                </ComposedChart>
+              </ResponsiveContainer>
+            </div>
+          )}
 
           {/* Stats Table */}
           {stats.length > 0 && (

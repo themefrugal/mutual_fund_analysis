@@ -163,7 +163,29 @@ class RollingCAGRPoint(BaseModel):
     cagr: Optional[float]
 
 
+class DrawdownRecoveryPoint(BaseModel):
+    name: str
+    latest_date: str
+    latest_nav: Optional[float]
+    last_seen_date: Optional[str]   # earliest date NAV was last at current level
+    last_seen_nav: Optional[float]
+
+
+class GrowthPoint(BaseModel):
+    date: str
+    mf: str
+    end_value: Optional[float]      # value of ₹1000 invested `holding_years` ago
+
+
+class RollingXIRRPoint(BaseModel):
+    start_date: str
+    end_date: str
+    xirr: Optional[float]
+
+
 class CompareResult(BaseModel):
     funds: list[FundSeries]
     drawdown: list[DrawdownPoint]
     rolling_cagr: list[RollingCAGRPoint]
+    drawdown_recovery: list[DrawdownRecoveryPoint]
+    growth_series: list[GrowthPoint]
