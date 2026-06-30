@@ -19,5 +19,6 @@ services:
     envVars:
       - key: NODE_VERSION
         value: 20.19.0
+      # Set this to the mf-api service URL (e.g. https://mf-api.onrender.com)
       - key: NEXT_PUBLIC_API_URL
         sync: false
