@@ -120,10 +120,39 @@ export interface RollingCAGRPoint {
   cagr: number | null
 }
 
+export interface DrawdownRecoveryPoint {
+  name: string
+  latest_date: string
+  latest_nav: number | null
+  last_seen_date: string | null
+  last_seen_nav: number | null
+}
+
+export interface GrowthPoint {
+  date: string
+  mf: string        // "{fund name}|{N}Y"
+  end_value: number | null
+}
+
+export interface RollingXIRRPoint {
+  start_date: string
+  end_date: string
+  xirr: number | null
+}
+
 export interface CompareResult {
   funds: FundSeries[]
   drawdown: DrawdownPoint[]
   rolling_cagr: RollingCAGRPoint[]
+  drawdown_recovery: DrawdownRecoveryPoint[]
+  growth_series: GrowthPoint[]
+}
+
+export interface RollingXIRRRequest {
+  scheme_code: string
+  window_years: number
+  monthly_amount: number
+  step_up_pct: number
 }
 
 // ─── Fetch helpers ────────────────────────────────────────────────────────────
@@ -161,3 +190,4 @@ export const apiSIP = (req: SIPRequest) => post<SIPResult>('/api/sip', req)
 export const apiSWP = (req: SWPRequest) => post<SWPResult>('/api/swp', req)
 export const apiSTP = (req: STPRequest) => post<STPResult>('/api/stp', req)
 export const apiCompare = (req: CompareRequest) => post<CompareResult>('/api/compare', req)
+export const apiRollingXIRR = (req: RollingXIRRRequest) => post<RollingXIRRPoint[]>('/api/sip/rolling-xirr', req)

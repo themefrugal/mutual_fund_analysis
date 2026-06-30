@@ -11,6 +11,7 @@ import numpy as np
 import pandas as pd
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
 
 from api.core.cagr import get_all_cagrs, get_cagr, get_cagr_stats
 from api.core.funds import get_scheme_codes
@@ -24,10 +25,13 @@ from api.models.schemas import (
     CompareRequest,
     CompareResult,
     DrawdownPoint,
+    DrawdownRecoveryPoint,
     FundItem,
     FundSeries,
+    GrowthPoint,
     NAVPoint,
     RollingCAGRPoint,
+    RollingXIRRPoint,
     SIPRequest,
     SIPResult,
     STPRequest,
@@ -144,6 +148,89 @@ def run_sip(req: SIPRequest):
         raise HTTPException(status_code=400, detail=str(exc)) from exc
 
 
+class _RollingXIRRRequest(BaseModel):
+    scheme_code: str
+    window_years: int = 7
+    monthly_amount: float = 1000.0
+    step_up_pct: float = 0.0
+
+
+def _solve_xirr_py(cashflows: list[tuple]) -> float | None:
+    if len(cashflows) < 2:
+        return None
+    t0 = min(d for d, _ in cashflows)
+
+    def years(d):
+        return (d - t0).days / 365.0
+
+    def npv(r):
+        return sum(cf / (1 + r) ** years(d) for d, cf in cashflows)
+
+    def npv_prime(r):
+        return sum(
+            -cf * years(d) / (1 + r) ** (years(d) + 1)
+            for d, cf in cashflows
+            if years(d) != 0
+        )
+
+    r = 0.1
+    for _ in range(100):
+        f = npv(r)
+        if abs(f) < 1e-7:
+            return r
+        fp = npv_prime(r)
+        if fp == 0 or np.isnan(fp):
+            return None
+        dr = f / fp
+        r -= dr
+        if not (-0.999999 < r < 1e6):
+            return None
+    return None
+
+
+@app.post("/api/sip/rolling-xirr", response_model=list[RollingXIRRPoint], tags=["SIP"])
+def rolling_sip_xirr(req: _RollingXIRRRequest):
+    """Compute rolling SIP XIRR across all windows of `window_years` length."""
+    _resolve_scheme_code(req.scheme_code)
+    df_navs = get_nav(req.scheme_code)
+    nav_map = {row["date"].date(): float(row["nav"]) for _, row in df_navs.iterrows()}
+
+    lo = min(nav_map)
+    hi = max(nav_map)
+
+    # Generate month-end dates
+    month_ends = pd.date_range(
+        start=pd.Timestamp(lo), end=pd.Timestamp(hi), freq="ME"
+    ).date.tolist()
+
+    num_months = req.window_years * 12
+    results: list[RollingXIRRPoint] = []
+
+    for i in range(len(month_ends) - num_months + 1):
+        window = month_ends[i : i + num_months]
+        navs = [nav_map.get(d) for d in window]
+        if any(v is None for v in navs):
+            continue
+        amounts = [
+            req.monthly_amount * ((1 + req.step_up_pct / 100) ** (idx // 12))
+            for idx in range(num_months)
+        ]
+        units = [amt / nav for amt, nav in zip(amounts, navs)]
+        final_value = sum(units) * navs[-1]
+        cashflows = [(d, -amt) for d, amt in zip(window, amounts)]
+        cashflows.append((window[-1], final_value))
+        r = _solve_xirr_py(cashflows)
+        results.append(
+            RollingXIRRPoint(
+                start_date=window[0].strftime("%Y-%m-%d"),
+                end_date=window[-1].strftime("%Y-%m-%d"),
+                xirr=_clean_float(r * 100) if r is not None else None,
+            )
+        )
+
+    return results
+
+
 @app.post("/api/swp", response_model=SWPResult, tags=["SWP"])
 def run_swp(req: SWPRequest):
     """Run a Systematic Withdrawal Plan (SWP) analysis."""
@@ -219,6 +306,7 @@ def compare_funds(req: CompareRequest):
     df_mfs = get_scheme_codes()
     list_navs: list[pd.DataFrame] = []
     fund_names: list[str] = []
+    drawdown_recovery_out: list[DrawdownRecoveryPoint] = []
 
     for code in req.scheme_codes:
         try:
@@ -230,6 +318,28 @@ def compare_funds(req: CompareRequest):
         fund_names.append(name)
         df_nav_indexed = df_nav.set_index("date").rename(columns={"nav": name})
         list_navs.append(df_nav_indexed)
+
+        # Drawdown recovery: earliest date when NAV was last at the current level
+        latest_date = df_nav["date"].max()
+        latest_nav_row = df_nav[df_nav["date"] == latest_date]
+        latest_nav = float(latest_nav_row["nav"].values[0]) if not latest_nav_row.empty else None
+        last_seen_date = None
+        last_seen_nav = None
+        if latest_nav is not None:
+            earlier = df_nav[df_nav["nav"] > latest_nav]
+            if not earlier.empty:
+                back_row = earlier.iloc[0]
+                last_seen_date = back_row["date"].strftime("%Y-%m-%d")
+                last_seen_nav = _clean_float(back_row["nav"])
+        drawdown_recovery_out.append(
+            DrawdownRecoveryPoint(
+                name=name,
+                latest_date=latest_date.strftime("%Y-%m-%d"),
+                latest_nav=_clean_float(latest_nav),
+                last_seen_date=last_seen_date,
+                last_seen_nav=last_seen_nav,
+            )
+        )
 
     df_nav_all = pd.concat(list_navs, axis=1)
     all_names = list(fund_names)
@@ -302,8 +412,30 @@ def compare_funds(req: CompareRequest):
                     )
                 )
 
+    # Comparative growth: value of ₹1000 invested N years ago (using 1Y to 10Y)
+    growth_out: list[GrowthPoint] = []
+    for name in all_names:
+        df_single = df_nav_all[[name]].reset_index().rename(columns={name: "nav"})
+        for y in range(1, 11):
+            shift = 365 * y
+            df_g = df_single.copy()
+            df_g["prev_nav"] = df_g["nav"].shift(shift)
+            df_g = df_g.dropna()
+            df_g = df_g[df_g["date"] >= from_dt]
+            for _, row in df_g.iterrows():
+                end_val = 1000.0 * row["nav"] / row["prev_nav"]
+                growth_out.append(
+                    GrowthPoint(
+                        date=row["date"].strftime("%Y-%m-%d"),
+                        mf=f"{name}|{y}Y",
+                        end_value=_clean_float(end_val),
+                    )
+                )
+
     return CompareResult(
         funds=funds_out,
         drawdown=drawdown_out,
         rolling_cagr=rolling_cagr_out,
+        drawdown_recovery=drawdown_recovery_out,
+        growth_series=growth_out,
     )
