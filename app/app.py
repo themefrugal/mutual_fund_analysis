@@ -20,19 +20,90 @@ import re
 import subprocess
 import os
 
+# Set to True to use the compiled Haskell engine (faster, Windows-only).
+# Default is False — the pure-Python path works on all platforms including Render.
+USE_HASKELL_ENGINE = False
+
 ROLLING_XIRR_ENGINE = os.path.join(
     os.path.dirname(os.path.abspath(__file__)), '..', 'engine', 'bin', 'rolling-sip-xirr.exe'
 )
 
-@st.cache_data
-def run_rolling_sip_xirr(df_navs, window_years, monthly_amount, step_up_pct):
-    """
-    Call the Haskell rolling-sip-xirr engine: simulates a monthly SIP over
-    every possible rolling `window_years`-long window in df_navs and returns
-    the XIRR of each window.
+def _month_end_dates(lo, hi):
+    """Generate month-end dates between lo and hi (inclusive), as pd.Timestamp."""
+    dates = []
+    y, m = lo.year, lo.month
+    while True:
+        end = pd.Timestamp(y, m, 1) + pd.offsets.MonthEnd(0)
+        if end > hi:
+            break
+        if end >= lo:
+            dates.append(end)
+        if m == 12:
+            y, m = y + 1, 1
+        else:
+            m += 1
+    return dates
 
-    Returns a DataFrame with columns [startDate, endDate, xirr].
-    """
+def _solve_xirr_py(cashflows):
+    """Newton-Raphson XIRR solver. cashflows = list of (date, amount)."""
+    if len(cashflows) < 2:
+        return None
+    t0 = min(d for d, _ in cashflows)
+    def years(d):
+        return (d - t0).days / 365.0
+    def npv(r):
+        return sum(cf / (1 + r) ** years(d) for d, cf in cashflows)
+    def npv_prime(r):
+        return sum(-cf * years(d) / (1 + r) ** (years(d) + 1)
+                   for d, cf in cashflows if years(d) != 0)
+    r = 0.1
+    for _ in range(100):
+        f = npv(r)
+        if abs(f) < 1e-7:
+            return r
+        fp = npv_prime(r)
+        if fp == 0 or not (fp == fp):  # guard zero / NaN
+            return None
+        dr = f / fp
+        r -= dr
+        if not (-0.999999 < r < 1e6):
+            return None
+    return None
+
+@st.cache_data
+def _run_rolling_xirr_python(df_navs, window_years, monthly_amount, step_up_pct):
+    nav_map = {row['date']: row['nav'] for _, row in df_navs[['date', 'nav']].iterrows()}
+    lo = df_navs['date'].min()
+    hi = df_navs['date'].max()
+    month_ends = _month_end_dates(lo, hi)
+    num_months = window_years * 12
+    results = []
+    for i in range(len(month_ends) - num_months + 1):
+        window = month_ends[i:i + num_months]
+        navs = [nav_map.get(d) for d in window]
+        if any(v is None for v in navs):
+            continue
+        amounts = [monthly_amount * ((1 + step_up_pct / 100) ** (idx // 12))
+                   for idx in range(num_months)]
+        units = [amt / nav for amt, nav in zip(amounts, navs)]
+        total_units = sum(units)
+        final_value = total_units * navs[-1]
+        cashflows = [(d, -amt) for d, amt in zip(window, amounts)]
+        cashflows.append((window[-1], final_value))
+        r = _solve_xirr_py(cashflows)
+        results.append({
+            'startDate': window[0],
+            'endDate': window[-1],
+            'xirr': r * 100 if r is not None else None,
+        })
+    df = pd.DataFrame(results)
+    if not df.empty:
+        df['startDate'] = pd.to_datetime(df['startDate'])
+        df['endDate'] = pd.to_datetime(df['endDate'])
+    return df
+
+@st.cache_data
+def _run_rolling_xirr_haskell(df_navs, window_years, monthly_amount, step_up_pct):
     payload = {
         'navs': [
             {'date': d.strftime('%Y-%m-%d'), 'nav': float(n)}
@@ -56,6 +127,11 @@ def run_rolling_sip_xirr(df_navs, window_years, monthly_amount, step_up_pct):
     df['startDate'] = pd.to_datetime(df['startDate'])
     df['endDate'] = pd.to_datetime(df['endDate'])
     return df
+
+def run_rolling_sip_xirr(df_navs, window_years, monthly_amount, step_up_pct):
+    if USE_HASKELL_ENGINE and os.path.exists(ROLLING_XIRR_ENGINE):
+        return _run_rolling_xirr_haskell(df_navs, window_years, monthly_amount, step_up_pct)
+    return _run_rolling_xirr_python(df_navs, window_years, monthly_amount, step_up_pct)
 
 @st.cache_data
 def get_scheme_codes_old():
@@ -460,10 +536,11 @@ with tab_sip:
         roll_step_up_pct = st.number_input(
             'Annual Step-up (%):', value=0.0, min_value=0.0, step=1.0, key='roll_step_up_pct')
 
-    if not os.path.exists(ROLLING_XIRR_ENGINE):
+    if USE_HASKELL_ENGINE and not os.path.exists(ROLLING_XIRR_ENGINE):
         st.warning(
-            f'Rolling XIRR engine not found at {ROLLING_XIRR_ENGINE}. '
-            'Build it with `cabal build` in the engine/ directory.'
+            f'Haskell engine enabled (USE_HASKELL_ENGINE=True) but binary not found at '
+            f'{ROLLING_XIRR_ENGINE}. Build it with `cabal build` in the engine/ directory, '
+            'or set USE_HASKELL_ENGINE=False to use the Python fallback.'
         )
     else:
         try:
