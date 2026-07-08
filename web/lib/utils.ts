@@ -39,3 +39,23 @@ export function gainLossClass(value: number | null | undefined): string {
   if (value === null || value === undefined) return 'text-muted'
   return (value as number) >= 0 ? 'text-gain' : 'text-loss'
 }
+
+export function matchesFundSearch(
+  query: string,
+  fund: { schemeName: string; schemeCode: string; schemeISIN: string }
+): boolean {
+  const tokens = normalizeSearch(query).split(' ').filter(Boolean)
+  if (tokens.length === 0) return true
+
+  const searchable = normalizeSearch(`${fund.schemeName} ${fund.schemeCode} ${fund.schemeISIN}`)
+  return tokens.every((token) => searchable.includes(token))
+}
+
+function normalizeSearch(value: string): string {
+  return value
+    .toLowerCase()
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()
+}

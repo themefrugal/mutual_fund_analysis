@@ -14,7 +14,7 @@ import {
 } from 'recharts'
 import { useFund } from '@/lib/FundContext'
 import { apiCompare, type CompareResult } from '@/lib/api'
-import { formatCurrency } from '@/lib/utils'
+import { formatCurrency, matchesFundSearch } from '@/lib/utils'
 import { X, Plus } from 'lucide-react'
 
 const PALETTE = ['#f59e0b', '#60a5fa', '#34d399', '#f87171', '#a78bfa', '#fb923c']
@@ -62,7 +62,7 @@ export default function ComparePage() {
         : ctxFunds
             .filter(
               (f) =>
-                f.schemeName.toLowerCase().includes(addSearch.toLowerCase()) &&
+                matchesFundSearch(addSearch, f) &&
                 !selectedCodes.includes(f.schemeCode)
             )
             .slice(0, 30),

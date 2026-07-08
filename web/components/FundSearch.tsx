@@ -5,6 +5,7 @@ import * as Dialog from '@radix-ui/react-dialog'
 import { Command } from 'cmdk'
 import { Search, X } from 'lucide-react'
 import { useFund } from '@/lib/FundContext'
+import { matchesFundSearch } from '@/lib/utils'
 
 export default function FundSearch() {
   const [open, setOpen] = useState(false)
@@ -26,19 +27,13 @@ export default function FundSearch() {
 
   useEffect(() => {
     if (open) {
-      setQuery('')
       setTimeout(() => inputRef.current?.focus(), 50)
     }
   }, [open])
 
   const filtered = query.trim()
     ? funds
-        .filter(
-          (f) =>
-            f.schemeName.toLowerCase().includes(query.toLowerCase()) ||
-            f.schemeCode.includes(query) ||
-            f.schemeISIN.toLowerCase().includes(query.toLowerCase())
-        )
+        .filter((f) => matchesFundSearch(query, f))
         .slice(0, 50)
     : funds.slice(0, 50)
 
@@ -47,11 +42,16 @@ export default function FundSearch() {
     setOpen(false)
   }
 
+  const openSearch = () => {
+    setQuery('')
+    setOpen(true)
+  }
+
   return (
     <>
       {/* Trigger button */}
       <button
-        onClick={() => setOpen(true)}
+        onClick={openSearch}
         className="w-full flex items-center gap-2 rounded-lg border border-border bg-bg px-3 py-2 text-sm text-muted hover:border-accent hover:text-text transition-colors"
       >
         <Search className="h-4 w-4 shrink-0" />
@@ -64,7 +64,10 @@ export default function FundSearch() {
       </button>
 
       {/* Dialog */}
-      <Dialog.Root open={open} onOpenChange={setOpen}>
+      <Dialog.Root open={open} onOpenChange={(nextOpen) => {
+        if (nextOpen) setQuery('')
+        setOpen(nextOpen)
+      }}>
         <Dialog.Portal>
           <Dialog.Overlay className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm" />
           <Dialog.Content
