@@ -9,21 +9,11 @@ from __future__ import annotations
 
 from datetime import date
 
-import numpy as np
 import pandas as pd
 from pyxirr import xirr as _xirr
 
+from .common import clean_float, monthly_dates, validate_positive
 from .nav import get_nav
-
-
-def _to_none_if_nan(val):
-    """Return None if val is NaN/inf, else the Python float."""
-    try:
-        if val is None or np.isnan(val) or np.isinf(val):
-            return None
-    except (TypeError, ValueError):
-        pass
-    return float(val)
 
 
 def swp_analysis(
@@ -58,17 +48,12 @@ def swp_analysis(
     }
     The series is at monthly frequency (one row per withdrawal date).
     """
+    validate_positive(initial_investment, "Initial investment")
+    validate_positive(monthly_withdrawal, "Monthly withdrawal")
+
     df_navs = get_nav(scheme_code)
-
-    monthly_dates = pd.DataFrame(
-        pd.date_range(start=start_date, end=end_date, freq="ME"),
-        columns=["date"],
-    )
-
-    if monthly_dates.empty:
-        raise ValueError("No monthly dates found in the given date range.")
-
-    df_cf = df_navs.merge(monthly_dates, on="date")
+    swp_dates = monthly_dates(start_date, end_date, "ME")
+    df_cf = df_navs.merge(swp_dates, on="date")
     if df_cf.empty:
         raise ValueError(
             "No NAV data available for the selected fund in the given date range."
@@ -76,18 +61,36 @@ def swp_analysis(
 
     df_cf = df_cf.reset_index(drop=True)
 
-    # Use the NAV on the first date to determine initial units
-    init_nav = df_cf.iloc[0]["nav"]
-    init_units = initial_investment / init_nav
+    remaining_units = initial_investment / df_cf.iloc[0]["nav"]
+    rows: list[dict] = []
+    cum_amount = 0.0
+    depleted_on = None
+    for _, row in df_cf.iterrows():
+        nav = float(row["nav"])
+        available_value = remaining_units * nav
+        actual_withdrawal = min(float(monthly_withdrawal), available_value)
+        units_out = actual_withdrawal / nav if nav > 0 else 0.0
+        remaining_units = max(remaining_units - units_out, 0.0)
+        cum_amount += actual_withdrawal
+        cur_value = remaining_units * nav
+        if depleted_on is None and remaining_units <= 1e-12:
+            depleted_on = row["date"]
+        rows.append(
+            {
+                "date": row["date"],
+                "nav": nav,
+                "inv_value": float(initial_investment),
+                "amount": actual_withdrawal,
+                "cur_units": remaining_units,
+                "cur_value": cur_value,
+                "cum_amount": cum_amount,
+                "total": cur_value + cum_amount,
+            }
+        )
+        if remaining_units <= 1e-12:
+            remaining_units = 0.0
 
-    df_cf["inv_value"] = initial_investment
-    df_cf["amount"] = monthly_withdrawal
-    df_cf["units"] = df_cf["amount"] / df_cf["nav"]
-    df_cf["cum_units"] = df_cf["units"].cumsum()
-    df_cf["cur_units"] = (init_units - df_cf["cum_units"]).clip(lower=0)
-    df_cf["cur_value"] = df_cf["cur_units"] * df_cf["nav"]
-    df_cf["cum_amount"] = df_cf["amount"].cumsum()
-    df_cf["total"] = df_cf["cur_value"] + df_cf["cum_amount"]
+    df_cf = pd.DataFrame(rows)
 
     # XIRR: initial investment out, monthly withdrawals in, remaining corpus in at end
     df_investment = df_cf[["date", "inv_value"]].head(1).copy()
@@ -103,20 +106,24 @@ def swp_analysis(
     df_irr = pd.concat([df_investment, df_redemption], ignore_index=True)
 
     try:
-        xirr_value = _xirr(df_irr[["date", "amount"]]) * 100
-        xirr_value = _to_none_if_nan(xirr_value)
+        xirr_value = clean_float(_xirr(df_irr[["date", "amount"]]) * 100)
     except Exception:
         xirr_value = None
 
     series = [
         {
             "date": row["date"].strftime("%Y-%m-%d"),
-            "inv_value": _to_none_if_nan(row["inv_value"]),
-            "cur_value": _to_none_if_nan(row["cur_value"]),
-            "cum_amount": _to_none_if_nan(row["cum_amount"]),
-            "total": _to_none_if_nan(row["total"]),
+            "inv_value": clean_float(row["inv_value"]),
+            "cur_value": clean_float(row["cur_value"]),
+            "cum_amount": clean_float(row["cum_amount"]),
+            "total": clean_float(row["total"]),
+            "withdrawal": clean_float(row["amount"]),
         }
         for _, row in df_cf.iterrows()
     ]
 
-    return {"xirr": xirr_value, "series": series}
+    return {
+        "xirr": xirr_value,
+        "series": series,
+        "depleted_on": depleted_on.strftime("%Y-%m-%d") if depleted_on is not None else None,
+    }

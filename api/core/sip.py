@@ -9,21 +9,11 @@ from __future__ import annotations
 
 from datetime import date
 
-import numpy as np
 import pandas as pd
 from pyxirr import xirr as _xirr
 
+from .common import clean_float, monthly_dates, validate_positive
 from .nav import get_nav
-
-
-def _to_none_if_nan(val):
-    """Return None if val is NaN/inf, else the Python float."""
-    try:
-        if val is None or np.isnan(val) or np.isinf(val):
-            return None
-    except (TypeError, ValueError):
-        pass
-    return float(val)
 
 
 def sip_analysis(
@@ -58,19 +48,16 @@ def sip_analysis(
     }
     The series is at daily frequency (forward-filled between SIP dates).
     """
+    validate_positive(monthly_amount, "Monthly SIP amount")
+    if step_up_pct < 0:
+        raise ValueError("Annual step-up must be zero or positive.")
+
     df_navs = get_nav(scheme_code)
 
-    # Monthly SIP dates (month-end)
-    monthly_dates = pd.DataFrame(
-        pd.date_range(start=start_date, end=end_date, freq="ME"),
-        columns=["date"],
-    )
-
-    if monthly_dates.empty:
-        raise ValueError("No monthly dates found in the given date range.")
+    sip_dates = monthly_dates(start_date, end_date, "ME")
 
     # Merge with available NAVs
-    df_cf = df_navs.merge(monthly_dates, on="date")
+    df_cf = df_navs.merge(sip_dates, on="date")
     if df_cf.empty:
         raise ValueError(
             "No NAV data available for the selected fund in the given date range."
@@ -97,8 +84,7 @@ def sip_analysis(
     df_irr = pd.concat([df_investment, df_redemption], ignore_index=True)
 
     try:
-        xirr_value = _xirr(df_irr[["date", "amount"]]) * 100
-        xirr_value = _to_none_if_nan(xirr_value)
+        xirr_value = clean_float(_xirr(df_irr[["date", "amount"]]) * 100)
     except Exception:
         xirr_value = None
 
@@ -118,9 +104,9 @@ def sip_analysis(
     series = [
         {
             "date": row["date"].strftime("%Y-%m-%d"),
-            "invested_amount": _to_none_if_nan(row["inv_amount"]),
-            "current_value": _to_none_if_nan(row["current_value"]),
-            "cum_units": _to_none_if_nan(row["cum_units"]),
+            "invested_amount": clean_float(row["inv_amount"]),
+            "current_value": clean_float(row["current_value"]),
+            "cum_units": clean_float(row["cum_units"]),
         }
         for _, row in df_daily.iterrows()
     ]

@@ -10,12 +10,15 @@ from __future__ import annotations
 
 import urllib.request
 import json
-from functools import lru_cache
+import time
 
 import pandas as pd
 
 
-@lru_cache(maxsize=256)
+_NAV_CACHE_TTL_SECONDS = 12 * 60 * 60
+_nav_cache: dict[str, tuple[float, pd.DataFrame]] = {}
+
+
 def get_nav(scheme_code: str) -> pd.DataFrame:
     """
     Fetch NAV history for *scheme_code* from mfapi.in and return a
@@ -26,9 +29,15 @@ def get_nav(scheme_code: str) -> pd.DataFrame:
         ValueError: if the scheme_code is not found or the API returns
                     no data rows.
     """
+    scheme_code = str(scheme_code).strip()
+    cached = _nav_cache.get(scheme_code)
+    now = time.time()
+    if cached is not None and now - cached[0] < _NAV_CACHE_TTL_SECONDS:
+        return cached[1].copy()
+
     mf_url = f"https://api.mfapi.in/mf/{scheme_code}"
     try:
-        with urllib.request.urlopen(mf_url) as url:
+        with urllib.request.urlopen(mf_url, timeout=30) as url:
             data = json.load(url)
     except Exception as exc:
         raise ValueError(f"Could not fetch NAV for scheme_code={scheme_code}: {exc}") from exc
@@ -49,4 +58,6 @@ def get_nav(scheme_code: str) -> pd.DataFrame:
     ).set_index("date")
 
     df_navs = df_navs.join(all_dates, how="outer").ffill().reset_index()
+    df_navs = df_navs[["date", "nav"]]
+    _nav_cache[scheme_code] = (now, df_navs.copy())
     return df_navs

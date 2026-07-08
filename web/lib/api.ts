@@ -99,6 +99,7 @@ export interface STPResult {
 export interface CompareRequest {
   scheme_codes: string[]
   from_date: string
+  // Weights for comparison funds only: scheme_codes[1:].
   combo_weights?: number[]
 }
 

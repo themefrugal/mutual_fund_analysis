@@ -53,6 +53,8 @@ export default function ComparePage() {
     return m
   }, [ctxFunds])
 
+  const comparisonCodes = useMemo(() => selectedCodes.slice(1), [selectedCodes])
+
   const filteredSearch = useMemo(
     () =>
       addSearch.trim().length < 2
@@ -82,18 +84,28 @@ export default function ComparePage() {
 
   const comboWeights = useMemo(() => {
     if (!showCombo) return undefined
-    const parsed = selectedCodes.map((c) => parseFloat(weights[c] ?? '0') || 0)
+    const parsed = comparisonCodes.map((c) => parseFloat(weights[c] ?? '0') || 0)
     const total = parsed.reduce((s, v) => s + v, 0)
     return Math.abs(total - 100) < 0.01 ? parsed : undefined
-  }, [showCombo, selectedCodes, weights])
+  }, [showCombo, comparisonCodes, weights])
 
   const weightTotal = useMemo(() => {
     if (!showCombo) return 0
-    return selectedCodes.reduce((s, c) => s + (parseFloat(weights[c] ?? '0') || 0), 0)
-  }, [showCombo, selectedCodes, weights])
+    return comparisonCodes.reduce((s, c) => s + (parseFloat(weights[c] ?? '0') || 0), 0)
+  }, [showCombo, comparisonCodes, weights])
+
+  const comboIsValid = !showCombo || (comparisonCodes.length > 0 && comboWeights !== undefined)
 
   const runCompare = useCallback(async () => {
     if (selectedCodes.length === 0) return
+    if (showCombo && comparisonCodes.length === 0) {
+      setError('Add at least one comparison fund to build a weighted combination.')
+      return
+    }
+    if (showCombo && comboWeights === undefined) {
+      setError('Weighted combination must sum to 100%.')
+      return
+    }
     setLoading(true)
     setError(null)
     try {
@@ -108,7 +120,7 @@ export default function ComparePage() {
     } finally {
       setLoading(false)
     }
-  }, [selectedCodes, fromDate, comboWeights])
+  }, [selectedCodes, fromDate, showCombo, comparisonCodes.length, comboWeights])
 
   const fundNames = result?.funds.map((f) => f.name) ?? []
 
@@ -244,31 +256,37 @@ export default function ComparePage() {
               className="accent-accent" />
             Compare against a weighted combination
           </label>
-          {showCombo && selectedCodes.length > 0 && (
+          {showCombo && (
             <div className="mt-3 space-y-2">
-              {selectedCodes.map((code) => (
-                <div key={code} className="flex items-center gap-3">
-                  <span className="text-xs text-muted w-48 truncate">{nameMap[code] ?? code}</span>
-                  <input type="number" value={weights[code] ?? ''} placeholder="0"
-                    onChange={(e) => setWeights((w) => ({ ...w, [code]: e.target.value }))}
-                    className="w-20 rounded-lg border border-border bg-bg px-2 py-1 text-sm text-text outline-none focus:border-accent" />
-                  <span className="text-xs text-muted">%</span>
-                </div>
-              ))}
-              <p className={`text-xs mt-1 ${Math.abs(weightTotal - 100) < 0.01 ? 'text-gain' : 'text-loss'}`}>
-                Total: {weightTotal.toFixed(1)}% {Math.abs(weightTotal - 100) < 0.01 ? '✓' : '(must sum to 100)'}
-              </p>
+              <p className="text-xs text-muted">Weights apply only to added comparison funds. The first selected fund is the benchmark.</p>
+              {comparisonCodes.length === 0 ? (
+                <p className="text-xs text-loss">Add at least one comparison fund.</p>
+              ) : (
+                <>
+                  {comparisonCodes.map((code) => (
+                    <div key={code} className="flex items-center gap-3">
+                      <span className="text-xs text-muted w-48 truncate">{nameMap[code] ?? code}</span>
+                      <input type="number" value={weights[code] ?? ''} placeholder="0"
+                        onChange={(e) => setWeights((w) => ({ ...w, [code]: e.target.value }))}
+                        className="w-20 rounded-lg border border-border bg-bg px-2 py-1 text-sm text-text outline-none focus:border-accent" />
+                      <span className="text-xs text-muted">%</span>
+                    </div>
+                  ))}
+                  <p className={`text-xs mt-1 ${Math.abs(weightTotal - 100) < 0.01 ? 'text-gain' : 'text-loss'}`}>
+                    Total: {weightTotal.toFixed(1)}% {Math.abs(weightTotal - 100) < 0.01 ? 'OK' : '(must sum to 100)'}
+                  </p>
+                </>
+              )}
             </div>
           )}
         </div>
-
         <div className="flex items-center gap-4 flex-wrap">
           <div className="flex items-center gap-2">
             <label className="text-xs text-muted font-medium">From date:</label>
             <input type="date" value={fromDate} onChange={(e) => setFromDate(e.target.value)}
               className="rounded-lg border border-border bg-bg px-2 py-1.5 text-sm text-text outline-none focus:border-accent" />
           </div>
-          <button onClick={runCompare} disabled={selectedCodes.length === 0 || loading}
+          <button onClick={runCompare} disabled={selectedCodes.length === 0 || loading || !comboIsValid}
             className="rounded-lg bg-accent px-4 py-1.5 text-sm font-semibold text-bg hover:bg-accent-hover disabled:opacity-50 transition-colors">
             {loading ? 'Computing…' : 'Compare'}
           </button>
@@ -415,3 +433,5 @@ export default function ComparePage() {
     </div>
   )
 }
+
+

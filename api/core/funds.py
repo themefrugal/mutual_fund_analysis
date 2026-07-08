@@ -8,14 +8,17 @@ Priority:
 
 from __future__ import annotations
 
-import re
 import urllib.request
 import json
+import re
+import time
 from io import BytesIO
 from pathlib import Path
 
 import pandas as pd
 import requests
+
+from .common import ensure_columns
 
 # Path relative to this file: api/core/funds.py → ../../data/mf_codes.txt
 _DATA_FILE = Path(__file__).resolve().parent.parent.parent / "data" / "mf_codes.txt"
@@ -42,42 +45,90 @@ def download_latest_nav() -> pd.DataFrame | None:
         return None
 
 
-def get_scheme_codes_from_amfi() -> pd.DataFrame:
-    """Parse AMFI latest-NAV Excel into a clean fund catalogue DataFrame."""
-    df = download_latest_nav()
-    if df is None:
+def parse_amfi_latest_nav(df: pd.DataFrame) -> pd.DataFrame:
+    """Parse AMFI latest-NAV rows into schemeCode/schemeISIN/schemeName."""
+    if df is None or df.empty:
         return pd.DataFrame(columns=["schemeCode", "schemeISIN", "schemeName"])
 
     list_code: list[list[str]] = []
-    for idx, row in df.iterrows():
-        row_values = [str(val) if pd.notna(val) else "" for val in row.values]
-        if all(val == "" for val in row_values):
+    for _, row in df.iterrows():
+        values = _row_values(row)
+        scheme_code = _find_scheme_code(values)
+        if scheme_code is None:
             continue
 
-        scheme_name = str(row[1]) if pd.notna(row[1]) else ""
-        scheme_isin = str(row[2]) if pd.notna(row[2]) else ""
-        scheme_isin_reinv = str(row[3]) if pd.notna(row[3]) else ""
-
-        is_valid_isin = scheme_isin and len(scheme_isin) > 10 and scheme_isin.startswith("INF")
-
-        if scheme_name.startswith(("A.", "B.", "C.", "D.")) and not is_valid_isin:
+        isin_to_use = _find_isin(values) or ""
+        scheme_name = _find_scheme_name(values, scheme_code)
+        if not scheme_name:
             continue
 
-        if is_valid_isin:
-            isin_to_use = scheme_isin
-            if not isin_to_use or len(isin_to_use) < 10:
-                if scheme_isin_reinv and len(scheme_isin_reinv) > 10:
-                    isin_to_use = scheme_isin_reinv
-
-            scheme_code = str(row[0]) if pd.notna(row[0]) else f"CODE_{idx}"
-            scheme_name_clean = re.sub(r"\s+", " ", scheme_name).strip()
-
-            if isin_to_use and len(isin_to_use) > 10:
-                list_code.append([scheme_code, isin_to_use, scheme_name_clean])
+        list_code.append([scheme_code, isin_to_use, scheme_name])
 
     df_codes = pd.DataFrame(list_code, columns=["schemeCode", "schemeISIN", "schemeName"])
-    df_codes = df_codes.drop_duplicates(subset=["schemeISIN"], keep="first").reset_index(drop=True)
+    if df_codes.empty:
+        return pd.DataFrame(columns=["schemeCode", "schemeISIN", "schemeName"])
+    df_codes = df_codes.drop_duplicates(subset=["schemeCode"], keep="first").reset_index(drop=True)
     return df_codes
+
+
+def _is_valid_isin(value: str) -> bool:
+    return isinstance(value, str) and bool(re.fullmatch(r"[A-Z]{3}[A-Z0-9]{9,}", value.strip().upper()))
+
+
+def _row_values(row: pd.Series) -> list[str]:
+    return [str(value).strip() for value in row.tolist() if pd.notna(value) and str(value).strip()]
+
+
+def _find_scheme_code(values: list[str]) -> str | None:
+    for value in values:
+        if value.isdigit():
+            return value
+    return None
+
+
+def _find_isin(values: list[str]) -> str | None:
+    for value in values:
+        clean = value.strip().upper()
+        if _is_valid_isin(clean):
+            return clean
+    return None
+
+
+def _find_scheme_name(values: list[str], scheme_code: str) -> str | None:
+    candidates = []
+    for value in values:
+        clean = " ".join(value.split())
+        if not _looks_like_scheme_name(clean, scheme_code):
+            continue
+        candidates.append(clean)
+    if not candidates:
+        return None
+    return max(candidates, key=lambda item: (len(item.split()), len(item)))
+
+
+def _looks_like_scheme_name(value: str, scheme_code: str) -> bool:
+    clean = value.strip()
+    upper = clean.upper()
+    if not clean or clean == "-" or clean == scheme_code:
+        return False
+    if clean.isdigit() or _is_valid_isin(upper):
+        return False
+    if re.fullmatch(r"\d+(\.\d+)?", clean):
+        return False
+    if re.fullmatch(r"\d{1,2}[-/][A-Za-z]{3}[-/]\d{2,4}", clean):
+        return False
+    if upper in {"N.A.", "NA", "NAN", "SCHEME NAME"}:
+        return False
+    if upper.startswith(("OPEN ENDED SCHEMES", "CLOSE ENDED SCHEMES", "INTERVAL FUND")):
+        return False
+    if not re.search(r"[A-Za-z]", clean):
+        return False
+    return " " in clean or len(clean) >= 15
+
+
+def get_scheme_codes_from_amfi() -> pd.DataFrame:
+    """Download and parse AMFI latest-NAV data."""
+    return parse_amfi_latest_nav(download_latest_nav())
 
 
 def _load_local_scheme_codes() -> pd.DataFrame:
@@ -85,12 +136,19 @@ def _load_local_scheme_codes() -> pd.DataFrame:
     with open(_DATA_FILE, "r") as fp:
         for line in fp:
             words = line.strip().split(";")
-            if len(words) > 5:
-                list_code.append([words[i] for i in [0, 1, 3]])
-    return pd.DataFrame(list_code, columns=["schemeCode", "schemeISIN", "schemeName"])
+            if len(words) > 5 and words[0].strip().isdigit():
+                scheme_code = words[0].strip()
+                isin = _find_isin([words[1], words[2]]) or ""
+                scheme_name = _find_scheme_name(words, scheme_code)
+                if scheme_name:
+                    list_code.append([scheme_code, isin, scheme_name])
+    df = pd.DataFrame(list_code, columns=["schemeCode", "schemeISIN", "schemeName"])
+    ensure_columns(df, ["schemeCode", "schemeISIN", "schemeName"])
+    return df
 
 
-_scheme_codes_cache: pd.DataFrame | None = None
+_SCHEME_CODES_CACHE_TTL_SECONDS = 12 * 60 * 60
+_scheme_codes_cache: tuple[float, pd.DataFrame] | None = None
 
 
 def get_scheme_codes() -> pd.DataFrame:
@@ -101,13 +159,18 @@ def get_scheme_codes() -> pd.DataFrame:
     Caches a non-empty result so AMFI is only hit once per process.
     """
     global _scheme_codes_cache
-    if _scheme_codes_cache is not None and not _scheme_codes_cache.empty:
-        return _scheme_codes_cache
+    now = time.time()
+    if (
+        _scheme_codes_cache is not None
+        and now - _scheme_codes_cache[0] < _SCHEME_CODES_CACHE_TTL_SECONDS
+        and not _scheme_codes_cache[1].empty
+    ):
+        return _scheme_codes_cache[1].copy()
 
     df = get_scheme_codes_from_amfi()
     if not df.empty:
-        _scheme_codes_cache = df
-        return _scheme_codes_cache
+        _scheme_codes_cache = (now, df.copy())
+        return df
 
     # Fallback: local txt file (not cached — always fresh if AMFI keeps failing)
     return _load_local_scheme_codes()

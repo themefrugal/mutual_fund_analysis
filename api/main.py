@@ -7,15 +7,16 @@ Run with:
 
 from __future__ import annotations
 
-import numpy as np
-import pandas as pd
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-from api.core.cagr import get_all_cagrs, get_cagr, get_cagr_stats
+from api.core.cagr import get_all_cagrs, get_cagr_stats
+from api.core.common import clean_float
+from api.core.compare import compare_analysis
 from api.core.funds import get_scheme_codes
 from api.core.nav import get_nav
+from api.core.rolling import rolling_sip_xirr_records
 from api.core.sip import sip_analysis
 from api.core.stp import stp_analysis
 from api.core.swp import swp_analysis
@@ -24,13 +25,8 @@ from api.models.schemas import (
     CAGRStatPoint,
     CompareRequest,
     CompareResult,
-    DrawdownPoint,
-    DrawdownRecoveryPoint,
     FundItem,
-    FundSeries,
-    GrowthPoint,
     NAVPoint,
-    RollingCAGRPoint,
     RollingXIRRPoint,
     SIPRequest,
     SIPResult,
@@ -55,23 +51,11 @@ app.add_middleware(
 )
 
 
-def _clean_float(val) -> float | None:
-    """Convert val to float, return None for NaN/inf/None."""
-    try:
-        if val is None:
-            return None
-        f = float(val)
-        if np.isnan(f) or np.isinf(f):
-            return None
-        return f
-    except (TypeError, ValueError):
-        return None
-
-
 def _resolve_scheme_code(scheme_code: str) -> str:
     """Validate scheme_code against the fund catalogue; raise 404 if absent."""
     df_mfs = get_scheme_codes()
-    if scheme_code not in df_mfs["schemeCode"].values:
+    scheme_code = str(scheme_code).strip()
+    if scheme_code not in df_mfs["schemeCode"].astype(str).values:
         raise HTTPException(
             status_code=404,
             detail=f"scheme_code not found: {scheme_code}",
@@ -95,7 +79,7 @@ def get_nav_history(scheme_code: str):
     except ValueError as exc:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
     return [
-        {"date": row["date"].strftime("%Y-%m-%d"), "nav": _clean_float(row["nav"])}
+        {"date": row["date"].strftime("%Y-%m-%d"), "nav": clean_float(row["nav"])}
         for _, row in df.iterrows()
     ]
 
@@ -112,7 +96,7 @@ def get_cagr_history(scheme_code: str):
         {
             "date": row["date"].strftime("%Y-%m-%d"),
             "years": int(row["years"]),
-            "cagr": _clean_float(row["cagr"]),
+            "cagr": clean_float(row["cagr"]),
         }
         for _, row in df.iterrows()
     ]
@@ -155,80 +139,25 @@ class _RollingXIRRRequest(BaseModel):
     step_up_pct: float = 0.0
 
 
-def _solve_xirr_py(cashflows: list[tuple]) -> float | None:
-    if len(cashflows) < 2:
-        return None
-    t0 = min(d for d, _ in cashflows)
-
-    def years(d):
-        return (d - t0).days / 365.0
-
-    def npv(r):
-        return sum(cf / (1 + r) ** years(d) for d, cf in cashflows)
-
-    def npv_prime(r):
-        return sum(
-            -cf * years(d) / (1 + r) ** (years(d) + 1)
-            for d, cf in cashflows
-            if years(d) != 0
-        )
-
-    r = 0.1
-    for _ in range(100):
-        f = npv(r)
-        if abs(f) < 1e-7:
-            return r
-        fp = npv_prime(r)
-        if fp == 0 or np.isnan(fp):
-            return None
-        dr = f / fp
-        r -= dr
-        if not (-0.999999 < r < 1e6):
-            return None
-    return None
-
-
 @app.post("/api/sip/rolling-xirr", response_model=list[RollingXIRRPoint], tags=["SIP"])
 def rolling_sip_xirr(req: _RollingXIRRRequest):
     """Compute rolling SIP XIRR across all windows of `window_years` length."""
     _resolve_scheme_code(req.scheme_code)
-    df_navs = get_nav(req.scheme_code)
-    nav_map = {row["date"].date(): float(row["nav"]) for _, row in df_navs.iterrows()}
-
-    lo = min(nav_map)
-    hi = max(nav_map)
-
-    # Generate month-end dates
-    month_ends = pd.date_range(
-        start=pd.Timestamp(lo), end=pd.Timestamp(hi), freq="ME"
-    ).date.tolist()
-
-    num_months = req.window_years * 12
-    results: list[RollingXIRRPoint] = []
-
-    for i in range(len(month_ends) - num_months + 1):
-        window = month_ends[i : i + num_months]
-        navs = [nav_map.get(d) for d in window]
-        if any(v is None for v in navs):
-            continue
-        amounts = [
-            req.monthly_amount * ((1 + req.step_up_pct / 100) ** (idx // 12))
-            for idx in range(num_months)
-        ]
-        units = [amt / nav for amt, nav in zip(amounts, navs)]
-        final_value = sum(units) * navs[-1]
-        cashflows = [(d, -amt) for d, amt in zip(window, amounts)]
-        cashflows.append((window[-1], final_value))
-        r = _solve_xirr_py(cashflows)
-        results.append(
-            RollingXIRRPoint(
-                start_date=window[0].strftime("%Y-%m-%d"),
-                end_date=window[-1].strftime("%Y-%m-%d"),
-                xirr=_clean_float(r * 100) if r is not None else None,
-            )
+    if req.window_years <= 0:
+        raise HTTPException(status_code=400, detail="window_years must be positive.")
+    if req.monthly_amount <= 0:
+        raise HTTPException(status_code=400, detail="monthly_amount must be positive.")
+    if req.step_up_pct < 0:
+        raise HTTPException(status_code=400, detail="step_up_pct must be zero or positive.")
+    try:
+        return rolling_sip_xirr_records(
+            get_nav(req.scheme_code),
+            req.window_years,
+            req.monthly_amount,
+            req.step_up_pct,
         )
-
-    return results
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
 
 
 @app.post("/api/swp", response_model=SWPResult, tags=["SWP"])
@@ -284,158 +213,16 @@ def compare_funds(req: CompareRequest):
     """
     Compare multiple funds on cumulative returns, drawdown and rolling CAGR.
 
-    If combo_weights is provided (one weight per scheme_code, summing to 100),
-    a weighted combination column is also computed and included in the response.
+    If combo_weights is provided, a weighted combination column is also included.
     """
     for code in req.scheme_codes:
         _resolve_scheme_code(code)
-
-    if req.combo_weights is not None:
-        if len(req.combo_weights) != len(req.scheme_codes):
-            raise HTTPException(
-                status_code=400,
-                detail="combo_weights length must match scheme_codes length.",
-            )
-        total_wt = sum(req.combo_weights)
-        if abs(total_wt - 100.0) > 0.01:
-            raise HTTPException(
-                status_code=400,
-                detail="combo_weights must sum to 100.0.",
-            )
-
-    df_mfs = get_scheme_codes()
-    list_navs: list[pd.DataFrame] = []
-    fund_names: list[str] = []
-    drawdown_recovery_out: list[DrawdownRecoveryPoint] = []
-
-    for code in req.scheme_codes:
-        try:
-            df_nav = get_nav(code)
-        except ValueError as exc:
-            raise HTTPException(status_code=404, detail=str(exc)) from exc
-        matches = df_mfs.loc[df_mfs["schemeCode"] == code, "schemeName"]
-        name = matches.iloc[0] if not matches.empty else code
-        fund_names.append(name)
-        df_nav_indexed = df_nav.set_index("date").rename(columns={"nav": name})
-        list_navs.append(df_nav_indexed)
-
-        # Drawdown recovery: earliest date when NAV was last at the current level
-        latest_date = df_nav["date"].max()
-        latest_nav_row = df_nav[df_nav["date"] == latest_date]
-        latest_nav = float(latest_nav_row["nav"].values[0]) if not latest_nav_row.empty else None
-        last_seen_date = None
-        last_seen_nav = None
-        if latest_nav is not None:
-            earlier = df_nav[df_nav["nav"] > latest_nav]
-            if not earlier.empty:
-                back_row = earlier.iloc[0]
-                last_seen_date = back_row["date"].strftime("%Y-%m-%d")
-                last_seen_nav = _clean_float(back_row["nav"])
-        drawdown_recovery_out.append(
-            DrawdownRecoveryPoint(
-                name=name,
-                latest_date=latest_date.strftime("%Y-%m-%d"),
-                latest_nav=_clean_float(latest_nav),
-                last_seen_date=last_seen_date,
-                last_seen_nav=last_seen_nav,
-            )
+    try:
+        return compare_analysis(
+            scheme_codes=req.scheme_codes,
+            from_date=req.from_date,
+            combo_weights=req.combo_weights,
         )
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
 
-    df_nav_all = pd.concat(list_navs, axis=1)
-    all_names = list(fund_names)
-
-    if req.combo_weights is not None:
-        for i, name in enumerate(fund_names):
-            df_nav_all[name + "_wt"] = df_nav_all[name] * req.combo_weights[i] / 100.0
-        wt_cols = [n + "_wt" for n in fund_names]
-        df_nav_all["combo"] = df_nav_all[wt_cols].sum(axis=1)
-        all_names = all_names + ["combo"]
-
-    df_nav_all = df_nav_all[all_names].dropna()
-
-    if df_nav_all.empty:
-        raise HTTPException(
-            status_code=400,
-            detail="No overlapping date range found for the selected funds.",
-        )
-
-    from_dt = pd.Timestamp(req.from_date)
-    df_nav_filtered = df_nav_all[df_nav_all.index >= from_dt]
-
-    if df_nav_filtered.empty:
-        raise HTTPException(
-            status_code=400,
-            detail="No data available for the selected funds after from_date.",
-        )
-
-    df_rebased = df_nav_filtered.div(df_nav_filtered.iloc[0])
-
-    funds_out: list[FundSeries] = []
-    for name in all_names:
-        series_data = [
-            {"date": idx.strftime("%Y-%m-%d"), "rebased_nav": _clean_float(val)}
-            for idx, val in df_rebased[name].items()
-        ]
-        funds_out.append(FundSeries(name=name, series=series_data))
-
-    df_rebased_reset = df_rebased.reset_index()
-    df_rebased_long = df_rebased_reset.melt(
-        id_vars="date", value_vars=all_names, var_name="mf", value_name="nav"
-    )
-    df_rebased_long["cum_max"] = df_rebased_long.groupby("mf")["nav"].cummax()
-    df_rebased_long["draw_down"] = (
-        df_rebased_long["nav"] - df_rebased_long["cum_max"]
-    ) / df_rebased_long["cum_max"]
-
-    drawdown_out: list[DrawdownPoint] = [
-        DrawdownPoint(
-            date=row["date"].strftime("%Y-%m-%d"),
-            mf=row["mf"],
-            draw_down=_clean_float(row["draw_down"]),
-        )
-        for _, row in df_rebased_long.iterrows()
-    ]
-
-    rolling_cagr_out: list[RollingCAGRPoint] = []
-    for name in all_names:
-        df_single = df_nav_all[[name]].reset_index().rename(columns={name: "nav"})
-        for y in range(1, 11):
-            df_cagr_y = get_cagr(df_single, y)
-            df_cagr_y = df_cagr_y[df_cagr_y["date"] >= from_dt]
-            for _, row in df_cagr_y.iterrows():
-                rolling_cagr_out.append(
-                    RollingCAGRPoint(
-                        date=row["date"].strftime("%Y-%m-%d"),
-                        years=int(row["years"]),
-                        mf=name,
-                        cagr=_clean_float(row["cagr"]),
-                    )
-                )
-
-    # Comparative growth: value of ₹1000 invested N years ago (using 1Y to 10Y)
-    growth_out: list[GrowthPoint] = []
-    for name in all_names:
-        df_single = df_nav_all[[name]].reset_index().rename(columns={name: "nav"})
-        for y in range(1, 11):
-            shift = 365 * y
-            df_g = df_single.copy()
-            df_g["prev_nav"] = df_g["nav"].shift(shift)
-            df_g = df_g.dropna()
-            df_g = df_g[df_g["date"] >= from_dt]
-            for _, row in df_g.iterrows():
-                end_val = 1000.0 * row["nav"] / row["prev_nav"]
-                growth_out.append(
-                    GrowthPoint(
-                        date=row["date"].strftime("%Y-%m-%d"),
-                        mf=f"{name}|{y}Y",
-                        end_value=_clean_float(end_val),
-                    )
-                )
-
-    return CompareResult(
-        funds=funds_out,
-        drawdown=drawdown_out,
-        rolling_cagr=rolling_cagr_out,
-        drawdown_recovery=drawdown_recovery_out,
-        growth_series=growth_out,
-    )

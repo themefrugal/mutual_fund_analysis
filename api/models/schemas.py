@@ -38,7 +38,7 @@ class STPRequest(BaseModel):
 class CompareRequest(BaseModel):
     scheme_codes: list[str]
     from_date: date
-    combo_weights: Optional[list[float]] = None  # weights for a weighted combo column
+    combo_weights: Optional[list[float]] = None  # weights for scheme_codes[1:] only
 
     @field_validator("scheme_codes")
     @classmethod
@@ -113,11 +113,13 @@ class SWPSeriesPoint(BaseModel):
     cur_value: Optional[float]
     cum_amount: Optional[float]
     total: Optional[float]
+    withdrawal: Optional[float] = None
 
 
 class SWPResult(BaseModel):
     xirr: Optional[float]
     series: list[SWPSeriesPoint]
+    depleted_on: Optional[str] = None
 
 
 # ---------------------------------------------------------------------------
@@ -131,6 +133,7 @@ class STPSeriesPoint(BaseModel):
     total_value: Optional[float]
     src_units_norm: Optional[float]
     tgt_units_norm: Optional[float]
+    transfer_amount: Optional[float] = None
 
 
 class STPResult(BaseModel):
