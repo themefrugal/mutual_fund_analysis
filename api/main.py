@@ -13,7 +13,7 @@ from pydantic import BaseModel
 
 from api.core.cagr import get_all_cagrs, get_cagr_stats
 from api.core.common import clean_float
-from api.core.compare import compare_analysis
+from api.core.compare import cached_compare_analysis
 from api.core.funds import get_scheme_codes
 from api.core.nav import get_nav
 from api.core.rolling import rolling_sip_xirr_records
@@ -61,6 +61,17 @@ def _resolve_scheme_code(scheme_code: str) -> str:
             detail=f"scheme_code not found: {scheme_code}",
         )
     return scheme_code
+
+
+def _validate_scheme_codes(scheme_codes: list[str]) -> list[str]:
+    """Validate a batch against one catalogue lookup instead of one per fund."""
+    df_mfs = get_scheme_codes()
+    known_codes = set(df_mfs["schemeCode"].astype(str))
+    resolved_codes = [str(code).strip() for code in scheme_codes]
+    missing_code = next((code for code in resolved_codes if code not in known_codes), None)
+    if missing_code is not None:
+        raise HTTPException(status_code=404, detail=f"scheme_code not found: {missing_code}")
+    return resolved_codes
 
 
 @app.get("/api/funds", response_model=list[FundItem], tags=["Funds"])
@@ -215,11 +226,10 @@ def compare_funds(req: CompareRequest):
 
     If combo_weights is provided, a weighted combination column is also included.
     """
-    for code in req.scheme_codes:
-        _resolve_scheme_code(code)
+    scheme_codes = _validate_scheme_codes(req.scheme_codes)
     try:
-        return compare_analysis(
-            scheme_codes=req.scheme_codes,
+        return cached_compare_analysis(
+            scheme_codes=scheme_codes,
             from_date=req.from_date,
             combo_weights=req.combo_weights,
         )

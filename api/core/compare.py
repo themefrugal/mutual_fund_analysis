@@ -1,7 +1,9 @@
 from __future__ import annotations
 
+from collections import OrderedDict
 from dataclasses import dataclass
 from datetime import date
+import time
 
 import pandas as pd
 
@@ -9,6 +11,11 @@ from .cagr import get_cagr
 from .common import clean_float
 from .funds import get_scheme_codes
 from .nav import get_nav
+
+
+_COMPARE_CACHE_TTL_SECONDS = 12 * 60 * 60
+_COMPARE_CACHE_MAX_ENTRIES = 64
+_compare_cache: OrderedDict[tuple[tuple[str, ...], str, tuple[float, ...] | None], tuple[float, dict]] = OrderedDict()
 
 
 @dataclass
@@ -216,6 +223,31 @@ def compare_analysis(
             for _, row in growth.iterrows()
         ],
     }
+
+
+def cached_compare_analysis(
+    scheme_codes: list[str],
+    from_date: date,
+    combo_weights: list[float] | None = None,
+) -> dict:
+    """Reuse a completed comparison while the API process remains alive."""
+    key = (
+        tuple(str(code).strip() for code in scheme_codes),
+        from_date.isoformat(),
+        tuple(float(weight) for weight in combo_weights) if combo_weights is not None else None,
+    )
+    now = time.time()
+    cached = _compare_cache.get(key)
+    if cached is not None and now - cached[0] < _COMPARE_CACHE_TTL_SECONDS:
+        _compare_cache.move_to_end(key)
+        return cached[1]
+
+    result = compare_analysis(list(key[0]), from_date, list(key[2]) if key[2] is not None else None)
+    _compare_cache[key] = (now, result)
+    _compare_cache.move_to_end(key)
+    while len(_compare_cache) > _COMPARE_CACHE_MAX_ENTRIES:
+        _compare_cache.popitem(last=False)
+    return result
 
 
 def _resolve_fund_name(df_mfs: pd.DataFrame, scheme_code: str) -> str:

@@ -173,4 +173,8 @@ def get_scheme_codes() -> pd.DataFrame:
         return df
 
     # Fallback: local txt file (not cached — always fresh if AMFI keeps failing)
-    return _load_local_scheme_codes()
+    # Cache the local fallback too, so an unavailable AMFI endpoint does not
+    # cause every request to retry the download before reading disk.
+    df = _load_local_scheme_codes()
+    _scheme_codes_cache = (now, df.copy())
+    return df

@@ -18,6 +18,8 @@ import { formatCurrency, matchesFundSearch } from '@/lib/utils'
 import { X, Plus } from 'lucide-react'
 
 const PALETTE = ['#f59e0b', '#60a5fa', '#34d399', '#f87171', '#a78bfa', '#fb923c']
+// Keeps repeated comparisons instant while this browser session is open.
+const compareResultCache = new Map<string, CompareResult>()
 
 function sample<T>(arr: T[], max: number): T[] {
   if (arr.length <= max) return arr
@@ -109,11 +111,19 @@ export default function ComparePage() {
     setLoading(true)
     setError(null)
     try {
-      const r = await apiCompare({
+      const request = {
         scheme_codes: selectedCodes,
         from_date: fromDate,
         combo_weights: comboWeights,
-      })
+      }
+      const cacheKey = JSON.stringify(request)
+      const cached = compareResultCache.get(cacheKey)
+      if (cached) {
+        setResult(cached)
+        return
+      }
+      const r = await apiCompare(request)
+      compareResultCache.set(cacheKey, r)
       setResult(r)
     } catch (e: unknown) {
       setError(e instanceof Error ? e.message : String(e))

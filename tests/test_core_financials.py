@@ -4,6 +4,7 @@ import datetime as dt
 
 import pandas as pd
 
+import api.core.compare as compare_core
 from api.core.funds import parse_amfi_latest_nav
 from api.core.compare import build_comparison_data, drawdown_long, growth_long, rebased_nav_long, rolling_cagr_long
 from api.core.rolling import rolling_sip_xirr
@@ -146,3 +147,21 @@ def test_compare_core_builds_combo_and_shared_frames(monkeypatch):
     assert drawdown["draw_down"].max() == 0.0
     assert set(cagr["mf"]) == {"Fund A", "Fund B", "combo"}
     assert set(growth["mf"]) == {"Fund A", "Fund B", "combo"}
+
+
+def test_cached_compare_analysis_reuses_identical_request(monkeypatch):
+    calls = 0
+
+    def fake_compare(scheme_codes, from_date, combo_weights=None):
+        nonlocal calls
+        calls += 1
+        return {"funds": [scheme_codes, from_date.isoformat(), combo_weights]}
+
+    monkeypatch.setattr(compare_core, "compare_analysis", fake_compare)
+    compare_core._compare_cache.clear()
+
+    first = compare_core.cached_compare_analysis(["a", "b"], dt.date(2020, 1, 1), [100])
+    second = compare_core.cached_compare_analysis(["a", "b"], dt.date(2020, 1, 1), [100.0])
+
+    assert calls == 1
+    assert second == first
