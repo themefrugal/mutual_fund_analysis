@@ -3,11 +3,20 @@ from __future__ import annotations
 import datetime as dt
 
 import pandas as pd
+import pytest
 
 import api.core.compare as compare_core
 from api.core.funds import parse_amfi_latest_nav
 from api.core.compare import build_comparison_data, drawdown_long, growth_long, rebased_nav_long, rolling_cagr_long
 from api.core.rolling import rolling_sip_xirr
+from api.core.past_forward import (
+    AnalysisConfig,
+    build_observations,
+    generate_narrative,
+    nearest_conditional_observations,
+    scatter_metric_matrices,
+    summarize_observations,
+)
 from api.core.sip import sip_analysis
 from api.core.stp import stp_analysis
 from api.core.swp import swp_analysis
@@ -165,3 +174,45 @@ def test_cached_compare_analysis_reuses_identical_request(monkeypatch):
 
     assert calls == 1
     assert second == first
+
+
+def test_past_forward_observations_calculate_complete_calendar_year_windows():
+    dates = pd.date_range("2018-01-01", "2025-12-31", freq="D")
+    # 10% annual compounding makes each annualised window exactly 10%.
+    navs = pd.DataFrame({"date": dates, "nav": 100 * (1.10 ** ((dates - dates[0]).days / 365))})
+    config = AnalysisConfig(backward_years=2, forward_years=3, frequency="Monthly")
+
+    observations, current = build_observations(navs, config)
+
+    assert not observations.empty
+    assert observations["as_of_date"].max() <= pd.Timestamp("2022-12-31")
+    assert observations["trailing_cagr"].iloc[0] == pytest.approx(10.0, abs=.02)
+    assert observations["forward_cagr"].iloc[0] == pytest.approx(10.0, abs=.02)
+    assert current == pytest.approx(10.0, abs=.02)
+
+
+def test_past_forward_summary_and_conditional_history_are_deterministic():
+    dates = pd.date_range("2010-01-01", "2025-12-31", freq="D")
+    navs = pd.DataFrame({"date": dates, "nav": 100 * (1.08 ** ((dates - dates[0]).days / 365))})
+    config = AnalysisConfig(backward_years=1, forward_years=1, frequency="Weekly")
+    observations, current = build_observations(navs, config)
+
+    summary = summarize_observations(observations, config)
+    matched, conditional = nearest_conditional_observations(observations, current or 0, 0)
+    narrative = generate_narrative(summary, conditional, config, current)
+
+    assert summary["valid_observations"] == len(observations)
+    assert summary["regression_slope"] is not None
+    assert len(matched) == conditional["matches"]
+    assert "forecast" in " ".join(narrative["conclusion"]).lower()
+
+
+def test_scatter_metric_matrices_cover_every_requested_horizon_pair():
+    dates = pd.date_range("2000-01-01", "2025-12-31", freq="D")
+    navs = pd.DataFrame({"date": dates, "nav": 100 * (1.06 ** ((dates - dates[0]).days / 365))})
+
+    matrices = scatter_metric_matrices(navs, "Monthly", False, dates.min(), dates.max())
+
+    assert matrices["Pearson correlation"].shape == (5, 10)
+    assert matrices["Fitted line equation"].shape == (5, 10)
+    assert matrices["Observation count"].at["1Y", "1Y"] != 0

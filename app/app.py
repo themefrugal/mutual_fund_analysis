@@ -4,6 +4,7 @@ import datetime as dt
 import sys
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 import plotly.express as px
 import plotly.figure_factory as ff
@@ -25,6 +26,16 @@ from api.core.compare import (  # noqa: E402
 from api.core.common import validate_date_range  # noqa: E402
 from api.core.funds import get_scheme_codes as core_get_scheme_codes  # noqa: E402
 from api.core.nav import get_nav as core_get_nav  # noqa: E402
+from api.core.past_forward import (  # noqa: E402
+    AnalysisConfig,
+    FREQUENCIES,
+    build_observations,
+    generate_narrative,
+    nearest_conditional_observations,
+    return_zones,
+    scatter_metric_matrices,
+    summarize_observations,
+)
 from api.core.rolling import rolling_sip_xirr  # noqa: E402
 from api.core.sip import sip_analysis  # noqa: E402
 from api.core.stp import stp_analysis  # noqa: E402
@@ -42,6 +53,23 @@ def get_scheme_codes() -> pd.DataFrame:
 @st.cache_data(ttl=12 * 60 * 60)
 def get_nav(scheme_code: str) -> pd.DataFrame:
     return core_get_nav(scheme_code)
+
+
+@st.cache_data(show_spinner=False)
+def get_scatter_metric_matrices(
+    df_navs: pd.DataFrame,
+    frequency: str,
+    non_overlapping: bool,
+    start_date: dt.date,
+    end_date: dt.date,
+) -> dict[str, pd.DataFrame]:
+    return scatter_metric_matrices(
+        df_navs,
+        frequency,
+        non_overlapping,
+        pd.Timestamp(start_date),
+        pd.Timestamp(end_date),
+    )
 
 
 def show_error(exc: Exception) -> None:
@@ -121,7 +149,12 @@ def render_cagr(df_navs: pd.DataFrame) -> None:
     valid_years = sorted(df_cagrs.loc[df_cagrs["cagr"].notna(), "years"].unique().tolist())
     if not valid_years:
         return
-    sel_year = st.selectbox("Year for Histogram:", valid_years, index=0)
+    sel_year = st.selectbox(
+        "Year for Histogram:",
+        valid_years,
+        index=0,
+        key="cagr_hist_year",
+    )
     df_hist = df_cagrs.loc[df_cagrs["years"] == sel_year, "cagr"].dropna()
     fig_hist = go.Figure(go.Histogram(x=df_hist, nbinsx=50))
     for val, color, label, dash in [
@@ -136,6 +169,176 @@ def render_cagr(df_navs: pd.DataFrame) -> None:
             fig_hist.add_vline(x=val, line_dash=dash, line_color=color, annotation_text=label)
     st.write(f"CAGR Histogram ({sel_year}Y)")
     st.plotly_chart(fig_hist, use_container_width=True)
+
+
+def render_past_vs_forward(df_navs: pd.DataFrame, fund_name: str) -> None:
+    """Render the dedicated within-fund trailing-versus-forward analysis."""
+    st.subheader("Past vs Forward Returns")
+    st.caption("Within-fund historical analysis. It describes previous return combinations and is not a forecast or recommendation.")
+    minimum_date, maximum_date = as_date(df_navs["date"].min()), as_date(df_navs["date"].max())
+    c1, c2, c3, c4 = st.columns(4)
+    with c1:
+        backward_years = st.selectbox("Trailing period", [1, 2, 3, 5], index=1, format_func=lambda y: f"{y} years")
+    with c2:
+        forward_years = st.selectbox("Forward period", list(range(1, 11)), index=2, format_func=lambda y: f"{y} years")
+    with c3:
+        frequency = st.selectbox("Observation frequency", list(FREQUENCIES), index=1)
+    with c4:
+        non_overlapping = st.checkbox("Use non-overlapping observations", value=False)
+    d1, d2, d3 = st.columns(3)
+    with d1:
+        start_date = st.date_input("Analysis start", value=minimum_date, min_value=minimum_date, max_value=maximum_date, key="pvf_start")
+    with d2:
+        end_date = st.date_input("Analysis end", value=maximum_date, min_value=minimum_date, max_value=maximum_date, key="pvf_end")
+    with d3:
+        hurdle_rate = st.number_input("Annual hurdle rate (%)", value=0.0, step=1.0, key="pvf_hurdle")
+    if start_date >= end_date:
+        st.warning("Analysis start must be before analysis end.")
+        return
+
+    config = AnalysisConfig(backward_years, forward_years, frequency, non_overlapping, float(hurdle_rate))
+    observations, current_trailing = build_observations(df_navs, config, pd.Timestamp(start_date), pd.Timestamp(end_date))
+    if observations.empty:
+        st.warning("No complete backward and forward return windows are available for these settings.")
+        return
+    summary = summarize_observations(observations, config)
+    st.caption(
+        "Return mode: absolute CAGR. Benchmark-relative analysis and comparison-fund overlays are unavailable because this application has no reliable benchmark-history source. "
+        "Daily observations provide the most, and most heavily overlapping, points; weekly and monthly observations reduce overlap."
+    )
+    m1, m2, m3, m4 = st.columns(4)
+    m1.metric("Valid observations", summary["valid_observations"])
+    m2.metric("Approx. independent windows", summary["approx_independent_windows"])
+    m3.metric("Median trailing CAGR", f"{summary['median_trailing']:.2f}%")
+    m4.metric("Median subsequent CAGR", f"{summary['median_forward']:.2f}%")
+    st.warning(
+        f"Overlap warning: {len(observations)} plotted observations are rolling windows. Their approximate independent-window count is "
+        f"{summary['approx_independent_windows']}; correlations and fitted lines are descriptive diagnostics only.",
+        icon="⚠️",
+    )
+    st.caption(
+        f"Eligible as-of dates run from {summary['earliest_as_of_date']} to {summary['latest_as_of_date']}. "
+        f"Recent dates are excluded because a complete {forward_years}-year forward period is not yet available."
+    )
+
+    show_zero, show_medians, show_regression = st.columns(3)
+    with show_zero:
+        zero_lines = st.checkbox("Show zero lines", value=True)
+    with show_medians:
+        median_lines = st.checkbox("Show median lines", value=False)
+    with show_regression:
+        regression_line = st.checkbox("Show fitted line", value=True)
+    fig = px.scatter(
+        observations,
+        x="trailing_cagr",
+        y="forward_cagr",
+        labels={"trailing_cagr": f"Trailing {backward_years}-year CAGR (%)", "forward_cagr": f"Subsequent {forward_years}-year CAGR (%)"},
+        custom_data=["as_of_date", "backward_start_date", "forward_end_date", "backward_start_nav", "as_of_nav", "forward_end_nav"],
+        opacity=.7,
+    )
+    fig.update_traces(
+        marker={"color": "#2563eb", "size": 8},
+        hovertemplate=(f"Fund: {fund_name}<br>As-of date: %{{customdata[0]|%Y-%m-%d}}<br>"
+            "Trailing window: %{customdata[1]|%Y-%m-%d} to %{customdata[0]|%Y-%m-%d}<br>"
+            "Trailing CAGR: %{x:.2f}%<br>Forward window: %{customdata[0]|%Y-%m-%d} to %{customdata[2]|%Y-%m-%d}<br>"
+            "Subsequent CAGR: %{y:.2f}%<br>Calendar-aligned NAVs: %{customdata[3]:.2f}, %{customdata[4]:.2f}, %{customdata[5]:.2f}<extra></extra>"),
+    )
+    if zero_lines:
+        fig.add_vline(x=0, line_dash="dash", line_color="gray")
+        fig.add_hline(y=0, line_dash="dash", line_color="gray")
+    if median_lines:
+        fig.add_vline(x=observations.trailing_cagr.median(), line_dash="dot", line_color="#f59e0b")
+        fig.add_hline(y=observations.forward_cagr.median(), line_dash="dot", line_color="#f59e0b")
+    if regression_line and summary.get("regression_slope") is not None:
+        line_x = np.linspace(observations.trailing_cagr.min(), observations.trailing_cagr.max(), 100)
+        line_y = summary["regression_intercept"] + summary["regression_slope"] * line_x
+        fig.add_scatter(x=line_x, y=line_y, mode="lines", name="Linear fit", line={"color": "#f59e0b"})
+    st.plotly_chart(fig, width="stretch")
+
+    range_min, range_max = float(observations.trailing_cagr.min()), float(observations.trailing_cagr.max())
+    if range_min < range_max:
+        _, range_column, _ = st.columns([1, 10, 1])
+        with range_column:
+            selected_range = st.slider(
+                f"Trailing {backward_years}-year CAGR range for the distribution (%)", range_min, range_max,
+                (range_min, range_max), step=max((range_max - range_min) / 100, .01), key="pvf_range",
+            )
+        distribution = observations.loc[observations.trailing_cagr.between(*selected_range), "forward_cagr"]
+    else:
+        distribution = observations.forward_cagr
+    st.write(f"Distribution of subsequent {forward_years}-year returns")
+    st.caption(f"{len(distribution):,} of {len(observations):,} plotted observations match the selected trailing-return range.")
+    distribution_fig = go.Figure(go.Histogram(x=distribution, nbinsx=50))
+    distribution_fig.update_layout(xaxis_title=f"Subsequent {forward_years}-year CAGR (%)", yaxis_title="Occurrences")
+    for value, colour, label in [(distribution.mean(), "black", "Mean"), (distribution.median(), "red", "Median")]:
+        distribution_fig.add_vline(x=value, line_dash="dash", line_color=colour, annotation_text=label)
+    st.plotly_chart(distribution_fig, width="stretch")
+
+    st.subheader("Deterministic interpretation")
+    matched, conditional = nearest_conditional_observations(observations, current_trailing if current_trailing is not None else float(observations.trailing_cagr.median()), float(hurdle_rate))
+    narrative = generate_narrative(summary, conditional, config, current_trailing)
+    for section in ["data_coverage", "relationship", "conditional_history", "limitations", "conclusion"]:
+        for sentence in narrative[section]:
+            st.write(sentence)
+
+    st.subheader("What historically followed similar trailing returns?")
+    target = st.number_input(
+        f"Trailing {backward_years}-year CAGR to compare (%)", value=float(current_trailing if current_trailing is not None else observations.trailing_cagr.median()), step=1.0,
+    )
+    matched, conditional = nearest_conditional_observations(observations, float(target), float(hurdle_rate))
+    st.caption("Historical conditional estimates from nearest within-fund observations; they are not model predictions.")
+    if not matched.empty:
+        st.dataframe(pd.DataFrame([conditional]), width="stretch")
+        st.download_button("Download matched observations CSV", matched.to_csv(index=False), "conditional-history.csv", "text/csv")
+
+    st.subheader("Return zones within this fund")
+    zoned, zone_summary = return_zones(observations, float(hurdle_rate))
+    st.dataframe(zone_summary, width="stretch")
+    st.plotly_chart(
+        px.box(
+            zoned,
+            x="zone",
+            y="forward_cagr",
+            category_orders={"zone": ["Low", "Middle", "High"]},
+            labels={"zone": "Trailing-return zone", "forward_cagr": f"Subsequent {forward_years}-year CAGR (%)"},
+        ),
+        width="stretch",
+    )
+
+    with st.expander("Detailed descriptive statistics"):
+        st.dataframe(pd.DataFrame([summary]), width="stretch")
+    st.download_button("Download observation-level CSV", observations.to_csv(index=False), "past-forward-observations.csv", "text/csv")
+    st.download_button("Download statistics CSV", pd.DataFrame([summary]).to_csv(index=False), "past-forward-statistics.csv", "text/csv")
+    with st.expander("Methodology and limitations"):
+        st.markdown(
+            f"Each point is an as-of date: its x-value is the annualised return over the preceding {backward_years} years and its y-value is the annualised return over the following {forward_years} years. "
+            "NAV history is calendar-expanded by carrying the latest published NAV through weekends and holidays. Recent as-of dates cannot appear until a complete forward window exists. "
+            "Daily, weekly, and monthly observations overlap heavily; this view is descriptive, not evidence of causation or a forecast. Benchmark-relative mode and benchmark comparisons are unavailable because this application has no reliable benchmark history source."
+        )
+
+    st.subheader("Complete scatter-derived metric tables")
+    st.caption("Rows are trailing-return horizons; columns are subsequent-return horizons. Every cell uses all complete observations from its own scatter and is independent of the selections above.")
+    matrices = get_scatter_metric_matrices(df_navs, frequency, non_overlapping, start_date, end_date)
+    table_tabs = st.tabs(["Correlation", "R-squared", "Line equation", "Observations", "Diagnostics"])
+    with table_tabs[0]:
+        st.markdown("**Pearson correlation**")
+        st.dataframe(matrices["Pearson correlation"], width="stretch")
+        st.markdown("**Spearman rank correlation**")
+        st.dataframe(matrices["Spearman correlation"], width="stretch")
+    with table_tabs[1]:
+        st.dataframe(matrices["R-squared"], width="stretch")
+    with table_tabs[2]:
+        st.caption("Each equation is `subsequent CAGR = intercept + slope × trailing CAGR`; returns are measured in percentage points.")
+        st.dataframe(matrices["Fitted line equation"], width="stretch")
+    with table_tabs[3]:
+        st.dataframe(matrices["Observation count"], width="stretch")
+    with table_tabs[4]:
+        st.markdown("**Regression slope**")
+        st.dataframe(matrices["Regression slope"], width="stretch")
+        st.markdown("**Regression intercept**")
+        st.dataframe(matrices["Regression intercept"], width="stretch")
+        st.markdown("**Residual standard error**")
+        st.dataframe(matrices["Residual standard error"], width="stretch")
 
 
 def render_comparison(df_mfs: pd.DataFrame, sel_name: str) -> None:
@@ -354,7 +557,7 @@ except Exception as exc:
 st.title(sel_name)
 page = st.radio(
     "Analysis",
-    ["Home / NAV History", "CAGR Charts", "Comparative Analysis", "SIP", "SWP", "STP"],
+    ["Home / NAV History", "CAGR Charts", "Past vs Forward Returns", "Comparative Analysis", "SIP", "SWP", "STP"],
     horizontal=True,
 )
 
@@ -362,6 +565,8 @@ if page == "Home / NAV History":
     render_nav(df_navs)
 elif page == "CAGR Charts":
     render_cagr(df_navs)
+elif page == "Past vs Forward Returns":
+    render_past_vs_forward(df_navs, sel_name)
 elif page == "Comparative Analysis":
     render_comparison(df_mfs, sel_name)
 elif page == "SIP":
