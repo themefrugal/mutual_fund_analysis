@@ -40,9 +40,14 @@ from api.core.rolling import rolling_sip_xirr  # noqa: E402
 from api.core.sip import sip_analysis  # noqa: E402
 from api.core.stp import stp_analysis  # noqa: E402
 from api.core.swp import swp_analysis  # noqa: E402
+APP_DIR = str(Path(__file__).resolve().parent)
+if APP_DIR not in sys.path:
+    sys.path.insert(0, APP_DIR)
+from presentation import PALETTE, apply_style, brand, data_table, page_header, plot_chart, section, welcome  # noqa: E402
 
 
-st.set_page_config(page_title="Mutual Fund Analysis", layout="wide")
+st.set_page_config(page_title="Mutual Fund Analysis", page_icon="◈", layout="wide")
+apply_style()
 
 
 @st.cache_data(ttl=12 * 60 * 60)
@@ -109,10 +114,14 @@ def records_to_df(records: list[dict]) -> pd.DataFrame:
 
 
 def render_nav(df_navs: pd.DataFrame) -> None:
-    st.write("NAV Data")
-    st.dataframe(df_navs, use_container_width=True)
+    section("Net asset value", "Daily NAV across the available history. Use the scale control to change the chart display.")
     nav_log_y = st.checkbox("Log Y-Axis", value=True, key="nav_log_y")
-    st.plotly_chart(px.line(df_navs, x="date", y="nav", log_y=nav_log_y), use_container_width=True)
+    plot_chart(px.line(df_navs, x="date", y="nav", log_y=nav_log_y), width="stretch")
+    with st.expander("Explore NAV data"):
+        data_table(df_navs, width="stretch", column_config={
+            "date": st.column_config.DateColumn("Date", format="DD MMM YYYY"),
+            "nav": st.column_config.NumberColumn("NAV (₹)", format="%.4f"),
+        })
 
 
 def render_cagr(df_navs: pd.DataFrame) -> None:
@@ -122,18 +131,19 @@ def render_cagr(df_navs: pd.DataFrame) -> None:
         st.warning("This fund does not have enough NAV history for CAGR analysis.")
         return
 
-    st.write("CAGR Data")
-    st.dataframe(df_cagrs, use_container_width=True)
-    st.plotly_chart(px.line(df_cagrs, x="date", y="cagr", color="years"), use_container_width=True)
+    section("Rolling CAGR", "Annualised returns across holding periods from 1 to 10 years.")
+    plot_chart(px.line(df_cagrs, x="date", y="cagr", color="years"), width="stretch")
+    with st.expander("Explore rolling CAGR data"):
+        data_table(df_cagrs, width="stretch")
 
     stats = df_cagrs.groupby("years")["cagr"].describe().reset_index()
-    st.write("CAGR - Min, Median and Max")
-    st.dataframe(stats, use_container_width=True)
+    with st.expander("CAGR statistics · minimum, median and maximum"):
+        data_table(stats, width="stretch")
 
     df_yield = df_cagrs.groupby("years")["cagr"].agg(["min", "max"]).reset_index()
     df_yield_long = pd.melt(df_yield, id_vars="years", value_vars=["min", "max"], var_name="stat", value_name="cagr")
-    st.write("Equity Yield Curve (Min/Max CAGR by Holding Period)")
-    st.plotly_chart(px.line(df_yield_long, x="years", y="cagr", color="stat", markers=True), use_container_width=True)
+    section("Returns by holding period", "Minimum and maximum CAGR for each holding period.")
+    plot_chart(px.line(df_yield_long, x="years", y="cagr", color="stat", markers=True), width="stretch")
 
     hist_data = []
     labels = []
@@ -143,8 +153,8 @@ def render_cagr(df_navs: pd.DataFrame) -> None:
             hist_data.append(values)
             labels.append(f"{y}Y")
     if hist_data:
-        st.write("CAGR Distribution (Density)")
-        st.plotly_chart(ff.create_distplot(hist_data, labels, show_hist=False, show_rug=False), use_container_width=True)
+        section("Return distributions")
+        plot_chart(ff.create_distplot(hist_data, labels, show_hist=False, show_rug=False), width="stretch")
 
     valid_years = sorted(df_cagrs.loc[df_cagrs["cagr"].notna(), "years"].unique().tolist())
     if not valid_years:
@@ -167,31 +177,32 @@ def render_cagr(df_navs: pd.DataFrame) -> None:
     ]:
         if pd.notna(val):
             fig_hist.add_vline(x=val, line_dash=dash, line_color=color, annotation_text=label)
-    st.write(f"CAGR Histogram ({sel_year}Y)")
-    st.plotly_chart(fig_hist, use_container_width=True)
+    section(f"CAGR distribution · {sel_year}-year holding period")
+    plot_chart(fig_hist, width="stretch")
 
 
 def render_past_vs_forward(df_navs: pd.DataFrame, fund_name: str) -> None:
     """Render the dedicated within-fund trailing-versus-forward analysis."""
-    st.subheader("Past vs Forward Returns")
+    section("Analysis settings")
     st.caption("Within-fund historical analysis. It describes previous return combinations and is not a forecast or recommendation.")
     minimum_date, maximum_date = as_date(df_navs["date"].min()), as_date(df_navs["date"].max())
-    c1, c2, c3, c4 = st.columns(4)
-    with c1:
-        backward_years = st.selectbox("Trailing period", [1, 2, 3, 5], index=1, format_func=lambda y: f"{y} years")
-    with c2:
-        forward_years = st.selectbox("Forward period", list(range(1, 11)), index=2, format_func=lambda y: f"{y} years")
-    with c3:
-        frequency = st.selectbox("Observation frequency", list(FREQUENCIES), index=1)
-    with c4:
-        non_overlapping = st.checkbox("Use non-overlapping observations", value=False)
-    d1, d2, d3 = st.columns(3)
-    with d1:
-        start_date = st.date_input("Analysis start", value=minimum_date, min_value=minimum_date, max_value=maximum_date, key="pvf_start")
-    with d2:
-        end_date = st.date_input("Analysis end", value=maximum_date, min_value=minimum_date, max_value=maximum_date, key="pvf_end")
-    with d3:
-        hurdle_rate = st.number_input("Annual hurdle rate (%)", value=0.0, step=1.0, key="pvf_hurdle")
+    with st.container(border=True, key="mf-panel-0"):
+        c1, c2, c3, c4 = st.columns(4)
+        with c1:
+            backward_years = st.selectbox("Trailing period", [1, 2, 3, 5], index=1, format_func=lambda y: f"{y} years")
+        with c2:
+            forward_years = st.selectbox("Forward period", list(range(1, 11)), index=2, format_func=lambda y: f"{y} years")
+        with c3:
+            frequency = st.selectbox("Observation frequency", list(FREQUENCIES), index=1)
+        with c4:
+            non_overlapping = st.checkbox("Use non-overlapping observations", value=False)
+        d1, d2, d3 = st.columns(3)
+        with d1:
+            start_date = st.date_input("Analysis start", value=minimum_date, min_value=minimum_date, max_value=maximum_date, key="pvf_start")
+        with d2:
+            end_date = st.date_input("Analysis end", value=maximum_date, min_value=minimum_date, max_value=maximum_date, key="pvf_end")
+        with d3:
+            hurdle_rate = st.number_input("Annual hurdle rate (%)", value=0.0, step=1.0, key="pvf_hurdle")
     if start_date >= end_date:
         st.warning("Analysis start must be before analysis end.")
         return
@@ -221,6 +232,7 @@ def render_past_vs_forward(df_navs: pd.DataFrame, fund_name: str) -> None:
         f"Recent dates are excluded because a complete {forward_years}-year forward period is not yet available."
     )
 
+    section("Trailing vs subsequent returns", "Each point represents one historical observation window.")
     show_zero, show_medians, show_regression = st.columns(3)
     with show_zero:
         zero_lines = st.checkbox("Show zero lines", value=True)
@@ -253,7 +265,7 @@ def render_past_vs_forward(df_navs: pd.DataFrame, fund_name: str) -> None:
         line_x = np.linspace(observations.trailing_cagr.min(), observations.trailing_cagr.max(), 100)
         line_y = summary["regression_intercept"] + summary["regression_slope"] * line_x
         fig.add_scatter(x=line_x, y=line_y, mode="lines", name="Linear fit", line={"color": "#f59e0b"})
-    st.plotly_chart(fig, width="stretch")
+    plot_chart(fig, width="stretch")
 
     range_min, range_max = float(observations.trailing_cagr.min()), float(observations.trailing_cagr.max())
     if range_min < range_max:
@@ -266,20 +278,21 @@ def render_past_vs_forward(df_navs: pd.DataFrame, fund_name: str) -> None:
         distribution = observations.loc[observations.trailing_cagr.between(*selected_range), "forward_cagr"]
     else:
         distribution = observations.forward_cagr
-    st.write(f"Distribution of subsequent {forward_years}-year returns")
+    section(f"Distribution of subsequent {forward_years}-year returns")
     st.caption(f"{len(distribution):,} of {len(observations):,} plotted observations match the selected trailing-return range.")
     distribution_fig = go.Figure(go.Histogram(x=distribution, nbinsx=50))
     distribution_fig.update_layout(xaxis_title=f"Subsequent {forward_years}-year CAGR (%)", yaxis_title="Occurrences")
     for value, colour, label in [(distribution.mean(), "black", "Mean"), (distribution.median(), "red", "Median")]:
         distribution_fig.add_vline(x=value, line_dash="dash", line_color=colour, annotation_text=label)
-    st.plotly_chart(distribution_fig, width="stretch")
+    plot_chart(distribution_fig, width="stretch")
 
-    st.subheader("Deterministic interpretation")
+    section("Historical interpretation")
     matched, conditional = nearest_conditional_observations(observations, current_trailing if current_trailing is not None else float(observations.trailing_cagr.median()), float(hurdle_rate))
     narrative = generate_narrative(summary, conditional, config, current_trailing)
-    for section in ["data_coverage", "relationship", "conditional_history", "limitations", "conclusion"]:
-        for sentence in narrative[section]:
-            st.write(sentence)
+    with st.container(border=True, key="mf-panel-1"):
+        for narrative_section in ["data_coverage", "relationship", "conditional_history", "limitations", "conclusion"]:
+            for sentence in narrative[narrative_section]:
+                st.write(sentence)
 
     st.subheader("What historically followed similar trailing returns?")
     target = st.number_input(
@@ -288,13 +301,13 @@ def render_past_vs_forward(df_navs: pd.DataFrame, fund_name: str) -> None:
     matched, conditional = nearest_conditional_observations(observations, float(target), float(hurdle_rate))
     st.caption("Historical conditional estimates from nearest within-fund observations; they are not model predictions.")
     if not matched.empty:
-        st.dataframe(pd.DataFrame([conditional]), width="stretch")
+        data_table(pd.DataFrame([conditional]), width="stretch")
         st.download_button("Download matched observations CSV", matched.to_csv(index=False), "conditional-history.csv", "text/csv")
 
     st.subheader("Return zones within this fund")
     zoned, zone_summary = return_zones(observations, float(hurdle_rate))
-    st.dataframe(zone_summary, width="stretch")
-    st.plotly_chart(
+    data_table(zone_summary, width="stretch")
+    plot_chart(
         px.box(
             zoned,
             x="zone",
@@ -306,9 +319,13 @@ def render_past_vs_forward(df_navs: pd.DataFrame, fund_name: str) -> None:
     )
 
     with st.expander("Detailed descriptive statistics"):
-        st.dataframe(pd.DataFrame([summary]), width="stretch")
-    st.download_button("Download observation-level CSV", observations.to_csv(index=False), "past-forward-observations.csv", "text/csv")
-    st.download_button("Download statistics CSV", pd.DataFrame([summary]).to_csv(index=False), "past-forward-statistics.csv", "text/csv")
+        data_table(pd.DataFrame([summary]), width="stretch")
+    section("Research data")
+    download_columns = st.columns(2)
+    with download_columns[0]:
+        st.download_button("Download observation-level CSV", observations.to_csv(index=False), "past-forward-observations.csv", "text/csv")
+    with download_columns[1]:
+        st.download_button("Download statistics CSV", pd.DataFrame([summary]).to_csv(index=False), "past-forward-statistics.csv", "text/csv")
     with st.expander("Methodology and limitations"):
         st.markdown(
             f"Each point is an as-of date: its x-value is the annualised return over the preceding {backward_years} years and its y-value is the annualised return over the following {forward_years} years. "
@@ -322,45 +339,47 @@ def render_past_vs_forward(df_navs: pd.DataFrame, fund_name: str) -> None:
     table_tabs = st.tabs(["Correlation", "R-squared", "Line equation", "Observations", "Diagnostics"])
     with table_tabs[0]:
         st.markdown("**Pearson correlation**")
-        st.dataframe(matrices["Pearson correlation"], width="stretch")
+        data_table(matrices["Pearson correlation"], width="stretch")
         st.markdown("**Spearman rank correlation**")
-        st.dataframe(matrices["Spearman correlation"], width="stretch")
+        data_table(matrices["Spearman correlation"], width="stretch")
     with table_tabs[1]:
-        st.dataframe(matrices["R-squared"], width="stretch")
+        data_table(matrices["R-squared"], width="stretch")
     with table_tabs[2]:
         st.caption("Each equation is `subsequent CAGR = intercept + slope × trailing CAGR`; returns are measured in percentage points.")
-        st.dataframe(matrices["Fitted line equation"], width="stretch")
+        data_table(matrices["Fitted line equation"], width="stretch")
     with table_tabs[3]:
-        st.dataframe(matrices["Observation count"], width="stretch")
+        data_table(matrices["Observation count"], width="stretch")
     with table_tabs[4]:
         st.markdown("**Regression slope**")
-        st.dataframe(matrices["Regression slope"], width="stretch")
+        data_table(matrices["Regression slope"], width="stretch")
         st.markdown("**Regression intercept**")
-        st.dataframe(matrices["Regression intercept"], width="stretch")
+        data_table(matrices["Regression intercept"], width="stretch")
         st.markdown("**Residual standard error**")
-        st.dataframe(matrices["Residual standard error"], width="stretch")
+        data_table(matrices["Residual standard error"], width="stretch")
 
 
 def render_comparison(df_mfs: pd.DataFrame, sel_name: str) -> None:
-    check_combo = st.checkbox("Compare against a combination of MF?", value=False)
-    names_comp = st.multiselect("Select Mutual Funds to Compare:", df_mfs.schemeName.unique(), max_selections=5)
-    all_names = [sel_name] + [name for name in names_comp if name != sel_name]
-    scheme_codes = [get_selected_code(df_mfs, name) for name in all_names]
-    weights = None
+    section("Comparison settings", "Select up to five comparison funds. The fund in the sidebar remains the base fund.")
+    with st.container(border=True, key="mf-panel-2"):
+        check_combo = st.checkbox("Compare against a combination of MF?", value=False)
+        names_comp = st.multiselect("Select Mutual Funds to Compare:", df_mfs.schemeName.unique(), max_selections=5)
+        all_names = [sel_name] + [name for name in names_comp if name != sel_name]
+        scheme_codes = [get_selected_code(df_mfs, name) for name in all_names]
+        weights = None
 
-    if check_combo:
-        if not names_comp:
-            st.warning("Select at least one comparison fund to build a weighted combo.")
-            return
-        default = ", ".join([str(round(100 / len(names_comp), 2))] * len(names_comp))
-        wt_text = st.text_input("Weightage for comparison funds only:", value=default)
-        try:
-            weights = parse_weights(wt_text, len(names_comp))
-            st.success("Weights add up to 100.0.")
-            st.caption("The selected/base fund is excluded from the combo.")
-        except ValueError as exc:
-            st.error(str(exc))
-            return
+        if check_combo:
+            if not names_comp:
+                st.warning("Select at least one comparison fund to build a weighted combo.")
+                return
+            default = ", ".join([str(round(100 / len(names_comp), 2))] * len(names_comp))
+            wt_text = st.text_input("Weightage for comparison funds only:", value=default)
+            try:
+                weights = parse_weights(wt_text, len(names_comp))
+                st.success("Weights add up to 100.0.")
+                st.caption("The selected/base fund is excluded from the combo.")
+            except ValueError as exc:
+                st.error(str(exc))
+                return
 
     try:
         comp = build_comparison_data(scheme_codes, combo_weights=weights)
@@ -368,6 +387,7 @@ def render_comparison(df_mfs: pd.DataFrame, sel_name: str) -> None:
         st.warning(str(exc))
         return
 
+    fund_colors = {name: PALETTE[i % len(PALETTE)] for i, name in enumerate(comp.plot_names)}
     recovery = pd.DataFrame(comp.drawdown_recovery)
     if not recovery.empty:
         recovery = recovery.rename(
@@ -379,12 +399,15 @@ def render_comparison(df_mfs: pd.DataFrame, sel_name: str) -> None:
                 "last_seen_nav": "NAVThen",
             }
         )
-        st.write("Drawdown Recovery - Current NAV Level Last Seen On")
-        st.dataframe(recovery, use_container_width=True)
+        with st.expander("Drawdown recovery · when the current NAV level was last seen"):
+            data_table(recovery, width="stretch", column_config={
+                "LatestDate": "Latest date", "LatestNAV": "Latest NAV (₹)",
+                "BackToDate": "Level last seen", "NAVThen": "NAV then (₹)",
+            })
 
     min_date = as_date(comp.nav_wide.index.min())
     max_date = as_date(comp.nav_wide.index.max())
-    st.write("Cumulative Returns Comparisons")
+    section("Cumulative growth")
     col1, col2 = st.columns(2)
     with col1:
         from_date = st.date_input("From Date:", value=min_date, min_value=min_date, max_value=max_date)
@@ -397,42 +420,44 @@ def render_comparison(df_mfs: pd.DataFrame, sel_name: str) -> None:
         st.warning(str(exc))
         return
 
-    st.plotly_chart(
+    plot_chart(
         px.line(df_rebased_long, x="date", y="rebased_nav", color="mf", log_y=log_y),
-        use_container_width=True,
+        width="stretch", colors=fund_colors,
     )
 
-    st.write("Rolling CAGR Comparison")
+    section("Rolling CAGR comparison")
     sel_year = st.number_input("Investment Duration (Number of Years):", value=1, min_value=1, max_value=10, step=1)
     df_cagr_all = rolling_cagr_long(comp, years=int(sel_year))
     if df_cagr_all.empty:
         st.warning("Not enough history for the selected rolling CAGR period.")
     else:
-        st.plotly_chart(px.line(df_cagr_all, x="date", y="cagr", color="mf"), use_container_width=True)
+        plot_chart(px.line(df_cagr_all, x="date", y="cagr", color="mf"), width="stretch", colors=fund_colors)
 
-    st.write("Draw Down Comparison")
+    section("Drawdown comparison")
     df_drawdown = drawdown_long(df_rebased_long)
-    st.plotly_chart(px.line(df_drawdown, x="date", y="draw_down", color="mf"), use_container_width=True)
+    plot_chart(px.line(df_drawdown, x="date", y="draw_down", color="mf"), width="stretch", colors=fund_colors)
 
-    st.write("Comparative Growth - Value of Rs 1000 Invested")
+    section("Growth of ₹1,000")
     sel_growth = st.number_input("Holding Period (Years):", value=5, min_value=1, max_value=10, step=1, key="growth_year")
     df_growth = growth_long(comp, holding_years=int(sel_growth))
     if not df_growth.empty:
-        st.plotly_chart(px.line(df_growth, x="date", y="end_value", color="mf"), use_container_width=True)
+        plot_chart(px.line(df_growth, x="date", y="end_value", color="mf"), width="stretch", colors=fund_colors)
     else:
         st.warning("Not enough history for the selected holding period.")
 
 def render_sip(sel_code: str, df_navs: pd.DataFrame) -> None:
+    section("Investment settings", "Amounts are in Indian rupees. Results update when you change a setting.")
     min_date = as_date(df_navs["date"].min())
     max_date = as_date(df_navs["date"].max())
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        start_date = st.date_input("Start Date:", max(min_date, dt.date(2006, 5, 1)), min_value=min_date, max_value=max_date)
-    with col2:
-        end_date = st.date_input("End Date:", min(max_date, dt.date(2022, 4, 1)), min_value=min_date, max_value=max_date)
-    with col3:
-        monthly_amount = st.number_input("Monthly SIP Amount:", value=1000, min_value=100, step=100)
-    step_up_pct = st.number_input("Annual Step-up (%):", value=5.0, min_value=0.0, step=1.0)
+    with st.container(border=True, key="mf-panel-3"):
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            start_date = st.date_input("Start Date:", max(min_date, dt.date(2006, 5, 1)), min_value=min_date, max_value=max_date)
+        with col2:
+            end_date = st.date_input("End Date:", min(max_date, dt.date(2022, 4, 1)), min_value=min_date, max_value=max_date)
+        with col3:
+            monthly_amount = st.number_input("Monthly SIP Amount:", value=1000, min_value=100, step=100)
+        step_up_pct = st.number_input("Annual Step-up (%):", value=5.0, min_value=0.0, step=1.0)
 
     try:
         validate_date_range(start_date, end_date)
@@ -447,25 +472,26 @@ def render_sip(sel_code: str, df_navs: pd.DataFrame) -> None:
         st.warning("No SIP series could be generated.")
         return
     df_long = pd.melt(df_series[["date", "invested_amount", "current_value"]], id_vars="date", var_name="component", value_name="amount")
-    st.write("Invested Amount vs Current Value")
-    st.plotly_chart(px.line(df_long, x="date", y="amount", color="component"), use_container_width=True)
+    section("Invested amount vs current value")
+    plot_chart(px.line(df_long, x="date", y="amount", color="component"), width="stretch")
 
-    st.write("Unit Accumulation - Normalized")
+    section("Unit accumulation · normalised")
     df_norm = df_series.copy()
     df_norm["invested_amount"] = df_norm["invested_amount"] / df_norm["invested_amount"].iloc[-1]
     df_norm["cum_units"] = df_norm["cum_units"] / df_norm["cum_units"].iloc[-1]
     df_norm_long = pd.melt(df_norm[["date", "invested_amount", "cum_units"]], id_vars="date", var_name="component", value_name="proportion")
-    st.plotly_chart(px.line(df_norm_long, x="date", y="proportion", color="component"), use_container_width=True)
+    plot_chart(px.line(df_norm_long, x="date", y="proportion", color="component"), width="stretch")
 
     st.write("---")
-    st.write("Rolling SIP XIRR Distribution")
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        window_years = st.number_input("SIP Duration (years):", value=7, min_value=1, max_value=20, step=1)
-    with col2:
-        roll_amount = st.number_input("Rolling Monthly SIP Amount:", value=1000, min_value=100, step=100)
-    with col3:
-        roll_step_up = st.number_input("Rolling Annual Step-up (%):", value=0.0, min_value=0.0, step=1.0)
+    section("Rolling SIP analysis", "Compare outcomes for the same SIP duration across different historical start dates.")
+    with st.container(border=True, key="mf-panel-4"):
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            window_years = st.number_input("SIP Duration (years):", value=7, min_value=1, max_value=20, step=1)
+        with col2:
+            roll_amount = st.number_input("Rolling Monthly SIP Amount:", value=1000, min_value=100, step=100)
+        with col3:
+            roll_step_up = st.number_input("Rolling Annual Step-up (%):", value=0.0, min_value=0.0, step=1.0)
     try:
         df_roll = rolling_sip_xirr(df_navs, int(window_years), float(roll_amount), float(roll_step_up)).dropna(subset=["xirr"])
     except Exception as exc:
@@ -474,21 +500,24 @@ def render_sip(sel_code: str, df_navs: pd.DataFrame) -> None:
     if df_roll.empty:
         st.warning("No valid rolling windows found for this duration and date range.")
         return
-    st.plotly_chart(px.histogram(df_roll, x="xirr", nbins=40, labels={"xirr": "XIRR (%)"}), use_container_width=True)
-    st.plotly_chart(px.line(df_roll, x="startDate", y="xirr", labels={"startDate": "SIP Start Date", "xirr": "XIRR (%)"}), use_container_width=True)
-    st.dataframe(df_roll[["startDate", "endDate", "xirr"]].describe(), use_container_width=True)
+    plot_chart(px.histogram(df_roll, x="xirr", nbins=40, labels={"xirr": "XIRR (%)"}), width="stretch")
+    plot_chart(px.line(df_roll, x="startDate", y="xirr", labels={"startDate": "SIP Start Date", "xirr": "XIRR (%)"}), width="stretch")
+    with st.expander("Rolling SIP descriptive statistics"):
+        data_table(df_roll[["startDate", "endDate", "xirr"]].describe(), width="stretch")
 
 
 def render_swp(sel_code: str, df_navs: pd.DataFrame) -> None:
+    section("Withdrawal settings", "Set the initial investment, monthly withdrawal and analysis dates. Amounts are in Indian rupees.")
     min_date = as_date(df_navs["date"].min())
     max_date = as_date(df_navs["date"].max())
-    col1, col2 = st.columns(2)
-    with col1:
-        inv_amount = st.number_input("Amount Invested:", value=100000, min_value=1000, step=10000)
-        start_date = st.date_input("Start Date:", max(min_date, dt.date(2005, 4, 1)), min_value=min_date, max_value=max_date, key="st_date_swp")
-    with col2:
-        red_amount = st.number_input("Monthly Withdrawn:", value=1000, min_value=100, step=100)
-        end_date = st.date_input("End Date:", min(max_date, dt.date(2022, 4, 1)), min_value=min_date, max_value=max_date, key="end_date_swp")
+    with st.container(border=True, key="mf-panel-5"):
+        col1, col2 = st.columns(2)
+        with col1:
+            inv_amount = st.number_input("Amount Invested:", value=100000, min_value=1000, step=10000)
+            start_date = st.date_input("Start Date:", max(min_date, dt.date(2005, 4, 1)), min_value=min_date, max_value=max_date, key="st_date_swp")
+        with col2:
+            red_amount = st.number_input("Monthly Withdrawn:", value=1000, min_value=100, step=100)
+            end_date = st.date_input("End Date:", min(max_date, dt.date(2022, 4, 1)), min_value=min_date, max_value=max_date, key="end_date_swp")
     try:
         result = swp_analysis(sel_code, start_date, end_date, float(inv_amount), float(red_amount))
     except Exception as exc:
@@ -499,19 +528,27 @@ def render_swp(sel_code: str, df_navs: pd.DataFrame) -> None:
         st.warning(f"Corpus depleted on {result['depleted_on']}; later withdrawals are capped at available value.")
     df_series = records_to_df(result["series"])
     df_long = pd.melt(df_series[["date", "inv_value", "cur_value", "cum_amount", "total"]], id_vars="date", var_name="component", value_name="amount")
-    st.plotly_chart(px.line(df_long, x="date", y="amount", color="component"), use_container_width=True)
+    section("Corpus and withdrawals", "Track the remaining corpus alongside cumulative withdrawals.")
+    plot_chart(px.line(df_long, x="date", y="amount", color="component"), width="stretch")
 
 
 def render_stp(df_mfs: pd.DataFrame, sel_name: str, sel_code: str) -> None:
-    st.write(f"Target Fund: **{sel_name}**")
+    section("Transfer settings", "Amounts are in Indian rupees. Transfers flow from the source fund to the selected target fund.")
     source_name = st.selectbox("Source Fund (transfer FROM):", df_mfs.schemeName.unique(), key="stp_source")
-    col1, col2 = st.columns(2)
-    with col1:
-        inv_amount = st.number_input("Amount Invested in Source:", value=100000, min_value=1000, step=10000, key="stp_inv")
-        start_date = st.date_input("Start Date:", dt.date(2010, 1, 1), key="stp_start")
-    with col2:
-        transfer = st.number_input("Monthly Transfer Amount:", value=5000, min_value=100, step=500, key="stp_transfer")
-        end_date = st.date_input("End Date:", dt.date(2022, 1, 1), key="stp_end")
+    with st.container(border=True, key="mf-panel-6"):
+        source_column, target_column = st.columns(2)
+        source_column.caption("FROM · SOURCE FUND")
+        source_column.write(source_name)
+        target_column.caption("TO · TARGET FUND")
+        target_column.write(sel_name)
+    with st.container(border=True, key="mf-panel-7"):
+        col1, col2 = st.columns(2)
+        with col1:
+            inv_amount = st.number_input("Amount Invested in Source:", value=100000, min_value=1000, step=10000, key="stp_inv")
+            start_date = st.date_input("Start Date:", dt.date(2010, 1, 1), key="stp_start")
+        with col2:
+            transfer = st.number_input("Monthly Transfer Amount:", value=5000, min_value=100, step=500, key="stp_transfer")
+            end_date = st.date_input("End Date:", dt.date(2022, 1, 1), key="stp_end")
     try:
         source_code = get_selected_code(df_mfs, source_name)
         result = stp_analysis(source_code, sel_code, start_date, end_date, float(inv_amount), float(transfer))
@@ -526,12 +563,15 @@ def render_stp(df_mfs: pd.DataFrame, sel_name: str, sel_code: str) -> None:
 
     df_series = records_to_df(result["series"])
     df_val_long = pd.melt(df_series[["date", "value_src", "value_tgt", "total_value"]], id_vars="date", var_name="component", value_name="value")
-    st.write("Portfolio Value Over Time")
-    st.plotly_chart(px.line(df_val_long, x="date", y="value", color="component"), use_container_width=True)
+    section("Portfolio value over time")
+    plot_chart(px.line(df_val_long, x="date", y="value", color="component"), width="stretch")
     df_units_long = pd.melt(df_series[["date", "src_units_norm", "tgt_units_norm"]], id_vars="date", var_name="component", value_name="proportion")
-    st.write("Units Tracker (Normalised)")
-    st.plotly_chart(px.line(df_units_long, x="date", y="proportion", color="component"), use_container_width=True)
+    section("Units tracker · normalised")
+    plot_chart(px.line(df_units_long, x="date", y="proportion", color="component"), width="stretch")
 
+
+with st.sidebar:
+    brand()
 
 df_mfs = get_scheme_codes()
 if df_mfs.empty:
@@ -540,11 +580,10 @@ if df_mfs.empty:
 
 scheme_names = sorted(df_mfs.schemeName.dropna().unique().tolist())
 sel_name = st.sidebar.selectbox("Select a Mutual Fund:", scheme_names, index=None, placeholder="Choose a fund")
-st.sidebar.write(
-    "Visualize historical NAV, rolling CAGR, SIP, SWP, STP, and comparative performance for Indian mutual funds."
-)
+st.sidebar.caption("One fund. Every perspective.")
 
 if not sel_name:
+    welcome()
     st.stop()
 
 try:
@@ -554,12 +593,16 @@ except Exception as exc:
     show_error(exc)
     st.stop()
 
-st.title(sel_name)
-page = st.radio(
+st.sidebar.divider()
+page = st.sidebar.radio(
     "Analysis",
     ["Home / NAV History", "CAGR Charts", "Past vs Forward Returns", "Comparative Analysis", "SIP", "SWP", "STP"],
-    horizontal=True,
+    format_func=lambda value: {"Home / NAV History": "NAV history", "CAGR Charts": "Rolling returns",
+                               "Comparative Analysis": "Fund comparison"}.get(value, value),
 )
+st.sidebar.divider()
+st.sidebar.caption("Historical data · Research workspace")
+page_header(page, sel_name, df_navs["date"])
 
 if page == "Home / NAV History":
     render_nav(df_navs)
