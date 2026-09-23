@@ -1,0 +1,35 @@
+.stApp { background: #f5f7fb; color: #172b4d; }
+[data-testid="stHeader"] { background: #f5f7fb; }
+[data-testid="stMainBlockContainer"] { max-width: 1400px; padding-top: 2.4rem; padding-bottom: 4rem; }
+[data-testid="stSidebar"] { background: #fff; border-right: 1px solid #e2e8f0; }
+[data-testid="stSidebar"] [data-testid="stSidebarContent"] { padding-top: 1rem; }
+.mf-brand { display: flex; align-items: center; gap: 12px; font-size: 15px; font-weight: 700; margin: 8px 0 28px; color: #172b4d; }
+.mf-brand small { display: block; font-size: 9px; letter-spacing: 1.6px; color: #64748b; margin-top: 4px; }
+.mf-mark { display: grid; place-items: center; background: #2563eb; color: white; width: 36px; height: 40px; border-radius: 10px; font-size: 23px; }
+.mf-eyebrow { color: #64748b; font-size: 10px; font-weight: 700; letter-spacing: 1.6px; line-height: 1.6; }
+h1 { color: #172b4d; font-size: 2.2rem !important; font-weight: 700 !important; letter-spacing: -0.8px; padding-top: .25rem !important; }
+h3 { color: #172b4d; font-size: 1.1rem !important; font-weight: 650 !important; letter-spacing: -.2px; }
+[data-testid="stCaptionContainer"] { color: #64748b; }
+.mf-context { display: flex; justify-content: space-between; align-items: center; gap: 24px; background: #eaf0fa; border: 1px solid #dce5f3; border-left: 3px solid #2563eb; padding: 18px 22px; border-radius: 10px; margin: 6px 0 18px; }
+.mf-fund { font-size: 15px; font-weight: 600; margin-top: 5px; overflow-wrap: anywhere; }
+.mf-coverage { flex-shrink: 0; color: #64748b; font-size: 11px; line-height: 1.8; }
+.mf-coverage strong { color: #334155; font-weight: 500; }
+[class*="st-key-mf-panel-"] { background: #fff; border-color: #e2e8f0 !important; border-radius: 12px !important; }
+[data-testid="stMetric"] { background: #fff; padding: 18px 20px; border: 1px solid #e2e8f0; border-radius: 12px; }
+[data-testid="stMetricLabel"] { color: #64748b; }
+[data-testid="stMetricValue"] { color: #172b4d; font-size: 1.8rem; font-variant-numeric: tabular-nums; }
+[data-testid="stPlotlyChart"] { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 8px; overflow: hidden; }
+[data-testid="stExpander"] { background: #fff; border-radius: 10px; }
+[data-testid="stDataFrame"] { border-radius: 8px; }
+[data-testid="stSidebar"] [role="radiogroup"] { gap: 4px; }
+[data-testid="stSidebar"] [role="radiogroup"] label { padding: 10px 12px; border-radius: 8px; margin: 0; width: 100%; }
+[data-testid="stSidebar"] [role="radiogroup"] label:has(input:checked) { background: #eaf1ff; color: #1d4ed8; }
+[data-testid="stSidebar"] [role="radiogroup"] label:hover { background: #f1f5f9; }
+[data-testid="stDownloadButton"] button { border: 1px solid #cbd5e1; border-radius: 8px; font-size: 13px; }
+@media (max-width: 768px) {
+    [data-testid="stMainBlockContainer"] { padding: 1.5rem 1rem 3rem; }
+    h1 { font-size: 1.7rem !important; }
+    .mf-context { flex-direction: column; align-items: flex-start; gap: 12px; padding: 16px; }
+    [data-testid="stHorizontalBlock"] { flex-wrap: wrap; }
+    [data-testid="stHorizontalBlock"] > [data-testid="stColumn"] { min-width: 100% !important; width: 100% !important; flex: 1 1 100% !important; }
+}
