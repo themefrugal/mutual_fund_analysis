@@ -12,6 +12,8 @@ import {
   Legend,
   BarChart,
   Bar,
+  Scatter,
+  ScatterChart,
   ReferenceLine,
   ComposedChart,
   Area,
@@ -39,6 +41,144 @@ function sample<T>(arr: T[], max: number): T[] {
   return arr.filter((_, i) => i % step === 0 || i === arr.length - 1)
 }
 
+type ForwardReturnPoint = {
+  anchorDate: string
+  pastStartDate: string
+  futureEndDate: string
+  pastCagr: number
+  futureCagr: number
+}
+
+type HistogramData = {
+  bins: { bucket: number; count: number }[]
+  mean: number | null
+  median: number | null
+}
+
+function ForwardReturnTooltip({
+  active,
+  payload,
+}: {
+  active?: boolean
+  payload?: ReadonlyArray<{ payload?: ForwardReturnPoint }>
+}) {
+  const point = payload?.[0]?.payload
+  if (!active || !point) return null
+
+  return (
+    <div className="rounded-lg border border-border bg-[#0f1117] px-3 py-2 text-xs text-text shadow-lg">
+      <p className="mb-1 font-semibold">Anchor date: {point.anchorDate}</p>
+      <p className="text-muted">Past window: {point.pastStartDate} to {point.anchorDate}</p>
+      <p className="text-muted">Future window: {point.anchorDate} to {point.futureEndDate}</p>
+      <p className="mt-1">Past return: <span className={gainLossClass(point.pastCagr)}>{point.pastCagr.toFixed(2)}%</span></p>
+      <p>Future return: <span className={gainLossClass(point.futureCagr)}>{point.futureCagr.toFixed(2)}%</span></p>
+    </div>
+  )
+}
+
+function shiftByDays(date: string, days: number): string {
+  const result = new Date(`${date}T00:00:00Z`)
+  result.setUTCDate(result.getUTCDate() + days)
+  return result.toISOString().slice(0, 10)
+}
+
+function buildHistogram(values: number[]): HistogramData {
+  if (values.length === 0) return { bins: [], mean: null, median: null }
+  const min = Math.min(...values)
+  const max = Math.max(...values)
+  const buckets = 40
+  const width = (max - min) / buckets || 1
+  const counts = new Array<number>(buckets).fill(0)
+  for (const value of values) {
+    const index = Math.min(Math.floor((value - min) / width), buckets - 1)
+    counts[index]++
+  }
+  const ordered = [...values].sort((a, b) => a - b)
+  const middle = Math.floor(ordered.length / 2)
+  const median = ordered.length % 2 === 0
+    ? (ordered[middle - 1] + ordered[middle]) / 2
+    : ordered[middle]
+  return {
+    bins: counts.map((count, index) => ({ bucket: +(min + index * width).toFixed(1), count })),
+    mean: values.reduce((sum, value) => sum + value, 0) / values.length,
+    median,
+  }
+}
+
+function ForwardReturnHistogram({
+  data,
+  allFutureReturns,
+  pastYears,
+  futureYears,
+}: {
+  data: ForwardReturnPoint[]
+  allFutureReturns: number[]
+  pastYears: number
+  futureYears: number
+}) {
+  const minimum = Math.min(...data.map((point) => point.pastCagr))
+  const maximum = Math.max(...data.map((point) => point.pastCagr))
+  const [range, setRange] = useState<[number, number]>([minimum, maximum])
+  const step = Math.max((maximum - minimum) / 100, 0.01)
+  const filtered = data.filter((point) => point.pastCagr >= range[0] && point.pastCagr <= range[1])
+  const fullRange = range[0] === minimum && range[1] === maximum
+  const histogram = useMemo(
+    () => buildHistogram(fullRange ? allFutureReturns : filtered.map((point) => point.futureCagr)),
+    [allFutureReturns, filtered, fullRange]
+  )
+
+  return (
+    <div className="mt-5 border-t border-border pt-5">
+      {minimum < maximum ? (
+        <div className="mb-5 ml-[60px] mr-4">
+          <div className="mb-2 flex items-center justify-between text-xs">
+            <label className="font-semibold text-text">Past {pastYears}-year CAGR range for the histogram</label>
+            <span className="font-mono text-muted">{range[0].toFixed(1)}% – {range[1].toFixed(1)}%</span>
+          </div>
+          <div className="space-y-1">
+            <input
+              aria-label="Minimum past CAGR"
+              type="range"
+              min={minimum}
+              max={maximum}
+              step={step}
+              value={range[0]}
+              onChange={(e) => setRange((current) => [Math.min(+e.target.value, current[1]), current[1]])}
+              className="h-2 w-full cursor-pointer accent-accent"
+            />
+            <input
+              aria-label="Maximum past CAGR"
+              type="range"
+              min={minimum}
+              max={maximum}
+              step={step}
+              value={range[1]}
+              onChange={(e) => setRange((current) => [current[0], Math.max(+e.target.value, current[0])])}
+              className="h-2 w-full cursor-pointer accent-accent"
+            />
+          </div>
+          <div className="mt-1 flex justify-between text-[10px] text-muted"><span>{minimum.toFixed(1)}%</span><span>{maximum.toFixed(1)}%</span></div>
+        </div>
+      ) : (
+        <p className="mb-5 text-xs text-muted">Past {pastYears}-year CAGR is {minimum.toFixed(2)}% for every point.</p>
+      )}
+      <h3 className="mb-1 text-xs font-semibold text-text">Distribution of Next {futureYears}-year Returns</h3>
+      <p className="mb-3 text-xs text-muted">{fullRange ? allFutureReturns.length : filtered.length.toLocaleString()} of {allFutureReturns.length.toLocaleString()} future-return observations are shown.</p>
+      <ResponsiveContainer width="100%" height={200}>
+        <BarChart data={histogram.bins}>
+          <CartesianGrid strokeDasharray="3 3" stroke="#1e2232" />
+          <XAxis dataKey="bucket" tick={{ fill: '#6b7280', fontSize: 10 }} tickLine={false} axisLine={{ stroke: '#1e2232' }} tickFormatter={(v: number) => `${v}%`} />
+          <YAxis tick={{ fill: '#6b7280', fontSize: 10 }} tickLine={false} axisLine={{ stroke: '#1e2232' }} width={40} />
+          <Tooltip contentStyle={{ background: '#0f1117', border: '1px solid #1e2232', borderRadius: 8, fontSize: 11, color: '#e2e8f0' }} formatter={(v: number | undefined) => [v, 'Occurrences']} labelFormatter={(v) => `Future CAGR ~${v}%`} />
+          {histogram.mean != null && <ReferenceLine x={+histogram.mean.toFixed(1)} stroke="#f59e0b" strokeDasharray="4 4" label={{ value: 'Mean', fill: '#f59e0b', fontSize: 10 }} />}
+          {histogram.median != null && <ReferenceLine x={+histogram.median.toFixed(1)} stroke="#34d399" strokeDasharray="4 4" label={{ value: 'Median', fill: '#34d399', fontSize: 10 }} />}
+          <Bar dataKey="count" fill="#f59e0b" fillOpacity={0.7} radius={[2, 2, 0, 0]} />
+        </BarChart>
+      </ResponsiveContainer>
+    </div>
+  )
+}
+
 export default function CAGRPage() {
   const { selectedCode, selectedName } = useFund()
   const [data, setData] = useState<CAGRPoint[]>([])
@@ -46,7 +186,9 @@ export default function CAGRPage() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [selectedYears, setSelectedYears] = useState<number[]>([1, 3, 5, 10])
-  const [histYear, setHistYear] = useState(5)
+  const [histYear, setHistYear] = useState(3)
+  const [pastYears, setPastYears] = useState(2)
+  const [futureYears, setFutureYears] = useState(3)
 
   useEffect(() => {
     if (!selectedCode) return
@@ -95,6 +237,39 @@ export default function CAGRPage() {
       count,
     }))
   }, [data, histYear])
+
+  const forwardReturnData = useMemo<ForwardReturnPoint[]>(() => {
+    const returnsByPeriod = new Map<number, Map<string, number>>()
+    for (const point of data) {
+      if (point.cagr == null) continue
+      if (!returnsByPeriod.has(point.years)) returnsByPeriod.set(point.years, new Map())
+      returnsByPeriod.get(point.years)!.set(point.date, point.cagr)
+    }
+
+    const pastReturns = returnsByPeriod.get(pastYears)
+    const futureReturns = returnsByPeriod.get(futureYears)
+    if (!pastReturns || !futureReturns) return []
+
+    return Array.from(pastReturns.entries()).flatMap(([anchorDate, pastCagr]) => {
+      // CAGR periods use fixed 365-day windows in the backend, so use the same
+      // convention when locating the end of the forward-looking window.
+      const futureEndDate = shiftByDays(anchorDate, 365 * futureYears)
+      const futureCagr = futureReturns.get(futureEndDate)
+      if (futureCagr == null) return []
+      return [{
+        anchorDate,
+        pastStartDate: shiftByDays(anchorDate, -365 * pastYears),
+        futureEndDate,
+        pastCagr,
+        futureCagr,
+      }]
+    })
+  }, [data, pastYears, futureYears])
+
+  const allFutureReturns = useMemo(
+    () => data.filter((point) => point.years === futureYears && point.cagr != null).map((point) => point.cagr as number),
+    [data, futureYears]
+  )
 
   const histStats = stats.find((s) => s.years === histYear)
   const allYears = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -277,6 +452,81 @@ export default function CAGRPage() {
                 <Bar dataKey="count" fill="#f59e0b" fillOpacity={0.7} radius={[2, 2, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
+          </div>
+
+          {/* Past-to-future return scatter */}
+          <div className="rounded-xl border border-border bg-card p-5">
+            <div className="mb-1 flex items-center justify-between flex-wrap gap-2">
+              <h2 className="text-sm font-semibold text-text">Past Return vs Future Return</h2>
+              <div className="flex items-center gap-3 text-xs">
+                <label className="flex items-center gap-2 text-muted">
+                  Past return:
+                  <select
+                    value={pastYears}
+                    onChange={(e) => setPastYears(+e.target.value)}
+                    className="rounded-lg border border-border bg-bg px-2 py-1 text-text outline-none focus:border-accent"
+                  >
+                    {allYears.map((y) => <option key={y} value={y}>{y} Year{y === 1 ? '' : 's'}</option>)}
+                  </select>
+                </label>
+                <label className="flex items-center gap-2 text-muted">
+                  Future return:
+                  <select
+                    value={futureYears}
+                    onChange={(e) => {
+                      const years = +e.target.value
+                      setFutureYears(years)
+                      setHistYear(years)
+                    }}
+                    className="rounded-lg border border-border bg-bg px-2 py-1 text-text outline-none focus:border-accent"
+                  >
+                    {allYears.map((y) => <option key={y} value={y}>{y} Year{y === 1 ? '' : 's'}</option>)}
+                  </select>
+                </label>
+              </div>
+            </div>
+            <p className="mb-4 text-xs text-muted">
+              Each dot pairs the return before an anchor date with the return after it. Time determines neither position nor order.
+            </p>
+            {forwardReturnData.length > 0 ? (
+              <>
+                <ResponsiveContainer width="100%" height={320}>
+                  <ScatterChart margin={{ top: 8, right: 16, bottom: 20, left: 8 }}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#1e2232" />
+                    <XAxis
+                      type="number"
+                      dataKey="pastCagr"
+                      name={`Past ${pastYears}-year CAGR`}
+                      tick={{ fill: '#6b7280', fontSize: 10 }}
+                      tickLine={false}
+                      axisLine={{ stroke: '#1e2232' }}
+                      tickFormatter={(v: number) => `${v.toFixed(0)}%`}
+                      label={{ value: `Past ${pastYears}-year CAGR`, position: 'insideBottom', offset: -12, fill: '#6b7280', fontSize: 11 }}
+                    />
+                    <YAxis
+                      type="number"
+                      dataKey="futureCagr"
+                      name={`Next ${futureYears}-year CAGR`}
+                      tick={{ fill: '#6b7280', fontSize: 10 }}
+                      tickLine={false}
+                      axisLine={{ stroke: '#1e2232' }}
+                      tickFormatter={(v: number) => `${v.toFixed(0)}%`}
+                      label={{ value: `Next ${futureYears}-year CAGR`, angle: -90, position: 'insideLeft', offset: 0, fill: '#6b7280', fontSize: 11 }}
+                      width={52}
+                    />
+                    <Tooltip content={<ForwardReturnTooltip />} cursor={{ stroke: '#6b7280', strokeDasharray: '4 4' }} />
+                    <ReferenceLine x={0} stroke="#6b7280" strokeDasharray="4 4" />
+                    <ReferenceLine y={0} stroke="#6b7280" strokeDasharray="4 4" />
+                    <Scatter data={forwardReturnData} fill="#60a5fa" fillOpacity={0.6} />
+                  </ScatterChart>
+                </ResponsiveContainer>
+                <ForwardReturnHistogram key={`${pastYears}-${futureYears}`} data={forwardReturnData} allFutureReturns={allFutureReturns} pastYears={pastYears} futureYears={futureYears} />
+              </>
+            ) : (
+              <div className="flex h-80 items-center justify-center text-sm text-muted">
+                Not enough history to pair a past {pastYears}-year return with a future {futureYears}-year return.
+              </div>
+            )}
           </div>
 
           {/* Equity Yield Curve */}
