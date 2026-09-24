@@ -48,6 +48,39 @@ class CompareRequest(BaseModel):
         return v
 
 
+class PastForwardRequest(BaseModel):
+    scheme_code: str
+    backward_years: int = 2
+    forward_years: int = 3
+    frequency: str = "Weekly"
+    non_overlapping: bool = False
+    hurdle_rate: float = 0.0
+    start_date: Optional[date] = None
+    end_date: Optional[date] = None
+    target_return: Optional[float] = None
+
+    @field_validator("backward_years")
+    @classmethod
+    def validate_backward_years(cls, value: int) -> int:
+        if not 1 <= value <= 5:
+            raise ValueError("backward_years must be between 1 and 5")
+        return value
+
+    @field_validator("forward_years")
+    @classmethod
+    def validate_forward_years(cls, value: int) -> int:
+        if not 1 <= value <= 10:
+            raise ValueError("forward_years must be between 1 and 10")
+        return value
+
+    @field_validator("frequency")
+    @classmethod
+    def validate_frequency(cls, value: str) -> str:
+        if value not in {"Daily", "Weekly", "Monthly"}:
+            raise ValueError("frequency must be Daily, Weekly, or Monthly")
+        return value
+
+
 # ---------------------------------------------------------------------------
 # Response models — funds list
 # ---------------------------------------------------------------------------

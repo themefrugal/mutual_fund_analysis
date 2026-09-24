@@ -19,6 +19,7 @@ const navItems = [
   { href: '/', label: 'Dashboard', icon: LayoutDashboard },
   { href: '/nav', label: 'NAV History', icon: TrendingUp },
   { href: '/cagr', label: 'CAGR Analysis', icon: BarChart2 },
+  { href: '/past-forward', label: 'Past vs Forward', icon: BarChart2 },
   { href: '/compare', label: 'Compare Funds', icon: GitCompare },
   { href: '/sip', label: 'SIP Calculator', icon: PiggyBank },
   { href: '/swp', label: 'SWP Calculator', icon: Wallet },

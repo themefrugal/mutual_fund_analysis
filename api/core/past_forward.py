@@ -187,7 +187,7 @@ def generate_narrative(summary: dict[str, float | int | str | None], conditional
     if current_trailing is not None and matches >= 10:
         conditional_lines.append(f"The current trailing {config.backward_years}-year CAGR is {current_trailing:.2f}%. The {matches} closest historical periods ranged from {conditional['trailing_low']:.2f}% to {conditional['trailing_high']:.2f}% and had a median subsequent {config.forward_years}-year CAGR of {conditional['median_forward']:.2f}%.")
         conditional_lines.append(f"A positive subsequent return occurred in {conditional['positive_count']} of {matches} comparable historical observations; this is a historical frequency, not a forecast.")
-    limitations = [f"Monthly and other rolling observations overlap. The approximate independent-window count is {summary.get('approx_independent_windows', 0)}, so correlations and fitted lines are descriptive diagnostics, not statistical proof."]
+    limitations = [f"Daily, weekly, and monthly rolling observations overlap. The approximate independent-window count is {summary.get('approx_independent_windows', 0)}, so correlations and fitted lines are descriptive diagnostics, not statistical proof."]
     conclusion = ["Overall, this is a within-fund description of historical association. It does not establish causation, guarantee future returns, or provide a forecast."]
     return {"data_coverage": coverage, "relationship": relationship, "conditional_history": conditional_lines, "limitations": limitations, "conclusion": conclusion}
 
