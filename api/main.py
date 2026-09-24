@@ -7,6 +7,9 @@ Run with:
 
 from __future__ import annotations
 
+import math
+
+import pandas as pd
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -16,6 +19,15 @@ from api.core.common import clean_float
 from api.core.compare import cached_compare_analysis
 from api.core.funds import get_scheme_codes
 from api.core.nav import get_nav
+from api.core.past_forward import (
+    AnalysisConfig,
+    build_observations,
+    generate_narrative,
+    nearest_conditional_observations,
+    return_zones,
+    scatter_metric_matrices,
+    summarize_observations,
+)
 from api.core.rolling import rolling_sip_xirr_records
 from api.core.sip import sip_analysis
 from api.core.stp import stp_analysis
@@ -27,6 +39,7 @@ from api.models.schemas import (
     CompareResult,
     FundItem,
     NAVPoint,
+    PastForwardRequest,
     RollingXIRRPoint,
     SIPRequest,
     SIPResult,
@@ -72,6 +85,24 @@ def _validate_scheme_codes(scheme_codes: list[str]) -> list[str]:
     if missing_code is not None:
         raise HTTPException(status_code=404, detail=f"scheme_code not found: {missing_code}")
     return resolved_codes
+
+
+def _frame_records(frame: pd.DataFrame) -> list[dict]:
+    """Convert analysis frames to JSON-safe records without changing the engine."""
+    records: list[dict] = []
+    for record in frame.to_dict(orient="records"):
+        clean: dict[str, object] = {}
+        for key, value in record.items():
+            if value is None or (isinstance(value, float) and math.isnan(value)):
+                clean[key] = None
+            elif hasattr(value, "strftime"):
+                clean[key] = value.strftime("%Y-%m-%d")
+            elif hasattr(value, "item"):
+                clean[key] = value.item()
+            else:
+                clean[key] = value
+        records.append(clean)
+    return records
 
 
 @app.get("/api/funds", response_model=list[FundItem], tags=["Funds"])
@@ -121,6 +152,50 @@ def get_cagr_statistics(scheme_code: str):
         return get_cagr_stats(scheme_code)
     except ValueError as exc:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
+
+
+@app.post("/api/past-forward", tags=["Past vs Forward Returns"])
+def analyze_past_forward_returns(req: PastForwardRequest):
+    """Expose the existing within-fund past-to-forward analysis to all UIs."""
+    scheme_code = _resolve_scheme_code(req.scheme_code)
+    if req.start_date is not None and req.end_date is not None and req.start_date >= req.end_date:
+        raise HTTPException(status_code=422, detail="start_date must be before end_date")
+    try:
+        navs = get_nav(scheme_code)
+        config = AnalysisConfig(
+            backward_years=req.backward_years,
+            forward_years=req.forward_years,
+            frequency=req.frequency,
+            non_overlapping=req.non_overlapping,
+            hurdle_rate=req.hurdle_rate,
+        )
+        observations, current_trailing = build_observations(navs, config, req.start_date, req.end_date)
+        if observations.empty:
+            raise HTTPException(status_code=422, detail="No complete backward and forward return windows are available for these settings.")
+        summary = summarize_observations(observations, config)
+        target = req.target_return
+        if target is None:
+            target = current_trailing if current_trailing is not None else float(observations["trailing_cagr"].median())
+        matched, conditional = nearest_conditional_observations(observations, float(target), req.hurdle_rate)
+        zoned, zone_summary = return_zones(observations, req.hurdle_rate)
+        matrices = scatter_metric_matrices(navs, req.frequency, req.non_overlapping, req.start_date or navs["date"].min(), req.end_date or navs["date"].max())
+    except HTTPException:
+        raise
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
+
+    return {
+        "observations": _frame_records(observations),
+        "summary": summary,
+        "current_trailing": current_trailing,
+        "target_return": target,
+        "conditional": conditional,
+        "matched_observations": _frame_records(matched),
+        "zones": _frame_records(zoned),
+        "zone_summary": _frame_records(zone_summary),
+        "narrative": generate_narrative(summary, conditional, config, current_trailing),
+        "matrices": {name: matrix.to_dict(orient="split") for name, matrix in matrices.items()},
+    }
 
 
 @app.post("/api/sip", response_model=SIPResult, tags=["SIP"])

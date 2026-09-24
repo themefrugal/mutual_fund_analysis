@@ -156,6 +156,50 @@ export interface RollingXIRRRequest {
   step_up_pct: number
 }
 
+export interface PastForwardRequest {
+  scheme_code: string
+  backward_years: number
+  forward_years: number
+  frequency: 'Daily' | 'Weekly' | 'Monthly'
+  non_overlapping: boolean
+  hurdle_rate: number
+  start_date?: string
+  end_date?: string
+  target_return?: number
+}
+
+export interface PastForwardObservation {
+  as_of_date: string
+  backward_start_date: string
+  forward_end_date: string
+  backward_start_nav: number
+  as_of_nav: number
+  forward_end_nav: number
+  trailing_cagr: number
+  forward_cagr: number
+  data_quality: string
+  zone?: 'Low' | 'Middle' | 'High'
+}
+
+export interface MatrixData {
+  index: string[]
+  columns: string[]
+  data: Array<Array<string | number>>
+}
+
+export interface PastForwardResult {
+  observations: PastForwardObservation[]
+  summary: Record<string, string | number | null>
+  current_trailing: number | null
+  target_return: number
+  conditional: Record<string, number | null>
+  matched_observations: PastForwardObservation[]
+  zones: PastForwardObservation[]
+  zone_summary: Array<Record<string, string | number | null>>
+  narrative: Record<string, string[]>
+  matrices: Record<string, MatrixData>
+}
+
 // ─── Fetch helpers ────────────────────────────────────────────────────────────
 
 async function get<T>(path: string): Promise<T> {
@@ -192,3 +236,4 @@ export const apiSWP = (req: SWPRequest) => post<SWPResult>('/api/swp', req)
 export const apiSTP = (req: STPRequest) => post<STPResult>('/api/stp', req)
 export const apiCompare = (req: CompareRequest) => post<CompareResult>('/api/compare', req)
 export const apiRollingXIRR = (req: RollingXIRRRequest) => post<RollingXIRRPoint[]>('/api/sip/rolling-xirr', req)
+export const apiPastForward = (req: PastForwardRequest) => post<PastForwardResult>('/api/past-forward', req)
