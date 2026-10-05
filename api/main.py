@@ -223,11 +223,12 @@ class _RollingXIRRRequest(BaseModel):
     window_years: int = 7
     monthly_amount: float = 1000.0
     step_up_pct: float = 0.0
+    frequency: str = "Monthly"
 
 
 @app.post("/api/sip/rolling-xirr", response_model=list[RollingXIRRPoint], tags=["SIP"])
 def rolling_sip_xirr(req: _RollingXIRRRequest):
-    """Compute rolling SIP XIRR across all windows of `window_years` length."""
+    """Compute monthly SIP XIRR through each window's full-year redemption date."""
     _resolve_scheme_code(req.scheme_code)
     if req.window_years <= 0:
         raise HTTPException(status_code=400, detail="window_years must be positive.")
@@ -241,6 +242,7 @@ def rolling_sip_xirr(req: _RollingXIRRRequest):
             req.window_years,
             req.monthly_amount,
             req.step_up_pct,
+            req.frequency,
         )
     except ValueError as exc:
         raise HTTPException(status_code=400, detail=str(exc)) from exc

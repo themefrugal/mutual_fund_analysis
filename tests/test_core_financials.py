@@ -8,7 +8,7 @@ import pytest
 import api.core.compare as compare_core
 from api.core.funds import parse_amfi_latest_nav
 from api.core.compare import build_comparison_data, drawdown_long, growth_long, rebased_nav_long, rolling_cagr_long
-from api.core.rolling import rolling_sip_xirr
+from api.core.rolling import rolling_sip_xirr, rolling_sip_xirr_records
 from api.core.past_forward import (
     AnalysisConfig,
     build_observations,
@@ -128,6 +128,70 @@ def test_rolling_sip_returns_empty_when_history_is_too_short():
     result = rolling_sip_xirr(df_nav, window_years=2, monthly_amount=1000.0, step_up_pct=0.0)
 
     assert result.empty
+
+
+@pytest.mark.parametrize(
+    ("frequency", "first_start", "second_start"),
+    [
+        ("Monthly", "2020-01-31", "2020-02-29"),
+        ("Weekly", "2020-01-06", "2020-01-13"),
+        ("Daily", "2020-01-01", "2020-01-02"),
+    ],
+)
+def test_rolling_sip_start_frequency_keeps_monthly_investments(monkeypatch, frequency, first_start, second_start):
+    cashflow_dates = []
+
+    def fake_xirr(dates, amounts):
+        cashflow_dates.append(list(dates))
+        return 0.1
+
+    monkeypatch.setattr("api.core.rolling.xirr", fake_xirr)
+    result = rolling_sip_xirr(nav_frame("2020-01-01", "2021-02-28"), 1, 1000.0, 0.0, frequency)
+
+    assert result["startDate"].iloc[:2].dt.strftime("%Y-%m-%d").tolist() == [first_start, second_start]
+    assert result["xirr"].eq(10.0).all()
+    assert len(cashflow_dates[0]) == 13  # twelve monthly purchases and final redemption
+    assert pd.Timestamp(cashflow_dates[0][0]).date() == pd.Timestamp(first_start).date()
+    assert pd.Timestamp(cashflow_dates[0][1]).date() == (pd.Timestamp(first_start) + pd.DateOffset(months=1)).date()
+    assert pd.Timestamp(cashflow_dates[0][-1]).date() == (pd.Timestamp(first_start) + pd.DateOffset(years=1)).date()
+
+
+def test_daily_rolling_sip_requires_full_seven_years():
+    navs = nav_frame("2019-10-01", "2026-10-05")
+
+    result = rolling_sip_xirr(navs, 7, 1000.0, 0.0, "Daily")
+    records = rolling_sip_xirr_records(navs, 7, 1000.0, 0.0, "Daily")
+
+    assert result["startDate"].max() == pd.Timestamp("2019-10-05")
+    assert result["endDate"].max() == pd.Timestamp("2026-10-05")
+    assert records[-1]["start_date"] == "2019-10-05"
+    assert records[-1]["end_date"] == "2026-10-05"
+
+
+def test_monthly_rolling_sip_uses_calendar_anniversary_across_leap_year():
+    navs = nav_frame("2019-02-28", "2020-02-28")
+
+    result = rolling_sip_xirr(navs, 1, 1000.0, 0.0, "Monthly")
+
+    assert result[["startDate", "endDate"]].iloc[0].tolist() == [
+        pd.Timestamp("2019-02-28"), pd.Timestamp("2020-02-28")
+    ]
+
+
+def test_rolling_sip_redeems_at_maturity_nav(monkeypatch):
+    navs = nav_frame("2020-01-01", "2021-01-01")
+    navs.loc[navs["date"].eq(pd.Timestamp("2021-01-01")), "nav"] = 20.0
+    cashflows = []
+
+    def fake_xirr(dates, amounts):
+        cashflows.append((dates, amounts))
+        return 0.1
+
+    monkeypatch.setattr("api.core.rolling.xirr", fake_xirr)
+    rolling_sip_xirr(navs, 1, 1000.0, 0.0, "Daily")
+
+    assert pd.Timestamp(cashflows[0][0][-1]) == pd.Timestamp("2021-01-01")
+    assert cashflows[0][1][-1] == 24000.0
 
 
 def test_compare_core_builds_combo_and_shared_frames(monkeypatch):

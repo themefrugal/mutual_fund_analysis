@@ -154,6 +154,7 @@ export interface RollingXIRRRequest {
   window_years: number
   monthly_amount: number
   step_up_pct: number
+  frequency: 'Monthly' | 'Weekly' | 'Daily'
 }
 
 export interface PastForwardRequest {

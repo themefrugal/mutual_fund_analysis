@@ -61,6 +61,13 @@ def get_nav(scheme_code: str) -> pd.DataFrame:
 
 
 @st.cache_data(show_spinner=False)
+def get_full_duration_rolling_sip_xirr(
+    df_navs: pd.DataFrame, window_years: int, monthly_amount: float, step_up_pct: float, frequency: str
+) -> pd.DataFrame:
+    return rolling_sip_xirr(df_navs, window_years, monthly_amount, step_up_pct, frequency)
+
+
+@st.cache_data(show_spinner=False)
 def get_scatter_metric_matrices(
     df_navs: pd.DataFrame,
     frequency: str,
@@ -445,7 +452,7 @@ def render_comparison(df_mfs: pd.DataFrame, sel_name: str) -> None:
     else:
         st.warning("Not enough history for the selected holding period.")
 
-def render_sip(sel_code: str, df_navs: pd.DataFrame) -> None:
+def render_sip(sel_code: str, df_navs: pd.DataFrame, df_mfs: pd.DataFrame, sel_name: str) -> None:
     section("Investment settings", "Amounts are in Indian rupees. Results update when you change a setting.")
     min_date = as_date(df_navs["date"].min())
     max_date = as_date(df_navs["date"].max())
@@ -483,27 +490,85 @@ def render_sip(sel_code: str, df_navs: pd.DataFrame) -> None:
     plot_chart(px.line(df_norm_long, x="date", y="proportion", color="component"), width="stretch")
 
     st.write("---")
-    section("Rolling SIP analysis", "Compare outcomes for the same SIP duration across different historical start dates.")
+    section("Rolling SIP analysis", "Compare outcomes by the date each SIP window ends. Investments remain monthly; frequency controls how often a new rolling window starts.")
     with st.container(border=True, key="mf-panel-4"):
-        col1, col2, col3 = st.columns(3)
+        col1, col2, col3, col4 = st.columns(4)
         with col1:
             window_years = st.number_input("SIP Duration (years):", value=7, min_value=1, max_value=20, step=1)
         with col2:
             roll_amount = st.number_input("Rolling Monthly SIP Amount:", value=1000, min_value=100, step=100)
         with col3:
             roll_step_up = st.number_input("Rolling Annual Step-up (%):", value=0.0, min_value=0.0, step=1.0)
+        with col4:
+            roll_frequency = st.selectbox("Rolling start frequency:", ["Monthly", "Weekly", "Daily"])
     try:
-        df_roll = rolling_sip_xirr(df_navs, int(window_years), float(roll_amount), float(roll_step_up)).dropna(subset=["xirr"])
+        df_roll = get_full_duration_rolling_sip_xirr(df_navs, int(window_years), float(roll_amount), float(roll_step_up), roll_frequency).dropna(subset=["xirr"])
     except Exception as exc:
         show_error(exc)
         return
     if df_roll.empty:
         st.warning("No valid rolling windows found for this duration and date range.")
         return
+    st.caption(
+        f"Latest NAV: {max_date:%d %b %Y}. Each window redeems after the full {int(window_years)}-year period. "
+        "Daily starts use calendar days, weekly starts use Mondays, and investments remain monthly. "
+        "Weekend and holiday NAVs use the latest published value."
+    )
     plot_chart(px.histogram(df_roll, x="xirr", nbins=40, labels={"xirr": "XIRR (%)"}), width="stretch")
-    plot_chart(px.line(df_roll, x="startDate", y="xirr", labels={"startDate": "SIP Start Date", "xirr": "XIRR (%)"}), width="stretch")
+    rolling_chart = st.empty()
+    comparison_names = st.multiselect(
+        "Select Mutual Funds to Compare:",
+        sorted(name for name in df_mfs.schemeName.dropna().unique() if name != sel_name),
+        max_selections=5,
+        key="sip_rolling_comparison_funds",
+    )
+    comparison = df_roll[["startDate", "endDate", "xirr"]].rename(columns={"xirr": sel_name})
+    for name in comparison_names:
+        try:
+            code = get_selected_code(df_mfs, name)
+            fund_navs = get_nav(code)
+            fund_roll = get_full_duration_rolling_sip_xirr(
+                fund_navs, int(window_years), float(roll_amount), float(roll_step_up), roll_frequency
+            ).dropna(subset=["xirr"])
+        except Exception as exc:
+            st.warning(f"Could not calculate rolling SIP returns for {name}: {exc}")
+            continue
+        comparison = comparison.merge(
+            fund_roll[["startDate", "xirr"]].rename(columns={"xirr": name}),
+            on="startDate",
+            how="inner",
+        )
+    has_comparison = bool(comparison_names) and not comparison.empty and len(comparison.columns) > 3
+    if has_comparison:
+        comparison_long = comparison.melt(id_vars=["startDate", "endDate"], var_name="Fund", value_name="xirr")
+        line_fig = px.line(
+            comparison_long,
+            x="endDate",
+            y="xirr",
+            color="Fund",
+            hover_data={"startDate": "|%Y-%m-%d"},
+            labels={"startDate": "SIP Start Date", "endDate": "SIP End Date", "xirr": "XIRR (%)"},
+            render_mode="webgl",
+        )
+    else:
+        line_fig = px.line(
+            df_roll, x="endDate", y="xirr", hover_data={"startDate": "|%Y-%m-%d"},
+            labels={"startDate": "SIP Start Date", "endDate": "SIP End Date", "xirr": "XIRR (%)"},
+        )
+    with rolling_chart:
+        plot_chart(line_fig, width="stretch")
+    if comparison_names:
+        if comparison.empty:
+            st.warning("The selected funds have no common rolling SIP start dates for these settings.")
+        elif has_comparison:
+            st.caption(f"Comparison uses {len(comparison):,} start dates shared by all displayed funds.")
     with st.expander("Rolling SIP descriptive statistics"):
-        data_table(df_roll[["startDate", "endDate", "xirr"]].describe(), width="stretch")
+        if has_comparison:
+            stats = comparison.drop(columns=["startDate", "endDate"]).describe().T
+            stats.index.name = "Fund"
+        else:
+            stats = df_roll[["xirr"]].describe().T
+        data_table(stats, width="stretch")
 
 
 def render_swp(sel_code: str, df_navs: pd.DataFrame) -> None:
@@ -613,7 +678,7 @@ elif page == "Past vs Forward Returns":
 elif page == "Comparative Analysis":
     render_comparison(df_mfs, sel_name)
 elif page == "SIP":
-    render_sip(sel_code, df_navs)
+    render_sip(sel_code, df_navs, df_mfs, sel_name)
 elif page == "SWP":
     render_swp(sel_code, df_navs)
 elif page == "STP":

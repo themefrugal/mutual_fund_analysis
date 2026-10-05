@@ -60,6 +60,7 @@ export default function SIPPage() {
   const [rollWindowYears, setRollWindowYears] = useState(7)
   const [rollAmount, setRollAmount] = useState(1000)
   const [rollStepUp, setRollStepUp] = useState(0)
+  const [rollFrequency, setRollFrequency] = useState<'Monthly' | 'Weekly' | 'Daily'>('Monthly')
   const [rollResult, setRollResult] = useState<RollingXIRRPoint[] | null>(null)
   const [rollLoading, setRollLoading] = useState(false)
   const [rollError, setRollError] = useState<string | null>(null)
@@ -94,6 +95,7 @@ export default function SIPPage() {
         window_years: rollWindowYears,
         monthly_amount: rollAmount,
         step_up_pct: rollStepUp,
+        frequency: rollFrequency,
       })
       setRollResult(r)
     } catch (e: unknown) {
@@ -241,9 +243,9 @@ export default function SIPPage() {
       <div className="rounded-xl border border-border bg-card p-5">
         <h2 className="text-sm font-semibold text-text mb-1">Rolling SIP XIRR Distribution</h2>
         <p className="text-xs text-muted mb-4">
-          Slide a fixed-duration SIP window across the full NAV history and see how XIRR varies by start date.
+          Each SIP invests monthly and redeems after the full selected duration. Daily checks every calendar-day start; weekly checks Mondays. Weekend and holiday NAVs use the latest published value.
         </p>
-        <div className="grid grid-cols-3 gap-4 mb-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
           <div className="space-y-1.5">
             <label className="text-xs font-medium text-muted uppercase tracking-wider">SIP Duration (years)</label>
             <input type="number" value={rollWindowYears} onChange={(e) => setRollWindowYears(+e.target.value)} min={1} max={20} step={1}
@@ -258,6 +260,13 @@ export default function SIPPage() {
             <label className="text-xs font-medium text-muted uppercase tracking-wider">Annual Step-Up (%)</label>
             <input type="number" value={rollStepUp} onChange={(e) => setRollStepUp(+e.target.value)} min={0} max={50} step={1}
               className="w-full rounded-lg border border-border bg-bg px-3 py-2 text-sm text-text outline-none focus:border-accent" />
+          </div>
+          <div className="space-y-1.5">
+            <label className="text-xs font-medium text-muted uppercase tracking-wider">Rolling Start Frequency</label>
+            <select value={rollFrequency} onChange={(e) => setRollFrequency(e.target.value as 'Monthly' | 'Weekly' | 'Daily')}
+              className="w-full rounded-lg border border-border bg-bg px-3 py-2 text-sm text-text outline-none focus:border-accent">
+              <option>Monthly</option><option>Weekly</option><option>Daily</option>
+            </select>
           </div>
         </div>
         <button onClick={runRolling} disabled={!selectedCode || rollLoading}
@@ -332,20 +341,21 @@ export default function SIPPage() {
               </ResponsiveContainer>
             </div>
 
-            {/* XIRR by start date */}
+            {/* XIRR by end date */}
             <div>
               <h3 className="text-xs font-semibold text-muted uppercase tracking-wider mb-3">
-                XIRR by SIP Start Date
+                XIRR by SIP End Date
               </h3>
               <ResponsiveContainer width="100%" height={220}>
                 <LineChart data={sample(rollPoints, 500)}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#1e2232" />
-                  <XAxis dataKey="start_date" tick={{ fill: '#6b7280', fontSize: 10 }} tickLine={false}
+                  <XAxis dataKey="end_date" tick={{ fill: '#6b7280', fontSize: 10 }} tickLine={false}
                     axisLine={{ stroke: '#1e2232' }} tickFormatter={(v: string) => v.slice(0, 7)} interval="preserveStartEnd" />
                   <YAxis tick={{ fill: '#6b7280', fontSize: 10 }} tickLine={false}
                     axisLine={{ stroke: '#1e2232' }} tickFormatter={(v: number) => `${v.toFixed(0)}%`} width={48} />
                   <Tooltip contentStyle={{ background: '#0f1117', border: '1px solid #1e2232', borderRadius: 8, fontSize: 11, color: '#e2e8f0' }}
-                    formatter={(v) => [`${(v as number)?.toFixed(2)}%`, 'XIRR']} />
+                    formatter={(v) => [`${(v as number)?.toFixed(2)}%`, 'XIRR']}
+                    labelFormatter={(label, items) => `End ${label} · Start ${items?.[0]?.payload?.start_date ?? '—'}`} />
                   <ReferenceLine y={0} stroke="#1e2232" strokeDasharray="4 4" />
                   <Line type="monotone" dataKey="xirr" name="XIRR" stroke="#f59e0b" strokeWidth={1.5} dot={false} connectNulls />
                 </LineChart>
